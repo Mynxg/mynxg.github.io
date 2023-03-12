@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 12 Mar 2023 12:52:05 GMT</pubDate>
-    <lastBuildDate>Sun, 12 Mar 2023 12:52:05 GMT</lastBuildDate>
+    <pubDate>Sun, 12 Mar 2023 14:18:50 GMT</pubDate>
+    <lastBuildDate>Sun, 12 Mar 2023 14:18:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>mysql</category>
@@ -1268,6 +1268,15 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h2> 在线教程</h2>
 <h2> 文档相关</h2>
 <h2> 其他导航</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>个人导航</title>
+      <link>https://blog.lxip.top/resources/share/nav.html</link>
+      <guid>https://blog.lxip.top/resources/share/nav.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">个人导航</source>
+      <category>快速导航</category>
+      <content:encoded><![CDATA[
 ]]></content:encoded>
     </item>
     <item>
