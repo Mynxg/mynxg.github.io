@@ -1,1 +1,0 @@
-import e from"./FlipClock-03c5ee93.js";import{aP as c,Q as t,S as n,ae as s,G as l}from"./framework-d0ca5c4c.js";import"./FlipItem-59b557c1.js";const _={components:{FlipClock:e}},p={class:"test-clock-container"};function a(r,i,f,m,k,d){const o=l("flip-clock");return t(),n("div",p,[s(o)])}const C=c(_,[["render",a],["__file","MyFlipClock.vue"]]);export{C as default};
