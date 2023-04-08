@@ -6,10 +6,11 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 06 Apr 2023 14:45:13 GMT</pubDate>
-    <lastBuildDate>Thu, 06 Apr 2023 14:45:13 GMT</lastBuildDate>
+    <pubDate>Sat, 08 Apr 2023 13:34:14 GMT</pubDate>
+    <lastBuildDate>Sat, 08 Apr 2023 13:34:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>图床</category>
     <category>运维</category>
     <category>mysql</category>
     <category>linux</category>
@@ -31,6 +32,62 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>PicGo配置多图床仓库</title>
+      <link>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</link>
+      <guid>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">PicGo配置多图床仓库</source>
+      <description>背景 想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具 PicGo配置多图床 以七牛云为例： 官网：https://portal.qiniu.com/ 七牛云有10G免费存储空间和10G CDN静态资源加速 注意：CDN超额会需要付费的。 参考此文：配置手册 | PicGo...</description>
+      <category>图床</category>
+      <pubDate>Sat, 08 Apr 2023 14:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
+<h2> PicGo配置多图床</h2>
+<p>以七牛云为例：</p>
+<blockquote>
+<p>官网：<a href="https://portal.qiniu.com/" target="_blank" rel="noopener noreferrer">https://portal.qiniu.com/</a></p>
+<p>七牛云有10G免费存储空间和10G CDN静态资源加速</p>
+<p>注意：CDN超额会需要付费的。</p>
+</blockquote>
+<p>参考此文：<a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E4%B8%83%E7%89%9B%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener noreferrer">配置手册 | PicGo</a></p>
+<p>PicGo配置如下图：</p>
+<figure><figcaption>image-20230408153157066</figcaption></figure>
+<p>个人密钥：</p>
+<p>参考：<a href="https://portal.qiniu.com/user/key" target="_blank" rel="noopener noreferrer">七牛云 - 密钥管理 (qiniu.com)</a></p>
+<figure><figcaption>image-20230408153612643</figcaption></figure>
+<p>空间名称：</p>
+<p>我自定义的空间名称为：<strong>nxg-img</strong></p>
+<figure><figcaption>image-20230408153712120</figcaption></figure>
+<p>存储区域参考这里：<a href="https://developer.qiniu.com/kodo/1671/region-endpoint-fq" target="_blank" rel="noopener noreferrer">存储区域_产品简介_对象存储 - 七牛开发者中心 (qiniu.com)</a></p>
+<p>图片存储路径：</p>
+<p>我使用typora编辑器，就自定义了 <strong>typora</strong>目录</p>
+<figure><figcaption>image-20230408153902349</figcaption></figure>
+<blockquote>
+<p>注意：</p>
+<p>自定义域名，免费的的cdn只提供http协议，使用外链域名时，需要填写http，而不是https</p>
+<p>网址后缀的作用是：用到了七牛的图片处理工具的时候会用到的一些处理参数，比如图片瘦身</p>
+</blockquote>
+<p>如图：</p>
+<figure><figcaption>image-20230408154227916</figcaption></figure>
+<p>域名绑定：</p>
+<p>自己购买的域名，如果没有可以使用官方提供的。</p>
+<figure><figcaption>image-20230408160523741</figcaption></figure>
+<h2> 扩展</h2>
+<p>GitHub图床配置</p>
+<figure><figcaption>image-20230408155030702</figcaption></figure>
+<p>cdn加速GitHub图床：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>例如：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>参考：<a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener noreferrer">GitHub配置 | PicGo</a></p>
+<p>gitee图床配置：</p>
+<figure><figcaption>image-20230408155204806</figcaption></figure>
+<p>参考：<a href="https://github.com/lizhuangs/picgo-plugin-gitee-uploader.git" target="_blank" rel="noopener noreferrer">https://github.com/lizhuangs/picgo-plugin-gitee-uploader.git</a></p>
+<h2> 附件</h2>
+<p>参考：</p>
+<p>GitHub仓库：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener noreferrer">Molunerfinn/PicGo</a></p>
+<p><a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E4%B8%83%E7%89%9B%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener noreferrer">配置手册 | PicGo</a></p>
+<p><a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener noreferrer">PicGo (molunerfinn.com)</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Gitee Pages Action</title>
       <link>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</link>
