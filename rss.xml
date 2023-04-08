@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 08 Apr 2023 13:34:14 GMT</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2023 13:34:14 GMT</lastBuildDate>
+    <pubDate>Sat, 08 Apr 2023 14:59:42 GMT</pubDate>
+    <lastBuildDate>Sat, 08 Apr 2023 14:59:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>图床</category>
@@ -1959,11 +1959,11 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>::: tip 引入</p>
 <ul>
 <li>换一个角度来引入<strong>非递归的快速幂</strong>，还是7的10次方，但这次，把10写成<strong>二进制</strong>的形式，也就是 <code>0b1010</code> 。</li>
-<li>要计算 7^0b1010^ ，可以怎么做？
+<li>要计算 7<sup>0b1010</sup> ，可以怎么做？
 <ul>
-<li>很自然地想到可以把它拆分为 7^0b1000^*7^0b10^ 。</li>
-<li>实际上，对于任意的整数，都可以把它拆成若干个 7^0b100...^的形式相乘。</li>
-<li>而这些7^0b100...^，恰好就是 7^1^ 、7^2^、7^4^等等，我们只需<strong>不断把底数平方</strong>就可以算出它们。</li>
+<li>很自然地想到可以把它拆分为 7<sup>0b1000</sup>*7<sup>0b10</sup> 。</li>
+<li>实际上，对于任意的整数，都可以把它拆成若干个 7<sup>0b100...</sup>的形式相乘。</li>
+<li>而这些7<sup>0b100...</sup>，恰好就是 7<sup>1</sup> 、7<sup>2</sup>、7<sup>4</sup>等等，我们只需<strong>不断把底数平方</strong>就可以算出它们。</li>
 </ul>
 </li>
 </ul>
@@ -1994,7 +1994,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><a href="https://leetcode.cn/problems/powx-n/?show=1" target="_blank" rel="noopener noreferrer">Pow(x, n)</a>：考虑<strong>指数为负数</strong>的情况。</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: warning 注意</p>
 <ul>
-<li><code>Java</code>中<code>int</code>类型的范围是<code>[-2147483648,2147483647]</code>，即最大值是2^31^-1，最小值是-2^31^。</li>
+<li><code>Java</code>中<code>int</code>类型的范围是<code>[-2147483648,2147483647]</code>，即最大值是2<sup>31</sup>-1，最小值是-2<sup>31</sup>。</li>
 <li>所以在测试用例<code>x=1，n=-2147483648</code>运行时，使用下面的代码会出现问题：</li>
 </ul>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
