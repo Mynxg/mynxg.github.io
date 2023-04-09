@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 08 Apr 2023 14:59:42 GMT</pubDate>
-    <lastBuildDate>Sat, 08 Apr 2023 14:59:42 GMT</lastBuildDate>
+    <pubDate>Sun, 09 Apr 2023 10:51:10 GMT</pubDate>
+    <lastBuildDate>Sun, 09 Apr 2023 10:51:10 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>图床</category>
@@ -889,6 +889,49 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>关于本站</title>
+      <link>https://blog.lxip.top/blog/about.html</link>
+      <guid>https://blog.lxip.top/blog/about.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">关于本站</source>
+      <description>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。 服务提供 本站由以下内容提供服务 博客 仓库连接 本站所有内容及代码均开源，可通过下面 👇 的链接访问 keney仓库 (https://github.com/mynxg/)</description>
+      <content:encoded><![CDATA[<h1> 关于本站</h1>
+<p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
+<h2> 服务提供</h2>
+<p>本站由以下内容提供服务</p>
+<div class="project-panel">
+              <a class="project project0" href="https://www.cloudflare.com/" rel="noopener noreferrer" target="_blank">
+                <img src="https://image.liubing.me/2023/02/11/7f17f3cf426c3.png" alt="Cloudflare" class="image">
+                <div class="name">Cloudflare</div>
+                <div class="desc">提供免费的 CDN 服务。</div>
+              </a>
+            
+              <a class="project project1" href="https://vuepress.vuejs.org/zh/" rel="noopener noreferrer" target="_blank">
+                <img src="https://vuepress.vuejs.org/hero.png" alt="VuePress" class="image">
+                <div class="name">VuePress</div>
+                <div class="desc">博客驱动引擎。</div>
+              </a>
+            
+              <a class="project project2" href="https://theme-hope.vuejs.press/zh/" rel="noopener noreferrer" target="_blank">
+                <img src="https://theme-hope.vuejs.press/logo.png" alt="VuePress Theme Hope" class="image">
+                <div class="name">VuePress Theme Hope</div>
+                <div class="desc">本站博客所用主题</div>
+              </a>
+            
+              <a class="project project3" href="https://buddy.works" rel="noopener noreferrer" target="_blank">
+                <img src="https://image.liubing.me/2023/02/11/a7643dcbbc234.png" alt="Buddy" class="image">
+                <div class="name">Buddy</div>
+                <div class="desc">本站自动化打包构建发布工具。</div>
+              </a>
+            
+              <a class="project project4" href="https://waline.js.org/" rel="noopener noreferrer" target="_blank">
+                <img src="https://image.liubing.me/2023/02/05/834597e9e927e.png" alt="Waline" class="image">
+                <div class="name">Waline</div>
+                <div class="desc">本站评论所用服务。</div>
+              </a>
+            <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><h2> 博客</h2>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Java8新特性</title>
       <link>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</link>
       <guid>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</guid>
@@ -917,13 +960,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h4> ofNullable</h4>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个静态方法，代表<code>value</code>值是可为空的。如果为<code>null</code>值，那么返回一个<code>value</code>为<code>null</code>的<code>Optional</code>对象；如果不为<code>null</code>值，那么返回一个<code>value</code>不为<code>null</code>的<code>Option</code>对象。允许<code>value</code>为<code>null</code>，实际开发中常用。</p>
 <p><strong>与<code>of</code>的区别：当<code>value</code>值为<code>null</code>时，<code>of</code>会报<code>NullPointerException</code>异常；<code>ofNullable</code>不会<code>throw Exception</code>，<code>ofNullable</code>直接返回一个<code>EMPTY</code>对象（<code>value</code>为<code>null</code>的<code>Optional</code>对象）。</strong></p>
-<p>::: tip 那是不是意味着，我们在项目中只用ofNullable函数而不用of函数呢?</p>
+<div class="hint-container tip">
+<p class="hint-container-title">那是不是意味着，我们在项目中只用ofNullable函数而不用of函数呢?</p>
 <ul>
 <li>不是的，一个东西存在那么自然有存在的价值。</li>
 <li>当我们在运行过程中，不想隐藏<code>NullPointerException</code>，而是要立即报告，这种情况下就用<code>of</code>函数。</li>
 <li>但是不得不承认，这样的场景真的很少。</li>
 </ul>
-<p>:::</p>
+</div>
 <h4> orElse</h4>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个实例方法，会首先判断调用它的<code>Optional</code>对象中的<code>value</code>值，如果为不为<code>null</code>，那么就返回该<code>value</code>值，如果为<code>null</code>，就返回传入的<code>other</code>对象。</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> orElseGet</h4>
@@ -1656,13 +1700,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <category>数据结构</category>
       <content:encoded><![CDATA[<h2> 常用的位操作</h2>
 <h3> Java中的位操作符</h3>
-<p>::: warning 注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li><code>Java</code>中位操作符的操作数只能是<strong>整型<code>（byte、short、int、long）</code>和字符型数据<code>（char）</code>。</strong></li>
 <li><code>Java</code>中位操作符<strong>一共有7个，其中4个是位逻辑运算符，3个是移位运算符。</strong></li>
 <li>使用按位操作符时要注意：相等<code>（==）</code>与不相等<code>（!=）</code>的优先级在按位操作符之上！这意味着，位运算符的<strong>优先级极小，所以使用位运算符时，最好加上括号。</strong></li>
 </ul>
-<p>:::</p>
+</div>
 <h4> 4个位逻辑运算符</h4>
 <ul>
 <li><strong>位逻辑运算符</strong>包括按位取反<code>（~）</code>、按位与<code>（&amp;）</code>、按位或<code>（|）</code>和按位异或<code>（^）</code>4种。
@@ -1674,7 +1719,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 </li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 补充</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">补充</p>
 <ul>
 <li>数字的二进制表现形式为 <strong>“有符号的二进制补码”。</strong>
 <ul>
@@ -1691,10 +1737,11 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 </li>
 </ul>
-<p>:::</p>
-<p>::: tip 说明</p>
+</div>
+<div class="hint-container tip">
+<p class="hint-container-title">说明</p>
 <p><strong>位逻辑运算符</strong>用来操作整数的二进制位，会对两个参数中对应的位执行布尔代数运算，并最终生成一个结果。</p>
-<p>:::</p>
+</div>
 <h4> 3个移位运算符</h4>
 <ul>
 <li>移位运算符包括左移<code>（&lt;&lt;）</code>、右移<code>（&gt;&gt;）</code>和无符号右移<code>（&gt;&gt;&gt;）</code>3种。
@@ -1709,14 +1756,16 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>移位运算符可以与等号组合使用（<code>&lt;&lt;=</code> 或 <code>&gt;&gt;=</code> 或 <code>&gt;&gt;&gt;=</code>），表示操作符左边的值会移动由右边数值指定的位数，再将得到的结果赋给左边的变量。</li>
 <li>在数字没有溢出的前提下，对于正数和负数，<strong>左移一位都相当于乘以2的1次方，左移<code>n</code>位就相当于乘以2的<code>n</code>次方，右移一位相当于除2，右移<code>n</code>位相当于除以2的<code>n</code>次方。</strong></li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 说明</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">说明</p>
 <p><strong>移位操作符</strong>的运算对象也是二进制的 “位”，但是只能用来处理整数类型。</p>
-<p>:::</p>
-<p>::: warning 注意</p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li><strong>逻辑运算符</strong>包括逻辑与<code>（&amp;&amp;）</code>、逻辑或<code>（||）</code>和逻辑非<code>（!）</code>，前两个是<strong>二元运算符</strong>，后一个是<strong>一元运算符</strong>。</li>
 </ul>
-<p>:::</p>
+</div>
 <blockquote>
 <p>参考：<a href="https://www.cnblogs.com/blknemo/p/14141417.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/blknemo/p/14141417.html</a></p>
 </blockquote>
@@ -1743,12 +1792,13 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li><strong>减一</strong></li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 位操作的黑科技玩法</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">位操作的黑科技玩法</p>
 <ul>
 <li>有一个叫做<code>Bit Twiddling Hacks</code>的外国网站收集了几乎所有位操作的黑科技玩法。</li>
 <li>网址：<a href="http://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel" target="_blank" rel="noopener noreferrer">http://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel</a></li>
 </ul>
-<p>:::</p>
+</div>
 <h3> n&amp;(n-1)的运用</h3>
 <ul>
 <li>
@@ -1768,13 +1818,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>一个数如果是 2 的指数，那么它的二进制表示一定只含有一个 1：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果使用 <code>n &amp; (n-1)</code> 的技巧就很简单了（注意运算符优先级，括号不可以省略）：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> a^a=0的运用</h3>
-<p>::: tip 异或运算的性质</p>
+<div class="hint-container tip">
+<p class="hint-container-title">异或运算的性质</p>
 <ul>
 <li>一个数和它本身做异或运算结果为 0，即 <code>a ^ a = 0</code>；一个数和 0 做异或运算的结果为它本身，即 <code>a ^ 0 = a</code>。</li>
 <li>满足<strong>结合律和交换律。</strong></li>
 <li>由于异或运算满足交换律和结合律，所以<strong>总是能把成对儿的数字消去，留下缺失的那个元素。</strong></li>
 </ul>
-<p>:::</p>
+</div>
 <p><strong>1、查找只出现一次的元素</strong></p>
 <p><code>LeetCode</code>相关题目：<a href="https://leetcode.cn/problems/single-number/" target="_blank" rel="noopener noreferrer">只出现一次的数字</a></p>
 <ul>
@@ -1795,8 +1846,9 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>思路四：利用一个数和它本身做异或运算结果为 0，一个数和 0 做异或运算还是它本身的性质。</li>
 </ul>
-<p>::: tip 异或运算满足交换律和结合律</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>:::</p>
+<div class="hint-container tip">
+<p class="hint-container-title">异或运算满足交换律和结合律</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
 <p>比如说 <code>nums = [0,3,1,4]</code>：</p>
 <ul>
 <li>
@@ -1855,7 +1907,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li><strong>对于这种具有单调性的函数，用 <code>for</code> 循环遍历，可以用二分查找进行降维打击。</strong></li>
 <li>搜索有多少个 <code>n</code> 满足 <code>trailingZeroes(n) == K</code>，其实就是在问，<strong>满足条件的 <code>n</code> 最小是多少，最大是多少，最大值和最小值一减，就可以算出来有多少个 <code>n</code> 满足条件</strong>，这就是二分查找中<strong>搜索左侧边界</strong>和<strong>搜索右侧边界</strong>。</li>
 </ul>
-<p>::: tip 寻找上界和下界</p>
+<div class="hint-container tip">
+<p class="hint-container-title">寻找上界和下界</p>
 <p>因为二分查找需要给一个<strong>搜索区间</strong>，也就是上界和下界，上述伪码中 <code>n</code> 的下界显然是 0，但上界是 <code>+inf</code>，这个正无穷应该如何表示出来呢？</p>
 <ul>
 <li>首先，数学上的正无穷肯定是无法编程表示出来的，我们一般的方法是用一个非常大的值，大到这个值一定不会被取到。比如说 <code>int</code> 类型的最大值 <code>INT_MAX</code>（<code>2^31 - 1</code>），还不够的话就 <code>long</code> 类型的最大值 <code>LONG_MAX</code>（<code>2^63 - 1</code>）。</li>
@@ -1863,7 +1916,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>这道题目实际上给了限制，<code>K</code> 是在 <code>[0, 10^9]</code> 区间内的整数，也就是说，<code>trailingZeroes(n)</code> 的结果最多可以达到 <code>10^9</code>。然后我们可以反推，当 <code>trailingZeroes(n)</code> 结果为 <code>10^9</code> 时，<code>n</code> 为多少？这个不需要你精确计算出来，你只要找到一个数 <code>hi</code>，使得 <code>trailingZeroes(hi)</code> 比 <code>10^9</code> 大，就可以把 <code>hi</code> 当做正无穷，作为搜索区间的上界。</li>
 <li><code>trailingZeroes</code> 函数是单调函数，那可以先算一下 <code>trailingZeroes(INT_MAX)</code> 的结果，比 <code>10^9</code> 小一些，那再用 <code>LONG_MAX</code> 算一下，远超 <code>10^9</code> 了，所以 <strong><code>LONG_MAX</code> 可以作为搜索的上界。</strong></li>
 </ul>
-<p>:::</p>
+</div>
 <ul>
 <li><strong>在区间 <code>[0, LONG_MAX]</code> 中寻找满足 <code>trailingZeroes(n) == K</code> 的左侧边界和右侧边界</strong>。</li>
 </ul>
@@ -1872,12 +1925,13 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>每次二分的时候都会调用一次 <code>trailingZeroes</code> 函数，复杂度 <code>O(logK)</code>；</li>
 <li>所以总体的时间复杂度就是 <code>O(logK)</code>。</li>
 </ul>
-<p>::: tip 规律和优化</p>
+<div class="hint-container tip">
+<p class="hint-container-title">规律和优化</p>
 <ul>
 <li><strong>这个题的答案其实不是<code>0</code>就是<code>5</code>，所以其实只需要判断阶乘结果末尾恰好有 <code>K</code> 个 <code>0</code>的值是否存在即可，如果存在，那么我们直接<code>return 5</code>；如果不存在，则直接<code>return 0</code>即可。</strong></li>
 <li>此优化<strong>效率提升明显。</strong></li>
 </ul>
-<p>:::</p>
+</div>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 高效寻找素数</h2>
 <h2> 高效进行模幂运算</h2>
 <p><code>LeetCode</code>相关题目：<a href="https://leetcode.cn/problems/super-pow/" target="_blank" rel="noopener noreferrer">超级次方</a></p>
@@ -1939,7 +1993,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><strong>递归快速幂</strong>【 <mark>重点掌握</mark> 】</p>
 </li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 注意</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">注意</p>
 <ul>
 <li>在实际问题中，题目常常会要求对一个<strong>大数取模</strong>，这是因为<strong>幂运算的计算结果可能会非常巨大。</strong></li>
 <li>快速幂也应当进行取模，此时应当注意：<strong>三种情况都需要考虑取模</strong>，如果取模的<code>base</code>较大，还应当使用<code>long</code>类型进行定义。</li>
@@ -1952,11 +2007,12 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 </li>
 </ul>
-<p>:::</p>
+</div>
 <ul>
 <li><strong>非递归快速幂</strong>【 <mark>重点掌握</mark> 】</li>
 </ul>
-<p>::: tip 引入</p>
+<div class="hint-container tip">
+<p class="hint-container-title">引入</p>
 <ul>
 <li>换一个角度来引入<strong>非递归的快速幂</strong>，还是7的10次方，但这次，把10写成<strong>二进制</strong>的形式，也就是 <code>0b1010</code> 。</li>
 <li>要计算 7<sup>0b1010</sup> ，可以怎么做？
@@ -1967,7 +2023,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 </li>
 </ul>
-<p>:::</p>
+</div>
 <p>不考虑取模的情况：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>考虑取模的情况：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><div class="highlight-line">&nbsp;</div><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
@@ -1992,12 +2048,13 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li><code>LeetCode</code>相关题目：</li>
 </ul>
 <p><a href="https://leetcode.cn/problems/powx-n/?show=1" target="_blank" rel="noopener noreferrer">Pow(x, n)</a>：考虑<strong>指数为负数</strong>的情况。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: warning 注意</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li><code>Java</code>中<code>int</code>类型的范围是<code>[-2147483648,2147483647]</code>，即最大值是2<sup>31</sup>-1，最小值是-2<sup>31</sup>。</li>
 <li>所以在测试用例<code>x=1，n=-2147483648</code>运行时，使用下面的代码会出现问题：</li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
 <p><a href="https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/?show=1" target="_blank" rel="noopener noreferrer">数值的整数次方</a></p>
 <h2> 同时寻找缺失和重复的元素</h2>
 <p><code>LeetCode</code>相关题目：<a href="https://leetcode.cn/problems/set-mismatch/" target="_blank" rel="noopener noreferrer">错误的集合</a></p>
@@ -2009,13 +2066,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>正常思路：首先记录每一个元素出现的次数，找到重复的元素，然后在找缺失的元素。</p>
 </li>
 </ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 复杂度分析</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">复杂度分析</p>
 <ul>
 <li>时间复杂度：<code>O(N)</code></li>
 <li>空间复杂度：<code>O(N)</code></li>
 <li><code>O(N)</code> 的时间复杂度遍历数组是无法避免的，所以可以想想办法如何降低空间复杂度，是否可以在 <code>O(1)</code> 的空间复杂度之下找到重复和缺失的元素？</li>
 </ul>
-<p>:::</p>
+</div>
 <ul>
 <li>思路分析（<strong>优化空间复杂度到<code>O(1)</code></strong>）
 <ul>
@@ -2027,14 +2085,15 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 </li>
 </ul>
-<p>::: tip 思路分析</p>
+<div class="hint-container tip">
+<p class="hint-container-title">思路分析</p>
 <ul>
 <li>用数组元素的绝对值做下标，然后让这个下标对应的元素置为负的，相当于<strong>把它标记为已访问过的元素</strong>，如果某个元素做下标时对应的元素值为负，则这个数是重复值。再次遍历数组<strong>寻找唯一没有置为负的那个元素</strong>，它的下标就是缺失的元素值。</li>
 <li>假设元素是 <code>[0..N-1]</code>，但<strong>题目要求是 <code>[1..N]</code></strong>，所以需要修改部分的值才能得到正确结果。</li>
 <li>时间复杂度：<code>O(N)</code></li>
 <li>空间复杂度：<code>O(1)</code></li>
 </ul>
-<p>:::</p>
+</div>
 <ul>
 <li>
 <p>原理图如下：</p>
@@ -2128,7 +2187,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h3> 数据结构的存储方式</h3>
 <p>数据结构的底层存储方式只有两种：<code>数组（顺序存储）和链表（链式存储）</code>。</p>
 <p>其他的数据结构，比如哈希表、栈、队列、堆、树、图等都是属于具体的上层建筑，都是在数组或者链表上的特殊操作，只是<code>API</code>特性不同而已。</p>
-<p>::: tip 数组</p>
+<div class="hint-container tip">
+<p class="hint-container-title">数组</p>
 <p>数组由于是紧凑连续存储，因此可以随机访问，通过索引快速找到对应的元素，而且相对节约存储空间。但正因为连续存储，内存空间必须一次性分配足，所以数组如果要扩容，需要先重新分配一块更大的空间，再把数据全部复制进去，时间复杂度为<code>O(N)</code>；而且如果想在数组中间和开始位置进行插入和删除操作，每次必须移动后面的所有数据以保持连续，时间复杂度为<code>O(N)</code>。</p>
 <p><strong>数组在开始、中间、最后位置的增删改查分析如下：</strong></p>
 <ul>
@@ -2136,8 +2196,9 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>中间位置：增加和删除都需要挪动元素，所以效率不高，但是查询和修改就比较高效。</li>
 <li>最后位置：增加和删除位置不需要挪动元素，效率比较高，同时查询和修改效率也比较高。</li>
 </ul>
-<p>:::</p>
-<p>::: tip 链表</p>
+</div>
+<div class="hint-container tip">
+<p class="hint-container-title">链表</p>
 <p>链表因为元素不连续，靠指针指向下一个元素的位置，所以不存在数组的扩容问题；如果知道某一元素的前驱和后继，操作指针即可删除该元素或者插入新元素，时间复杂度为<code>O(1)</code>。但是正因为存储空间不连续，你无法根据一个索引算出对应元素的地址，所以不能随机访问；而且由于每个元素必须存储指向前后元素位置的指针，因此会消耗相对更多的存储空间。</p>
 <p><strong>链表在开始、中间、最后位置的增删改查分析如下：</strong></p>
 <ul>
@@ -2145,7 +2206,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>中间位置：增加和删除元素只需要操作指针，效率较高，查询和修改元素需要从头节点开始进行遍历，时间复杂度为<code>O(N)</code>，所以效率不高。</li>
 <li>最后位置：增加和删除元素只需要操作指针，效率较高，查询和修改元素需要从头节点开始进行遍历，时间复杂度为<code>O(N)</code>，所以效率不高。</li>
 </ul>
-<p>:::</p>
+</div>
 <p>综上所述：</p>
 <ul>
 <li><strong>如果想要查询和修改比较高效，那就使用数组的底层结构。</strong></li>
@@ -2162,9 +2223,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><strong><code>N</code>叉树的遍历框架</strong>如下所示：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong><code>N</code>叉树的遍历又可以扩展到图的遍历</strong>，因为图就是好几个<code>N</code>叉树的结合体。但是图有可能出现环，这其实很好解决，使用布尔数组<code>visited</code>做标记就可以了。所谓的框架思维就是记住这些遍历框架，根据具体问题在框架上添加代码即可。</p>
 <h3> 算法刷题指南</h3>
-<p>::: tip 数据结构和算法</p>
+<div class="hint-container tip">
+<p class="hint-container-title">数据结构和算法</p>
 <p><strong>数据结构</strong>是工具，<strong>算法</strong>是通过合适的工具解决特定问题的方法。</p>
-<p>:::</p>
+</div>
 <ul>
 <li>先刷<strong>二叉树</strong>，因为二叉树是最容易培养框架思维的，而且大部分的常考算法<strong>本质上都是树的遍历问题。</strong></li>
 <li>试着<strong>从框架看问题</strong>，而不要纠结于细节。</li>
@@ -2189,7 +2251,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h3> 算法框架</h3>
 <p><code>BFS</code>出现的场景：问题的本质就是让你<strong>在一幅图中找到从起点到终点的最近距离</strong>。所谓的<code>BFS</code>本质就是解决该问题的，但是实际中很多题目的描述都是这个本质场景的各种变体，要把现实问题的场景抽象成一幅图，使用<code>BFS</code>的思想进行求解。</p>
 <p>框架如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 变量解释</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">变量解释</p>
 <ul>
 <li>
 <p><code>q</code>就是核心的<code>队列</code>数据结构；</p>
@@ -2204,7 +2267,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><code>visited</code>的主要作用是防止走回头路，大部分时候都是必需的，但是<strong>像一般的二叉树结构，没有子节点到父节点的指针，不会走回头路就不需要<code>visited</code></strong>；</p>
 </li>
 </ul>
-<p>:::</p>
+</div>
 <h3> 二叉树的最小高度</h3>
 <ul>
 <li>
@@ -2215,26 +2278,29 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </li>
 </ul>
 <p>代码如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 理解</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">理解</p>
 <p>整个算法过程<strong>通过画图</strong>可以很容易的理解，后面的几个<code>LeetCode</code>题目也建议通过<strong>画图</strong>的方式加深对<code>BFS</code>思想的理解。</p>
-<p>:::</p>
+</div>
 <ul>
 <li>两个问题</li>
 </ul>
-<p>::: tip 为什么BFS可以找到最短距离，DFS不行吗？</p>
+<div class="hint-container tip">
+<p class="hint-container-title">为什么BFS可以找到最短距离，DFS不行吗？</p>
 <ul>
 <li><code>BFS</code>的逻辑是<code>depth</code>每增加一次，队列中所有节点都向前迈了一步，这个逻辑保证了一旦找到一个终点，走的步数是最少的，<code>BFS</code>的时间复杂度最坏情况是<code>O(N)</code>。</li>
 <li><code>DFS</code>也是可以找到最短路径的，时间复杂度也是<code>O(N)</code>，但是实际上比<code>BFS</code>低效很多。这是因为DFS是靠递归的堆栈记录走过的路径的，如果要找到最短路径，肯定要把二叉树中的所有树杈都走完，然后才能对比得到最短路径，但是<code>BFS</code>借助队列可以做到一步一步“齐头并进”，是可以在还没遍历完整的一棵树的时候就可以找到最短距离。</li>
 <li>总结一下：<code>DFS</code>是线，<code>BFS</code>是面，<code>DFS</code>是单打独斗，<code>BFS</code>是集体行动。</li>
 </ul>
-<p>:::</p>
-<p>::: tip 既然BFS那么好，那么为什么还需要DFS？</p>
+</div>
+<div class="hint-container tip">
+<p class="hint-container-title">既然BFS那么好，那么为什么还需要DFS？</p>
 <ul>
 <li><code>BFS</code>是可以找到最短路径，但是其空间复杂度高，而<code>DFS</code>的空间复杂度较低。</li>
 <li>假设有一棵树是满二叉树，节点数为<code>N</code>，对于<code>DFS</code>算法来说，空间复杂度无非就是递归堆栈，在最坏情况下顶多就是树的高度，也就是<code>O(logN)</code>。但是对于<code>BFS</code>算法来说。队列中每次都会存储二叉树一层的节点，这样在最坏情况下空间复杂度应该是树的最下层节点的数量，也就是<code>N/2</code>，即<code>O(N)</code>。</li>
 <li><code>BFS</code>还是有代价的，一般来说在找最短路径的时候用的是<code>BFS</code>，其他情况用的还是<code>DFS</code>多一些（递归代码好写）。</li>
 </ul>
-<p>:::</p>
+</div>
 <ul>
 <li><code>LeetCode</code>相关题目</li>
 </ul>
@@ -2245,10 +2311,11 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><a href="https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/" target="_blank" rel="noopener noreferrer">N叉树的层序遍历</a></p>
 <p><a href="https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="noopener noreferrer">二叉树的锯齿形层序遍历</a></p>
 <p><a href="https://leetcode-cn.com/problems/path-sum/" target="_blank" rel="noopener noreferrer">路径之和</a></p>
-<p>::: tip 小总结</p>
+<div class="hint-container tip">
+<p class="hint-container-title">小总结</p>
 <p><code>BFS</code>是广度优先搜索，其抽象是以图的概念进行说明，但是<strong>在二叉树等数据结构中却频繁用到该算法</strong>，这是因为<strong>二叉树、二维数组等就是图的具体化</strong>。</p>
 <p>图中某个节点向四周扩散具体到二叉树、二维数组等数据结构分别是：<strong>二叉树某个节点扩散到其左右子节点、二维数组某个节点扩散到其上下左右四个子节点</strong>。但是树结构一般不用<code>visited</code>来防止走回头路，因为根本就没有子节点到父节点的指针存在，所以不用担心会走回头路。</p>
-<p>:::</p>
+</div>
 <h3> 解开密码锁的最少次数</h3>
 <ul>
 <li>
@@ -2274,21 +2341,24 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>没有对<code>deadends</code>进行处理。这些死亡密码是不能出现的，所以在碰到这些密码的时候应该跳过。</li>
 </ul>
 <p>通过对上述代码进行修改：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 优化</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">优化</p>
 <p><code>deads</code>集合和<code>visited</code>集合都是记录不合法访问的集合，可以不需要 <code>visited</code> 这个哈希集合，直接将遍历过的元素加到<code>deads</code>集合中，效果是⼀样的，可能更加优雅⼀些。</p>
-<p>:::</p>
+</div>
 <p><code>BFS</code>算法还有一种稍微高级的优化思路：<code>双向BFS</code>，使用<code>双向BFS</code>可以进一步提高算法的效率。</p>
-<p>::: tip 传统的BFS和双向BFS的区别</p>
+<div class="hint-container tip">
+<p class="hint-container-title">传统的BFS和双向BFS的区别</p>
 <p><code>传统的BFS框架</code>就是从起点开始向四周扩散，遇到终点时停⽌；⽽<code>双向BFS</code> 则是从起点和终点同时开始扩散，当两边有交集的时候停⽌。</p>
-<p>:::</p>
+</div>
 <p>从 <code>Big O</code> 表⽰法分析算法复杂度的话，它俩的最坏复杂度都是 <code>O(N)</code> ，但是实际上<code>双向BFS</code> 确实会快⼀些。</p>
 <p>按照<code>传统BFS</code>算法的策略，会把整棵树的节点都搜索⼀遍，最后找到<code>target</code> ；⽽<code>双向BFS</code>其实只遍历了半棵树就出现了交集，也就是找到了最短距离，明显实现了效率上的提升。</p>
-<p>::: warning 双向BFS的局限性</p>
+<div class="hint-container warning">
+<p class="hint-container-title">双向BFS的局限性</p>
 <ul>
 <li><code>双向BFS</code>也有局限，因为必须要知道终点在哪⾥。</li>
 <li>⽐如刚才讨论的⼆叉树最⼩⾼度的问题，⼀开始根本就不知道终点在哪⾥，也就⽆法使⽤<code>双向BFS</code>；但是第⼆个密码锁的问题，是可以使⽤<code>双向BFS</code>算法来提⾼效率。</li>
 </ul>
-<p>:::</p>
+</div>
 <p>使用<code>双向BFS</code>进行优化：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>不再使⽤队列，⽽是使⽤ <code>HashSet</code> ⽅便快速判断两个集合是否有交集。</li>
@@ -2296,9 +2366,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 </ul>
 <p><code>双向BFS</code>还有⼀个优化，就是每次将<strong>少的那个集合</strong>进行扩散，避免轮流扩散<code>q1</code>和<code>q2</code>。</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因为按照 <code>BFS</code> 的逻辑，队列（集合）中的元素越多，扩散之后新的队列 （集合）中的元素就越多；在<code>双向BFS</code>算法中，如果我们每次都选择⼀个较⼩的集合进⾏扩散，那么占⽤的空间增⻓速度就会慢⼀些，效率就会⾼⼀ 些。</p>
-<p>::: tip 时间复杂度</p>
+<div class="hint-container tip">
+<p class="hint-container-title">时间复杂度</p>
 <p>⽆论<code>传统BFS</code>还是<code>双向BFS</code>，⽆论做不做优化，从<code>Big O</code>衡量标准来看，时间复杂度都是⼀样的。因为<code>双向BFS</code>的代码只是更换了返回结果的方式（哈希集合是否有交集），每次进行扩散的方式不是并行扩散的，而是轮流进行扩散。</p>
-<p>:::</p>
+</div>
 <ul>
 <li><code>LeetCode</code>相关题目</li>
 </ul>
@@ -2325,12 +2396,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h4> 寻找无环单链表的中点</h4>
 <p>最直接的思路：先遍历一遍链表，算出链表的长度<code>n</code>，然后再一次遍历链表，走<code>n/2</code>步，这样就得到了链表的中点。</p>
 <p>漂亮的思路：使用双指针，让快指针一次前进两步，慢指针一次前进一步，当快指针到达链表尽头的时候，慢指针就处于链表的中间位置。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>::: tip 注意</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">注意</p>
 <p>当链表长度为奇数的时候，<code>slow</code>恰巧停留在中间位置；当链表长度为偶数的时候，<code>slow</code>最终的位置是中间偏右。</p>
-<p>:::</p>
-<p>::: warning 寻找链表中点作用</p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">寻找链表中点作用</p>
 <p>寻找链表中点的一个重要作用是对链表进行归并排序，可以尝试参考数组的归并排序写出链表的归并排序。</p>
-<p>:::</p>
+</div>
 <h4> 寻找单链表的倒数第K个元素</h4>
 <p>使用快慢指针，让快指针先走<code>k</code>步，然后快慢指针开始以相同速率前进，这样当快指针到链表末尾的时候，慢指针所在的位置就是链表倒数第<code>k</code>个节点（为了简化，假设<code>k</code>不会超过链表长度）。</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>LeetCode相关题目：</p>
@@ -2351,13 +2424,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 滑动窗口算法</h4>
 <p>滑动窗口算法是双指针技巧的最高境界，<strong>严格讲，它是快慢指针在数组（字符串）上的应用</strong>。若掌握该算法，可以<strong>解决一大类字符串匹配问题</strong>。该部分比前面稍微复杂，可以查看后续的滑动窗口算法框架。</p>
 <h2> 二分搜索算法</h2>
-<p>::: tip 一个笑话
-有一天阿东到图书馆借了<code>N</code>本书，出图书馆的时候，警报响了，于是保安把阿东拦下，
+<div class="hint-container tip">
+<p class="hint-container-title">一个笑话</p>
+<p>有一天阿东到图书馆借了<code>N</code>本书，出图书馆的时候，警报响了，于是保安把阿东拦下，
 要检查哪本书没有登记出借。阿东正准备把每一本书放在报警器下过一下，以找出引发警报的书，但是保安露出不屑的眼神：你连二分搜索都不会吗？</p>
 <p>于是保安把书分成两堆，让第一堆过一下报警器，报警器响；于是再把这堆书分成
 两堆。最终，检测了<code>logN</code>次之后，保安成功地找到了那本引起警报的书，露出了得意和嘲讽的笑容。于是阿东背着剩下的书走了。</p>
 <p>从此，图书馆丢了<code>N-1</code>本书。</p>
-<p>:::</p>
+</div>
 <p>二分搜索并不简单，<code>Knuth</code>“大佬”（发明<code>KMP</code>算法的那位）是这么评价二分搜索的：</p>
 <p><code>Although the basic idea of binary search is comparatively straightforward, the details canbe surprisingly tricky.</code></p>
 <p><strong>说人话就是：思路很简单，细节是魔鬼。</strong></p>
@@ -2410,9 +2484,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <category>算法</category>
       <category>数据结构</category>
       <content:encoded><![CDATA[<h2> 如何高效寻找素数</h2>
-<p>::: tip 素数</p>
+<div class="hint-container tip">
+<p class="hint-container-title">素数</p>
 <p>如果一个数只能被1和它本身整除，那么这个数就是素数。</p>
-<p>:::</p>
+</div>
 <p>实现一个函数，输入一个正整数<code>n</code>，函数返回区间<code>[2,n)</code>中素数的个数。</p>
 <p>函数签名如下：<code>int countPrimes(int n)</code></p>
 <h3> 一般实现</h3>
