@@ -3,12 +3,12 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-04-09T14:20:42.086Z</updated>
+  <updated>2023-04-16T10:32:07.762Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
-  <category term="图床"/>
   <category term="运维"/>
+  <category term="图床"/>
   <category term="mysql"/>
   <category term="linux"/>
   <category term="生活"/>
@@ -33,10 +33,160 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">git实时拉取GitHub仓库代码</title>
+    <id>https://blog.lxip.top/notes/linux/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
+    <link href="https://blog.lxip.top/notes/linux/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
+    <updated>2023-04-16T10:32:07.795Z</updated>
+    <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
+（gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
+<p>使用gitee仓库镜像管理（目前是限时开放）</p>
+<p>直接上效果图：
+</p>
+<blockquote>
+<p>选择直接需要同步的仓库</p>
+</blockquote>
+<p>获取GitHub私人令牌的方式简单贴一张图：
+
+具体如何创建GitHub私人令牌步骤就不展开了</p>
+<p>效果如下：
+</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
+（gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
+<p>使用gitee仓库镜像管理（目前是限时开放）</p>
+<p>直接上效果图：
+</p>
+<blockquote>
+<p>选择直接需要同步的仓库</p>
+</blockquote>
+<p>获取GitHub私人令牌的方式简单贴一张图：
+
+具体如何创建GitHub私人令牌步骤就不展开了</p>
+<p>效果如下：
+</p>
+]]></content>
+    <category term="运维"/>
+    <published>2023-04-16T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
+    <id>https://blog.lxip.top/notes/linux/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
+    <link href="https://blog.lxip.top/notes/linux/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
+    <updated>2023-04-16T10:32:07.806Z</updated>
+    <summary type="html"><![CDATA[<h2> 前置知识</h2>
+<p>需要对git命令比较熟悉，可以参考<a href="/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
+<h2> 背景</h2>
+<blockquote>
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）
+再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）
+最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<h2> 前置知识</h2>
+<p>需要对git命令比较熟悉，可以参考<a href="/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
+<h2> 背景</h2>
+<blockquote>
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）
+再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）
+最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
+</blockquote>
+<h2> 具体步骤</h2>
+<blockquote>
+<p>在一个git仓库下操作如下的命令</p>
+</blockquote>
+<p>创建orphan分支</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>这就是创建orphan类型的分支
+为什么使用orphan类型的分支
+原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响
+git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
+</blockquote>
+<p>检查分支状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>会列出<strong>本地</strong>所有的分支</p>
+</blockquote>
+<p>提交代码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>为什么push？
+因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p>创建其他orphan分支时，建议切换回主分支以后再新建 orphan 分支</p>
+</blockquote>
+<h2> 扩展</h2>
+<p>切换分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>此时新的分支会有当前分支的所有文件</p>
+</blockquote>
+<h2> 附件</h2>
+<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a>
+参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a>
+参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
+]]></content>
+    <category term="运维"/>
+    <published>2023-04-16T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">常用的git命令</title>
+    <id>https://blog.lxip.top/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html</id>
+    <link href="https://blog.lxip.top/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html"/>
+    <updated>2023-04-16T10:32:07.814Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>记录目前常用到的基本命令</p>
+</blockquote>
+<h2> 常用命令</h2>
+<h3> 提交代码的步骤</h3>
+<p>检查当前文件状态：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>git status
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>记录目前常用到的基本命令</p>
+</blockquote>
+<h2> 常用命令</h2>
+<h3> 提交代码的步骤</h3>
+<p>检查当前文件状态：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>提交代码：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>注意：可以不需要斜杠</p>
+</blockquote>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>推送代码到远程仓库：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>将本地仓库中的，当前main分支的代码提交到远程仓库</p>
+</blockquote>
+<h3> 扩展</h3>
+<p>创建分支</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>这就是创建orphan类型的分支，其他步骤就是简单的提交代操作了。</p>
+</blockquote>
+<p>检查分支状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>会列出<strong>本地</strong>所有的分支</p>
+</blockquote>
+<p>查看所有分支</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>列出所有的分支(远程和本地)</p>
+</blockquote>
+<p>切换分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>此时新的分支会有当前分支的所有文件</p>
+</blockquote>
+<h2> 附件</h2>
+<p>命令大全：
+</p>
+<p>参考：<a href="https://www.runoob.com/note/56524" target="_blank" rel="noopener noreferrer">https://www.runoob.com/note/56524</a></p>
+]]></content>
+    <category term="运维"/>
+    <published>2023-04-16T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-04-09T14:20:42.115Z</updated>
+    <updated>2023-04-16T10:32:07.821Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -100,7 +250,7 @@
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-04-09T14:20:42.158Z</updated>
+    <updated>2023-04-16T10:32:07.864Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -334,7 +484,7 @@
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-04-09T14:20:42.164Z</updated>
+    <updated>2023-04-16T10:32:07.870Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -399,7 +549,7 @@
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-04-09T14:20:42.168Z</updated>
+    <updated>2023-04-16T10:32:07.873Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -429,7 +579,7 @@
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-04-09T14:20:42.192Z</updated>
+    <updated>2023-04-16T10:32:07.903Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -774,7 +924,7 @@
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/linux/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/linux/gitMore.html"/>
-    <updated>2023-04-09T14:20:42.223Z</updated>
+    <updated>2023-04-16T10:32:07.910Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -874,7 +1024,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/linux/git.html</id>
     <link href="https://blog.lxip.top/notes/linux/git.html"/>
-    <updated>2023-04-09T14:20:42.229Z</updated>
+    <updated>2023-04-16T10:32:07.915Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支
 使用 git branch命令，如下：git branch
@@ -959,7 +1109,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-04-09T14:20:42.229Z</updated>
+    <updated>2023-04-16T10:32:07.916Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -967,7 +1117,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-04-09T14:20:42.234Z</updated>
+    <updated>2023-04-16T10:32:07.920Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1079,7 +1229,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-04-09T14:20:42.315Z</updated>
+    <updated>2023-04-16T10:32:08.001Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -1221,7 +1371,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">ArrayList</title>
     <id>https://blog.lxip.top/notes/javacore/Java%E9%9B%86%E5%90%88-ArrayList.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java%E9%9B%86%E5%90%88-ArrayList.html"/>
-    <updated>2023-04-09T14:20:42.372Z</updated>
+    <updated>2023-04-16T10:32:08.050Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p><code>ArrayList</code>实现了<code>List</code>接口，是顺序容器，即元素存放的数据与放进去的顺序相同，允许放入<code>null</code>元素，底层通过<strong>数组实现</strong>。除该类未实现同步外，其余跟<code>Vector</code>大致相同。每个<code>ArrayList</code>都有一个容量<code>(capacity)</code>，表示底层数组的实际大小，容器内存储元素的个数不能多于当前容量。当向容器中添加元素时，如果容量不足，容器会自动增大底层数组的大小。前面已经提过，<code>Java</code>泛型只是编译器提供的语法糖，所以这里的数组是一个<code>Object</code>数组，以便能够容纳任何类型的对象。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 概述</h2>
@@ -1322,7 +1472,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">集合类关系图</title>
     <id>https://blog.lxip.top/notes/javacore/Java%E9%9B%86%E5%90%88-%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java%E9%9B%86%E5%90%88-%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE.html"/>
-    <updated>2023-04-09T14:20:42.398Z</updated>
+    <updated>2023-04-16T10:32:08.080Z</updated>
     <summary type="html"><![CDATA[<h2> 类关系图</h2>
 <h2> 简单介绍</h2>
 <ul>
@@ -1459,14 +1609,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-04-09T14:20:42.398Z</updated>
+    <updated>2023-04-16T10:32:08.080Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://blog.lxip.top/questionskills/softguide/</id>
     <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-04-09T14:20:42.405Z</updated>
+    <updated>2023-04-16T10:32:08.087Z</updated>
     <summary type="html"><![CDATA[<h2> 组件库</h2>
 <ul>
 <li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
@@ -1660,7 +1810,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-04-09T14:20:42.406Z</updated>
+    <updated>2023-04-16T10:32:08.088Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -1683,7 +1833,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-04-09T14:20:42.408Z</updated>
+    <updated>2023-04-16T10:32:08.090Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -1747,7 +1897,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-04-09T14:20:42.410Z</updated>
+    <updated>2023-04-16T10:32:08.092Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -1871,7 +2021,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-04-09T14:20:42.417Z</updated>
+    <updated>2023-04-16T10:32:08.105Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -1894,7 +2044,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-04-09T14:20:42.418Z</updated>
+    <updated>2023-04-16T10:32:08.106Z</updated>
     <summary type="html"><![CDATA[
 ]]></summary>
     <content type="html"><![CDATA[
@@ -1905,7 +2055,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-04-09T14:20:42.420Z</updated>
+    <updated>2023-04-16T10:32:08.107Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -1934,7 +2084,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-04-09T14:20:42.420Z</updated>
+    <updated>2023-04-16T10:32:08.108Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -1942,7 +2092,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">动态规划</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html"/>
-    <updated>2023-04-09T14:20:42.420Z</updated>
+    <updated>2023-04-16T10:32:08.108Z</updated>
     <category term="算法"/>
     <category term="数据结构"/>
   </entry>
@@ -1950,7 +2100,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">数学运算</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97.html"/>
-    <updated>2023-04-09T14:20:42.513Z</updated>
+    <updated>2023-04-16T10:32:08.198Z</updated>
     <summary type="html"><![CDATA[<h2> 常用的位操作</h2>
 <h3> Java中的位操作符</h3>
 <div class="hint-container warning">
@@ -2386,7 +2536,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">数据结构</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"/>
-    <updated>2023-04-09T14:20:42.518Z</updated>
+    <updated>2023-04-16T10:32:08.209Z</updated>
     <summary type="html"><![CDATA[<h2> 手写LRU缓存淘汰算法</h2>
 <h3> LRU算法描述</h3>
 <h3> LRU算法设计</h3>
@@ -2458,7 +2608,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">核心套路</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%A0%B8%E5%BF%83%E5%A5%97%E8%B7%AF.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E6%A0%B8%E5%BF%83%E5%A5%97%E8%B7%AF.html"/>
-    <updated>2023-04-09T14:20:42.574Z</updated>
+    <updated>2023-04-16T10:32:08.261Z</updated>
     <summary type="html"><![CDATA[<h2> 学习算法和刷题的框架思维</h2>
 <p>学习解决问题的<strong>思路、套路、框架</strong>，养成“框架思维”，<strong>不应该纠结于问题的细节</strong>，把握问题的共性和本质，做到举一反三。</p>
 <h3> 数据结构的存储方式</h3>
@@ -2765,7 +2915,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">算法思维</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4.html"/>
-    <updated>2023-04-09T14:20:42.575Z</updated>
+    <updated>2023-04-16T10:32:08.261Z</updated>
     <category term="算法"/>
     <category term="数据结构"/>
   </entry>
@@ -2773,7 +2923,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">高频面试</title>
     <id>https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95.html</id>
     <link href="https://blog.lxip.top/notes/algdata/lbld/%E7%AE%97%E6%B3%95%E5%B0%8F%E6%8A%84%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95.html"/>
-    <updated>2023-04-09T14:20:42.581Z</updated>
+    <updated>2023-04-16T10:32:08.276Z</updated>
     <summary type="html"><![CDATA[<h2> 如何高效寻找素数</h2>
 <div class="hint-container tip">
 <p class="hint-container-title">素数</p>
@@ -2856,7 +3006,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Netty核心</title>
     <id>https://blog.lxip.top/notes/framework/netty/Netty%E6%A0%B8%E5%BF%83.html</id>
     <link href="https://blog.lxip.top/notes/framework/netty/Netty%E6%A0%B8%E5%BF%83.html"/>
-    <updated>2023-04-09T14:20:42.991Z</updated>
+    <updated>2023-04-16T10:32:08.895Z</updated>
     <summary type="html"><![CDATA[<h2> 一、概述</h2>
 <h3> 1、什么是Netty</h3>
 <div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token class-name">Netty</span> is an asynchronous event<span class="token operator">-</span>driven network application framework <span class="token keyword">for</span> rapid development of maintainable high performance protocol servers <span class="token operator">&amp;</span> clients<span class="token punctuation">.</span>
@@ -3717,7 +3867,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Netty高级</title>
     <id>https://blog.lxip.top/notes/framework/netty/Netty%E9%AB%98%E7%BA%A7.html</id>
     <link href="https://blog.lxip.top/notes/framework/netty/Netty%E9%AB%98%E7%BA%A7.html"/>
-    <updated>2023-04-09T14:20:43.042Z</updated>
+    <updated>2023-04-16T10:32:08.938Z</updated>
     <summary type="html"><![CDATA[<h2> 一、优化</h2>
 <h3> 1、扩展序列化算法</h3>
 <h4> 1、序列化接口</h4>
@@ -3891,7 +4041,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-04-09T14:20:43.047Z</updated>
+    <updated>2023-04-16T10:32:08.943Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>

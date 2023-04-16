@@ -6,12 +6,12 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 09 Apr 2023 14:20:42 GMT</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2023 14:20:42 GMT</lastBuildDate>
+    <pubDate>Sun, 16 Apr 2023 10:32:07 GMT</pubDate>
+    <lastBuildDate>Sun, 16 Apr 2023 10:32:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>图床</category>
     <category>运维</category>
+    <category>图床</category>
     <category>mysql</category>
     <category>linux</category>
     <category>生活</category>
@@ -32,6 +32,128 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>git实时拉取GitHub仓库代码</title>
+      <link>https://blog.lxip.top/notes/linux/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/notes/linux/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">git实时拉取GitHub仓库代码</source>
+      <description>首先你需要有一个gitee账号和一个GitHub账号 （gitee需要绑定手机号并且需要绑定对应的GitHub账号） 使用gitee仓库镜像管理（目前是限时开放） 直接上效果图： 选择直接需要同步的仓库 获取GitHub私人令牌的方式简单贴一张图： 具体如何创建GitHub私人令牌步骤就不展开了 效果如下：</description>
+      <category>运维</category>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
+（gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
+<p>使用gitee仓库镜像管理（目前是限时开放）</p>
+<p>直接上效果图：
+</p>
+<blockquote>
+<p>选择直接需要同步的仓库</p>
+</blockquote>
+<p>获取GitHub私人令牌的方式简单贴一张图：
+
+具体如何创建GitHub私人令牌步骤就不展开了</p>
+<p>效果如下：
+</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>使用 GitHub 的单个仓库管理多个项目</title>
+      <link>https://blog.lxip.top/notes/linux/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</link>
+      <guid>https://blog.lxip.top/notes/linux/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">使用 GitHub 的单个仓库管理多个项目</source>
+      <description>前置知识 需要对git命令比较熟悉，可以参考常用的git命令 (常用的git命令.md) 背景 练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看） 再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理 起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全c...</description>
+      <category>运维</category>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 前置知识</h2>
+<p>需要对git命令比较熟悉，可以参考<a href="/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
+<h2> 背景</h2>
+<blockquote>
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）
+再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）
+最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
+</blockquote>
+<h2> 具体步骤</h2>
+<blockquote>
+<p>在一个git仓库下操作如下的命令</p>
+</blockquote>
+<p>创建orphan分支</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>这就是创建orphan类型的分支
+为什么使用orphan类型的分支
+原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响
+git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
+</blockquote>
+<p>检查分支状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>会列出<strong>本地</strong>所有的分支</p>
+</blockquote>
+<p>提交代码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>为什么push？
+因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p>创建其他orphan分支时，建议切换回主分支以后再新建 orphan 分支</p>
+</blockquote>
+<h2> 扩展</h2>
+<p>切换分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>此时新的分支会有当前分支的所有文件</p>
+</blockquote>
+<h2> 附件</h2>
+<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a>
+参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a>
+参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>常用的git命令</title>
+      <link>https://blog.lxip.top/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html</link>
+      <guid>https://blog.lxip.top/notes/linux/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">常用的git命令</source>
+      <description>记录目前常用到的基本命令 常用命令 提交代码的步骤 检查当前文件状态： 提交代码：&amp;gt;注意：可以不需要斜杠 推送代码到远程仓库：&amp;gt;将本地仓库中的，当前main分支的代码提交到远程仓库 扩展 创建分支&amp;gt; 这就是创建orphan类型的分支，其他步骤就是简单的提交代操作了。 检查分支状态&amp;gt;会列出本地所有的分支 查看所有分支&amp;gt;列出所有的分支(远程和本地) 切换分...</description>
+      <category>运维</category>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>记录目前常用到的基本命令</p>
+</blockquote>
+<h2> 常用命令</h2>
+<h3> 提交代码的步骤</h3>
+<p>检查当前文件状态：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>提交代码：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>注意：可以不需要斜杠</p>
+</blockquote>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>推送代码到远程仓库：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>将本地仓库中的，当前main分支的代码提交到远程仓库</p>
+</blockquote>
+<h3> 扩展</h3>
+<p>创建分支</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>这就是创建orphan类型的分支，其他步骤就是简单的提交代操作了。</p>
+</blockquote>
+<p>检查分支状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>会列出<strong>本地</strong>所有的分支</p>
+</blockquote>
+<p>查看所有分支</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>列出所有的分支(远程和本地)</p>
+</blockquote>
+<p>切换分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
+<div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>此时新的分支会有当前分支的所有文件</p>
+</blockquote>
+<h2> 附件</h2>
+<p>命令大全：
+</p>
+<p>参考：<a href="https://www.runoob.com/note/56524" target="_blank" rel="noopener noreferrer">https://www.runoob.com/note/56524</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>PicGo配置多图床仓库</title>
       <link>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</link>
