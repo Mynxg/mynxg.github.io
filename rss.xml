@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 17 Apr 2023 03:36:58 GMT</pubDate>
-    <lastBuildDate>Mon, 17 Apr 2023 03:36:58 GMT</lastBuildDate>
+    <pubDate>Mon, 17 Apr 2023 06:04:06 GMT</pubDate>
+    <lastBuildDate>Mon, 17 Apr 2023 06:04:06 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>运维</category>
@@ -15,6 +15,7 @@
     <category>mysql</category>
     <category>linux</category>
     <category>生活</category>
+    <category>Java</category>
     <category>实战项目</category>
     <category>软件教程</category>
     <category>系统设计</category>
@@ -1049,6 +1050,136 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content:encoded>
     </item>
     <item>
+      <title>Java8新特性</title>
+      <link>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</link>
+      <guid>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Java8新特性</source>
+      <description>Optional类 引入 NPE问题就是在开发中经常碰到的NullPointerException，即空指针问题，Optional类就是用来优雅解决该问题的方案。 比如大家可能都有这样的经历：调用一个方法得到了返回值却不能直接将返回值作为参数去调用别的方法。我们首先要判断这个返回值是否为null，只有在非空的前提下才能将其作为其他方法的参数。 以用户类...</description>
+      <category>Java</category>
+      <content:encoded><![CDATA[<h2> Optional类</h2>
+<h3> 引入</h3>
+<p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
+<p>比如大家可能都有这样的经历：调用一个方法得到了返回值却不能直接将返回值作为参数去调用别的方法。我们首先要判断这个返回值是否为<code>null</code>，只有在非空的前提下才能将其作为其他方法的参数。</p>
+<p>以用户类和地址类举例说明其用法：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这种代码可能会出现空指针问题，在实际开发中，如果不使用<code>Optional</code>类，极其不优雅的处理方式如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="highlight-lines"><br><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的代码保证了代码的第三行、第五行、第七行肯定不会出现空指针，但是这个代码真的是非常的冗长和丑陋。</p>
+<p><strong><code>java.util</code>包下面的<code>Optional</code>类提供了一套API来处理一个对象是否为<code>null</code>值的问题。</strong></p>
+<h3> 源码解读及各API的使用</h3>
+<p>部分源码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其本质是内部有一个泛型容器存储外部需要判断<code>null</code>值的对象，同时提供了两个私有的构造函数，不能被外部所调用，只能由类内部的函数调用</p>
+<ul>
+<li>无参数的构造函数提供一个<code>value=null</code>的<code>Optional</code>对象</li>
+<li>有参数的构造函数提供一个<code>value</code>一定不能为<code>null</code>的<code>Optional</code>对象，因为它调用了<code>Objects</code>类的<code>requireNonNull</code>方法。</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> of</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个静态方法，调用有参数的构造函数，返回的是<code>value</code>值一定不为<code>null</code>的<code>Optional</code>对象，因为有参数的构造方法底层调用了<code>Objects</code>的<code>requireNonNull</code>方法，如果传入的<code>value</code>为<code>null</code>值，那么一定会报空指针异常。不允许<code>value</code>为<code>null</code>，实际开发中不常用。</p>
+<h4> empty</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个静态方法，直接将类初始化时加载的<code>value</code>为<code>null</code>的<code>Optional</code>对象给用户。</p>
+<h4> ofNullable</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个静态方法，代表<code>value</code>值是可为空的。如果为<code>null</code>值，那么返回一个<code>value</code>为<code>null</code>的<code>Optional</code>对象；如果不为<code>null</code>值，那么返回一个<code>value</code>不为<code>null</code>的<code>Option</code>对象。允许<code>value</code>为<code>null</code>，实际开发中常用。</p>
+<p><strong>与<code>of</code>的区别：当<code>value</code>值为<code>null</code>时，<code>of</code>会报<code>NullPointerException</code>异常；<code>ofNullable</code>不会<code>throw Exception</code>，<code>ofNullable</code>直接返回一个<code>EMPTY</code>对象（<code>value</code>为<code>null</code>的<code>Optional</code>对象）。</strong></p>
+<div class="hint-container tip">
+<p class="hint-container-title">那是不是意味着，我们在项目中只用ofNullable函数而不用of函数呢?</p>
+<ul>
+<li>不是的，一个东西存在那么自然有存在的价值。</li>
+<li>当我们在运行过程中，不想隐藏<code>NullPointerException</code>，而是要立即报告，这种情况下就用<code>of</code>函数。</li>
+<li>但是不得不承认，这样的场景真的很少。</li>
+</ul>
+</div>
+<h4> orElse</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这是一个实例方法，会首先判断调用它的<code>Optional</code>对象中的<code>value</code>值，如果为不为<code>null</code>，那么就返回该<code>value</code>值，如果为<code>null</code>，就返回传入的<code>other</code>对象。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> orElseGet</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该方法与<code>orElse</code>方法类似，只不过传入的<code>other</code>对象可以通过一个<strong>提供者函数式接口</strong>提供，这里可以改成<code>lambda</code>表达式的形式。为了方便对代码的理解，所以上面写的测试代码稍显复杂，实际开发中可以使用<code>lambda</code>表达式简化。</p>
+<h4> orElseThrow</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果<code>value</code>值不为<code>null</code>，那么直接返回，如果<code>value</code>值为<code>null</code>，可以自定义业务逻辑功能说明语句抛出异常，不影响后续代码执行。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> map</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果有值，则对其执行调用<code>mapper</code>函数得到返回值，将创建包含<code>mapper</code>返回值的<code>Optional</code>对象作为<code>map</code>方法返回值，否则返回空<code>Optional</code>对象。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>map</code>方法用来对<code>Optional</code>实例的值执行一系列操作。通过一组实现了<code>Function</code>接口的<code>lambda</code>表达式传入操作。</p>
+<h4> flatMap</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果有值，为其执行<code>mapper</code>函数返回<code>Optional</code>对象类型返回值，否则返回空<code>Optional</code>对象。<code>flatMap</code>与<code>map</code>方法类似，区别在于<code>flatMap</code>中的<code>mapper</code>返回值必须是<code>Optional</code>对象。调用结束时，<code>flatMap</code>不会对结果用<code>Optional</code>封装。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>flatMap</code>方法与<code>map</code>方法类似，区别在于<code>mapper</code>函数的返回值不同。<code>map</code>方法的<code>mapper</code>函数返回值可以是任何类型<code>T</code>，而<code>flatMap</code>方法的<code>mapper</code>函数必须是<code>Optional</code>对象。</p>
+<h4> filter</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果有值并且满足断言条件返回包含该值的<code>Optional</code>对象，否则返回空<code>Optional</code>对象。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> isPresent</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> ifPresent</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> get</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> equals</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> hashCode</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> toString</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 使用例子</h3>
+<ul>
+<li>基本使用</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>运行结果：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>在<code>Java8</code>中提高对象的<code>null</code>值安全性</li>
+</ul>
+<p>假设有如下的类层次结构：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>解决这种结构的深层嵌套路径是有点麻烦的，我们必须编写一堆<code>null</code>检查来确保不会导致一个 <code>NullPointerException</code>。</p>
+<p>我们可以通过利用<code>Optional</code>类型来摆脱所有这些<code>null</code>检查。<code>map</code>方法接收一个<code>Function</code>类型的<code>lambda</code>表达式，并自动将每个<code>function</code>的结果包装成一个<code>Optional</code>对象，这使我们能够在一行中进行多个 <code>map</code> 操作。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 使用总结</h3>
+<p>使用<code>Optional</code>工具类判断一个对象的<code>NPE</code>问题，一定要先通过其静态方法<code>（of、empty、ofNullable）</code>获得<code>Optional</code>对象，进而通过一些实例方法进行一系列的操作获得最后的对象。</p>
+<table>
+<thead>
+<tr>
+<th>API方法名称</th>
+<th>用处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>of</code></td>
+<td>为非<code>null</code>的值创建一个<code>Optional</code>对象。</td>
+</tr>
+<tr>
+<td><code>empty</code></td>
+<td>为<code>null</code>的值创建一个<code>Optional</code>对象。</td>
+</tr>
+<tr>
+<td><code>ofNullable</code></td>
+<td>为指定的值创建一个<code>Optional</code>对象，如果指定的值为<code>null</code>，则返回一个空的<code>Optional</code>对象。</td>
+</tr>
+<tr>
+<td><code>isPresent</code></td>
+<td>如果值不为<code>null</code>，则返回<code>true</code>，否则返回<code>false</code>。</td>
+</tr>
+<tr>
+<td><code>get</code></td>
+<td>如果<code>Optional</code>对象的值并不为空则将其返回，否则抛出<code>NoSuchElementException</code>。</td>
+</tr>
+<tr>
+<td><code>ifPresent</code></td>
+<td>如果<code>Optional</code>对象有值（不为空）则为其调用<code>Consumer</code>，否则不做处理</td>
+</tr>
+<tr>
+<td><code>orElse</code></td>
+<td>如果有值则将其返回，否则返回指定的其它值。</td>
+</tr>
+<tr>
+<td><code>orElseGet</code></td>
+<td><code>orElseGet</code>方法可以接受<code>Supplier</code>接口的实现用来生成默认值。</td>
+</tr>
+<tr>
+<td><code>orElseThrow</code></td>
+<td>如果有值则将其返回，否则抛出<code>Supplier</code>接口创建的异常。</td>
+</tr>
+<tr>
+<td><code>map</code></td>
+<td>如果有值，则对其执行调用<code>mapper</code>函数得到返回值，并且将创建包含<code>mapper</code>返回值的<code>Optional</code>对象作为<code>map</code>方法返回值，否则返回空<code>Optional</code>对象。</td>
+</tr>
+<tr>
+<td><code>flatMap</code></td>
+<td>如果有值，为其执行<code>mapper</code>函数返回<code>Optional</code>类型返回值，否则返回空<code>Optional</code>对象。<code>flatMap</code>与<code>map</code>方法类似，区别在于<code>flatMap</code>中的<code>mapper</code>返回值必须是<code>Optional</code>对象。调用结束时，<code>flatMap</code>不会对结果用<code>Optional</code>封装。</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>如果有值并且满足断言条件返回包含该值的<code>Optional</code>对象，否则返回空<code>Optional</code>对象。</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+    </item>
+    <item>
       <title>实战项目【开源项目】</title>
       <link>https://blog.lxip.top/questionskills/pracprojects/</link>
       <guid>https://blog.lxip.top/questionskills/pracprojects/</guid>
@@ -1404,7 +1535,12 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <guid>https://blog.lxip.top/resources/share/nav.html</guid>
       <source url="https://blog.lxip.top/rss.xml">个人导航</source>
       <category>快速导航</category>
-      <content:encoded><![CDATA[
+      <content:encoded><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
+{"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
+{"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
+{"title":"导航页","url":"https://navs.lxip.top/","desc":"导航","icon":"/navicon/yuque.png"},
+{"title":"兰空图床","url":"http://139.224.55.130:9080","desc":"方向代理有问题~~~","icon":"/navicon/dd.jpg"}
+]'></NavCard> -->
 ]]></content:encoded>
     </item>
     <item>
