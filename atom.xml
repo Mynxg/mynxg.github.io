@@ -3,10 +3,11 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-04-20T17:12:16.264Z</updated>
+  <updated>2023-04-20T17:36:02.168Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
+  <category term="frp"/>
   <category term="运维"/>
   <category term="图床"/>
   <category term="mysql"/>
@@ -29,10 +30,137 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">frp实现远程桌面连接</title>
+    <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
+    <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
+    <updated>2023-04-20T17:36:02.217Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
+<ol>
+<li>内网穿透：通过 Frp，您可以将内网中的服务暴露到公网上，例如 Web 服务器、FTP 服务器、SSH 服务器等。</li>
+<li>内网远程桌面：Frp 可以让您在外网使用远程桌面连接到内网中的计算机，方便远程管理和维护。</li>
+<li>构建云计算平台：Frp 可以帮助企业构建私有云环境，提供虚拟机、存储和计算资源等服务。</li>
+<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。
+总之，Frp 是一款十分实用的工具，可以帮助企业和个人轻松地管理和访问内网中的服务。</li>
+</ol>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
+<ol>
+<li>内网穿透：通过 Frp，您可以将内网中的服务暴露到公网上，例如 Web 服务器、FTP 服务器、SSH 服务器等。</li>
+<li>内网远程桌面：Frp 可以让您在外网使用远程桌面连接到内网中的计算机，方便远程管理和维护。</li>
+<li>构建云计算平台：Frp 可以帮助企业构建私有云环境，提供虚拟机、存储和计算资源等服务。</li>
+<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。
+总之，Frp 是一款十分实用的工具，可以帮助企业和个人轻松地管理和访问内网中的服务。</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>官网：<a href="https://github.com/fatedier/frp/releases/tag/v0.48.0" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases/tag/v0.48.0</a>
+官方文档：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
+</blockquote>
+<h2> 一、背景</h2>
+<p>使用todesk个人版(免费)连接远程桌面（win10、win11），在网络环境比较差的情况下，使用起来很不友好，于是就想使用frp这个工具了。</p>
+<h2> 二、前提</h2>
+<p>服务器需要开放安全组规则</p>
+<blockquote>
+<p>例如以我的阿里云服务器为例</p>
+</blockquote>
+<p>
+具体如何配置请参考：</p>
+<h3> frp实现思路：</h3>
+<p>首先先明确服务端和客户端是什么？</p>
+<blockquote>
+<p>FRP 中服务端（Server）和客户端（Client）是指 FRP 这个工具的两个不同角色。
+服务端是 FRP 的远程服务器，它运行在公网上，并且通常被用来提供内网穿透功能。当您需要从外部网络访问内部网络的设备时，可以在公网上部署一个 FRP 服务端，通过配置相应的映射规则，将来自公网的请求转发到内网设备上。
+客户端是 FRP 工具的本地组件，它运行在需要被访问的内部网络设备上，并与远程服务端建立连接。客户端会向服务端注册自己的身份信息，并定期向服务端发送心跳包以保持连接。一旦客户端成功连接到服务端，外部网络就可以通过服务端访问客户端所在的内部网络设备。</p>
+</blockquote>
+<figure><figcaption></figcaption></figure>
+<h2> 三、环境安装</h2>
+<blockquote>
+<p>在 Linux 系统下使用 systemd 控制 frps 及配置开机自启</p>
+</blockquote>
+<p>这里以Linux服务器（centos）为例，</p>
+<h3> 2.1 安装&nbsp;<code>systemd</code></h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 2.2 创建并编辑&nbsp;<code>frps.service</code>&nbsp;文件（使用vim编辑器）</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 2.3 写入内容</h3>
+<div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如下图：
+
+上面三步可以参考：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
+<h3> 2.4 下载解压安装包</h3>
+<p>方式一：
+在已经创建好的 /root/frp目录下，执行下面的命令即可下frp安装包：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>方式二：
+下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a>
+Linux版（centos），下载如下图版本：
+</p>
+<p>将frp的linux包传递Linux服务器的自定义目录下</p>
+<blockquote>
+<p>例如：
+放在/root/frp/目录（文件夹）下，然后解压此文件<strong>frp_0.48.0_linux_amd64.tar.gz</strong></p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后对其命名：
+mv 原文件名 修改后的文件名</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或者直接解压并重新命名</p>
+<h3> 2.5 配置服务端（服务器）</h3>
+<p>在解压frp安装包后的文件夹下对文件进行配置：</p>
+<blockquote>
+<p>例如：frp解压在/root/frp/frps/目录下</p>
+</blockquote>
+<p>对frps.ini文件进行配置</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>输入内容：</p>
+<div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>保存配置并退出 <em>:wq</em></p>
+<p>使用&nbsp;<code>systemd</code>&nbsp;命令，管理 frps</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置 frps 开机自启:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>贴一张可视化面板图：
+</p>
+<h3> 2.6 配置客户端frp</h3>
+<blockquote>
+<p>下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a></p>
+</blockquote>
+<p>
+自定义一个文件夹解压</p>
+<h3> 2.6 配置客户端（win10本机）</h3>
+<p>在解压frp安装包后，进入找到frpc.ini配置文件并使用文本编辑器打开
+
+配置如下：</p>
+<div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：服务端的配置的token与客户端配置的token需要保持一致。
+参考：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a></p>
+</blockquote>
+<p>在目录下输入cmd回车，然后运行frpc.exe
+如图所示：
+
+
+就此配置完成</p>
+<p>接下来就连接远程桌面了</p>
+<h3> 2.7 连接远程桌面</h3>
+<p>如下图所示：
+计算机为你服务端的ip地址加端口</p>
+<blockquote>
+<p>例如：139.224.12.12:7000
+</p>
+</blockquote>
+<p>由于我电脑使用的微软邮箱，用户名就为 <a href="mailto:123@outlook.com">123@outlook.com</a>，密码对应微软邮箱密码
+
+如果你使用的是本地账号登录，那用户名就是你本地的那个用户名，密码就是开机密码。</p>
+<blockquote>
+<p>如果不想使用ip地址，可以将ip地址绑到域名上，或不想输入端口，可以进行反向代理</p>
+</blockquote>
+<h2> 总结</h2>
+<p>总之，frp不仅仅只是玩远程桌面，还可以玩内网穿透、渗透等。</p>
+<h2> 附件</h2>
+<p>参考1：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a>
+参考2：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a>
+阿里云官方地址：<a href="https://account.aliyun.com/login/login.htm" target="_blank" rel="noopener noreferrer">https://account.aliyun.com/login/login.htm</a></p>
+]]></content>
+    <category term="frp"/>
+    <published>2023-04-20T21:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2023-04-20T17:12:16.294Z</updated>
+    <updated>2023-04-20T17:36:02.219Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -68,7 +196,7 @@
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2023-04-20T17:12:16.305Z</updated>
+    <updated>2023-04-20T17:36:02.233Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -121,7 +249,7 @@
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2023-04-20T17:12:16.313Z</updated>
+    <updated>2023-04-20T17:36:02.236Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -182,7 +310,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-04-20T17:12:16.323Z</updated>
+    <updated>2023-04-20T17:36:02.241Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -246,7 +374,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-04-20T17:12:16.370Z</updated>
+    <updated>2023-04-20T17:36:02.301Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -480,7 +608,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-04-20T17:12:16.404Z</updated>
+    <updated>2023-04-20T17:36:02.309Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -545,7 +673,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-04-20T17:12:16.407Z</updated>
+    <updated>2023-04-20T17:36:02.315Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -575,7 +703,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-04-20T17:12:16.439Z</updated>
+    <updated>2023-04-20T17:36:02.350Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -920,7 +1048,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2023-04-20T17:12:16.447Z</updated>
+    <updated>2023-04-20T17:36:02.356Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -1020,7 +1148,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2023-04-20T17:12:16.453Z</updated>
+    <updated>2023-04-20T17:36:02.361Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支
 使用 git branch命令，如下：git branch
@@ -1105,7 +1233,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-04-20T17:12:16.454Z</updated>
+    <updated>2023-04-20T17:36:02.361Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -1113,7 +1241,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-04-20T17:12:16.461Z</updated>
+    <updated>2023-04-20T17:36:02.365Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1225,7 +1353,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-04-20T17:12:16.558Z</updated>
+    <updated>2023-04-20T17:36:02.438Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -1367,14 +1495,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-04-20T17:12:16.559Z</updated>
+    <updated>2023-04-20T17:36:02.438Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://blog.lxip.top/questionskills/softguide/</id>
     <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-04-20T17:12:16.568Z</updated>
+    <updated>2023-04-20T17:36:02.455Z</updated>
     <summary type="html"><![CDATA[<h2> 组件库</h2>
 <ul>
 <li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
@@ -1568,7 +1696,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-04-20T17:12:16.569Z</updated>
+    <updated>2023-04-20T17:36:02.456Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -1591,7 +1719,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-04-20T17:12:16.571Z</updated>
+    <updated>2023-04-20T17:36:02.458Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -1655,7 +1783,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-04-20T17:12:16.573Z</updated>
+    <updated>2023-04-20T17:36:02.460Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -1779,7 +1907,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-04-20T17:12:16.580Z</updated>
+    <updated>2023-04-20T17:36:02.469Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -1802,7 +1930,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-04-20T17:12:16.581Z</updated>
+    <updated>2023-04-20T17:36:02.473Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -1822,7 +1950,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-04-20T17:12:16.584Z</updated>
+    <updated>2023-04-20T17:36:02.474Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -1851,7 +1979,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-04-20T17:12:16.584Z</updated>
+    <updated>2023-04-20T17:36:02.475Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -1859,12 +1987,12 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-04-20T17:12:16.599Z</updated>
+    <updated>2023-04-20T17:36:02.480Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019161616266</figcaption></figure>
 <h2> 2.HTTP 请求/响应的步骤</h2>
 <p>2.1 客户端连接到Web服务器 一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。 例如:<a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer">http://www.baidu.com</a>。</p>
 <p>2.2 发送HTTP请求 通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求 数据4部分组成。</p>
@@ -1880,8 +2008,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li>服务器对浏览器请求作出响应，并把对应的 html 文本发送给浏览器;</li>
 <li>浏览器将该 html 文本并显示内容;</li>
 </ol>
-<figure><figcaption></figcaption></figure>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019202244080</figcaption></figure>
+<figure><figcaption>image-20221019202313587</figcaption></figure>
 <h2> 3.HTTP请求方法</h2>
 <p>HTTP/1.1协议中共定义了八种方法（也叫“动作”）来以不同方式操作指定的资源：</p>
 <p>GET</p>
@@ -1920,7 +2048,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>(1) Tomcat下载与安装</p>
 <p>开源小型web服务器 ，完全免费，主要用于中小型web项目，只支持Servlet和JSP 等少量javaee规范（就是 JavaWeb编程接口）</p>
 <p><a href="https://tomcat.apache.org" target="_blank" rel="noopener noreferrer">https://tomcat.apache.org</a></p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203030315</figcaption></figure>
 <p>下载好之后，安装到任意目录</p>
 <p>安装步骤:</p>
 <ol>
@@ -1956,45 +2084,45 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>注: (1)启动tomcat后,tomcat会加载部署在服务器端的所有项目 (2) 浏览器访问的页面是服务器端的页面,基本上服务器的项目和工作空间的项目要保持一致</p>
 <p>(3)IntelliJ IDEA配置Tomcat</p>
 <p>1，点击Run---EDit Configurations...</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203439672</figcaption></figure>
 <p>2.点击左侧“+”号，找到Tomcat Server---Local（若是没有找到Tomcat Server 可以点击最后一行 34 items more）</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203513219</figcaption></figure>
 <p>3.在 To m c a t S e r v e r - &gt; lo c al- &gt; S e r v e r - &gt; A p plic a tio n s e r v e r 项 目 下 ，</p>
 <p>点 击 C o n fi g u r a tio n ， 找 到 本 地 To m c a t 服 务器 ， 再 点 击 O K 按 钮。</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203639520</figcaption></figure>
 <p>至此，IntelliJ IDEA配置Tomcat完成。</p>
 <h2> 7.创建JavaWeb项目</h2>
 <p>1.点击左上角的File--&gt;New--&gt;Project</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203720789</figcaption></figure>
 <p>2.找到Java Enterprise之后，在Application Sever中找到自己的Tomcat，同时勾选中Web Application</p>
-<figure><figcaption></figcaption></figure>
-<figure><figcaption></figcaption></figure>
-<figure><figcaption></figcaption></figure>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203813333</figcaption></figure>
+<figure><figcaption>image-20221019203832981</figcaption></figure>
+<figure><figcaption>image-20221019203846547</figcaption></figure>
+<figure><figcaption>image-20221019203905499</figcaption></figure>
 <p>3.第一项是你的工程名字，第二个是你的工程路径，选择好之后点击finish</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203930565</figcaption></figure>
 <p>4.创建classes和lib文件夹，名字不可改</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019203956429</figcaption></figure>
 <p>像这样</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204016620</figcaption></figure>
 <p>5.配置jar包和classes包：</p>
 <p>5.1 在File中找到Project Structure</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204047645</figcaption></figure>
 <p>5.2 点击Modules ,选择Paths,选中Use module compile output path ,把路径改成刚刚创建的classes文件夹</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204147211</figcaption></figure>
 <p>5.3 ok后再点旁边的Dependencies,点击"+"号，选择1 JARs or directories ，</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204206238</figcaption></figure>
 <p>5.4，选择你刚刚创建的lib文件夹，OK</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204245649</figcaption></figure>
 <p>5.5 选中jar Directory。</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204307664</figcaption></figure>
 <p>6.部署项目:将本地项目安装到服务器中</p>
 <p>6.1回到主界面后，点击Run ，选择Edit Configurations</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204337067</figcaption></figure>
 <p>6.2 看tomcat已经有啦，这是java Enterprise的好处啦，点击Deployment ,</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204357450</figcaption></figure>
 <p>6.3点击右上角的三角形</p>
-<figure><figcaption></figcaption></figure>
+<figure><figcaption>image-20221019204441171</figcaption></figure>
 <p>6.4 运行成功。</p>
 <p>至此，intellij idea创建并设置javaweb工程全部完成</p>
 <h2> 8.修改端口号</h2>
