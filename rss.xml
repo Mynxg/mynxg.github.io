@@ -6,10 +6,11 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 13 Jun 2023 15:49:27 GMT</pubDate>
-    <lastBuildDate>Tue, 13 Jun 2023 15:49:27 GMT</lastBuildDate>
+    <pubDate>Sun, 25 Jun 2023 18:16:50 GMT</pubDate>
+    <lastBuildDate>Sun, 25 Jun 2023 18:16:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>服务器监测</category>
     <category>frp</category>
     <category>运维</category>
     <category>图床</category>
@@ -29,6 +30,134 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>多服务器监测面板</title>
+      <link>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</link>
+      <guid>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">多服务器监测面板</source>
+      <description>✨ Rust 版 ServerStatus 探针、威力加强版 项目地址：zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com) (https://github.com/zdz/ServerStatus-Rust) 官方教程：安装部署 - Rust 版 ServerStatus...</description>
+      <category>服务器监测</category>
+      <pubDate>Sun, 25 Jun 2023 23:33:57 GMT</pubDate>
+      <content:encoded><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
+<blockquote>
+<p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
+<p>官方教程：<a href="https://doc.ssr.rs/deploy/" target="_blank" rel="noopener noreferrer">安装部署 - Rust 版 ServerStatus 云探针 (ssr.rs)</a></p>
+<p>在线地址：<a href="https://ssr.rs/" target="_blank" rel="noopener noreferrer">ServerStatus (ssr.rs)</a></p>
+<p>这是一个多服务器监测工具</p>
+</blockquote>
+<p>效果如下：</p>
+<figure><figcaption>image-20230626014338353</figcaption></figure>
+<h2> 1 准备工作</h2>
+<p>环境：centos7服务器两台 （建议使用香港服务器）</p>
+<blockquote>
+<p>建议使用国外的，国内的服务器拉取仓库代码比较慢，可感人了。</p>
+</blockquote>
+<p>比如：你的服务器环境不支持国外环境，脚本执行拉取远程仓库代码就出现超时，无法完成情况。
+我这里使用手动一步安装，也是大致根据脚本来完成的。</p>
+<blockquote>
+<p>注：在这之前需要了解服务端和客户端是什么，如何将客户端和服务端关联起来</p>
+<p>服务端（Server）通常是指提供某种服务或资源的计算机或设备</p>
+<p>客户端（Client）是指使用服务端提供的服务或资源的计算机或设备。</p>
+<p>服务端和客户端是计算机网络中的两个角色，服务端提供服务或资源，客户端使用服务或获取资源。它们通过网络进行通信，实现数据的传输和交互。</p>
+</blockquote>
+<blockquote>
+<p>在典型的客户端-服务端模型中，通常会存在多个客户端和一个服务端之间的通信。这是因为服务端的目标是为多个客户端提供服务或资源。</p>
+<p>客户端和服务端的数量不仅限于一个对多的关系，也可以存在多个服务端。</p>
+<p>客户端和服务端通常不只有一个，而是可以存在多个客户端和一个或多个服务端之间的通信。这种多对一或多对多的关系是为了满足大规模应用或系统的需求，并提供更好的性能、可靠性和可扩展性。</p>
+<p>例如：</p>
+<p>在搭建frp时，将Frp作为中转服务器，连接远程桌面。</p>
+<p>这ServerStatus_Rust跟frp搭建有异曲同工之妙，也是一个服务端一个客户端</p>
+<p>大致流程：外网连接服务器，通过frp配置的服务器中转连接本地Windows桌面</p>
+<p>这里的配置的frp服务端是服务器，客户端是本地Windows桌面</p>
+</blockquote>
+<p>来一张图更为贴切：</p>
+<figure><figcaption>image-20230626020256880</figcaption></figure>
+<blockquote>
+<p>其中服务端也可以作为客户端，自己给自己实时发送数据，来检测自身数据变化（不限于负载、流量、内存等）</p>
+</blockquote>
+<p>检测服务器架构：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>下载：<a href="https://github.com/zdz/ServerStatus-Rust/releases/tag/v1.7.2" target="_blank" rel="noopener noreferrer">Release v1.7.2 · zdz/ServerStatus-Rust (github.com)</a></p>
+<blockquote>
+<p>如果你的服务器是x86 64，就选择如下图安装包。</p>
+</blockquote>
+<figure><figcaption></figcaption></figure>
+<blockquote>
+<p>将其上传到服务器 <code>/opt/ServerStatus/</code> 目录下，服务端需要将客户端和服务端都上传</p>
+</blockquote>
+<p>创建目录：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 2 服务端搭建</h2>
+<blockquote>
+<p>需要安装服务端和客户端</p>
+</blockquote>
+<p><a href="http://server.sh" target="_blank" rel="noopener noreferrer">server.sh</a> 配置：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>不能执行，就换用手动方式，一步一步执行。</p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>修改配置：</p>
+<p>
+去掉注释，也就是去掉#号</p>
+<p>后面的地址替换成自己服务端反向代理的域名</p>
+<p>例如你的域名是：<a href="https://w.lxip.top" target="_blank" rel="noopener noreferrer">https://w.lxip.top</a></p>
+<p>则替换后就是<a href="https://w.lxip.top/report" target="_blank" rel="noopener noreferrer">https://w.lxip.top/report</a></p>
+<blockquote>
+<p>如果不想反向代理，或者觉得麻烦，那就直接使用服务器公网ip地址+端口号</p>
+<p>例如地址：<a href="http://139.212.12.120:8080" target="_blank" rel="noopener noreferrer">http://139.212.12.120:8080</a> （服务端上的），直接替换也行</p>
+</blockquote>
+<p>服务端与客户端的关联关系：</p>
+<figure><figcaption>image-20230626012319564</figcaption></figure>
+<figure><figcaption>image-20230626012950615</figcaption></figure>
+<blockquote>
+<p>config.toml文件对应服务端</p>
+</blockquote>
+<p>完成配置如下：</p>
+<figure><figcaption>image-20230626013208676</figcaption></figure>
+<h2> 3 客户端搭建</h2>
+<p><a href="http://client.sh" target="_blank" rel="noopener noreferrer">client.sh</a> 配置</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>不能执行，就换用手动方式，一步一步执行。</p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>都安装完成后如图所示：
+</p>
+<p>将客户端注册到服务端上：</p>
+<p>打开 stat_client.service 文件：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>修改如下图所示：</p>
+<figure><figcaption></figcaption></figure>
+<p>配置修改如下：</p>
+<figure><figcaption>image-20230626014148113</figcaption></figure>
+<h2> 搭建nginx反向代理</h2>
+<blockquote>
+<p>主要是用于将带有端口号的地址反向代理为一个域名（二级域名）</p>
+<p>如果你使用ip地址+端口号的形式访问就不需要反向代理了，也就省下这一步骤。</p>
+</blockquote>
+<h2> 卸载服务端和客户端：</h2>
+<ol>
+<li>先停掉 之前开启的服务
+查看服务状态：</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>如果服务状态是active（激活）就需要先停止，使用下面的命令</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>再执行简单粗暴的方式删除文件夹的文件
+在/opt/文件下删除ServerStatus文件夹（包括ServerStatus文件夹所有内容）</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>注意：别使用  /* 来删除所文件，小心一不小心就删库了，对于第一次使用删除命令来删除文件夹下所有内容，是很容易犯这样的问题的。
+原因：大致是习惯性使用可视化界面，把那种思维方式带到linux下，以为linux跟可视化界面删除方式删除方式相同，这就容易误操作，删库了。禁止这么操作，这是很严重的问题。</p>
+</blockquote>
+<p>删除完成后使用 ll命令，查看一下是否删除完成</p>
+<p>然后还需要删除残余文件：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>不确定是否有这个两个文件，可以切换到 /etc/systemd/system/目录下检查是否有这个两文件，再做删除操作。</p>
+<figure><figcaption></figcaption></figure>
+<h2> 总结</h2>
+<p>知道理解服务端与客户端之间如何关联起来。</p>
+<p>恕我太愚钝，花了一天多的时间搭建这，尝试了多种方式终于知道怎么看对应的脚步和文档了，小有收获。终于弄明白了severstatus_rust不同服务器之间如何相关联，也对脚本有了更好的认识。</p>
+<h2> 附件</h2>
+<p>参考1：<a href="https://blog.laoda.de/archives/ward-serverstatus-instal" target="_blank" rel="noopener noreferrer">搭建两个专属自己的服务器监控——Ward &amp;&amp; ServerStatus</a>
+参考2：<a href="https://iocky.com/archives/13" target="_blank" rel="noopener noreferrer">ServerStatus-Rust 服务器探针搭建使用</a></p>
+<p>参考3：<a href="https://doc.ssr.rs/deploy/" target="_blank" rel="noopener noreferrer">安装部署 - Rust 版 ServerStatus 云探针 (ssr.rs)</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>frp实现远程桌面连接</title>
       <link>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</link>
@@ -1628,6 +1757,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <td><code>《具有AI功能加持的终端工具warp使用总结》</code></td>
 <td><a href="https://www.aliyundrive.com/s/kXKqP4RqyUD" target="_blank" rel="noopener noreferrer">https://www.aliyundrive.com/s/kXKqP4RqyUD</a></td>
 </tr>
+<tr>
+<td>速查表</td>
+<td><a href="https://wangchujiang.com/reference/" target="_blank" rel="noopener noreferrer">https://wangchujiang.com/reference/</a></td>
+</tr>
 </tbody>
 </table>
 ]]></content:encoded>
@@ -1637,7 +1770,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <link>https://blog.lxip.top/resources/share/</link>
       <guid>https://blog.lxip.top/resources/share/</guid>
       <source url="https://blog.lxip.top/rss.xml">快速导航</source>
-      <description>搜索引擎 开源社区 优质博客 在线工具 在线教程 文档相关 其他导航</description>
+      <description>搜索引擎 开源社区 优质博客 在线工具 在线教程 文档相关 其他导航 navshare (navshare.md) navlearn (navlearn.md) navshare (navshare.md)</description>
       <category>快速导航</category>
       <content:encoded><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
@@ -1646,6 +1779,9 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h2> 在线教程</h2>
 <h2> 文档相关</h2>
 <h2> 其他导航</h2>
+<p><a href="/resources/share/navshare.html" target="blank">navshare</a></p>
+<p><a href="/resources/share/navlearn.html" target="blank">navlearn</a></p>
+<p><a href="/resources/share/navshare.html" target="blank">navshare</a></p>
 ]]></content:encoded>
     </item>
     <item>
