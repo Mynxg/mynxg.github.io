@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 25 Jun 2023 18:16:50 GMT</pubDate>
-    <lastBuildDate>Sun, 25 Jun 2023 18:16:50 GMT</lastBuildDate>
+    <pubDate>Mon, 26 Jun 2023 08:20:56 GMT</pubDate>
+    <lastBuildDate>Mon, 26 Jun 2023 08:20:56 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>服务器监测</category>
@@ -112,6 +112,10 @@
 </blockquote>
 <p>完成配置如下：</p>
 <figure><figcaption>image-20230626013208676</figcaption></figure>
+<blockquote>
+<p>服务端也可以使用第三方平台搭建，如 Railway 部署</p>
+<p><a href="https://github.com/zdz/ServerStatus-Rust/wiki/Railway" target="_blank" rel="noopener noreferrer">Railway部署教程</a></p>
+</blockquote>
 <h2> 3 客户端搭建</h2>
 <p><a href="http://client.sh" target="_blank" rel="noopener noreferrer">client.sh</a> 配置</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行：</p>
@@ -130,6 +134,8 @@
 <blockquote>
 <p>主要是用于将带有端口号的地址反向代理为一个域名（二级域名）</p>
 <p>如果你使用ip地址+端口号的形式访问就不需要反向代理了，也就省下这一步骤。</p>
+<p>参考：<a href="https://iocky.com/archives/13" target="_blank" rel="noopener noreferrer">ServerStatus-Rust 搭建反向代理部分</a></p>
+<p><a href="https://blog.laoda.de/archives/ward-serverstatus-install" target="_blank" rel="noopener noreferrer">ServerStatus 搭建反向代理部分</a></p>
 </blockquote>
 <h2> 卸载服务端和客户端：</h2>
 <ol>
@@ -149,12 +155,13 @@
 <p>然后还需要删除残余文件：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>不确定是否有这个两个文件，可以切换到 /etc/systemd/system/目录下检查是否有这个两文件，再做删除操作。</p>
 <figure><figcaption></figcaption></figure>
+<h2> 扩展功能</h2>
+<p>服务器挂了，tg机器人发通知或微信通知</p>
 <h2> 总结</h2>
-<p>知道理解服务端与客户端之间如何关联起来。</p>
 <p>恕我太愚钝，花了一天多的时间搭建这，尝试了多种方式终于知道怎么看对应的脚步和文档了，小有收获。终于弄明白了severstatus_rust不同服务器之间如何相关联，也对脚本有了更好的认识。</p>
 <h2> 附件</h2>
-<p>参考1：<a href="https://blog.laoda.de/archives/ward-serverstatus-instal" target="_blank" rel="noopener noreferrer">搭建两个专属自己的服务器监控——Ward &amp;&amp; ServerStatus</a>
-参考2：<a href="https://iocky.com/archives/13" target="_blank" rel="noopener noreferrer">ServerStatus-Rust 服务器探针搭建使用</a></p>
+<p>参考1：<a href="https://blog.laoda.de/archives/ward-serverstatus-install" target="_blank" rel="noopener noreferrer">搭建两个专属自己的服务器监控——Ward &amp;&amp; ServerStatus</a></p>
+<p>参考2：<a href="https://iocky.com/archives/13" target="_blank" rel="noopener noreferrer">ServerStatus-Rust 服务器探针搭建使用</a></p>
 <p>参考3：<a href="https://doc.ssr.rs/deploy/" target="_blank" rel="noopener noreferrer">安装部署 - Rust 版 ServerStatus 云探针 (ssr.rs)</a></p>
 ]]></content:encoded>
     </item>
