@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 12 Aug 2023 01:46:08 GMT</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2023 01:46:08 GMT</lastBuildDate>
+    <pubDate>Sat, 12 Aug 2023 01:48:32 GMT</pubDate>
+    <lastBuildDate>Sat, 12 Aug 2023 01:48:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>服务器监测</category>
@@ -16,7 +16,6 @@
     <category>图床</category>
     <category>mysql</category>
     <category>linux</category>
-    <category>生活</category>
     <category>Java</category>
     <category>实战项目</category>
     <category>软件教程</category>
@@ -1252,14 +1251,6 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h2> <em><strong>*GIT开发学习——合并分支的几种方法*</strong></em></h2>
 <p><a href="https://blog.csdn.net/fenglolo/article/details/125223433" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/fenglolo/article/details/125223433</a></p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>hello life</title>
-      <link>https://blog.lxip.top/happylife/thinker/th.html</link>
-      <guid>https://blog.lxip.top/happylife/thinker/th.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">hello life</source>
-      <category>生活</category>
-      <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>关于本站</title>
