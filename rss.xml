@@ -6,20 +6,22 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 12 Aug 2023 01:48:32 GMT</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2023 01:48:32 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2023 14:24:47 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2023 14:24:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>工具</category>
     <category>服务器监测</category>
     <category>frp</category>
     <category>运维</category>
     <category>图床</category>
     <category>mysql</category>
     <category>linux</category>
+    <category>生活</category>
     <category>Java</category>
     <category>实战项目</category>
     <category>软件教程</category>
-    <category>系统设计</category>
+    <category>导航</category>
     <category>技术教程</category>
     <category>书籍</category>
     <category>快速导航</category>
@@ -29,6 +31,23 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>编程工具</title>
+      <link>https://blog.lxip.top/questionskills/software/tool.html</link>
+      <guid>https://blog.lxip.top/questionskills/software/tool.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">编程工具</source>
+      <description>连接工具 Navicat Premium16永久激活教程 教程参考：https://zhuanlan.zhihu.com/p/642328966 下载地址：点击下载 (https://www.123pan.com/s/tB5A-gewYd.html) 提取码:IRRz 点击下载 (https://www.123pan.com/s/tB5A-FewYd....</description>
+      <category>工具</category>
+      <pubDate>Tue, 08 Aug 2023 14:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 连接工具</h2>
+<p>Navicat Premium16永久激活教程</p>
+<blockquote>
+<p>教程参考：<a href="https://zhuanlan.zhihu.com/p/642328966" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/642328966</a></p>
+</blockquote>
+<p>下载地址：<a href="https://www.123pan.com/s/tB5A-gewYd.html" target="_blank" rel="noopener noreferrer">点击下载</a> 提取码:IRRz
+<a href="https://www.123pan.com/s/tB5A-FewYd.html%E6%8F%90%E5%8F%96%E7%A0%81:tWUs" target="_blank" rel="noopener noreferrer">点击下载</a>  （激活工具）</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>多服务器监测面板</title>
       <link>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</link>
@@ -1253,6 +1272,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content:encoded>
     </item>
     <item>
+      <title>hello life</title>
+      <link>https://blog.lxip.top/happylife/thinker/th.html</link>
+      <guid>https://blog.lxip.top/happylife/thinker/th.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">hello life</source>
+      <category>生活</category>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>关于本站</title>
       <link>https://blog.lxip.top/blog/about.html</link>
       <guid>https://blog.lxip.top/blog/about.html</guid>
@@ -1620,12 +1647,12 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content:encoded>
     </item>
     <item>
-      <title>系统设计【开源项目】</title>
-      <link>https://blog.lxip.top/questionskills/systemdesign/</link>
-      <guid>https://blog.lxip.top/questionskills/systemdesign/</guid>
-      <source url="https://blog.lxip.top/rss.xml">系统设计【开源项目】</source>
-      <description>专业软件 RuanCang (https://ruancang.net/)：专业软件免费下载。; 官网：https://ruancang.net/</description>
-      <category>系统设计</category>
+      <title>编程软件</title>
+      <link>https://blog.lxip.top/questionskills/software/</link>
+      <guid>https://blog.lxip.top/questionskills/software/</guid>
+      <source url="https://blog.lxip.top/rss.xml">编程软件</source>
+      <description>专业软件 RuanCang (https://ruancang.net/)：专业软件免费下载。; 官网：https://ruancang.net/ 导航 编程软件 (./tool.md);</description>
+      <category>导航</category>
       <content:encoded><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -1633,6 +1660,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <blockquote>
 <p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
 </blockquote>
+<h2> 导航</h2>
+<ul>
+<li><a href="/questionskills/software/tool.html" target="blank">编程软件</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
