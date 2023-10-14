@@ -6,13 +6,13 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 21 Aug 2023 14:24:47 GMT</pubDate>
-    <lastBuildDate>Mon, 21 Aug 2023 14:24:47 GMT</lastBuildDate>
+    <pubDate>Sat, 14 Oct 2023 11:29:39 GMT</pubDate>
+    <lastBuildDate>Sat, 14 Oct 2023 11:29:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>frp</category>
     <category>工具</category>
     <category>服务器监测</category>
-    <category>frp</category>
     <category>运维</category>
     <category>图床</category>
     <category>mysql</category>
@@ -22,6 +22,7 @@
     <category>实战项目</category>
     <category>软件教程</category>
     <category>导航</category>
+    <category>系统设计</category>
     <category>技术教程</category>
     <category>书籍</category>
     <category>快速导航</category>
@@ -31,6 +32,85 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>frp实现p2p远程连接桌面</title>
+      <link>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</link>
+      <guid>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">frp实现p2p远程连接桌面</source>
+      <description>背景 国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。 对等式网络（peer-to-peer， 简称P2P），又称点对点技术，是无中心服务器、依靠用户群（peers）交换信息...</description>
+      <category>frp</category>
+      <pubDate>Sat, 14 Oct 2023 16:24:23 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
+<blockquote>
+<p><strong>对等式网络</strong>（peer-to-peer， 简称P2P），又称点对点技术，是无中心服务器、依靠用户群（peers）交换信息的互联网体系，它的作用在于，减低以往网路传输中的节点，以降低资料遗失的风险。</p>
+<p>优点：仅少量占用服务器带宽，占用的带宽可忽略不计，传输大文件利器！</p>
+</blockquote>
+<h2> 准备工作</h2>
+<p>安装教程参考我的另外一篇教程：<a href="https://blog.nnxx.me/posts/e7d9824f.html" target="_blank" rel="noopener noreferrer">frp实现远程桌面连接</a></p>
+<blockquote>
+<p>注意：上面的操作能实现，下面的配置操作就基本简单了。</p>
+<p>下载frp安装包(frp_0.51.2_windows_386)、一台有公网ip的服务器</p>
+</blockquote>
+
+<figure><img src="https://s2.ax1x.com/2019/01/12/FjUW0x.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2> 配置</h2>
+<blockquote>
+<p>先了解 被访问端、访问端、服务端</p>
+<p>被访问端：win10用户a</p>
+<p>访问端：win10用户b</p>
+<p>服务端：服务器（这里使用的是centos7）</p>
+<p>为了兼顾安全和兼容，所以这里使用stcp代理windows电脑的远程桌面（RDP，端口号3389）</p>
+</blockquote>
+<h3> 被访问端（客户端a）配置</h3>
+<p>frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 服务端配置</h3>
+<p>frps.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 访问端（客户端b）配置</h3>
+<p>frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> win客户端后台运行及开机自启</h2>
+<blockquote>
+<p>frpc运行时始终有一个命令行窗口运行在前台，影响美观，我们可以使用一个批处理文件来将其运行在后台，而且可以双击执行，每次打开frpc不用再自己输命令了。<br>
+在任何一个目录下新建一个文本文件并将其重命名为“frp.bat”，编辑，粘贴如下内容并保存。</p>
+</blockquote>
+<p>frp.bat</p>
+<div class="language-bat line-numbers-mode" data-ext="bat"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>将cd后的路径更改为你的frpc实际存放的目录</p>
+</blockquote>
+<p>win10开机自启frp
+简单操作：win+R 输入 "shell:startup" , 进入到开机自启的位置，然后将上述配置好的 frp.bat 文件的快捷方式复制到开机自启的位置。</p>
+<blockquote>
+<p>注意：之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
+至于开机启动，把这个 .bat 文件直接扔进Windows的开机启动文件夹就好了 )<br>
+客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。</p>
+<p>强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
+</blockquote>
+<h2> 连接远程桌面</h2>
+<p>通过 远程桌面连接（mstsc远程程序），输入127.0.0.1:9091 并输入账号和密码进行远程登录。这种不受限于服务器的网络限制，可以进行大文件传输。</p>
+<blockquote>
+<p>远程桌面连接怎么打开？直接win+Q，输入远程桌面连接，点击即可打开，然后输入地址、账号、密码。</p>
+</blockquote>
+<h2> 配置说明</h2>
+<p>参考：<a href="https://gofrp.org/zh-cn/docs/features/xtcp/" target="_blank" rel="noopener noreferrer">XTCP | frp (gofrp.org)</a></p>
+<blockquote>
+<p>XTCP 的配置方式和 STCP 很类似。但是会采用 P2P 的方式进行打洞穿透，如果成功，后续的流量将不会经过 frps，而是直接通信，不再受到 frps 所在服务器的带宽限制。</p>
+<p>由于打洞成功率取决于所处网络的 NAT 类型，所以 XTCP 的可用性和稳定性无法保证。在需要可靠连接的情况下，建议使用 STCP 替代。</p>
+<p>当 visitor 配置了&nbsp;<code>keep_tunnel_open = true</code>&nbsp;时，frpc 会定期检测隧道是否打开，如果没有，则会尝试打洞建立隧道，这样可以始终保持隧道打开，在需要连接对端服务时，可以避免延迟。</p>
+<p>默认情况下，visitor 会在接收到用户连接后尝试打洞，如果打洞失败，可以尝试多次建立连接，程序会尝试其他的打洞策略，有可能在多次重试后成功打洞。一旦打洞成功，后续新增连接不必重复打洞，而是可以复用隧道。</p>
+</blockquote>
+<p>自定义配置：<a href="https://gofrp.org/zh-cn/docs/reference/server-configures/" target="_blank" rel="noopener noreferrer">服务端配置 | frp (gofrp.org)</a></p>
+<p>个人具体配置：<a href="https://blog.nnxx.me/posts/e1d1124g.html" target="_blank" rel="noopener noreferrer">frp-p2p配置说明</a></p>
+<h2> 附件</h2>
+<p>扩展资料：</p>
+<p>frp udp p2p打洞内网穿透net，xtcp点对点直连win远程桌面，速度超快的高性能内网穿透
+<a href="https://imold.wang/technology/computer/420.html/2/" target="_blank" rel="noopener noreferrer">https://imold.wang/technology/computer/420.html/2/</a></p>
+<p>frp实现p2p远程连接桌面：
+<a href="https://www.2280129.xyz/article/000040/frp.html" target="_blank" rel="noopener noreferrer">https://www.2280129.xyz/article/000040/frp.html</a></p>
+<p>frp实现p2p远程连接桌面，非服务器中转：
+<a href="https://blog.csdn.net/Asachen/article/details/120845923" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Asachen/article/details/120845923</a></p>
+]]></content:encoded>
+      <enclosure url="https://s2.ax1x.com/2019/01/12/FjUW0x.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" type="image/"/>
+    </item>
     <item>
       <title>编程工具</title>
       <link>https://blog.lxip.top/questionskills/software/tool.html</link>
@@ -1647,6 +1727,72 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content:encoded>
     </item>
     <item>
+      <title>当前页面内容标题</title>
+      <link>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</link>
+      <guid>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">当前页面内容标题</source>
+      <description>title: frp-p2p配置说明 icon: sliders category: frp; tag: frps; 远程桌面; p2p; sticky: false star: false article: true timeline: true date: 2023-10-14 16:12:00 标准的配置文件 访问者、被访问者都修改frpc.in...</description>
+      <content:encoded><![CDATA[<hr>
+<h1> 当前页面内容标题</h1>
+<p>title: frp-p2p配置说明</p>
+<h1> 当前页面图标</h1>
+<p>icon: sliders</p>
+<h1> 分类</h1>
+<p>category:</p>
+<ul>
+<li>frp</li>
+</ul>
+<h1> 标签</h1>
+<p>tag:</p>
+<ul>
+<li>frps</li>
+<li>远程桌面</li>
+<li>p2p
+sticky: false</li>
+</ul>
+<h1> 是否收藏在博客主题的文章列表中，当填入数字时，数字越大，排名越靠前。</h1>
+<p>star: false</p>
+<h1> 是否将该文章添加至文章列表中</h1>
+<p>article: true</p>
+<h1> 是否将该文章添加至时间线中</h1>
+<h2> timeline: true
+date: 2023-10-14 16:12:00</h2>
+<h2> 标准的配置文件</h2>
+<p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
+<p>被访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>服务器：frps.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 个人配置文件</h2>
+<p>被访问者：frpc.ini</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>mstsc表示远程桌面的命令行指令_mstsc_，原来它的意思是Microsoft Terminal Server Connection微软终端服务器连接的缩写。</p>
+</blockquote>
+<p>服务器：frps.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> win客户端后台运行及开机自启</h2>
+<blockquote>
+<p>frpc运行时始终有一个命令行窗口运行在前台，影响美观，我们可以使用一个批处理文件来将其运行在后台，而且可以双击执行，每次打开frpc不用再自己输命令了。<br>
+在任何一个目录下新建一个文本文件并将其重命名为“frpc.bat”，编辑，粘贴如下内容并保存。</p>
+</blockquote>
+<div class="language-bat line-numbers-mode" data-ext="bat"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>将cd后的路径更改为你的frpc实际存放的目录。</p>
+</blockquote>
+<blockquote>
+<p>之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
+至于开机启动，把这个 .bat 文件直接扔进Windows的开机启动文件夹就好了 😃<br>
+至此，客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。<br>
+强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
+</blockquote>
+<p>windows开机自启动bat文件：
+<a href="https://www.cnblogs.com/shengruxiahuaya/p/17150459.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</a></p>
+<p>开机自启可以参考：<a href="https://www.vuar.cn/index.php/archives/74/" target="_blank" rel="noopener noreferrer">https://www.vuar.cn/index.php/archives/74/</a></p>
+<h2> 附件</h2>
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/575316935" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/575316935</a></p>
+<p>xtcp使用解释：<a href="https://gofrp.org/docs/features/xtcp/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/features/xtcp/</a></p>
+<p>xtcp参考：<a href="https://doc.natfrp.com/app/xtcp.html" target="_blank" rel="noopener noreferrer">https://doc.natfrp.com/app/xtcp.html</a></p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>编程软件</title>
       <link>https://blog.lxip.top/questionskills/software/</link>
       <guid>https://blog.lxip.top/questionskills/software/</guid>
@@ -1664,6 +1810,22 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <ul>
 <li><a href="/questionskills/software/tool.html" target="blank">编程软件</a></li>
 </ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>系统设计【开源项目】</title>
+      <link>https://blog.lxip.top/questionskills/systemdesign/</link>
+      <guid>https://blog.lxip.top/questionskills/systemdesign/</guid>
+      <source url="https://blog.lxip.top/rss.xml">系统设计【开源项目】</source>
+      <description>专业软件 RuanCang (https://ruancang.net/)：专业软件免费下载。; 官网：https://ruancang.net/</description>
+      <category>系统设计</category>
+      <content:encoded><![CDATA[<h2> 专业软件</h2>
+<ul>
+<li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
