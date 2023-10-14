@@ -3,12 +3,11 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-10-14T11:29:39.850Z</updated>
+  <updated>2023-10-14T11:38:21.165Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
   <category term="frp"/>
-  <category term="工具"/>
   <category term="服务器监测"/>
   <category term="运维"/>
   <category term="图床"/>
@@ -36,7 +35,7 @@
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2023-10-14T11:29:39.887Z</updated>
+    <updated>2023-10-14T11:38:21.206Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -116,33 +115,73 @@
     <published>2023-10-14T16:24:23.000Z</published>
   </entry>
   <entry>
-    <title type="text">编程工具</title>
-    <id>https://blog.lxip.top/questionskills/software/tool.html</id>
-    <link href="https://blog.lxip.top/questionskills/software/tool.html"/>
-    <updated>2023-10-14T11:29:39.889Z</updated>
-    <summary type="html"><![CDATA[<h2> 连接工具</h2>
-<p>Navicat Premium16永久激活教程</p>
-<blockquote>
-<p>教程参考：<a href="https://zhuanlan.zhihu.com/p/642328966" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/642328966</a></p>
+    <title type="text">frp-p2p配置说明</title>
+    <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
+    <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
+    <updated>2023-10-14T11:38:21.236Z</updated>
+    <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
+<p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
+<p>被访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token punctuation">[</span>common<span class="token punctuation">]</span>
+<span class="token comment"># 这里是客户端配置，server_addr后写本客户端要连接的服务器的IP地址,默认是0.0.0.0</span>
+server_addr <span class="token operator">=</span> 服务器IP
+server_port <span class="token operator">=</span> <span class="token number">7000</span>
+<span class="token comment"># 鉴权使用的 token 值，可以自定义</span>
+token <span class="token operator">=</span> abc123123
+<span class="token comment">#  启用 TLS 协议加密连接</span>
+tls_enable <span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token punctuation">[</span>rdp<span class="token punctuation">]</span> 
+<span class="token builtin class-name">type</span> <span class="token operator">=</span> stcp
+<span class="token comment">#  这部分是代理配置，将type改为stcp类型的代理</span>
+<span class="token comment"># sk是密钥，可以自定义。服务端和访问端的密钥需要一致，访问端才能访问到服务端</span>
+sk <span class="token operator">=</span> abcd1234
+<span class="token comment">#  不需要写远端端口(remote_port)，因为代理的是本地的3389端口</span>
+local_ip <span class="token operator">=</span> <span class="token number">127.0</span>.0.1
+local_port <span class="token operator">=</span> <span class="token number">3389</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 标准的配置文件</h2>
+<p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
+<p>被访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>服务器：frps.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 个人配置文件</h2>
+<p>被访问者：frpc.ini</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>mstsc表示远程桌面的命令行指令_mstsc_，原来它的意思是Microsoft Terminal Server Connection微软终端服务器连接的缩写。</p>
 </blockquote>
-<p>下载地址：<a href="https://www.123pan.com/s/tB5A-gewYd.html" target="_blank" rel="noopener noreferrer">点击下载</a> 提取码:IRRz
-<a href="https://www.123pan.com/s/tB5A-FewYd.html%E6%8F%90%E5%8F%96%E7%A0%81:tWUs" target="_blank" rel="noopener noreferrer">点击下载</a>  （激活工具）</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 连接工具</h2>
-<p>Navicat Premium16永久激活教程</p>
+<p>服务器：frps.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> win客户端后台运行及开机自启</h2>
 <blockquote>
-<p>教程参考：<a href="https://zhuanlan.zhihu.com/p/642328966" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/642328966</a></p>
+<p>frpc运行时始终有一个命令行窗口运行在前台，影响美观，我们可以使用一个批处理文件来将其运行在后台，而且可以双击执行，每次打开frpc不用再自己输命令了。<br>
+在任何一个目录下新建一个文本文件并将其重命名为“frpc.bat”，编辑，粘贴如下内容并保存。</p>
 </blockquote>
-<p>下载地址：<a href="https://www.123pan.com/s/tB5A-gewYd.html" target="_blank" rel="noopener noreferrer">点击下载</a> 提取码:IRRz
-<a href="https://www.123pan.com/s/tB5A-FewYd.html%E6%8F%90%E5%8F%96%E7%A0%81:tWUs" target="_blank" rel="noopener noreferrer">点击下载</a>  （激活工具）</p>
+<div class="language-bat line-numbers-mode" data-ext="bat"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>将cd后的路径更改为你的frpc实际存放的目录。</p>
+</blockquote>
+<blockquote>
+<p>之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
+至于开机启动，把这个 .bat 文件直接扔进Windows的开机启动文件夹就好了 😃<br>
+至此，客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。<br>
+强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
+</blockquote>
+<p>windows开机自启动bat文件：
+<a href="https://www.cnblogs.com/shengruxiahuaya/p/17150459.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</a></p>
+<p>开机自启可以参考：<a href="https://www.vuar.cn/index.php/archives/74/" target="_blank" rel="noopener noreferrer">https://www.vuar.cn/index.php/archives/74/</a></p>
+<h2> 附件</h2>
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/575316935" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/575316935</a></p>
+<p>xtcp使用解释：<a href="https://gofrp.org/docs/features/xtcp/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/features/xtcp/</a></p>
+<p>xtcp参考：<a href="https://doc.natfrp.com/app/xtcp.html" target="_blank" rel="noopener noreferrer">https://doc.natfrp.com/app/xtcp.html</a></p>
 ]]></content>
-    <category term="工具"/>
-    <published>2023-08-08T14:00:00.000Z</published>
+    <category term="frp"/>
+    <published>2023-10-14T16:12:00.000Z</published>
   </entry>
   <entry>
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2023-10-14T11:29:39.906Z</updated>
+    <updated>2023-10-14T11:38:21.266Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -283,7 +322,7 @@
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2023-10-14T11:29:39.935Z</updated>
+    <updated>2023-10-14T11:38:21.305Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -410,7 +449,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2023-10-14T11:29:39.937Z</updated>
+    <updated>2023-10-14T11:38:21.307Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -446,7 +485,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2023-10-14T11:29:39.943Z</updated>
+    <updated>2023-10-14T11:38:21.309Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -499,7 +538,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2023-10-14T11:29:39.949Z</updated>
+    <updated>2023-10-14T11:38:21.313Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -560,7 +599,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-10-14T11:29:39.955Z</updated>
+    <updated>2023-10-14T11:38:21.317Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -624,7 +663,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-10-14T11:29:40.003Z</updated>
+    <updated>2023-10-14T11:38:21.369Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -858,7 +897,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-10-14T11:29:40.008Z</updated>
+    <updated>2023-10-14T11:38:21.373Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -923,7 +962,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-10-14T11:29:40.011Z</updated>
+    <updated>2023-10-14T11:38:21.376Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -953,7 +992,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-10-14T11:29:40.058Z</updated>
+    <updated>2023-10-14T11:38:21.415Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -1298,7 +1337,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2023-10-14T11:29:40.066Z</updated>
+    <updated>2023-10-14T11:38:21.421Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -1398,7 +1437,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2023-10-14T11:29:40.070Z</updated>
+    <updated>2023-10-14T11:38:21.425Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支
 使用 git branch命令，如下：git branch
@@ -1483,7 +1522,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-10-14T11:29:40.071Z</updated>
+    <updated>2023-10-14T11:38:21.425Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -1491,7 +1530,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-10-14T11:29:40.080Z</updated>
+    <updated>2023-10-14T11:38:21.430Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1603,7 +1642,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-10-14T11:29:40.155Z</updated>
+    <updated>2023-10-14T11:38:21.494Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -1745,14 +1784,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-10-14T11:29:40.155Z</updated>
+    <updated>2023-10-14T11:38:21.495Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://blog.lxip.top/questionskills/softguide/</id>
     <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-10-14T11:29:40.162Z</updated>
+    <updated>2023-10-14T11:38:21.517Z</updated>
     <summary type="html"><![CDATA[<h2> 组件库</h2>
 <ul>
 <li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
@@ -1943,96 +1982,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <category term="软件教程"/>
   </entry>
   <entry>
-    <title type="text">当前页面内容标题</title>
-    <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
-    <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2023-10-14T11:29:40.170Z</updated>
-    <summary type="html"><![CDATA[<hr>
-<h1> 当前页面内容标题</h1>
-<p>title: frp-p2p配置说明</p>
-<h1> 当前页面图标</h1>
-<p>icon: sliders</p>
-<h1> 分类</h1>
-<p>category:</p>
-<ul>
-<li>frp</li>
-</ul>
-<h1> 标签</h1>
-<p>tag:</p>
-<ul>
-<li>frps</li>
-<li>远程桌面</li>
-<li>p2p
-sticky: false</li>
-</ul>
-<h1> 是否收藏在博客主题的文章列表中，当填入数字时，数字越大，排名越靠前。</h1>
-<p>star: false</p>
-<h1> 是否将该文章添加至文章列表中</h1>]]></summary>
-    <content type="html"><![CDATA[<hr>
-<h1> 当前页面内容标题</h1>
-<p>title: frp-p2p配置说明</p>
-<h1> 当前页面图标</h1>
-<p>icon: sliders</p>
-<h1> 分类</h1>
-<p>category:</p>
-<ul>
-<li>frp</li>
-</ul>
-<h1> 标签</h1>
-<p>tag:</p>
-<ul>
-<li>frps</li>
-<li>远程桌面</li>
-<li>p2p
-sticky: false</li>
-</ul>
-<h1> 是否收藏在博客主题的文章列表中，当填入数字时，数字越大，排名越靠前。</h1>
-<p>star: false</p>
-<h1> 是否将该文章添加至文章列表中</h1>
-<p>article: true</p>
-<h1> 是否将该文章添加至时间线中</h1>
-<h2> timeline: true
-date: 2023-10-14 16:12:00</h2>
-<h2> 标准的配置文件</h2>
-<p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
-<p>被访问者：frpc.ini</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>服务器：frps.ini</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 个人配置文件</h2>
-<p>被访问者：frpc.ini</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>mstsc表示远程桌面的命令行指令_mstsc_，原来它的意思是Microsoft Terminal Server Connection微软终端服务器连接的缩写。</p>
-</blockquote>
-<p>服务器：frps.ini</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问者：frpc.ini</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> win客户端后台运行及开机自启</h2>
-<blockquote>
-<p>frpc运行时始终有一个命令行窗口运行在前台，影响美观，我们可以使用一个批处理文件来将其运行在后台，而且可以双击执行，每次打开frpc不用再自己输命令了。<br>
-在任何一个目录下新建一个文本文件并将其重命名为“frpc.bat”，编辑，粘贴如下内容并保存。</p>
-</blockquote>
-<div class="language-bat line-numbers-mode" data-ext="bat"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>将cd后的路径更改为你的frpc实际存放的目录。</p>
-</blockquote>
-<blockquote>
-<p>之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
-至于开机启动，把这个 .bat 文件直接扔进Windows的开机启动文件夹就好了 😃<br>
-至此，客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。<br>
-强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
-</blockquote>
-<p>windows开机自启动bat文件：
-<a href="https://www.cnblogs.com/shengruxiahuaya/p/17150459.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</a></p>
-<p>开机自启可以参考：<a href="https://www.vuar.cn/index.php/archives/74/" target="_blank" rel="noopener noreferrer">https://www.vuar.cn/index.php/archives/74/</a></p>
-<h2> 附件</h2>
-<p>参考：<a href="https://zhuanlan.zhihu.com/p/575316935" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/575316935</a></p>
-<p>xtcp使用解释：<a href="https://gofrp.org/docs/features/xtcp/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/features/xtcp/</a></p>
-<p>xtcp参考：<a href="https://doc.natfrp.com/app/xtcp.html" target="_blank" rel="noopener noreferrer">https://doc.natfrp.com/app/xtcp.html</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2023-10-14T11:29:40.171Z</updated>
+    <updated>2023-10-14T11:38:21.518Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2062,7 +2015,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-10-14T11:29:40.172Z</updated>
+    <updated>2023-10-14T11:38:21.524Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2085,7 +2038,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-10-14T11:29:40.174Z</updated>
+    <updated>2023-10-14T11:38:21.526Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2149,7 +2102,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-10-14T11:29:40.177Z</updated>
+    <updated>2023-10-14T11:38:21.528Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -2281,7 +2234,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-10-14T11:29:40.185Z</updated>
+    <updated>2023-10-14T11:38:21.537Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -2309,7 +2262,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-10-14T11:29:40.187Z</updated>
+    <updated>2023-10-14T11:38:21.539Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -2329,7 +2282,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-10-14T11:29:40.189Z</updated>
+    <updated>2023-10-14T11:38:21.540Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -2358,7 +2311,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-10-14T11:29:40.189Z</updated>
+    <updated>2023-10-14T11:38:21.542Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -2366,7 +2319,7 @@ date: 2023-10-14 16:12:00</h2>
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-10-14T11:29:40.213Z</updated>
+    <updated>2023-10-14T11:38:21.550Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
