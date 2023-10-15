@@ -6,14 +6,14 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 15 Oct 2023 00:45:22 GMT</pubDate>
-    <lastBuildDate>Sun, 15 Oct 2023 00:45:22 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2023 01:52:15 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2023 01:52:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>图床</category>
     <category>frp</category>
     <category>服务器监测</category>
     <category>运维</category>
-    <category>图床</category>
     <category>mysql</category>
     <category>linux</category>
     <category>生活</category>
@@ -31,6 +31,74 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>Cloudfare和Telegraph-Image-实现图床搭建</title>
+      <link>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</link>
+      <guid>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Cloudfare和Telegraph-Image-实现图床搭建</source>
+      <description>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。 核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔 背景 想有个免费、稳定、访问速度还可以的，并且就算图片丢失也没问题的图床工具，于是就有了Telegraph-I...</description>
+      <category>图床</category>
+      <pubDate>Sun, 15 Oct 2023 09:49:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
+<p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
+</blockquote>
+<h2> 背景</h2>
+<p>想有个免费、稳定、访问速度还可以的，并且就算图片丢失也没问题的图床工具，于是就有了Telegraph-Image。</p>
+<h2> 部署和配置</h2>
+<h3> fork 仓库 和 部署Telegraph-Image 静态资源</h3>
+<p>将 <a href="https://github.com/cf-pages/Telegraph-Image" target="_blank" rel="noopener noreferrer">https://github.com/cf-pages/Telegraph-Image</a>  这个仓库克隆到自己的仓库，然后通过cloudfare中Workers  &amp; Pages ，将克隆好的Github仓库关联，然后进行部署，基本上是点下一步下一步。</p>
+<p>首先点击创建一个应用( create application )：
+<img src="https://img.nnxx.me/file/0a4d1702892892007890c.png" alt="" loading="lazy"></p>
+<p>选择 Pages ，点击关联自己的Github仓库，然后选择克隆后的 Telegraph-Image 仓库
+<img src="https://img.nnxx.me/file/94ae08aabc2a6fe4ee91c.png" alt="" loading="lazy"></p>
+<p>点击 Telegraph-Image 仓库，然后部署即可。</p>
+<figure><img src="https://img.nnxx.me/file/e2ac933717a0c9840efb4.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>部署后的效果图：
+<img src="https://img.nnxx.me/file/e1fcfc5881514a4f02961.png" alt="" loading="lazy"></p>
+<p>配置环境变量：BASIC_USER、BASIC_PASS、ModerateContentApiKey</p>
+<blockquote>
+<p>用于图床后台管理</p>
+<p>BASIC_USER：用户名</p>
+<p>BASIC_PASS：密码</p>
+<p>ModerateContentApiKey： 用于图片内容审查的API</p>
+</blockquote>
+<p>ModerateContentApiKey获取地址API的key：<a href="moderatecontent.com">moderatecontent.com</a></p>
+<figure><img src="https://img.nnxx.me/file/1c59abff1132c1fdf0955.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h3> 创建 KV 存储空间</h3>
+<p>然后需要创建 KV 作为图片的存储空间</p>
+<p>创建 命名空间：
+<img src="https://img.nnxx.me/file/529ea5cd707af55ca1756.png" alt="" loading="lazy"></p>
+<p>效果：
+<img src="https://img.nnxx.me/file/296e6c1b13d4478a3c8ac.png" alt="" loading="lazy"></p>
+<p>找到Functions（函数）---&gt; KV name space bindings ----&gt; Production ，点击 Edit
+bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量值。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>KV  namespace获取的地方就是刚刚创建的 KV 的命名空间</p>
+</blockquote>
+<figure><img src="https://img.nnxx.me/file/6bfb90aadb091fed56cac.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>最后，就需要重新部署即可使配置生效。
+<img src="https://img.nnxx.me/file/48603ba898bf2851a4b35.png" alt="" loading="lazy"></p>
+<h2> 定制域名</h2>
+<p>找到telegraph-image部署后的地方，点击 Custom domains(定制域名)，然后选择 Set up a custom domain ，</p>
+<figure><img src="https://img.nnxx.me/file/fb1d1d01a2f8b9564b30a.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>输入自己的域名（不限于二级域名），然后点击下一步。
+<img src="https://img.nnxx.me/file/3543247c76749c360aa9e.png" alt="" loading="lazy"></p>
+<h2> 登录图床后台</h2>
+<p>后台地址示例：<a href="https://telegraph-image-xxx.pages.dev/admin" target="_blank" rel="noopener noreferrer">https://telegraph-image-xxx.pages.dev/admin</a></p>
+<blockquote>
+<p>根据自己的时间情况而定，比如你这仓库绑定的域名是 <a href="http://img.a.com" target="_blank" rel="noopener noreferrer">img.a.com</a></p>
+<p>那么后台地址就是： <a href="https://img.a.com/admin" target="_blank" rel="noopener noreferrer">https://img.a.com/admin</a></p>
+<p>然后输入上述配置的环境变量中的用户名和密码</p>
+</blockquote>
+<h2> 附件</h2>
+<blockquote>
+<p>参考：<a href="https://mp.weixin.qq.com/s/hbpCxE3dYZY1sgt2H3JffA" target="_blank" rel="noopener noreferrer">保姆级教程：使用Cloudflare+Telegraph搭建零成本图床系统 (qq.com)</a></p>
+<p>项目地址：<a href="https://github.com/cf-pages/Telegraph-Image" target="_blank" rel="noopener noreferrer">https://github.com/cf-pages/Telegraph-Image</a></p>
+</blockquote>
+]]></content:encoded>
+      <enclosure url="https://img.nnxx.me/file/0a4d1702892892007890c.png" type="image/png"/>
+    </item>
     <item>
       <title>frp实现p2p远程连接桌面</title>
       <link>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</link>
