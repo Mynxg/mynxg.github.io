@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 14 Oct 2023 11:38:21 GMT</pubDate>
-    <lastBuildDate>Sat, 14 Oct 2023 11:38:21 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2023 00:45:22 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2023 00:45:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>frp</category>
@@ -89,6 +89,10 @@
 <blockquote>
 <p>远程桌面连接怎么打开？直接win+Q，输入远程桌面连接，点击即可打开，然后输入地址、账号、密码。</p>
 </blockquote>
+<p>效果：
+<img src="https://img.nnxx.me/file/d96263d8a494ba3a00aed.png" alt="" loading="lazy"></p>
+<figure><img src="https://img.nnxx.me/file/99b239d563a82414830e9.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://img.nnxx.me/file/f275bbd5eb71225f9b0d3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 配置说明</h2>
 <p>参考：<a href="https://gofrp.org/zh-cn/docs/features/xtcp/" target="_blank" rel="noopener noreferrer">XTCP | frp (gofrp.org)</a></p>
 <blockquote>
