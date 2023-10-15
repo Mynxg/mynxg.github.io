@@ -6,14 +6,16 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 15 Oct 2023 01:52:15 GMT</pubDate>
-    <lastBuildDate>Sun, 15 Oct 2023 01:52:15 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2023 14:48:22 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2023 14:48:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>图床</category>
     <category>frp</category>
     <category>服务器监测</category>
     <category>运维</category>
+    <category>快速导航</category>
+    <category>编程知识库</category>
     <category>mysql</category>
     <category>linux</category>
     <category>生活</category>
@@ -24,8 +26,6 @@
     <category>系统设计</category>
     <category>技术教程</category>
     <category>书籍</category>
-    <category>快速导航</category>
-    <category>编程知识库</category>
     <category>影视</category>
     <category>音乐</category>
     <category>java</category>
@@ -48,13 +48,13 @@
 <h2> 部署和配置</h2>
 <h3> fork 仓库 和 部署Telegraph-Image 静态资源</h3>
 <p>将 <a href="https://github.com/cf-pages/Telegraph-Image" target="_blank" rel="noopener noreferrer">https://github.com/cf-pages/Telegraph-Image</a>  这个仓库克隆到自己的仓库，然后通过cloudfare中Workers  &amp; Pages ，将克隆好的Github仓库关联，然后进行部署，基本上是点下一步下一步。</p>
-<p>首先点击创建一个应用( create application )：
+<p>首先点击创建一个应用( create application )：<br>
 <img src="https://img.nnxx.me/file/0a4d1702892892007890c.png" alt="" loading="lazy"></p>
-<p>选择 Pages ，点击关联自己的Github仓库，然后选择克隆后的 Telegraph-Image 仓库
+<p>选择 Pages ，点击关联自己的Github仓库，然后选择克隆后的 Telegraph-Image 仓库<br>
 <img src="https://img.nnxx.me/file/94ae08aabc2a6fe4ee91c.png" alt="" loading="lazy"></p>
 <p>点击 Telegraph-Image 仓库，然后部署即可。</p>
 <figure><img src="https://img.nnxx.me/file/e2ac933717a0c9840efb4.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>部署后的效果图：
+<p>部署后的效果图：<br>
 <img src="https://img.nnxx.me/file/e1fcfc5881514a4f02961.png" alt="" loading="lazy"></p>
 <p>配置环境变量：BASIC_USER、BASIC_PASS、ModerateContentApiKey</p>
 <blockquote>
@@ -67,22 +67,22 @@
 <figure><img src="https://img.nnxx.me/file/1c59abff1132c1fdf0955.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 创建 KV 存储空间</h3>
 <p>然后需要创建 KV 作为图片的存储空间</p>
-<p>创建 命名空间：
+<p>创建 命名空间：<br>
 <img src="https://img.nnxx.me/file/529ea5cd707af55ca1756.png" alt="" loading="lazy"></p>
-<p>效果：
+<p>效果：<br>
 <img src="https://img.nnxx.me/file/296e6c1b13d4478a3c8ac.png" alt="" loading="lazy"></p>
-<p>找到Functions（函数）---&gt; KV name space bindings ----&gt; Production ，点击 Edit
+<p>找到Functions（函数）---&gt; KV name space bindings ----&gt; Production ，点击 Edit<br>
 bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量值。</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>KV  namespace获取的地方就是刚刚创建的 KV 的命名空间</p>
 </blockquote>
 <figure><img src="https://img.nnxx.me/file/6bfb90aadb091fed56cac.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>最后，就需要重新部署即可使配置生效。
+<p>最后，就需要重新部署即可使配置生效。<br>
 <img src="https://img.nnxx.me/file/48603ba898bf2851a4b35.png" alt="" loading="lazy"></p>
 <h2> 定制域名</h2>
 <p>找到telegraph-image部署后的地方，点击 Custom domains(定制域名)，然后选择 Set up a custom domain ，</p>
 <figure><img src="https://img.nnxx.me/file/fb1d1d01a2f8b9564b30a.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>输入自己的域名（不限于二级域名），然后点击下一步。
+<p>输入自己的域名（不限于二级域名），然后点击下一步。<br>
 <img src="https://img.nnxx.me/file/3543247c76749c360aa9e.png" alt="" loading="lazy"></p>
 <h2> 登录图床后台</h2>
 <p>后台地址示例：<a href="https://telegraph-image-xxx.pages.dev/admin" target="_blank" rel="noopener noreferrer">https://telegraph-image-xxx.pages.dev/admin</a></p>
@@ -144,7 +144,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <div class="language-bat line-numbers-mode" data-ext="bat"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>将cd后的路径更改为你的frpc实际存放的目录</p>
 </blockquote>
-<p>win10开机自启frp
+<p>win10开机自启frp<br>
 简单操作：win+R 输入 "shell:startup" , 进入到开机自启的位置，然后将上述配置好的 frp.bat 文件的快捷方式复制到开机自启的位置。</p>
 <blockquote>
 <p>注意：之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
@@ -157,7 +157,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <blockquote>
 <p>远程桌面连接怎么打开？直接win+Q，输入远程桌面连接，点击即可打开，然后输入地址、账号、密码。</p>
 </blockquote>
-<p>效果：
+<p>效果：<br>
 <img src="https://img.nnxx.me/file/d96263d8a494ba3a00aed.png" alt="" loading="lazy"></p>
 <figure><img src="https://img.nnxx.me/file/99b239d563a82414830e9.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <figure><img src="https://img.nnxx.me/file/f275bbd5eb71225f9b0d3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
@@ -173,11 +173,11 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <p>个人具体配置：<a href="https://blog.nnxx.me/posts/e1d1124g.html" target="_blank" rel="noopener noreferrer">frp-p2p配置说明</a></p>
 <h2> 附件</h2>
 <p>扩展资料：</p>
-<p>frp udp p2p打洞内网穿透net，xtcp点对点直连win远程桌面，速度超快的高性能内网穿透
+<p>frp udp p2p打洞内网穿透net，xtcp点对点直连win远程桌面，速度超快的高性能内网穿透<br>
 <a href="https://imold.wang/technology/computer/420.html/2/" target="_blank" rel="noopener noreferrer">https://imold.wang/technology/computer/420.html/2/</a></p>
-<p>frp实现p2p远程连接桌面：
+<p>frp实现p2p远程连接桌面：<br>
 <a href="https://www.2280129.xyz/article/000040/frp.html" target="_blank" rel="noopener noreferrer">https://www.2280129.xyz/article/000040/frp.html</a></p>
-<p>frp实现p2p远程连接桌面，非服务器中转：
+<p>frp实现p2p远程连接桌面，非服务器中转：<br>
 <a href="https://blog.csdn.net/Asachen/article/details/120845923" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Asachen/article/details/120845923</a></p>
 ]]></content:encoded>
       <enclosure url="https://s2.ax1x.com/2019/01/12/FjUW0x.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" type="image/"/>
@@ -216,7 +216,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 至此，客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。<br>
 强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
 </blockquote>
-<p>windows开机自启动bat文件：
+<p>windows开机自启动bat文件：<br>
 <a href="https://www.cnblogs.com/shengruxiahuaya/p/17150459.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</a></p>
 <p>开机自启可以参考：<a href="https://www.vuar.cn/index.php/archives/74/" target="_blank" rel="noopener noreferrer">https://www.vuar.cn/index.php/archives/74/</a></p>
 <h2> 附件</h2>
@@ -247,7 +247,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <blockquote>
 <p>建议使用国外的，国内的服务器拉取仓库代码比较慢，可感人了。</p>
 </blockquote>
-<p>比如：你的服务器环境不支持国外环境，脚本执行拉取远程仓库代码就出现超时，无法完成情况。
+<p>比如：你的服务器环境不支持国外环境，脚本执行拉取远程仓库代码就出现超时，无法完成情况。<br>
 我这里使用手动一步安装，也是大致根据脚本来完成的。</p>
 <blockquote>
 <p>注：在这之前需要了解服务端和客户端是什么，如何将客户端和服务端关联起来</p>
@@ -290,7 +290,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <p>不能执行，就换用手动方式，一步一步执行。</p>
 </blockquote>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>修改配置：</p>
-<p>
+<p><br>
 去掉注释，也就是去掉#号</p>
 <p>后面的地址替换成自己服务端反向代理的域名</p>
 <p>例如你的域名是：<a href="https://w.lxip.top" target="_blank" rel="noopener noreferrer">https://w.lxip.top</a></p>
@@ -317,7 +317,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
 <p>不能执行，就换用手动方式，一步一步执行。</p>
 </blockquote>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>都安装完成后如图所示：
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>都安装完成后如图所示：<br>
 </p>
 <p>将客户端注册到服务端上：</p>
 <p>打开 stat_client.service 文件：</p>
@@ -334,16 +334,16 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 </blockquote>
 <h2> 卸载服务端和客户端：</h2>
 <ol>
-<li>先停掉 之前开启的服务
+<li>先停掉 之前开启的服务<br>
 查看服务状态：</li>
 </ol>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>如果服务状态是active（激活）就需要先停止，使用下面的命令</p>
 </blockquote>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>再执行简单粗暴的方式删除文件夹的文件
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>再执行简单粗暴的方式删除文件夹的文件<br>
 在/opt/文件下删除ServerStatus文件夹（包括ServerStatus文件夹所有内容）</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>注意：别使用  /* 来删除所文件，小心一不小心就删库了，对于第一次使用删除命令来删除文件夹下所有内容，是很容易犯这样的问题的。
+<p>注意：别使用  /* 来删除所文件，小心一不小心就删库了，对于第一次使用删除命令来删除文件夹下所有内容，是很容易犯这样的问题的。<br>
 原因：大致是习惯性使用可视化界面，把那种思维方式带到linux下，以为linux跟可视化界面删除方式删除方式相同，这就容易误操作，删库了。禁止这么操作，这是很严重的问题。</p>
 </blockquote>
 <p>删除完成后使用 ll命令，查看一下是否删除完成</p>
@@ -374,12 +374,12 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <li>内网穿透：通过 Frp，您可以将内网中的服务暴露到公网上，例如 Web 服务器、FTP 服务器、SSH 服务器等。</li>
 <li>内网远程桌面：Frp 可以让您在外网使用远程桌面连接到内网中的计算机，方便远程管理和维护。</li>
 <li>构建云计算平台：Frp 可以帮助企业构建私有云环境，提供虚拟机、存储和计算资源等服务。</li>
-<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。
+<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。<br>
 总之，Frp 是一款十分实用的工具，可以帮助企业和个人轻松地管理和访问内网中的服务。</li>
 </ol>
 </blockquote>
 <blockquote>
-<p>官网：<a href="https://github.com/fatedier/frp/releases/tag/v0.48.0" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases/tag/v0.48.0</a>
+<p>官网：<a href="https://github.com/fatedier/frp/releases/tag/v0.48.0" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases/tag/v0.48.0</a><br>
 官方文档：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
 </blockquote>
 <h2> 一、背景</h2>
@@ -389,13 +389,13 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <blockquote>
 <p>例如以我的阿里云服务器为例</p>
 </blockquote>
-<p>
+<p><br>
 具体如何配置请参考：</p>
 <h3> frp实现思路：</h3>
 <p>首先先明确服务端和客户端是什么？</p>
 <blockquote>
-<p>FRP 中服务端（Server）和客户端（Client）是指 FRP 这个工具的两个不同角色。
-服务端是 FRP 的远程服务器，它运行在公网上，并且通常被用来提供内网穿透功能。当您需要从外部网络访问内部网络的设备时，可以在公网上部署一个 FRP 服务端，通过配置相应的映射规则，将来自公网的请求转发到内网设备上。
+<p>FRP 中服务端（Server）和客户端（Client）是指 FRP 这个工具的两个不同角色。<br>
+服务端是 FRP 的远程服务器，它运行在公网上，并且通常被用来提供内网穿透功能。当您需要从外部网络访问内部网络的设备时，可以在公网上部署一个 FRP 服务端，通过配置相应的映射规则，将来自公网的请求转发到内网设备上。<br>
 客户端是 FRP 工具的本地组件，它运行在需要被访问的内部网络设备上，并与远程服务端建立连接。客户端会向服务端注册自己的身份信息，并定期向服务端发送心跳包以保持连接。一旦客户端成功连接到服务端，外部网络就可以通过服务端访问客户端所在的内部网络设备。</p>
 </blockquote>
 <figure><figcaption></figcaption></figure>
@@ -407,22 +407,22 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
 <h3> 2.1 安装&nbsp;<code>systemd</code></h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 2.2 创建并编辑&nbsp;<code>frps.service</code>&nbsp;文件（使用vim编辑器）</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 2.3 写入内容</h3>
-<div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如下图：
-
+<div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如下图：<br>
+<br>
 上面三步可以参考：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
 <h3> 2.4 下载解压安装包</h3>
-<p>方式一：
+<p>方式一：<br>
 在已经创建好的 /root/frp目录下，执行下面的命令即可下frp安装包：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>方式二：
-下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a>
-Linux版（centos），下载如下图版本：
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>方式二：<br>
+下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a><br>
+Linux版（centos），下载如下图版本：<br>
 </p>
 <p>将frp的linux包传递Linux服务器的自定义目录下</p>
 <blockquote>
-<p>例如：
+<p>例如：<br>
 放在/root/frp/目录（文件夹）下，然后解压此文件<strong>frp_0.48.0_linux_amd64.tar.gz</strong></p>
 </blockquote>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后对其命名：
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后对其命名：<br>
 mv 原文件名 修改后的文件名</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或者直接解压并重新命名</p>
 <h3> 2.5 配置服务端（服务器）</h3>
@@ -435,37 +435,37 @@ mv 原文件名 修改后的文件名</p>
 <div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>保存配置并退出 <em>:wq</em></p>
 <p>使用&nbsp;<code>systemd</code>&nbsp;命令，管理 frps</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置 frps 开机自启:</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>贴一张可视化面板图：
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>贴一张可视化面板图：<br>
 </p>
 <h3> 2.6 配置客户端frp</h3>
 <blockquote>
 <p>下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a></p>
 </blockquote>
-<p>
+<p><br>
 自定义一个文件夹解压</p>
 <h3> 2.6 配置客户端（win10本机）</h3>
-<p>在解压frp安装包后，进入找到frpc.ini配置文件并使用文本编辑器打开
-
+<p>在解压frp安装包后，进入找到frpc.ini配置文件并使用文本编辑器打开<br>
+<br>
 配置如下：</p>
 <div class="language-ini line-numbers-mode" data-ext="ini"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>注意：服务端的配置的token与客户端配置的token需要保持一致。
+<p>注意：服务端的配置的token与客户端配置的token需要保持一致。<br>
 参考：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a></p>
 </blockquote>
-<p>在目录下输入cmd回车，然后运行frpc.exe
-如图所示：
-
-
+<p>在目录下输入cmd回车，然后运行frpc.exe<br>
+如图所示：<br>
+<br>
+<br>
 就此配置完成</p>
 <p>接下来就连接远程桌面了</p>
 <h3> 2.7 连接远程桌面</h3>
-<p>如下图所示：
+<p>如下图所示：<br>
 计算机为你服务端的ip地址加端口</p>
 <blockquote>
-<p>例如：139.224.12.12:7000
+<p>例如：139.224.12.12:7000<br>
 </p>
 </blockquote>
-<p>由于我电脑使用的微软邮箱，用户名就为 <a href="mailto:123@outlook.com">123@outlook.com</a>，密码对应微软邮箱密码
-
+<p>由于我电脑使用的微软邮箱，用户名就为 <a href="mailto:123@outlook.com">123@outlook.com</a>，密码对应微软邮箱密码<br>
+<br>
 如果你使用的是本地账号登录，那用户名就是你本地的那个用户名，密码就是开机密码。</p>
 <blockquote>
 <p>如果不想使用ip地址，可以将ip地址绑到域名上，或不想输入端口，可以进行反向代理</p>
@@ -473,8 +473,8 @@ mv 原文件名 修改后的文件名</p>
 <h2> 总结</h2>
 <p>总之，frp不仅仅只是玩远程桌面，还可以玩内网穿透、渗透等。</p>
 <h2> 附件</h2>
-<p>参考1：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a>
-参考2：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a>
+<p>参考1：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a><br>
+参考2：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a><br>
 阿里云官方地址：<a href="https://account.aliyun.com/login/login.htm" target="_blank" rel="noopener noreferrer">https://account.aliyun.com/login/login.htm</a></p>
 ]]></content:encoded>
     </item>
@@ -486,18 +486,18 @@ mv 原文件名 修改后的文件名</p>
       <description>首先你需要有一个gitee账号和一个GitHub账号 （gitee需要绑定手机号并且需要绑定对应的GitHub账号） 使用gitee仓库镜像管理（目前是限时开放） 直接上效果图： 选择直接需要同步的仓库 获取GitHub私人令牌的方式简单贴一张图： 具体如何创建GitHub私人令牌步骤就不展开了 效果如下：</description>
       <category>运维</category>
       <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
+      <content:encoded><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
-<p>直接上效果图：
+<p>直接上效果图：<br>
 </p>
 <blockquote>
 <p>选择直接需要同步的仓库</p>
 </blockquote>
-<p>获取GitHub私人令牌的方式简单贴一张图：
-
+<p>获取GitHub私人令牌的方式简单贴一张图：<br>
+<br>
 具体如何创建GitHub私人令牌步骤就不展开了</p>
-<p>效果如下：
+<p>效果如下：<br>
 </p>
 ]]></content:encoded>
     </item>
@@ -542,7 +542,7 @@ mv 原文件名 修改后的文件名</p>
 <p>此时新的分支会有当前分支的所有文件</p>
 </blockquote>
 <h2> 附件</h2>
-<p>命令大全：
+<p>命令大全：<br>
 </p>
 <p>参考：<a href="https://www.runoob.com/note/56524" target="_blank" rel="noopener noreferrer">https://www.runoob.com/note/56524</a></p>
 ]]></content:encoded>
@@ -559,9 +559,9 @@ mv 原文件名 修改后的文件名</p>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
 <blockquote>
-<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）
-再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理
-起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）<br>
+再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理<br>
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）<br>
 最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
 </blockquote>
 <h2> 具体步骤</h2>
@@ -570,9 +570,9 @@ mv 原文件名 修改后的文件名</p>
 </blockquote>
 <p>创建orphan分支</p>
 <div class="language-git line-numbers-mode" data-ext="git"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>这就是创建orphan类型的分支
-为什么使用orphan类型的分支
-原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响
+<p>这就是创建orphan类型的分支<br>
+为什么使用orphan类型的分支<br>
+原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响<br>
 git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
 </blockquote>
 <p>检查分支状态</p>
@@ -581,7 +581,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 </blockquote>
 <p>提交代码</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>为什么push？
+<p>为什么push？<br>
 因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
 </blockquote>
 <p>注意：</p>
@@ -595,9 +595,28 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <p>此时新的分支会有当前分支的所有文件</p>
 </blockquote>
 <h2> 附件</h2>
-<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a>
-参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a>
+<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a><br>
+参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a><br>
 参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>编程知识库</title>
+      <link>https://blog.lxip.top/resources/share/navlearn.html</link>
+      <guid>https://blog.lxip.top/resources/share/navlearn.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">编程知识库</source>
+      <description>介绍 编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。 编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供...</description>
+      <category>快速导航</category>
+      <category>编程知识库</category>
+      <pubDate>Fri, 14 Apr 2023 16:12:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 介绍</h2>
+<blockquote>
+<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
+<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
+<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
+<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
+</blockquote>
+<h2> 后端知识库</h2>
 ]]></content:encoded>
     </item>
     <item>
@@ -1309,15 +1328,15 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果如图所示：</p>
 <figure><figcaption>image-20221031224144979</figcaption></figure>
 <blockquote>
-<p>“#”  表示注释
+<p>“#”  表示注释<br>
 Host  后面是名称，可以随便写，相当于起了一个别名</p>
-<p>每一个Host就代表一个仓库，仓库参数另起一行，前有4个空格
+<p>每一个Host就代表一个仓库，仓库参数另起一行，前有4个空格<br>
 HostName ： 真正连接的服务器地址</p>
 <p>ssh的host，SSH地址“git@”后面到冒号前面的内容</p>
-<p><code>User</code>：自定义的用户名，一般使用“git”
+<p><code>User</code>：自定义的用户名，一般使用“git”<br>
 <code>PreferredAuthentications</code>： 指定优先使用哪种方式验证，支持密码和秘钥验证方式 。使用“publickey”即可，git仓库均为这种形式</p>
-<p>权限认证--可设为publickey,password publickey,keyboard-interactive等
-<code>IdentityFile</code>：指定本次连接使用的密钥文件。 该host后台配置的公钥对应的私钥地址的绝对路径
+<p>权限认证--可设为publickey,password publickey,keyboard-interactive等<br>
+<code>IdentityFile</code>：指定本次连接使用的密钥文件。 该host后台配置的公钥对应的私钥地址的绝对路径<br>
 Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口号</p>
 </blockquote>
 <h3> 3.2 全局配置</h3>
@@ -1383,8 +1402,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <category>运维</category>
       <pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 查看分支</h1>
-<p>A: 查看本地分支
-使用 git branch命令，如下：git branch
+<p>A: 查看本地分支<br>
+使用 git branch命令，如下：git branch<br>
 *标识的是你当前所在的分支</p>
 <figure><figcaption>img</figcaption></figure>
 <p>B: 查看远程分支</p>
@@ -1466,37 +1485,6 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
 <p>本站由以下内容提供服务</p>
-<div class="project-panel">
-              <a class="project project0" href="https://www.cloudflare.com/" rel="noopener noreferrer" target="_blank">
-                <img src="https://image.liubing.me/2023/02/11/7f17f3cf426c3.png" alt="Cloudflare" class="image">
-                <div class="name">Cloudflare</div>
-                <div class="desc">提供免费的 CDN 服务。</div>
-              </a>
-            
-              <a class="project project1" href="https://vuepress.vuejs.org/zh/" rel="noopener noreferrer" target="_blank">
-                <img src="https://vuepress.vuejs.org/hero.png" alt="VuePress" class="image">
-                <div class="name">VuePress</div>
-                <div class="desc">博客驱动引擎。</div>
-              </a>
-            
-              <a class="project project2" href="https://theme-hope.vuejs.press/zh/" rel="noopener noreferrer" target="_blank">
-                <img src="https://theme-hope.vuejs.press/logo.png" alt="VuePress Theme Hope" class="image">
-                <div class="name">VuePress Theme Hope</div>
-                <div class="desc">本站博客所用主题</div>
-              </a>
-            
-              <a class="project project3" href="https://buddy.works" rel="noopener noreferrer" target="_blank">
-                <img src="https://image.liubing.me/2023/02/11/a7643dcbbc234.png" alt="Buddy" class="image">
-                <div class="name">Buddy</div>
-                <div class="desc">本站自动化打包构建发布工具。</div>
-              </a>
-            
-              <a class="project project4" href="https://waline.js.org/" rel="noopener noreferrer" target="_blank">
-                <img src="https://image.liubing.me/2023/02/05/834597e9e927e.png" alt="Waline" class="image">
-                <div class="name">Waline</div>
-                <div class="desc">本站评论所用服务。</div>
-              </a>
-            <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><h2> 博客</h2>
 ]]></content:encoded>
     </item>
     <item>
@@ -2018,29 +2006,6 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 {"title":"导航页","url":"https://navs.lxip.top/","desc":"导航","icon":"/navicon/yuque.png"},
 {"title":"兰空图床","url":"http://139.224.55.130:9080","desc":"方向代理有问题~~~","icon":"/navicon/dd.jpg"}
 ]'></NavCard> -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>编程知识库</title>
-      <link>https://blog.lxip.top/resources/share/navlearn.html</link>
-      <guid>https://blog.lxip.top/resources/share/navlearn.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">编程知识库</source>
-      <description>介绍 编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。 编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供...</description>
-      <category>快速导航</category>
-      <category>编程知识库</category>
-      <content:encoded><![CDATA[<h2> 介绍</h2>
-<blockquote>
-<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
-<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
-<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
-<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
-</blockquote>
-<h2> 后端知识库</h2>
-
-<h2> 前端知识库</h2>
-
-<h2> 运维知识库</h2>
-
 ]]></content:encoded>
     </item>
     <item>
