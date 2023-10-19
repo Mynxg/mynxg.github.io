@@ -1,4 +1,0 @@
-import{_ as n}from"./plugin-vue_export-helper-c27b6911.js";import{r as c,o as r,c as a,a as s,e as i,b as e,d as o}from"./app-d028e69d.js";const d={},l=e("h2",{id:"关于我",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#关于我","aria-hidden":"true"},"#"),o(" 关于我")],-1),_=e("blockquote",null,[e("p",null,[o("不断地学习和探索新的技术，以及在自己的项目中应用它们"),e("br"),o(" 努力掌握它，以便将其转化为有趣和实用的项目"),e("br"),o(" 自己的热情和能力，并意识到它可以为世界带来更多的创新和进步"),e("br"),o(" 不断努力和探索，我可以不断提高自己的技能，创造更多的有趣和实用的项目，同时也帮助更多的人理解和使用技术。")])],-1);function h(m,p){const t=c("clock");return r(),a("div",null,[s(t),l,_,i(` ## 博客推荐
-<NavCard arr='[{"title":"blog","url":"https://hisnxg.gitee.io/","desc":"hexo搭建的博客模板","icon":"/navicon/dd.jpg"},
-{"title":"逆的博客","url":"https://hisnxg.github.io/","desc":"基于hexo搭建的博客","icon":"/navicon/r2coding.png"}
-]'></NavCard> `)])}const f=n(d,[["render",h],["__file","index.html.vue"]]);export{f as default};

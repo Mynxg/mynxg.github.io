@@ -3,10 +3,11 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-10-16T14:44:56.038Z</updated>
+  <updated>2023-10-19T05:20:58.331Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
+  <category term="项目整合"/>
   <category term="项目"/>
   <category term="图床"/>
   <category term="frp"/>
@@ -33,10 +34,89 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">spring项目整合xxl-job</title>
+    <id>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
+    <link href="https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
+    <updated>2023-10-19T05:20:58.409Z</updated>
+    <summary type="html"><![CDATA[<h2> 背景</h2>
+<p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
+<h2> 准备工作</h2>
+<h3> 环境和版本确定</h3>
+<p>这里选择：xxl-job-admin-2.3.1版本、需要用到了jdk1.8</p>
+<p>项目地址：<a href="https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/" target="_blank" rel="noopener noreferrer">https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/</a></p>]]></summary>
+    <content type="html"><![CDATA[<h2> 背景</h2>
+<p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
+<h2> 准备工作</h2>
+<h3> 环境和版本确定</h3>
+<p>这里选择：xxl-job-admin-2.3.1版本、需要用到了jdk1.8</p>
+<p>项目地址：<a href="https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/" target="_blank" rel="noopener noreferrer">https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/</a></p>
+<blockquote>
+<p>项目地址：<a href="https://github.com/xuxueli/xxl-job" target="_blank" rel="noopener noreferrer">xuxueli/xxl-job: A distributed task scheduling framework.（分布式任务调度平台XXL-JOB） (github.com)</a></p>
+<p>官方文档：<a href="https://www.xuxueli.com/xxl-job" target="_blank" rel="noopener noreferrer">https://www.xuxueli.com/xxl-job</a></p>
+</blockquote>
+<h3> xxl-job-admin项目配置修改</h3>
+<p>xxl-job-admin项目中的application.properties<br>
+关键配置修改：</p>
+<div class="language-properties line-numbers-mode" data-ext="properties"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：目前只需要修改端口、数据库连接地址（用户名、密码）、accessToken</p>
+</blockquote>
+<h2> 项目整合xxl-job</h2>
+<blockquote>
+<p>项目环境：jdk1.8、idea2022.2.2</p>
+</blockquote>
+<h3> 项目目录结构</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 依赖添加</h3>
+<p>记得将xxl-job-core-2.3.1.jar引入到项目lib中。</p>
+<blockquote>
+<p>如你使用的maven，那就添加对应的依赖到pom.xml</p>
+</blockquote>
+<h3> 配置修改</h3>
+<p>修改对应的配置在resouce目录下可自行修改</p>
+<blockquote>
+<p>如你使用的是springboot项目，那就容易多了，就不需要这么繁琐的配置文件了。</p>
+</blockquote>
+<h4> xxl-job-executor.properties</h4>
+<div class="language-properties line-numbers-mode" data-ext="properties"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>xxl.job.admin.addresses ：与启动xxl-job-admin项目启动运行的地址对应</p>
+<p>xxl.job.accessToken： 与启动xxl-job-admin项目中配置的accessToken对应</p>
+<p>xxl.job.executor.appname：执行器的名称自定义，后面配置xxl-job执行器管理会使用到</p>
+</blockquote>
+<h4> applicationcontext-xxl-job.xml</h4>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>这里只需要修改： &lt;context:component-scan base-package="com.xxl.job.executor.service.jobhandler" /&gt; 对应的扫描包</p>
+</blockquote>
+<h4> XxlJob开发示例类</h4>
+<p>SampleXxlJob</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>@XxlJob("demoJobHandler")  ：这里的demoJobHandler会在任务管理器中使用到。<br>
+当你执行点执行时，就会触发demoJobHandler方法</p>
+</blockquote>
+<h4> web.xml</h4>
+<p>原本的web.xml配置：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>web.xml修改后为：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>这里时匹配applicationContext前缀的xml文件，进行加载对应的配置。</p>
+</blockquote>
+<h2> xxl-job使用</h2>
+<p>参考我的另外一篇教程。</p>
+<h2> 附件</h2>
+<p>最后说明一下项目，本项目是使用eclipse编写的，如使用idea打开，就需要修改相应的环境配置，使用的技术栈有：spring、mybaits、Oracle、mongdb、quartz等。在整合xxl-job时，并不能直接按照项目来配置。</p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="项目整合"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2023-10-19T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2023-10-16T14:44:56.067Z</updated>
+    <updated>2023-10-19T05:20:58.416Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2> 开发工具的选择</h2>
@@ -153,7 +233,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2023-10-16T14:44:56.073Z</updated>
+    <updated>2023-10-19T05:20:58.422Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -228,7 +308,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2023-10-16T14:44:56.087Z</updated>
+    <updated>2023-10-19T05:20:58.441Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -315,7 +395,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2023-10-16T14:44:56.107Z</updated>
+    <updated>2023-10-19T05:20:58.481Z</updated>
     <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -378,7 +458,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2023-10-16T14:44:56.136Z</updated>
+    <updated>2023-10-19T05:20:58.497Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -519,7 +599,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2023-10-16T14:44:56.169Z</updated>
+    <updated>2023-10-19T05:20:58.514Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -646,7 +726,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2023-10-16T14:44:56.171Z</updated>
+    <updated>2023-10-19T05:20:58.515Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -682,7 +762,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2023-10-16T14:44:56.173Z</updated>
+    <updated>2023-10-19T05:20:58.518Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -735,7 +815,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2023-10-16T14:44:56.182Z</updated>
+    <updated>2023-10-19T05:20:58.528Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -796,7 +876,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-10-16T14:44:56.183Z</updated>
+    <updated>2023-10-19T05:20:58.530Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -821,7 +901,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-10-16T14:44:56.188Z</updated>
+    <updated>2023-10-19T05:20:58.533Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -885,7 +965,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-10-16T14:44:56.245Z</updated>
+    <updated>2023-10-19T05:20:58.587Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -1119,7 +1199,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-10-16T14:44:56.249Z</updated>
+    <updated>2023-10-19T05:20:58.597Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -1184,7 +1264,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-10-16T14:44:56.251Z</updated>
+    <updated>2023-10-19T05:20:58.599Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -1214,7 +1294,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-10-16T14:44:56.301Z</updated>
+    <updated>2023-10-19T05:20:58.638Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -1559,7 +1639,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2023-10-16T14:44:56.317Z</updated>
+    <updated>2023-10-19T05:20:58.651Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -1659,7 +1739,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2023-10-16T14:44:56.322Z</updated>
+    <updated>2023-10-19T05:20:58.655Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -1743,7 +1823,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-10-16T14:44:56.322Z</updated>
+    <updated>2023-10-19T05:20:58.656Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -1751,7 +1831,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-10-16T14:44:56.324Z</updated>
+    <updated>2023-10-19T05:20:58.657Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1767,7 +1847,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-10-16T14:44:56.420Z</updated>
+    <updated>2023-10-19T05:20:58.734Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -1909,14 +1989,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-10-16T14:44:56.421Z</updated>
+    <updated>2023-10-19T05:20:58.735Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://blog.lxip.top/questionskills/softguide/</id>
     <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-10-16T14:44:56.445Z</updated>
+    <updated>2023-10-19T05:20:58.745Z</updated>
     <summary type="html"><![CDATA[<h2> 组件库</h2>
 <ul>
 <li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
@@ -2110,7 +2190,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2023-10-16T14:44:56.446Z</updated>
+    <updated>2023-10-19T05:20:58.746Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2140,7 +2220,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-10-16T14:44:56.447Z</updated>
+    <updated>2023-10-19T05:20:58.747Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2163,7 +2243,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-10-16T14:44:56.467Z</updated>
+    <updated>2023-10-19T05:20:58.749Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2227,7 +2307,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-10-16T14:44:56.473Z</updated>
+    <updated>2023-10-19T05:20:58.760Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -2359,7 +2439,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-10-16T14:44:56.496Z</updated>
+    <updated>2023-10-19T05:20:58.769Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -2387,7 +2467,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-10-16T14:44:56.497Z</updated>
+    <updated>2023-10-19T05:20:58.770Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -2407,7 +2487,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-10-16T14:44:56.498Z</updated>
+    <updated>2023-10-19T05:20:58.770Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -2415,7 +2495,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-10-16T14:44:56.504Z</updated>
+    <updated>2023-10-19T05:20:58.788Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>

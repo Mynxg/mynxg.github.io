@@ -6,10 +6,11 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 16 Oct 2023 14:44:56 GMT</pubDate>
-    <lastBuildDate>Mon, 16 Oct 2023 14:44:56 GMT</lastBuildDate>
+    <pubDate>Thu, 19 Oct 2023 05:20:58 GMT</pubDate>
+    <lastBuildDate>Thu, 19 Oct 2023 05:20:58 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>项目整合</category>
     <category>项目</category>
     <category>图床</category>
     <category>frp</category>
@@ -32,6 +33,73 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>spring项目整合xxl-job</title>
+      <link>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</link>
+      <guid>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">spring项目整合xxl-job</source>
+      <description>背景 当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。 准备工作 环境和版本确定 这里选择：xxl-job-admin-2.3.1版本、需要用到了jdk1.8 项目地址：https://gitee.com/xuxueli0323/xxl-job/t...</description>
+      <category>项目整合</category>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
+<h2> 准备工作</h2>
+<h3> 环境和版本确定</h3>
+<p>这里选择：xxl-job-admin-2.3.1版本、需要用到了jdk1.8</p>
+<p>项目地址：<a href="https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/" target="_blank" rel="noopener noreferrer">https://gitee.com/xuxueli0323/xxl-job/tree/2.3.1/</a></p>
+<blockquote>
+<p>项目地址：<a href="https://github.com/xuxueli/xxl-job" target="_blank" rel="noopener noreferrer">xuxueli/xxl-job: A distributed task scheduling framework.（分布式任务调度平台XXL-JOB） (github.com)</a></p>
+<p>官方文档：<a href="https://www.xuxueli.com/xxl-job" target="_blank" rel="noopener noreferrer">https://www.xuxueli.com/xxl-job</a></p>
+</blockquote>
+<h3> xxl-job-admin项目配置修改</h3>
+<p>xxl-job-admin项目中的application.properties<br>
+关键配置修改：</p>
+<div class="language-properties line-numbers-mode" data-ext="properties"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：目前只需要修改端口、数据库连接地址（用户名、密码）、accessToken</p>
+</blockquote>
+<h2> 项目整合xxl-job</h2>
+<blockquote>
+<p>项目环境：jdk1.8、idea2022.2.2</p>
+</blockquote>
+<h3> 项目目录结构</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 依赖添加</h3>
+<p>记得将xxl-job-core-2.3.1.jar引入到项目lib中。</p>
+<blockquote>
+<p>如你使用的maven，那就添加对应的依赖到pom.xml</p>
+</blockquote>
+<h3> 配置修改</h3>
+<p>修改对应的配置在resouce目录下可自行修改</p>
+<blockquote>
+<p>如你使用的是springboot项目，那就容易多了，就不需要这么繁琐的配置文件了。</p>
+</blockquote>
+<h4> xxl-job-executor.properties</h4>
+<div class="language-properties line-numbers-mode" data-ext="properties"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>xxl.job.admin.addresses ：与启动xxl-job-admin项目启动运行的地址对应</p>
+<p>xxl.job.accessToken： 与启动xxl-job-admin项目中配置的accessToken对应</p>
+<p>xxl.job.executor.appname：执行器的名称自定义，后面配置xxl-job执行器管理会使用到</p>
+</blockquote>
+<h4> applicationcontext-xxl-job.xml</h4>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>这里只需要修改： &lt;context:component-scan base-package="com.xxl.job.executor.service.jobhandler" /&gt; 对应的扫描包</p>
+</blockquote>
+<h4> XxlJob开发示例类</h4>
+<p>SampleXxlJob</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>@XxlJob("demoJobHandler")  ：这里的demoJobHandler会在任务管理器中使用到。<br>
+当你执行点执行时，就会触发demoJobHandler方法</p>
+</blockquote>
+<h4> web.xml</h4>
+<p>原本的web.xml配置：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>web.xml修改后为：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>这里时匹配applicationContext前缀的xml文件，进行加载对应的配置。</p>
+</blockquote>
+<h2> xxl-job使用</h2>
+<p>参考我的另外一篇教程。</p>
+<h2> 附件</h2>
+<p>最后说明一下项目，本项目是使用eclipse编写的，如使用idea打开，就需要修改相应的环境配置，使用的技术栈有：spring、mybaits、Oracle、mongdb、quartz等。在整合xxl-job时，并不能直接按照项目来配置。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>熟悉项目 &amp; idea导入eclipse项目</title>
       <link>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
