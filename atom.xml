@@ -3,10 +3,11 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-11-29T10:10:45.079Z</updated>
+  <updated>2023-11-29T10:14:56.102Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
+  <category term="工具"/>
   <category term="项目整合"/>
   <category term="项目"/>
   <category term="图床"/>
@@ -18,7 +19,6 @@
   <category term="mysql"/>
   <category term="linux"/>
   <category term="生活"/>
-  <category term="工具"/>
   <category term="Java"/>
   <category term="实战项目"/>
   <category term="软件教程"/>
@@ -35,10 +35,78 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">工作必会工具</title>
+    <id>https://blog.lxip.top/notes/devtool/front-dev-tool.html</id>
+    <link href="https://blog.lxip.top/notes/devtool/front-dev-tool.html"/>
+    <updated>2023-11-29T10:14:56.120Z</updated>
+    <summary type="html"><![CDATA[<h2> git</h2>
+<blockquote>
+<p>Gitee、GitHub、GitLab、Gitcode</p>
+</blockquote>
+<p>教程：<a href="https://www.bilibili.com/video/BV1fN4y1r7ie" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1fN4y1r7ie</a></p>
+<p><a href="https://www.bilibili.com/video/BV14V4y1U7k9/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV14V4y1U7k9/</a></p>]]></summary>
+    <content type="html"><![CDATA[<h2> git</h2>
+<blockquote>
+<p>Gitee、GitHub、GitLab、Gitcode</p>
+</blockquote>
+<p>教程：<a href="https://www.bilibili.com/video/BV1fN4y1r7ie" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1fN4y1r7ie</a></p>
+<p><a href="https://www.bilibili.com/video/BV14V4y1U7k9/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV14V4y1U7k9/</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Ga4y1G79o" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Ga4y1G79o</a></p>
+<blockquote>
+<p>注：有git前置知识（会基础的命令），再看这视频会有更好的理解和感受。也可以直接看这个视频，但就没有那种恍然大悟，也不好理解git。</p>
+</blockquote>
+<h2> 编译器：</h2>
+<blockquote>
+<p>idea、eclipse、Android studio、vscode、Hbuilder、</p>
+</blockquote>
+<p>需要会将将项目拉取下，配置好环境，并能运行起来。</p>
+<p>像老项目很多使用的eclipse开发的，想eclipse项目导入到idea中也需要会配置环境，可能有的项目你在idea中配置好了jdk版本、tomcat、lib（依赖），但项目中还是会飘红、跑不起来，这时你就很迷茫了。不着急，这可能就是提交不规范或有的人提交上去有稍微的问题，但是并不影响本地的项目运行。但对于新拉取的人来说就烦心了，各种问题，特别是eclipse比较老的项目。原因有很多比如我们使用的都是比较新的编译器、可能就会编码问题。解决办法有很多，比如：有的代码根据提示注释即可，并不影响代码运行，特别是一些测试代码，编码问题就需要配置好编译器的编码，但这并不能解决所有问题，当你解决一个问题，又有新的问题。</p>
+<p>idea编译器导入eclipse项目还是不行，就换eclipse项目，可能你还会遇到问题，第一步就阻挡了你的去路，这时你会感到崩溃，emo。你从尝试idea，再到尝试eclipse，折腾来会也没有跑起来。有时并不是自己的原因，得换下思路了。从仓库中拉下来得项目，是多人协作提交的。可能有的人并没有将自己新增加的依赖提交上去，但他们会他们会跟你说需要新增加哪几个依赖。但换了一个人就是另一种说法了。接手新项目的时候，可能配环境都到emo了，会劝退一些人，懂的都懂。</p>
+<h2> 数据库</h2>
+<blockquote>
+<p>Mysql、Oracle</p>
+</blockquote>
+<p>对于Mysql连接工具会一两种即可（Navicat Premium 16、SQLyog、idea自带的）<br>
+Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使用比较多的还是PL/SQL。PL/SQL可以同时连接6个数据库，感觉不够使用。</p>
+<p>Mysql是入门必会的，额，sql server 那就算了，目前使用到的比较少。</p>
+<p>Oracle 学习起来还是有一定的成本的，特别是SQL又丑又长，~~</p>
+<h2> linux工具</h2>
+<blockquote>
+<p>XShell、Xftp、FinalShell 、Termius、MobaXterm</p>
+</blockquote>
+<p>前置Linux基本命令、对Linux有一定了解，一般使用比较多的服务器是centos7</p>
+<p>一般在公司会连接多个服务器，为了方便切换服务器有企业版（ Xmanager ）</p>
+<p>个人使用推荐：FinalShell、MobaXterm</p>
+<h2> 测试工具</h2>
+<blockquote>
+<p>postman、swagger、ApiPost、swagger API</p>
+</blockquote>
+<p>对于springboot框架很多都引入了swagger，你可以将接口API导入到postman中，一般线上测试都需要加入对应的cookie，并不能像你平时那样直接可以测试的。</p>
+<h2> 其他工具</h2>
+<p>设计工具： 墨刀</p>
+<p>思维导图：XMind、ProcessOn</p>
+<p>禅道、IPS</p>
+<h2> 笔记工具</h2>
+<blockquote>
+<p>typroa（markdown编译器）、obsidian</p>
+</blockquote>
+<p>公司内网使用的话，记录一些用户名、密码、地址，就需要一款数据库笔记工具 --  mybase （可设置密码）</p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2023-11-16T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
     <title type="text">spring项目整合xxl-job</title>
     <id>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
     <link href="https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
-    <updated>2023-11-29T10:10:45.155Z</updated>
+    <updated>2023-11-29T10:14:56.181Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
 <h2> 准备工作</h2>
@@ -117,7 +185,7 @@
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2023-11-29T10:10:45.166Z</updated>
+    <updated>2023-11-29T10:14:56.188Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2> 开发工具的选择</h2>
@@ -234,7 +302,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2023-11-29T10:10:45.171Z</updated>
+    <updated>2023-11-29T10:14:56.195Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -309,7 +377,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2023-11-29T10:10:45.188Z</updated>
+    <updated>2023-11-29T10:14:56.233Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -396,7 +464,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2023-11-29T10:10:45.229Z</updated>
+    <updated>2023-11-29T10:14:56.251Z</updated>
     <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -459,7 +527,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2023-11-29T10:10:45.255Z</updated>
+    <updated>2023-11-29T10:14:56.267Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -600,7 +668,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2023-11-29T10:10:45.278Z</updated>
+    <updated>2023-11-29T10:14:56.283Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -727,7 +795,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2023-11-29T10:10:45.279Z</updated>
+    <updated>2023-11-29T10:14:56.284Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -763,7 +831,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2023-11-29T10:10:45.282Z</updated>
+    <updated>2023-11-29T10:14:56.286Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -816,7 +884,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2023-11-29T10:10:45.286Z</updated>
+    <updated>2023-11-29T10:14:56.294Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -877,7 +945,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-11-29T10:10:45.288Z</updated>
+    <updated>2023-11-29T10:14:56.295Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -902,7 +970,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-11-29T10:10:45.292Z</updated>
+    <updated>2023-11-29T10:14:56.310Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -966,7 +1034,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-11-29T10:10:45.355Z</updated>
+    <updated>2023-11-29T10:14:56.354Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -1200,7 +1268,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-11-29T10:10:45.361Z</updated>
+    <updated>2023-11-29T10:14:56.361Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -1265,7 +1333,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-11-29T10:10:45.363Z</updated>
+    <updated>2023-11-29T10:14:56.367Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -1295,7 +1363,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-11-29T10:10:45.396Z</updated>
+    <updated>2023-11-29T10:14:56.393Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -1640,7 +1708,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2023-11-29T10:10:45.410Z</updated>
+    <updated>2023-11-29T10:14:56.413Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -1740,7 +1808,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2023-11-29T10:10:45.426Z</updated>
+    <updated>2023-11-29T10:14:56.418Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -1824,7 +1892,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-11-29T10:10:45.427Z</updated>
+    <updated>2023-11-29T10:14:56.418Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -1832,7 +1900,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-11-29T10:10:45.428Z</updated>
+    <updated>2023-11-29T10:14:56.421Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1845,70 +1913,10 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 ]]></content>
   </entry>
   <entry>
-    <title type="text">工作必会工具</title>
-    <id>https://blog.lxip.top/notes/devtool/front-dev-tool.html</id>
-    <link href="https://blog.lxip.top/notes/devtool/front-dev-tool.html"/>
-    <updated>2023-11-29T10:10:45.442Z</updated>
-    <summary type="html"><![CDATA[<h2> git</h2>
-<blockquote>
-<p>Gitee、GitHub、GitLab、Gitcode</p>
-</blockquote>
-<p>教程：<a href="https://www.bilibili.com/video/BV1fN4y1r7ie" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1fN4y1r7ie</a></p>
-<p><a href="https://www.bilibili.com/video/BV14V4y1U7k9/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV14V4y1U7k9/</a></p>]]></summary>
-    <content type="html"><![CDATA[<h2> git</h2>
-<blockquote>
-<p>Gitee、GitHub、GitLab、Gitcode</p>
-</blockquote>
-<p>教程：<a href="https://www.bilibili.com/video/BV1fN4y1r7ie" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1fN4y1r7ie</a></p>
-<p><a href="https://www.bilibili.com/video/BV14V4y1U7k9/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV14V4y1U7k9/</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ga4y1G79o" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Ga4y1G79o</a></p>
-<blockquote>
-<p>注：有git前置知识（会基础的命令），再看这视频会有更好的理解和感受。也可以直接看这个视频，但就没有那种恍然大悟，也不好理解git。</p>
-</blockquote>
-<h2> 编译器：</h2>
-<blockquote>
-<p>idea、eclipse、Android studio、vscode、Hbuilder、</p>
-</blockquote>
-<p>需要会将将项目拉取下，配置好环境，并能运行起来。</p>
-<p>像老项目很多使用的eclipse开发的，想eclipse项目导入到idea中也需要会配置环境，可能有的项目你在idea中配置好了jdk版本、tomcat、lib（依赖），但项目中还是会飘红、跑不起来，这时你就很迷茫了。不着急，这可能就是提交不规范或有的人提交上去有稍微的问题，但是并不影响本地的项目运行。但对于新拉取的人来说就烦心了，各种问题，特别是eclipse比较老的项目。原因有很多比如我们使用的都是比较新的编译器、可能就会编码问题。解决办法有很多，比如：有的代码根据提示注释即可，并不影响代码运行，特别是一些测试代码，编码问题就需要配置好编译器的编码，但这并不能解决所有问题，当你解决一个问题，又有新的问题。</p>
-<p>idea编译器导入eclipse项目还是不行，就换eclipse项目，可能你还会遇到问题，第一步就阻挡了你的去路，这时你会感到崩溃，emo。你从尝试idea，再到尝试eclipse，折腾来会也没有跑起来。有时并不是自己的原因，得换下思路了。从仓库中拉下来得项目，是多人协作提交的。可能有的人并没有将自己新增加的依赖提交上去，但他们会他们会跟你说需要新增加哪几个依赖。但换了一个人就是另一种说法了。接手新项目的时候，可能配环境都到emo了，会劝退一些人，懂的都懂。</p>
-<h2> 数据库</h2>
-<blockquote>
-<p>Mysql、Oracle</p>
-</blockquote>
-<p>对于Mysql连接工具会一两种即可（Navicat Premium 16、SQLyog、idea自带的）<br>
-Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使用比较多的还是PL/SQL。PL/SQL可以同时连接6个数据库，感觉不够使用。</p>
-<p>Mysql是入门必会的，额，sql server 那就算了，目前使用到的比较少。</p>
-<p>Oracle 学习起来还是有一定的成本的，特别是SQL又丑又长，~~</p>
-<h2> linux工具</h2>
-<blockquote>
-<p>XShell、Xftp、FinalShell 、Termius、MobaXterm</p>
-</blockquote>
-<p>前置Linux基本命令、对Linux有一定了解，一般使用比较多的服务器是centos7</p>
-<p>一般在公司会连接多个服务器，为了方便切换服务器有企业版（ Xmanager ）</p>
-<p>个人使用推荐：FinalShell、MobaXterm</p>
-<h2> 测试工具</h2>
-<blockquote>
-<p>postman、swagger、ApiPost、swagger API</p>
-</blockquote>
-<p>对于springboot框架很多都引入了swagger，你可以将接口API导入到postman中，一般线上测试都需要加入对应的cookie，并不能像你平时那样直接可以测试的。</p>
-<h2> 其他工具</h2>
-<p>设计工具： 墨刀</p>
-<p>思维导图：XMind、ProcessOn</p>
-<p>禅道、IPS</p>
-<h2> 笔记工具</h2>
-<blockquote>
-<p>typroa（markdown编译器）、obsidian</p>
-</blockquote>
-<p>公司内网使用的话，记录一些用户名、密码、地址，就需要一款数据库笔记工具 --  mybase （可设置密码）</p>
-]]></content>
-    <category term="工具"/>
-  </entry>
-  <entry>
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-11-29T10:10:45.515Z</updated>
+    <updated>2023-11-29T10:14:56.498Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -2050,14 +2058,14 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-11-29T10:10:45.516Z</updated>
+    <updated>2023-11-29T10:14:56.499Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://blog.lxip.top/questionskills/softguide/</id>
     <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-11-29T10:10:45.524Z</updated>
+    <updated>2023-11-29T10:14:56.510Z</updated>
     <summary type="html"><![CDATA[<h2> 组件库</h2>
 <ul>
 <li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
@@ -2251,7 +2259,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2023-11-29T10:10:45.525Z</updated>
+    <updated>2023-11-29T10:14:56.511Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2281,7 +2289,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-11-29T10:10:45.526Z</updated>
+    <updated>2023-11-29T10:14:56.511Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2304,7 +2312,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-11-29T10:10:45.538Z</updated>
+    <updated>2023-11-29T10:14:56.513Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2368,7 +2376,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-11-29T10:10:45.540Z</updated>
+    <updated>2023-11-29T10:14:56.528Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -2500,7 +2508,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-11-29T10:10:45.552Z</updated>
+    <updated>2023-11-29T10:14:56.538Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -2528,7 +2536,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-11-29T10:10:45.554Z</updated>
+    <updated>2023-11-29T10:14:56.539Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -2548,7 +2556,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-11-29T10:10:45.554Z</updated>
+    <updated>2023-11-29T10:14:56.539Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -2556,7 +2564,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-11-29T10:10:45.588Z</updated>
+    <updated>2023-11-29T10:14:56.546Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
