@@ -3,13 +3,16 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2023-11-29T10:14:56.102Z</updated>
+  <updated>2023-12-27T03:51:53.136Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
-  <category term="工具"/>
-  <category term="项目整合"/>
   <category term="项目"/>
+  <category term="lombok"/>
+  <category term="工具"/>
+  <category term="docker"/>
+  <category term="安装教程"/>
+  <category term="项目整合"/>
   <category term="图床"/>
   <category term="frp"/>
   <category term="服务器监测"/>
@@ -21,7 +24,6 @@
   <category term="生活"/>
   <category term="Java"/>
   <category term="实战项目"/>
-  <category term="软件教程"/>
   <category term="导航"/>
   <category term="系统设计"/>
   <category term="技术教程"/>
@@ -35,10 +37,43 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">问题集-插件类</title>
+    <id>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</id>
+    <link href="https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html"/>
+    <updated>2023-12-27T03:51:53.149Z</updated>
+    <summary type="html"><![CDATA[<h2> lombok在eclipse中不生效问题</h2>
+<p>遇到的问题</p>
+<p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
+<p>解决方法：<br>
+把lombok.jar包复制到了eclipse安装目录，并在 eclipse.ini 文件中最后一行加入了一句话：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>-javaagent:D:\eclipse_4.4\eclipse\lombok.jar
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> lombok在eclipse中不生效问题</h2>
+<p>遇到的问题</p>
+<p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
+<p>解决方法：<br>
+把lombok.jar包复制到了eclipse安装目录，并在 eclipse.ini 文件中最后一行加入了一句话：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>最后在项目中引入lombok.jar，然后重启eclipse，lombok插件就生效了。</p>
+<blockquote>
+<p>关键步骤</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://blog.csdn.net/chengmo123/article/details/108673610" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/chengmo123/article/details/108673610</a></p>
+<p><a href="https://blog.csdn.net/chengmo123/article/details/108673610" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/chengmo123/article/details/108673610</a></p>
+<p>解决Error running ‘XXX‘：command line is too long.Shorten command line for ‘XXX‘ or also for Junit</p>
+<p>解决方法：<br>
+<a href="https://blog.csdn.net/weixin_44009447/article/details/118707493" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_44009447/article/details/118707493</a></p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://blog.csdn.net/qq_24033983/article/details/123335806" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_24033983/article/details/123335806</a></p>
+<p><a href="https://www.bilibili.com/read/cv26239980/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv26239980/</a></p>
+]]></content>
+    <category term="项目"/>
+    <category term="lombok"/>
+    <published>2023-12-26T10:36:13.000Z</published>
+  </entry>
+  <entry>
     <title type="text">工作必会工具</title>
     <id>https://blog.lxip.top/notes/devtool/front-dev-tool.html</id>
     <link href="https://blog.lxip.top/notes/devtool/front-dev-tool.html"/>
-    <updated>2023-11-29T10:14:56.120Z</updated>
+    <updated>2023-12-27T03:51:53.162Z</updated>
     <summary type="html"><![CDATA[<h2> git</h2>
 <blockquote>
 <p>Gitee、GitHub、GitLab、Gitcode</p>
@@ -103,10 +138,93 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <rights>Copyright by nxg</rights>
   </entry>
   <entry>
+    <title type="text">docker安装Oracle容器</title>
+    <id>https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</id>
+    <link href="https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html"/>
+    <updated>2023-12-27T03:51:53.182Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>使用docker方式手动方式安装各类容器（服务）</p>
+</blockquote>
+<p>镜像查找方式：<a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">https://hub.docker.com/</a></p>
+<h2> 安装Oracle</h2>
+<blockquote>
+<p>参考1：<a href="https://blog.csdn.net/javaboyweng/article/details/125486242" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/javaboyweng/article/details/125486242</a></p>
+<p>参考2：<a href="https://developer.aliyun.com/article/1025085" target="_blank" rel="noopener noreferrer">Docker-14：Docker安装Oracle11g</a>  (赞)</p>
+<p>参考3：[<a href="https://cloud.tencent.com/developer/article/2177523" target="_blank" rel="noopener noreferrer">docker安装Oracle数据库-腾讯云开发者社区-腾讯云 (tencent.com)</a>] (赞)</p>
+<p>镜像：<a href="https://hub.docker.com/r/akaiot/oracle_11g" target="_blank" rel="noopener noreferrer">https://hub.docker.com/r/akaiot/oracle_11g</a></p>
+<p>安装视频教程：<a href="https://www.bilibili.com/video/BV1sf4y177md" target="_blank" rel="noopener noreferrer">参考</a></p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>使用docker方式手动方式安装各类容器（服务）</p>
+</blockquote>
+<p>镜像查找方式：<a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">https://hub.docker.com/</a></p>
+<h2> 安装Oracle</h2>
+<blockquote>
+<p>参考1：<a href="https://blog.csdn.net/javaboyweng/article/details/125486242" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/javaboyweng/article/details/125486242</a></p>
+<p>参考2：<a href="https://developer.aliyun.com/article/1025085" target="_blank" rel="noopener noreferrer">Docker-14：Docker安装Oracle11g</a>  (赞)</p>
+<p>参考3：[<a href="https://cloud.tencent.com/developer/article/2177523" target="_blank" rel="noopener noreferrer">docker安装Oracle数据库-腾讯云开发者社区-腾讯云 (tencent.com)</a>] (赞)</p>
+<p>镜像：<a href="https://hub.docker.com/r/akaiot/oracle_11g" target="_blank" rel="noopener noreferrer">https://hub.docker.com/r/akaiot/oracle_11g</a></p>
+<p>安装视频教程：<a href="https://www.bilibili.com/video/BV1sf4y177md" target="_blank" rel="noopener noreferrer">参考</a></p>
+</blockquote>
+<p>这里使用云服务器，通过docker方式安装Oracle容器</p>
+<blockquote>
+<p>服务器使用的是2核4G的，</p>
+</blockquote>
+<h3> 操作</h3>
+<blockquote>
+<p>前置知识需要熟悉docker常用命令</p>
+</blockquote>
+<p>拉取镜像</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>启动容器：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>--mount source=oracle_vol,</p>
+<p>target=/home/oracle/app/oracle/oradata ，服务器本地目录，可以自定义，比如：/root/docker-data/oracle/oracledata</p>
+<p><a href="http://registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g" target="_blank" rel="noopener noreferrer">registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</a></p>
+</blockquote>
+<p>修改文件，先进入容器内，执行一下操作：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后输入密码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改<code>/etc/profile</code>文件，将ORACLE_HOME和ORACLE_SID配置到其中，然后生效。<br>
+输入：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p><code>--restart</code>表示docker重启是容器自动重启</p>
+<p><code>--mount</code>表示要将Host上的路径挂载到容器中</p>
+<p>export ORACLE_SID=helowin ，ORACLE_SID=自定义sid，后面连接的时候会用到</p>
+</blockquote>
+<p>然后让配置文件生效：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>创建<a href="https://so.csdn.net/so/search?q=%E8%BD%AF%E8%BF%9E%E6%8E%A5&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">软连接</a></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>登录sqlplus</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建一个用户(看自己了)</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>顺带修改一下连接次数：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>还有一步，修改以上信息后，需要重新启动数据库；</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>数据库服务关闭：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>数据库服务启动：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>退出软链接：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 工具连接</h3>
+<p>使用的是Navicat Premium16工具连接Oracle数据库进行测试。</p>
+<blockquote>
+<p>工具下载：<a href="https://blogs.lxip.top/questionskills/software/tool.html" target="_blank" rel="noopener noreferrer">参考这里</a></p>
+</blockquote>
+<h3> 可能遇到问题</h3>
+<p>当执行修改密码的时候出现 ： database not open</p>
+<p>解决办法：</p>
+<p>输入：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>输入 ：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后就可修改数据库密码的命令了</p>
+<p>改完之后输入：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>刷新下表</p>
+<blockquote>
+<p>exit 表示退出sql，软连接 i</p>
+</blockquote>
+]]></content>
+    <category term="docker"/>
+    <category term="安装教程"/>
+    <published>2023-10-26T10:00:13.000Z</published>
+  </entry>
+  <entry>
     <title type="text">spring项目整合xxl-job</title>
     <id>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
     <link href="https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
-    <updated>2023-11-29T10:14:56.181Z</updated>
+    <updated>2023-12-27T03:51:53.221Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
 <h2> 准备工作</h2>
@@ -185,7 +303,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2023-11-29T10:14:56.188Z</updated>
+    <updated>2023-12-27T03:51:53.227Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2> 开发工具的选择</h2>
@@ -302,7 +420,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2023-11-29T10:14:56.195Z</updated>
+    <updated>2023-12-27T03:51:53.232Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -377,7 +495,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2023-11-29T10:14:56.233Z</updated>
+    <updated>2023-12-27T03:51:53.241Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -464,7 +582,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2023-11-29T10:14:56.251Z</updated>
+    <updated>2023-12-27T03:51:53.277Z</updated>
     <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -527,7 +645,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2023-11-29T10:14:56.267Z</updated>
+    <updated>2023-12-27T03:51:53.292Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -668,7 +786,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2023-11-29T10:14:56.283Z</updated>
+    <updated>2023-12-27T03:51:53.300Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -795,7 +913,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2023-11-29T10:14:56.284Z</updated>
+    <updated>2023-12-27T03:51:53.301Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -831,7 +949,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2023-11-29T10:14:56.286Z</updated>
+    <updated>2023-12-27T03:51:53.304Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -884,7 +1002,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2023-11-29T10:14:56.294Z</updated>
+    <updated>2023-12-27T03:51:53.307Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -945,7 +1063,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2023-11-29T10:14:56.295Z</updated>
+    <updated>2023-12-27T03:51:53.309Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -970,7 +1088,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2023-11-29T10:14:56.310Z</updated>
+    <updated>2023-12-27T03:51:53.327Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -1034,7 +1152,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2023-11-29T10:14:56.354Z</updated>
+    <updated>2023-12-27T03:51:53.375Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -1268,7 +1386,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-11-29T10:14:56.361Z</updated>
+    <updated>2023-12-27T03:51:53.378Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -1333,7 +1451,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2023-11-29T10:14:56.367Z</updated>
+    <updated>2023-12-27T03:51:53.388Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -1363,7 +1481,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2023-11-29T10:14:56.393Z</updated>
+    <updated>2023-12-27T03:51:53.406Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -1708,7 +1826,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2023-11-29T10:14:56.413Z</updated>
+    <updated>2023-12-27T03:51:53.423Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -1808,7 +1926,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2023-11-29T10:14:56.418Z</updated>
+    <updated>2023-12-27T03:51:53.445Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -1892,7 +2010,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2023-11-29T10:14:56.418Z</updated>
+    <updated>2023-12-27T03:51:53.446Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -1900,7 +2018,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2023-11-29T10:14:56.421Z</updated>
+    <updated>2023-12-27T03:51:53.447Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -1916,7 +2034,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2023-11-29T10:14:56.498Z</updated>
+    <updated>2023-12-27T03:51:53.519Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -2058,208 +2176,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2023-11-29T10:14:56.499Z</updated>
+    <updated>2023-12-27T03:51:53.520Z</updated>
     <category term="实战项目"/>
-  </entry>
-  <entry>
-    <title type="text">软件教程</title>
-    <id>https://blog.lxip.top/questionskills/softguide/</id>
-    <link href="https://blog.lxip.top/questionskills/softguide/"/>
-    <updated>2023-11-29T10:14:56.510Z</updated>
-    <summary type="html"><![CDATA[<h2> 组件库</h2>
-<ul>
-<li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">GitHub - bestvist/vue-clock2: vue clock component</a></p>
-<p>演示：<a href="https://bestvist.github.io/vue-clock2/docs/" target="_blank" rel="noopener noreferrer">vue-clock2 | vue clock component (bestvist.github.io)</a></p>
-</blockquote>]]></summary>
-    <content type="html"><![CDATA[<h2> 组件库</h2>
-<ul>
-<li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">GitHub - bestvist/vue-clock2: vue clock component</a></p>
-<p>演示：<a href="https://bestvist.github.io/vue-clock2/docs/" target="_blank" rel="noopener noreferrer">vue-clock2 | vue clock component (bestvist.github.io)</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/javaLuo/vue-flip-down" target="_blank" rel="noopener noreferrer">vue-flip-down</a>：一款简单的<strong>翻页倒计时组件</strong>，可以自定义结束时间、显示类型、空隙间的文字。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://github.com/javaLuo/vue-flip-down" target="_blank" rel="noopener noreferrer">GitHub - javaLuo/vue-flip-down: vue 翻页倒计时组件 妙啊</a></p>
-<p>演示：<a href="https://isluo.com/work/vue-flip-down/" target="_blank" rel="noopener noreferrer">Vue-flip-down DEMO (isluo.com)</a></p>
-</blockquote>
-<ul>
-<li><a href="https://codepen.io/quintiontang/pen/MWrywqW" target="_blank" rel="noopener noreferrer">crayon-clock</a>：一款<strong>极简时钟组件</strong>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://www.devpoint.cn/article/390.shtml" target="_blank" rel="noopener noreferrer">VUE构建数字时钟组件|在线数字时钟_devpoint</a></p>
-<p>演示：<a href="https://codepen.io/quintiontang/pen/MWrywqW" target="_blank" rel="noopener noreferrer">crayon-clock (codepen.io)</a></p>
-<p>代码：<a href="https://gitee.com/xt-gitee/codes/cv451silwfzm63dqa9xe863" target="_blank" rel="noopener noreferrer">https://gitee.com/xt-gitee/codes/cv451silwfzm63dqa9xe863</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/kuan1/kuan-vue-flip-clock" target="_blank" rel="noopener noreferrer">kuan-vue-flip-clock</a>：一款类似于经典<code>flip</code>的<strong>翻页时钟组件</strong>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://github.com/kuan1/kuan-vue-flip-clock" target="_blank" rel="noopener noreferrer">GitHub - kuan1/kuan-vue-flip-clock: 使用vue制作翻页时钟</a></p>
-<p>演示：<a href="https://www.kuan1.top/kuan-vue-flip-clock/" target="_blank" rel="noopener noreferrer">kuan-vue-flip-clock (kuan1.top)</a></p>
-</blockquote>
-<h2> 工具库</h2>
-<ul>
-<li><a href="https://hutool.cn/" target="_blank" rel="noopener noreferrer">Hutool</a>：一个小而全的<code>Java</code>工具类库，通过<strong>静态方法封装</strong>，降低相关<code>API</code>的学习成本，提高工作效率，使<code>Java</code>拥有函数式语言般的优雅，让<code>Java</code>语言也可以“甜甜的”。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://hutool.cn/" target="_blank" rel="noopener noreferrer">Hutool — 🍬A set of tools that keep Java sweet.</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/dromara/hutool/" target="_blank" rel="noopener noreferrer">hutool: 🍬小而全的Java工具类库，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。 (gitee.com)</a></p>
-<p><code>API</code>文档：<a href="https://apidoc.gitee.com/dromara/hutool/" target="_blank" rel="noopener noreferrer">Overview (hutool-码云(gitee.com))</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/DiUS/java-faker" target="_blank" rel="noopener noreferrer">java-faker</a>：一个获得<strong>假数据</strong>的神器【 <strong>Faker-骗子</strong> 】。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/DiUS/java-faker" target="_blank" rel="noopener noreferrer">GitHub - DiUS/java-faker: Brings the popular ruby faker gem to Java</a></p>
-<p><code>API</code>文档：<a href="http://dius.github.io/java-faker/apidocs/index.html" target="_blank" rel="noopener noreferrer">Overview (Java Faker 0.19-SNAPSHOT API) (dius.github.io)</a></p>
-</blockquote>
-<ul>
-<li><a href="https://guava.dev/" target="_blank" rel="noopener noreferrer">Guava</a>：<code>Guava</code>是<code>Google</code>提供的一组<strong>核心<code>Java</code>库</strong>，其中包括新的集合类型（如<code>multimap</code>和<code>multiset</code>）、不可变集合、图形库以及用于并发、<code>I/O</code>、哈希、缓存、原语、字符串等的实用程序。它广泛用于<code>Google</code>中的大多数<code>Java</code>项目，也被许多其他公司广泛使用。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/google/guava" target="_blank" rel="noopener noreferrer">GitHub - google/guava: Google core libraries for Java</a></p>
-<p>官方文档：<a href="https://github.com/google/guava/wiki" target="_blank" rel="noopener noreferrer">Home · google/guava Wiki · GitHub</a></p>
-<p>中文文档：<a href="https://www.yiibai.com/guava/guava_environment.html" target="_blank" rel="noopener noreferrer"> Guava教程</a></p>
-</blockquote>
-<h2> Mac软件</h2>
-<ul>
-<li><a href="https://mos.caldis.me/" target="_blank" rel="noopener noreferrer">Mos</a>：<code>MagicMouse</code>真的是太难用了，<code>Mac</code>上外接鼠标之后，会出现<strong>滚动卡顿</strong>和<strong>自然方向</strong>的问题，通过该软件可以<strong>实现<code>平滑滚动</code>和<code>反转方向</code></strong>，还可以自定义滚动的速度、持续时长，同时该软件<code>免费开源</code>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://mos.caldis.me/" target="_blank" rel="noopener noreferrer">MOS | 一个用于在 MacOS 上平滑你的鼠标滚动效果或单独设置滚动方向的小工具, 让你的滚轮爽如触控板 (caldis.me)</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/Caldis/Mos" target="_blank" rel="noopener noreferrer">https://github.com/Caldis/Mos</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/dwarvesf/hidden" target="_blank" rel="noopener noreferrer">Hidden Bar</a>：<strong>隐藏<code>Mac</code>菜单栏</strong>的小工具，免费开源。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://dwarves.foundation/opensource/" target="_blank" rel="noopener noreferrer">https://dwarves.foundation/opensource/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/dwarvesf/hidden" target="_blank" rel="noopener noreferrer">https://github.com/dwarvesf/hidden</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/Splode/pomotroid" target="_blank" rel="noopener noreferrer">Pomotroid</a>：<code>Pomotroid</code>是一个简单且可配置的<strong>番茄计时器</strong>。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/Splode/pomotroid" target="_blank" rel="noopener noreferrer">https://github.com/Splode/pomotroid</a></p>
-<p>官网：<a href="https://splode.github.io/pomotroid/" target="_blank" rel="noopener noreferrer">https://splode.github.io/pomotroid/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/CyC2018/Text-Typesetting" target="_blank" rel="noopener noreferrer">Text-Typesetting</a>：中英混排文档<strong>在线排版工具</strong>。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/CyC2018/Text-Typesetting" target="_blank" rel="noopener noreferrer">https://github.com/CyC2018/Text-Typesetting</a></p>
-<p>官网：<a href="https://cyc2018.github.io/Text-Typesetting/" target="_blank" rel="noopener noreferrer">https://cyc2018.github.io/Text-Typesetting/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://gitee.com/Doocs/md" target="_blank" rel="noopener noreferrer">md</a>：一款高度简洁的<strong>微信公众号推文 <code>Markdown</code> 编辑器</strong>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://doocs.gitee.io/md/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/md/</a></p>
-<p>官网：<a href="https://doocs.github.io/md" target="_blank" rel="noopener noreferrer">https://doocs.github.io/md</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/doocs/md" target="_blank" rel="noopener noreferrer">https://github.com/doocs/md</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/md" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/md</a></p>
-</blockquote>
-<ul>
-<li><a href="https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12" target="_blank" rel="noopener noreferrer">Input Source Pro</a>：自动<strong>显示当前输入法名称</strong>的工具。</li>
-</ul>
-<blockquote>
-<p>下载地址：<a href="https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12" target="_blank" rel="noopener noreferrer">https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/obsproject/obs-studio" target="_blank" rel="noopener noreferrer">obs-studio</a>：用于<strong>视频录制和直播</strong>的免费开源软件。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/obsproject/obs-studio" target="_blank" rel="noopener noreferrer">https://github.com/obsproject/obs-studio</a></p>
-<p>官网：<a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">https://obsproject.com/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md" target="_blank" rel="noopener noreferrer">awesome-mac</a>：收集了各种类别非常好用的 <strong><code>Mac</code> 应用程序、软件以及工具。</strong></li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener noreferrer">https://github.com/jaywcjlove/awesome-mac</a></p>
-<p>官网：<a href="https://git.io/macx" target="_blank" rel="noopener noreferrer">https://git.io/macx</a></p>
-</blockquote>
-<ul>
-<li><a href="https://gitee.com/xwintop/xJavaFxTool" target="_blank" rel="noopener noreferrer">xJavaFxTool</a>：基于<code>JavaFx</code>搭建的<strong>实用小工具集合</strong>，方便开发过程中的代码编写与调试。</li>
-</ul>
-<blockquote>
-<p><code>Api Doc</code>：<a href="https://apidoc.gitee.com/xwintop/xJavaFxTool/" target="_blank" rel="noopener noreferrer">https://apidoc.gitee.com/xwintop/xJavaFxTool/</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/xwintop/xJavaFxTool" target="_blank" rel="noopener noreferrer">https://gitee.com/xwintop/xJavaFxTool</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/864381832/xJavaFxTool" target="_blank" rel="noopener noreferrer">https://github.com/864381832/xJavaFxTool</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/fvarrui/JavaPackager" target="_blank" rel="noopener noreferrer">JavaPackager</a>：<code>Java</code>应用的<strong>打包工具</strong>，可以为<code>Windows</code>、<code>Mac</code>、<code>Linux</code>打包应用。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/fvarrui/JavaPackager" target="_blank" rel="noopener noreferrer">https://github.com/fvarrui/JavaPackager</a></p>
-</blockquote>
-<ul>
-<li><a href="https://www.coley.software/Recaf/" target="_blank" rel="noopener noreferrer">Recaf</a>：基于JavaFx构建的开源<strong>字节码编辑器。</strong></li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://www.coley.software/Recaf/" target="_blank" rel="noopener noreferrer">https://www.coley.software/Recaf/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/Col-E/Recaf" target="_blank" rel="noopener noreferrer">https://github.com/Col-E/Recaf</a></p>
-</blockquote>
-<ul>
-<li><a href="https://apps.apple.com/cn/app/menubarx-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%B5%8F%E8%A7%88%E5%99%A8/id1575588022?mt=12" target="_blank" rel="noopener noreferrer">MenubarX</a>：一款强大的<code>Mac</code><strong>菜单栏浏览器</strong>。</li>
-</ul>
-<blockquote>
-<p>下载链接：<a href="https://apps.apple.com/cn/app/menubarx-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%B5%8F%E8%A7%88%E5%99%A8/id1575588022?mt=12" target="_blank" rel="noopener noreferrer">https://apps.apple.com/cn/app/menubarx-强大的菜单栏浏览器/id1575588022?mt=12</a></p>
-</blockquote>
-<ul>
-<li><a href="https://www.apicloud.com/" target="_blank" rel="noopener noreferrer">apicloud</a>：移动<strong>低代码专家，可以使用其<code>APICloud Studio 3</code>开发工具进行快速开发。</strong></li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://www.apicloud.com/" target="_blank" rel="noopener noreferrer">https://www.apicloud.com/</a></p>
-<p><code>APICloud Studio 3</code>下载地址：<a href="https://www.apicloud.com/studio3" target="_blank" rel="noopener noreferrer">https://www.apicloud.com/studio3</a></p>
-</blockquote>
-<ul>
-<li><a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a>：免费开源且跨平台的<strong>音频编辑软件</strong>，可以用来实现降噪。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">https://www.audacityteam.org/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">HandBrake</a>：<code>HandBrake</code>是一款适用于<code>Mac</code>系统的<strong>视频压缩软件（免费开源）</strong>，可压缩<code>MP4</code>视频和其他文件格式，软件可以用于调整诸如帧率，码率，分辨率等参数，以便轻松地压缩视频大小。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">https://handbrake.fr/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://github.com/keycastr/keycastr" target="_blank" rel="noopener noreferrer">keycastr</a>：一个开源免费的在桌面上<strong>显示键盘按键</strong>的小工具。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/keycastr/keycastr" target="_blank" rel="noopener noreferrer">https://github.com/keycastr/keycastr</a></p>
-</blockquote>
-<ul>
-<li><a href="https://www.warp.dev/" target="_blank" rel="noopener noreferrer">warp</a>：<code>21世纪</code>的专为程序员开发的<strong>终端工具</strong>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://www.warp.dev/" target="_blank" rel="noopener noreferrer">https://www.warp.dev/</a></p>
-</blockquote>
-<ul>
-<li><a href="https://swh.app/" target="_blank" rel="noopener noreferrer">SwitchHosts</a>：<strong>管理<code>host</code>文件</strong>的开源免费工具。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://swh.app/" target="_blank" rel="noopener noreferrer">https://swh.app/</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/mirrors/switchhosts" target="_blank" rel="noopener noreferrer">https://gitee.com/mirrors/switchhosts</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/oldj/SwitchHosts" target="_blank" rel="noopener noreferrer">https://github.com/oldj/SwitchHosts</a></p>
-</blockquote>
-]]></content>
-    <category term="软件教程"/>
   </entry>
   <entry>
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2023-11-29T10:14:56.511Z</updated>
+    <updated>2023-12-27T03:51:53.521Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2289,7 +2213,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2023-11-29T10:14:56.511Z</updated>
+    <updated>2023-12-27T03:51:53.522Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2312,7 +2236,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2023-11-29T10:14:56.513Z</updated>
+    <updated>2023-12-27T03:51:53.524Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2376,7 +2300,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2023-11-29T10:14:56.528Z</updated>
+    <updated>2023-12-27T03:51:53.526Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -2508,7 +2432,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2023-11-29T10:14:56.538Z</updated>
+    <updated>2023-12-27T03:51:53.533Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -2536,7 +2460,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2023-11-29T10:14:56.539Z</updated>
+    <updated>2023-12-27T03:51:53.535Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -2556,7 +2480,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2023-11-29T10:14:56.539Z</updated>
+    <updated>2023-12-27T03:51:53.535Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -2564,7 +2488,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2023-11-29T10:14:56.546Z</updated>
+    <updated>2023-12-27T03:51:53.541Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
