@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 31 Jan 2024 06:58:55 GMT</pubDate>
-    <lastBuildDate>Wed, 31 Jan 2024 06:58:55 GMT</lastBuildDate>
+    <pubDate>Wed, 31 Jan 2024 07:14:22 GMT</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2024 07:14:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>git</category>
@@ -185,6 +185,37 @@ config文件</p>
 <p>注意：<code>idea64.exe.vmoptions</code>&nbsp;文件的修改需要慎重修改，修改后有可能出现编译器打不开问题。<br>
 还有就是 在新版本idea编译器中并没有 <code>idea.exe.vmoptions</code></p>
 </blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>项目中文乱码</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">项目中文乱码</source>
+      <description>背景 在spring大杂烩项目中，调用第三方接口时，出现中文乱码。 这里使用到spring、springmvc、本地tomcat、idea 找问题心流： 在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是...</description>
+      <category>项目</category>
+      <pubDate>Thu, 18 Jan 2024 09:11:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
+这里使用到spring、springmvc、本地tomcat、idea</p>
+<p>找问题心流：<br>
+在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是不能正常运行的，需要注释掉对应的测试类，在idea中运行项目，一点错误都不能有，比如测试类中有错误，项目就跑不起来，idea中就是这样的。在eclipse中就没有这么样的情况，它也不会检测你测试类中是否丢失了哪些包或者不存在，你还是能正常运行项目。而且拉下来的项目，连配置文件中的内容都缺少，我也是服了。其实这里缺少的是两行配置，加在配置文件中即可，看似两行简单配置，可能会让你在突然拿到这个项目时，启动项目调接口时调不同，你去调别人的接口也貌似调不通。找啊找，很纠结。于是去看同事电脑上对应的项目的配置文件，才发现少了这两行代码，代码仓库居然不提交。我服了。这问题解决了，新的问题又来了。数据返回的中文乱码，但在单元测试中调用接口却没有出现中文乱码的问题。使用postman调用却出现了。<br>
+于是我检查idea所有的与编码相关的，在检查postman请求头中的，都没有发现问题，找啊找，意外发现是tomcat的问题。但是我使用之前的项目是可以正常调用接口，也没发现中文乱码问题。</p>
+<h2> 遇到的问题</h2>
+<p>返回的数据出现中文乱码</p>
+<p>原因：<br>
+tomcat字符集问题</p>
+<h2> 解决方法</h2>
+<p>检查字符编码，将所有跟编码相关的都更改为 UTF-8 编码格式</p>
+<blockquote>
+<p>tomcat安装目录下的conf/server.xml中，搜索 元素，找到URIEncoding属性（没有就新增），并将其设置为UTF-8:</p>
+</blockquote>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>IDEA的配置tomcat页面VM options  添加   <code>-Dfile.encoding=UTF-8</code></p>
+</blockquote>
+<p>其他问题检查：<br>
+参考这里：<a href="https://blog.csdn.net/qq_44549652/article/details/131764308" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_44549652/article/details/131764308</a></p>
+<p><a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2443,60 +2474,6 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><code>Github</code>地址：<a href="https://github.com/doocs/jvm" target="_blank" rel="noopener noreferrer">https://github.com/doocs/jvm</a></p>
 <p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/jvm</a></p>
 </blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>当前页面内容标题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">当前页面内容标题</source>
-      <description>title: 项目中文乱码 icon: sliders category: 项目; tag: idea; tomcat; 乱码; sticky: false star: false article: true timeline: true date: 2024-01-18 09:11:17 背景 在spring大杂烩项目中，调用第三方接口时，出现中文乱...</description>
-      <content:encoded><![CDATA[<hr>
-<h1> 当前页面内容标题</h1>
-<p>title: 项目中文乱码</p>
-<h1> 当前页面图标</h1>
-<p>icon: sliders</p>
-<h1> 分类</h1>
-<p>category:</p>
-<ul>
-<li>项目</li>
-</ul>
-<h1> 标签</h1>
-<p>tag:</p>
-<ul>
-<li>idea</li>
-<li>tomcat</li>
-<li>乱码<br>
-sticky: false</li>
-</ul>
-<h1> 是否收藏在博客主题的文章列表中，当填入数字时，数字越大，排名越靠前。</h1>
-<p>star: false</p>
-<h1> 是否将该文章添加至文章列表中</h1>
-<p>article: true</p>
-<h1> 是否将该文章添加至时间线中</h1>
-<h2> timeline: true<br>
-date: 2024-01-18 09:11:17</h2>
-<h2> 背景</h2>
-<p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
-这里使用到spring、springmvc、本地tomcat、idea</p>
-<p>找问题心流：<br>
-在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是不能正常运行的，需要注释掉对应的测试类，在idea中运行项目，一点错误都不能有，比如测试类中有错误，项目就跑不起来，idea中就是这样的。在eclipse中就没有这么样的情况，它也不会检测你测试类中是否丢失了哪些包或者不存在，你还是能正常运行项目。而且拉下来的项目，连配置文件中的内容都缺少，我也是服了。其实这里缺少的是两行配置，加在配置文件中即可，看似两行简单配置，可能会让你在突然拿到这个项目时，启动项目调接口时调不同，你去调别人的接口也貌似调不通。找啊找，很纠结。于是去看同事电脑上对应的项目的配置文件，才发现少了这两行代码，代码仓库居然不提交。我服了。这问题解决了，新的问题又来了。数据返回的中文乱码，但在单元测试中调用接口却没有出现中文乱码的问题。使用postman调用却出现了。<br>
-于是我检查idea所有的与编码相关的，在检查postman请求头中的，都没有发现问题，找啊找，意外发现是tomcat的问题。但是我使用之前的项目是可以正常调用接口，也没发现中文乱码问题。</p>
-<h2> 遇到的问题</h2>
-<p>返回的数据出现中文乱码</p>
-<p>原因：<br>
-tomcat字符集问题</p>
-<h2> 解决方法</h2>
-<p>检查字符编码，将所有跟编码相关的都更改为 UTF-8 编码格式</p>
-<blockquote>
-<p>tomcat安装目录下的conf/server.xml中，搜索 元素，找到URIEncoding属性（没有就新增），并将其设置为UTF-8:</p>
-</blockquote>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
-<p>IDEA的配置tomcat页面VM options  添加   <code>-Dfile.encoding=UTF-8</code></p>
-</blockquote>
-<p>其他问题检查：<br>
-参考这里：<a href="https://blog.csdn.net/qq_44549652/article/details/131764308" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_44549652/article/details/131764308</a></p>
-<p><a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
 ]]></content:encoded>
     </item>
     <item>
