@@ -6,12 +6,16 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 27 Dec 2023 03:51:53 GMT</pubDate>
-    <lastBuildDate>Wed, 27 Dec 2023 03:51:53 GMT</lastBuildDate>
+    <pubDate>Wed, 31 Jan 2024 06:58:55 GMT</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2024 06:58:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>git</category>
     <category>项目</category>
     <category>lombok</category>
+    <category>技巧</category>
+    <category>数据库</category>
+    <category>maven</category>
     <category>工具</category>
     <category>docker</category>
     <category>安装教程</category>
@@ -37,6 +41,183 @@
     <category>后端</category>
     <category>javaweb</category>
     <item>
+      <title>mac配置gitlab</title>
+      <link>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</link>
+      <guid>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">mac配置gitlab</source>
+      <description>使用ssh方式拉取gitlab仓库代码 背景 在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比...</description>
+      <category>git</category>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>使用ssh方式拉取gitlab仓库代码</p>
+<h2> 背景</h2>
+<p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。<br>
+再扯点，我使用过idea和Android提交代码，并且它们提交的方式差不多，我也使用svn提交代码，但觉得并不优雅。我通常使用两种方式来提交代码，一种是命令方式、一种是可视化方式，点点就行。高级一点的方式就是Sourcetree。</p>
+<h2> 执行步骤</h2>
+<h3> 1、配置</h3>
+<blockquote>
+<p><strong>以下命令</strong>都是在终端中进入 /Users/<strong>用户/.ssh目录下</strong>执行下面的命令：</p>
+</blockquote>
+<p>1.1手动方式配置<br>
+config文件</p>
+<blockquote>
+<p>.ssh/目录下，如果没有config文件，需要创建一个config<br>
+创建命令方式：touch config</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>.gitconfig文件</p>
+<blockquote>
+<p>用户目录下，根据实际情况查找</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>windows 和 Mac 协同开发，会碰到一个问题:<br>
+提示修改 git core.autocrlf，<br>
+这个是由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。</p>
+<p>参考：<a href="https://blog.csdn.net/u012364372/article/details/123215289" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/u012364372/article/details/123215289</a></p>
+<p>在Mac上设置 autocrlf = input, 在Windows上设置autocrlf = true（默认值）</p>
+</blockquote>
+<p>1.2 命令方式：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 2、生成秘钥</h3>
+<p>生成秘钥：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>具体git配置ssh秘钥请移步：<a href="https://blog.nnxx.me/posts/e238cc11.html" target="_blank" rel="noopener noreferrer">git账号多配置</a></p>
+</blockquote>
+<h3> 3、验证是否成功</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>自建的gitlab仓库地址不同，根据实际情况更改。</p>
+</blockquote>
+<h3> 4、在gitlab远程仓库配置ssh秘钥</h3>
+<p>参考：<a href="https://blog.csdn.net/XX_123_1_RJ/article/details/103332668" target="_blank" rel="noopener noreferrer">Mac 配置Git与常用命令_mac git配置</a></p>
+<blockquote>
+<p>不同版本的gitlab的SSH keys秘钥配置位置有细微的差别，自行在设置中找到</p>
+</blockquote>
+<h2> 附件</h2>
+<p>参考：<a href="https://blog.csdn.net/nxg0916/article/details/135911954" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/nxg0916/article/details/135911954</a></p>
+<p><a href="https://blog.nnxx.me/posts/e238cc11.html" target="_blank" rel="noopener noreferrer">git账号多配置</a></p>
+<p><a href="https://blog.nnxx.me/posts/de0da321.html" target="_blank" rel="noopener noreferrer">git提交代码到本地分支</a></p>
+<p>再啰嗦点：</p>
+<p>提交代码最关键的几步：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：在提交代码之前，先拉取代码，再提交代码。</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>gitlab导入本地或远程仓库代码</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">gitlab导入本地或远程仓库代码</source>
+      <description>gitee仓库项目迁移到gitlab仓库 背景 之前一直使用gitee代码仓库提交代码，现在需要将gitee仓库中的代码迁移到gitlab中，并保留原有的提交记录。 前提 配置好了本地git，并本地与gitlab仓库已连接。 我这里使用 ssh方式拉去代码，因此需要配置ssh密钥 步骤 也可以直接使用gitee仓库中url地址直接导入整个仓库到gitl...</description>
+      <category>git</category>
+      <pubDate>Mon, 29 Jan 2024 11:36:13 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>gitee仓库项目迁移到gitlab仓库</p>
+</blockquote>
+<p>背景</p>
+<blockquote>
+<p>之前一直使用gitee代码仓库提交代码，现在需要将gitee仓库中的代码迁移到gitlab中，并保留原有的提交记录。</p>
+</blockquote>
+<h2> 前提</h2>
+<p>配置好了本地git，并本地与gitlab仓库已连接。</p>
+<blockquote>
+<p>我这里使用 ssh方式拉去代码，因此需要配置ssh密钥</p>
+</blockquote>
+<h2> 步骤</h2>
+<blockquote>
+<p>也可以直接使用gitee仓库中url地址直接导入整个仓库到gitlab中，<br>
+例如：<a href="http://gitee.com" target="_blank" rel="noopener noreferrer">http://gitee.com</a>:xiaoming/test.git</p>
+</blockquote>
+<p>1、将gitee上的仓库代码 git clone至本地</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>2、在gitlab 上创建空项目，并复制克隆地址</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>注意：需要配置好gitlab与本地关联的ssh密钥</p>
+</blockquote>
+<p>3、 cd至项目内部，查看git remote是否是origin</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>4、是origin则直接修改origin的url，url为刚才复制的新建项目的url</p>
+<blockquote>
+<p>这里也可以手动替换 url地址，具体位置：在项目 test\.git\config 文件中</p>
+</blockquote>
+<p>命令方式替换：</p>
+<blockquote>
+<p>在test项目目录下执行下方命令</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>5、查看test项目是否已修改为新项目地址的url<br>
+在test项目目录下使用此命令查看：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>效果如下：</p>
+<blockquote>
+<p>文件位置：test\.git\config</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>6、推送代码至新仓库</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>默认也可以使用git push</p>
+<p>mater表示是master分支名的代码提交到project-test仓库</p>
+</blockquote>
+<h2> 附件</h2>
+<p>参考：<a href="https://blog.nnxx.me/posts/e238cc11.html" target="_blank" rel="noopener noreferrer">git账号多配置</a></p>
+<p><a href="https://blog.csdn.net/weixin_44549646/article/details/127494340" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_44549646/article/details/127494340</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>idea中文乱码问题</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">idea中文乱码问题</source>
+      <description>背景 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。 遇到问题 ide...</description>
+      <category>项目</category>
+      <pubDate>Fri, 19 Jan 2024 09:13:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>背景<br>
+在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit  configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。</p>
+<h2> 遇到问题</h2>
+<p>idea控制台运行项目是打印日志，出现中文乱码</p>
+<h2> 解决方法</h2>
+<p>控制台中文乱码，实际上是控制打印编码的问题，需要找到根源。<br>
+在file --&gt; settings --&gt; Editor --&gt; General --&gt; Console，然后点击Console在这界面找到<code>Default Encoding</code> 选择 UTF-8 即可解决。</p>
+<blockquote>
+<p>注意：不同idea版本可能位置不同，但Console位置应该是不变的</p>
+</blockquote>
+<h2> 附件</h2>
+<p>参考：<br>
+<a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
+<p><a href="https://blog.csdn.net/nxg0916/article/details/135697221" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/nxg0916/article/details/135697221</a></p>
+<p><a href="https://www.quanxiaoha.com/idea/idea-chinese-garbled-code.html" target="_blank" rel="noopener noreferrer">https://www.quanxiaoha.com/idea/idea-chinese-garbled-code.html</a></p>
+<p><a href="https://www.cnblogs.com/itzkd/articles/17384934.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itzkd/articles/17384934.html</a></p>
+<p><a href="https://www.cnblogs.com/itzkd/articles/17384934.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itzkd/articles/17384934.html</a></p>
+<blockquote>
+<p>这里面是包含文件（xml、java文件等）内容的中文乱码的修改配置。</p>
+<p>注意：<code>idea64.exe.vmoptions</code>&nbsp;文件的修改需要慎重修改，修改后有可能出现编译器打不开问题。<br>
+还有就是 在新版本idea编译器中并没有 <code>idea.exe.vmoptions</code></p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>eclipse-内存问题</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">eclipse-内存问题</source>
+      <description>启动超时问题 对tomcat启动项目，将超时时间（timeouts）延迟 tomcat6内存问题 eclipse使用tomcat6运行项目 eclipse版本是2019-06（4.12.0） 遇到的问题： 原因： 提示内存溢出，电脑内存不够，运行起来卡顿 解决方法 在双击tomcat server at localhost 配置之后，找到open la...</description>
+      <category>项目</category>
+      <pubDate>Wed, 17 Jan 2024 08:13:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 启动超时问题</h2>
+<p>对tomcat启动项目，将超时时间（timeouts）延迟</p>
+<h2> tomcat6内存问题</h2>
+<p>eclipse使用tomcat6运行项目<br>
+eclipse版本是2019-06（4.12.0）</p>
+<p>遇到的问题：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>原因：<br>
+提示内存溢出，电脑内存不够，运行起来卡顿</p>
+<p>解决方法<br>
+在双击tomcat server at localhost 配置之后，找到open lannch configuration，点击进入后，找到Arguments ，再找到 VM arguments输入框，在最后一行加上一下配置：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>参数的解释</p>
+<p>-Xms256m : 表示虚拟机占用系统的最小内存为256M。</p>
+<p>-Xmx1024m :表示虚拟机占用系统的最大内存为1024M.</p>
+<p>-XX:PermSize：最小堆大小。一般报内存不足时,都是说这个太小,堆空间剩余容量小于5%就会警告,建议把这个稍微设大一点,视自己机器内存大小来设置</p>
+<p>-XX:MaxPermSize：最大堆大小。这个也适当大些</p>
+</blockquote>
+<p>eclipse版本不一样，布局可能也不同，自行探究。</p>
+<p>参考：<a href="https://www.cnblogs.com/jepson6669/p/9040438.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/jepson6669/p/9040438.html</a></p>
+<p><a href="https://blog.csdn.net/leo187/article/details/83866774" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/leo187/article/details/83866774</a></p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>问题集-插件类</title>
       <link>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</link>
       <guid>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</guid>
@@ -61,6 +242,217 @@
 <a href="https://blog.csdn.net/weixin_44009447/article/details/118707493" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_44009447/article/details/118707493</a></p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://blog.csdn.net/qq_24033983/article/details/123335806" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_24033983/article/details/123335806</a></p>
 <p><a href="https://www.bilibili.com/read/cv26239980/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv26239980/</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>老项目导入问题</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">老项目导入问题</source>
+      <description>背景 导入eclipse项目，可能就会遇到这样那样的问题 比如 该项目时jdk1.7版本的老项目 一、遇到的问题： 参考点：https://blog.csdn.net/qq45988641/article/details/117474148 (https://blog.csdn.net/qq45988641/article/details/117474...</description>
+      <category>项目</category>
+      <category>技巧</category>
+      <pubDate>Thu, 21 Dec 2023 09:12:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>导入eclipse项目，可能就会遇到这样那样的问题</p>
+<p>比如 该项目时jdk1.7版本的老项目</p>
+<h2> 一、遇到的问题：</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>参考点：<a href="https://blog.csdn.net/qq_45988641/article/details/117474148" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_45988641/article/details/117474148</a></p>
+<p><a href="https://blog.csdn.net/netwalk/article/details/52005546" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/netwalk/article/details/52005546</a></p>
+<p><a href="https://blog.csdn.net/dszgf5717/article/details/104284198" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/dszgf5717/article/details/104284198</a><br>
+<a href="https://blog.csdn.net/yuhaibao324/article/details/108187891" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/yuhaibao324/article/details/108187891</a></p>
+<h2> 二、解决方法</h2>
+<p>解决方法：</p>
+<blockquote>
+<p>IDEA编译完成后报非法字符</p>
+<p>1、网上有很多说是 File &gt; Setting &gt; File Encoding，将IDE Encoding和Project Encoding 都设置为UTF-8就行，可是我试了不行，</p>
+<p>2、上述方法尝试失败之后尝试以下设置，File &gt; Setting &gt;Java Compiler，在 Additional comman line parameters（附加参数）中添加参数 -encoding UTF8</p>
+</blockquote>
+<p>实在不行就换eclipse吧</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Oracle之ORA-29275-部分多字节字符</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Oracle之ORA-29275-部分多字节字符</source>
+      <description>背景： 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题 一、遇到的问题 排查过程： 1.先定位到哪条数据有问题，这可以通过二分查找方式缩小查询范围 2.拿出A所有的字段，进行查询，同样通过二分查找的方式缩小查询范围 3.最终定位到 A表中的 w字段有问题 显示如下错误：ORA-29275: 部分多字节字符 原因分析： 可能某个...</description>
+      <category>数据库</category>
+      <pubDate>Sat, 02 Dec 2023 09:14:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>背景：<br>
+在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 一、遇到的问题</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>排查过程：</p>
+<p>1.先定位到哪条数据有问题，这可以通过二分查找方式缩小查询范围</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>2.拿出A所有的字段，进行查询，同样通过二分查找的方式缩小查询范围</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>3.最终定位到 A表中的 w字段有问题</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>显示如下错误：ORA-29275: 部分多字节字符</p>
+<p>原因分析：</p>
+<blockquote>
+<p>可能某个字段中有半个中文字符则会报这个异常，原因为Oracle编码问题。</p>
+</blockquote>
+<h2> 二、解决方法：</h2>
+<p>方法1：<br>
+在有问题的字段上面加上 to_nchar(字段)</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>方法2：</p>
+<blockquote>
+<p>改数据库字符集</p>
+<p>检查他们Oracle的nls_lang环境变量，发现他们客户端的nls_lang设置为 american.</p>
+<p>改成export NLS_LANG=AMERICAN_AMERICA.ZHS16CGB231280后， 就正常了。</p>
+</blockquote>
+<p>方法3：</p>
+<blockquote>
+<p>在oracle中字段中找出汉字的方法：可以利用length(testname)和lengthb(testname)，其中length(testname)不论数字或者字符都算一个，</p>
+<p>而lengthb则不同，比如说testname的值为：54看法12，用length(testname)的值为6，而lengthb(testname)的值为：8。</p>
+<p>利用这个就可以非常清楚的判断一个字符中是否包含汉字了(字母除外)。<br>
+to_single_byte(c)转换成半角</p>
+<p>to_multi_byte(c)转换成全角</p>
+</blockquote>
+<h2> 三、附件</h2>
+<p>参考：<br>
+<a href="https://blog.csdn.net/zhangzhongzhong/article/details/78722105" target="_blank" rel="noopener noreferrer">ORA-29275部分多字节字符处理</a></p>
+<p><a href="https://blog.csdn.net/keueng/article/details/48808085" target="_blank" rel="noopener noreferrer">ORA-29275:部分多字节字符</a></p>
+<p><a href="https://www.cnblogs.com/huaji666/p/8489592.html" target="_blank" rel="noopener noreferrer"> Oracle数据库报错: ORA-29275:部分多字节字符</a></p>
+<p><a href="https://blog.csdn.net/blood_Z/article/details/123524415" target="_blank" rel="noopener noreferrer">Oracle分页查询</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>maven之‘settings.xml‘-has-syntax-errors</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">maven之‘settings.xml‘-has-syntax-errors</source>
+      <description>背景： 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示： 之前一直使用阿里云 http://Maven.aliyun.com/nexus/content/groups/public/ maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。 一、遇到的问题 二、解决方法 方法1：...</description>
+      <category>maven</category>
+      <pubDate>Sat, 02 Dec 2023 09:09:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>背景：<br>
+在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示：</p>
+<blockquote>
+<p>之前一直使用阿里云 <a href="http://Maven.aliyun.com/nexus/content/groups/public/" target="_blank" rel="noopener noreferrer">http://Maven.aliyun.com/nexus/content/groups/public/</a> maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。</p>
+</blockquote>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 一、遇到的问题</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 二、解决方法</h2>
+<p>方法1：<br>
+删除maven仓库资源，例如：D:\Software\Maven\repository<br>
+更换为华为云的仓库</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后重新拉取依赖</p>
+<p>方法2：<br>
+需要注意settings.xml配置中格式问题，这个需要注意一下，例如：你可能在增加maven仓库地址时少引入单词或者引脚等</p>
+<p>settings.xml配置</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 附件</h2>
+<p>参考：<br>
+<a href="https://www.west999.com/info/html/chengxusheji/Javajishu/20190826/4657334.html" target="_blank" rel="noopener noreferrer">intellij idea 新建springboot工程pom.xml报错</a><br>
+<a href="https://blog.csdn.net/RABCDXB/article/details/123910435" target="_blank" rel="noopener noreferrer">settings.xml‘ has syntax errors 解决办法</a><br>
+<a href="https://blog.csdn.net/RABCDXB/article/details/123910435" target="_blank" rel="noopener noreferrer">‘settings.xml‘ has syntax errors 解决办法</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>eclipse项目在idea中打开</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">eclipse项目在idea中打开</source>
+      <description>首先拿到项目地址： 使用svn拉到本地目录位置（自定义） 背景 当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。 开发工具的选择 是选择使用eclips...</description>
+      <category>项目</category>
+      <category>技巧</category>
+      <pubDate>Wed, 22 Nov 2023 10:36:13 GMT</pubDate>
+      <content:encoded><![CDATA[<p>首先拿到项目地址：</p>
+<p>使用svn拉到本地目录位置（自定义）</p>
+<h2> 背景</h2>
+<p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
+<h2> 开发工具的选择</h2>
+<p>是选择使用eclipse还是idea，根据自己的使用习惯。</p>
+<p>环境：<br>
+可能拿到一个项目，无法直接确定项目中使用的jdk版本、缺失的依赖等。</p>
+<p>这里以idea为例</p>
+<h2> 环境配置</h2>
+<p>开发环境：windows Server 2008 R2 Enterprise  64为操作系统</p>
+<p>sbf项目</p>
+<p>jdk1.8</p>
+<p>idea2022.02.02、tomcat8.5</p>
+<p>svn1.14.5.29465-x64</p>
+<blockquote>
+<p>对应需要安装vc_redist.x64.exe环境</p>
+</blockquote>
+<h2> 导入项目</h2>
+<p>项目本身是eclipse编写的，由此你需要会如何将eclipse项目导入到idea中：<br>
+教程可以参考这：<a href="https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506</a></p>
+<p>在idea中找到File --&gt; New --&gt; Project from Existing Sources，选择你需要导入的项目。</p>
+<blockquote>
+<p>因为这里是eclipse项目</p>
+</blockquote>
+<p>导入项目后会弹出 Import Project 界面：<br>
+选择 Import project from external model (默认选项)，然后选择选项 Eclipse ，<br>
+点击下一步（Next），默认配置，点击下一步，后会进行扫描，等待一下即可。<br>
+然后勾选对应的项目，点击下一步，点到最后，选择JDK版本，这里选择JDK1.8，<br>
+最后点击创建（Create），项目导入完成。</p>
+<h2> 配置项目</h2>
+<p>打开导入的项目后：</p>
+<p>在idea中，找到 File --&gt; Project Structure ，<br>
+然后开始配置。</p>
+<h3> 第一步：确定Project中jdk版本</h3>
+<p>选择SDK对应的JDK1.8</p>
+<h3> 第二步：Modules (模块)</h3>
+<p>点击左上方 + （加号），找到 Web 点击加入。<br>
+然后点击项目名称，找到 Dependencies后，点击下面的 + （加号），<br>
+点击 Library 添加对应的 Tomcat 。</p>
+<h3> 第三步：Libraries</h3>
+<p>点击 Libraries，点击左上方 + （加号），点击Java，然后找到项目对应的依赖路径位置 lib，<br>
+点击添加 lib 即可</p>
+<blockquote>
+<p>一般lib位置在WEB-INF目录下</p>
+</blockquote>
+<h3> 第四步：Facets</h3>
+<p>点击 Facets，点击左上方 + （加号），找到 Web 点击添加项目对应的模块</p>
+<blockquote>
+<p><strong>重点来了</strong></p>
+</blockquote>
+<p>点击 样式类似于   Web（项目名）的位置后，<br>
+定位到Deployment Descriptors位置下方：<br>
+点击 type下方的 Web Module Deployment Descriptor 之后，点击编辑（Edit），选择项目中对应的web.xml文件。</p>
+<blockquote>
+<p>这里注意了，一般项目中 是 web  --&gt; WEB-INF --&gt; web.xml文件，<br>
+但是 这个项目的web存放路径也可以自定义，比如 名称叫 interfacePlatform  ，下面存放WEB-INF --&gt; web.xml文件，存放静态资源，存放对应的jar包。</p>
+</blockquote>
+<p>定位到 Web Resource Directories 位置：<br>
+点击下方的路径，然后点击编辑按钮，修改静态资源存放路径的主目录，例如项目存放静态资源的主目录名为 interfacePlatform，</p>
+<h3> 第五步：Artifacts</h3>
+<p>点击 Artifacts，点击左上方 + （加号），找到 Web Application：Exlpoded --&gt; From Modules</p>
+<p>选择项目中对应的模块，点OK即可。</p>
+<p>第六步：找到 Platform Settings 位置<br>
+点击 Problems ，如果有提示 fixed，就点击修复一下</p>
+<p>最后，点击右下角的 Apply（应用），点 OK，这里就配置完成了。</p>
+<h2> 配置tomcat</h2>
+<p>在idea中找到 File --&gt; Settings --&gt; Build Execution，Deployment，<br>
+然后找到 Application Servers并点击之后，<br>
+点击左上方 + （加号），找到 Tomcat Server，<br>
+添加Tomcat Home目录位置，然后下方的 Tomcat base directory就自动加上路径，点击OK就可以了，最后点击Apply（应用）和 OK</p>
+<p>点击右上角的“Add configuration”，点击左上方 + （加号），找到 Tomcat Server --&gt; Local<br>
+点击local后，点击 Tomcat 8.5.23 ，在右边找到Deployment，在下方 Deploy at the server startup，这一步默认可以省掉，原因是在上面  第五步：Artifacts  就已经配置好了。</p>
+<p>如果你想请求路径不带有项目名，你就在 Application context下方，去掉项目名称直接留下 / (斜杠)即可。</p>
+<p>最后就点击 Apply（应用）和 OK 。</p>
+<p>最最后就可以稳定启动项目了。</p>
+<h2> 启动项目</h2>
+<p>可能遇到问题，tomcat端口占用，修改端口即可</p>
+<p>项目中依赖问题，缺少依赖就添加对应的jar包，如果是测试类中缺少依赖就注释掉对应的代码。</p>
+<p>有时候还是有问题，就需要rebuild --&gt; Rebuild Project (重新构建项目)</p>
+<h2> 遇到的问题</h2>
+<h3> 问题一：svn使用问题</h3>
+<p>如果你使用的svn是TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi版本时，你在idea的设置中，找到version Control（版本控制），找到Subversion，找到 Path to Subversion executable 配置svn启动exe。<br>
+但是在TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi 版本对应的安装目录下，貌似没有svn.exe文件。<br>
+idea就会提示找到svn对应的.exe</p>
+<p>使用TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi时idea提示报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>解决方法：<br>
+我是直接换一个svn版本：TortoiseSVN-1.14.5.29465-x64-svn-1.14.2.msi<br>
+这个安装时也会提示报错，说缺少windows Server 2008 R2 Enterprise缺少组件，于是找到对应的组件包（vc_redist.x64.exe）安装即可解决问题。</p>
+<h2> 问题二</h2>
+<p>idea中可能报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>原因是：将eclipse项目导入到idea中，会遇到这样的问题。</p>
+<p>解决方法：<br>
+在idea设置中找到Build，Execution，Deploymentw位置，点击Compiler，点击Java Compiler，找到Use comiler，然后选择eclipse，点击Apply（应用），点OK即可。</p>
+<blockquote>
+<p>注意：在没有出现这样的问题的情况下，还是使用Javac，每个项目的使用情况可能不同。<br>
+还有，如果之前改为了eclipse，后面换了一个项目，建议及时改回Javac，然后后面编译总是报错，也找到问题所在，那就很难受了。</p>
+<p>不过呢，对于现在SpringBoot项目一般不会出现这样的问题。</p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -2051,6 +2443,60 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p><code>Github</code>地址：<a href="https://github.com/doocs/jvm" target="_blank" rel="noopener noreferrer">https://github.com/doocs/jvm</a></p>
 <p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/jvm</a></p>
 </blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>当前页面内容标题</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">当前页面内容标题</source>
+      <description>title: 项目中文乱码 icon: sliders category: 项目; tag: idea; tomcat; 乱码; sticky: false star: false article: true timeline: true date: 2024-01-18 09:11:17 背景 在spring大杂烩项目中，调用第三方接口时，出现中文乱...</description>
+      <content:encoded><![CDATA[<hr>
+<h1> 当前页面内容标题</h1>
+<p>title: 项目中文乱码</p>
+<h1> 当前页面图标</h1>
+<p>icon: sliders</p>
+<h1> 分类</h1>
+<p>category:</p>
+<ul>
+<li>项目</li>
+</ul>
+<h1> 标签</h1>
+<p>tag:</p>
+<ul>
+<li>idea</li>
+<li>tomcat</li>
+<li>乱码<br>
+sticky: false</li>
+</ul>
+<h1> 是否收藏在博客主题的文章列表中，当填入数字时，数字越大，排名越靠前。</h1>
+<p>star: false</p>
+<h1> 是否将该文章添加至文章列表中</h1>
+<p>article: true</p>
+<h1> 是否将该文章添加至时间线中</h1>
+<h2> timeline: true<br>
+date: 2024-01-18 09:11:17</h2>
+<h2> 背景</h2>
+<p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
+这里使用到spring、springmvc、本地tomcat、idea</p>
+<p>找问题心流：<br>
+在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是不能正常运行的，需要注释掉对应的测试类，在idea中运行项目，一点错误都不能有，比如测试类中有错误，项目就跑不起来，idea中就是这样的。在eclipse中就没有这么样的情况，它也不会检测你测试类中是否丢失了哪些包或者不存在，你还是能正常运行项目。而且拉下来的项目，连配置文件中的内容都缺少，我也是服了。其实这里缺少的是两行配置，加在配置文件中即可，看似两行简单配置，可能会让你在突然拿到这个项目时，启动项目调接口时调不同，你去调别人的接口也貌似调不通。找啊找，很纠结。于是去看同事电脑上对应的项目的配置文件，才发现少了这两行代码，代码仓库居然不提交。我服了。这问题解决了，新的问题又来了。数据返回的中文乱码，但在单元测试中调用接口却没有出现中文乱码的问题。使用postman调用却出现了。<br>
+于是我检查idea所有的与编码相关的，在检查postman请求头中的，都没有发现问题，找啊找，意外发现是tomcat的问题。但是我使用之前的项目是可以正常调用接口，也没发现中文乱码问题。</p>
+<h2> 遇到的问题</h2>
+<p>返回的数据出现中文乱码</p>
+<p>原因：<br>
+tomcat字符集问题</p>
+<h2> 解决方法</h2>
+<p>检查字符编码，将所有跟编码相关的都更改为 UTF-8 编码格式</p>
+<blockquote>
+<p>tomcat安装目录下的conf/server.xml中，搜索 元素，找到URIEncoding属性（没有就新增），并将其设置为UTF-8:</p>
+</blockquote>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>IDEA的配置tomcat页面VM options  添加   <code>-Dfile.encoding=UTF-8</code></p>
+</blockquote>
+<p>其他问题检查：<br>
+参考这里：<a href="https://blog.csdn.net/qq_44549652/article/details/131764308" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_44549652/article/details/131764308</a></p>
+<p><a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
 ]]></content:encoded>
     </item>
     <item>
