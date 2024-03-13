@@ -6,16 +6,17 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 31 Jan 2024 07:14:22 GMT</pubDate>
-    <lastBuildDate>Wed, 31 Jan 2024 07:14:22 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Mar 2024 02:14:25 GMT</pubDate>
+    <lastBuildDate>Wed, 13 Mar 2024 02:14:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Springboot</category>
+    <category>maven</category>
     <category>git</category>
     <category>项目</category>
     <category>lombok</category>
     <category>技巧</category>
     <category>数据库</category>
-    <category>maven</category>
     <category>工具</category>
     <category>docker</category>
     <category>安装教程</category>
@@ -40,6 +41,121 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
+      <link>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</source>
+      <description>背景 使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。 遇到的问题： 报错： 原因： 最开始我想到的是，官方最新版本编译器强制使用JDK17， 后续验证，才发现并不是这样，你也能正常引用jdk1.8。 如果没有指定 spring-boot-maven-plugin 的版本...</description>
+      <category>Springboot</category>
+      <pubDate>Wed, 13 Mar 2024 09:13:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>背景</p>
+<p>使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。</p>
+<h2> 遇到的问题：</h2>
+<p>报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>原因：<br>
+最开始我想到的是，官方最新版本编译器强制使用JDK17，</p>
+<p>后续验证，才发现并不是这样，你也能正常引用jdk1.8。</p>
+<blockquote>
+<p>如果没有指定 spring-boot-maven-plugin 的版本，Maven 会使用最新版本的插件进行打包。但是，最新版本的插件可能不适用于 1.8 的 JDK</p>
+</blockquote>
+<h2> 解决方法：</h2>
+<p>1、检查idea编译器中的jdk版本（编译版本）<br>
+2、检查pom文件中的maven插件版本 （<strong>推荐</strong>）</p>
+<blockquote>
+<p>可能在使用maven插件版本时，你并没有指定maven插件版本，默认引用的就是最新版本的maven插件。<br>
+这也是在升级项目时常遇到的问题，之前使用项目是可以正常打包，但后来升级了项目之后，项目可以正常打包，但到打包环节就出现了问题。</p>
+</blockquote>
+<p><strong>指定 spring-boot-maven-plugin 的版本</strong></p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 附件</h2>
+<p>具体报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>参考：</p>
+<p><a href="https://blog.csdn.net/qq_44664231/article/details/131544077" target="_blank" rel="noopener noreferrer">Java异常】完美解决this version of the Java Runtime only recognizes class file versions up to xx.0异常</a></p>
+<p><a href="https://blog.csdn.net/qq_26898033/article/details/128915500" target="_blank" rel="noopener noreferrer">Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file</a></p>
+<p><a href="https://stackoverflow.com/questions/72867018/someservice-required-a-bean-named-entitymanagerfactory-that-could-not-be-found" target="_blank" rel="noopener noreferrer">someService required a bean named 'entityManagerFactory' that could not be found</a></p>
+<p><a href="https://www.04007.cn/article/840.html" target="_blank" rel="noopener noreferrer">https://www.04007.cn/article/840.html</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>maven私服批量上传本地依赖</title>
+      <link>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</link>
+      <guid>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">maven私服批量上传本地依赖</source>
+      <description>maven本地仓库依赖上传到远程仓库 本地仓库上传到远程仓库 批量上传： 批量本地仓库依赖（jar包）上传脚本： 在maven本地仓库目录下创建 batch_upload_repo2.sh 脚本，并将上述内容添加进去脚本文件中 在maven本地仓库目录下，右键打开 git 自带的 git bash Here命令窗口： 执行以下命令： sh 脚本名称.s...</description>
+      <category>maven</category>
+      <pubDate>Tue, 12 Mar 2024 15:01:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> maven本地仓库依赖上传到远程仓库</h2>
+<blockquote>
+<p>本地仓库上传到远程仓库</p>
+</blockquote>
+<p>批量上传：</p>
+<p>批量本地仓库依赖（jar包）上传脚本：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在maven本地仓库目录下创建 <strong>batch_upload_repo2.sh</strong> 脚本，并将上述内容添加进去脚本文件中<br>
+</p>
+<p>在maven本地仓库目录下，右键打开 git 自带的 git bash Here命令窗口：<br>
+</p>
+<p>执行以下命令：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>sh <a href="http://xn--eqrv85b2vnsxg.sh" target="_blank" rel="noopener noreferrer">脚本名称.sh</a> -u 用户名 -p 密码 -r  <a href="http://localhost:8081/repository/%E4%BB%93%E5%BA%93%E5%90%8D" target="_blank" rel="noopener noreferrer">http://localhost:8081/repository/仓库名</a></p>
+</blockquote>
+<p>执行完成是下图的效果：<br>
+</p>
+<h2> 注意事项</h2>
+<p>删除本地maven仓库目录下所有的 .lastUpdated 文件</p>
+<p>如果上传失败，可以将本地maven仓库目录下所有的 _remote.repositories 文件删除</p>
+<h2> 附件</h2>
+<p>参考：<br>
+<a href="https://mdzzw.cn/archives/mavenimport" target="_blank" rel="noopener noreferrer">本地仓库所有Jar批量上传到Nexus</a></p>
+<p><a href="https://www.sharkchili.com/pages/076b9d/" target="_blank" rel="noopener noreferrer">基于自动化脚本批量上传依赖到nexus内网私服</a></p>
+<p><a href="http://www.angyum.com/archives/pi-liang-shang-chuan-ben-de-maven-ku-dao-nexus-fu-wu-qi-zhong" target="_blank" rel="noopener noreferrer">批量上传本地maven库到Nexus服务器中</a></p>
+<p><a href="https://blog.csdn.net/qq_36299991/article/details/134349345" target="_blank" rel="noopener noreferrer">Maven内网开发使用离线仓库</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/678331669" target="_blank" rel="noopener noreferrer">持续集成工作原理 - maven私服</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>maven私服搭建教程</title>
+      <link>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</link>
+      <guid>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">maven私服搭建教程</source>
+      <description>sonatype-nexus私服搭建 搭建 下载安装包： 官方地址：https://www.sonatype.com/products/sonatype-nexus-oss-download (https://www.sonatype.com/products/sonatype-nexus-oss-download) 这里我提供安装包： https:/...</description>
+      <category>maven</category>
+      <pubDate>Mon, 11 Mar 2024 11:19:17 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>sonatype-nexus私服搭建</p>
+</blockquote>
+<h2> 搭建</h2>
+<p>下载安装包：</p>
+<blockquote>
+<p>官方地址：<a href="https://www.sonatype.com/products/sonatype-nexus-oss-download" target="_blank" rel="noopener noreferrer">https://www.sonatype.com/products/sonatype-nexus-oss-download</a></p>
+</blockquote>
+<p>这里我提供安装包：</p>
+<blockquote>
+<p><a href="https://www.123pan.com/s/tB5A-F4GYd.html" target="_blank" rel="noopener noreferrer">https://www.123pan.com/s/tB5A-F4GYd.html</a><br>
+提取码:I3hp</p>
+</blockquote>
+<p>这里以window10安装为例：</p>
+<figure><figcaption></figcaption></figure>
+<blockquote>
+<p>nexus-3.66.0-02<br>
+sonatype-work</p>
+</blockquote>
+<p>进入 nexus-3.66.0-02 目录，在地址栏输入 cmd命令，并回车，进入终端窗口<br>
+<br>
+在终端窗口输入以下启动命令，回车：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<blockquote>
+<p>开始初始化maven私服仓库</p>
+</blockquote>
+<p>等初始化完成，我们访问 <a href="http://localhost:8081/" target="_blank" rel="noopener noreferrer">http://localhost:8081/</a> 到达登录页面，提示你需要登录<br>
+这时需要在你安装maven私服  D:\programTool\nexus-3.66.0-02-win64\sonatype-work\nexus3<br>
+目录下找到 admin.password 文件，打开复制那一串秘钥，<br>
+用户名默认是 admin  ，密码是刚刚复制的秘钥，点击登录，然后进行设置密码</p>
+<h2> 具体使用</h2>
+<p>接下来的使用教程可以参考这里：</p>
+<p><a href="https://blog.csdn.net/weixin_43888891/article/details/130818293" target="_blank" rel="noopener noreferrer">Maven私服仓库配置-Nexus详解</a></p>
+<p>参考：<a href="https://blog.csdn.net/shi450561200/article/details/134096074" target="_blank" rel="noopener noreferrer">Nexus入门学习使用</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>mac配置gitlab</title>
       <link>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</link>
