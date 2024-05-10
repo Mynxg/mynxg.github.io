@@ -6,10 +6,11 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 13 Mar 2024 02:14:25 GMT</pubDate>
-    <lastBuildDate>Wed, 13 Mar 2024 02:14:25 GMT</lastBuildDate>
+    <pubDate>Fri, 10 May 2024 02:30:54 GMT</pubDate>
+    <lastBuildDate>Fri, 10 May 2024 02:30:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>运维</category>
     <category>Springboot</category>
     <category>maven</category>
     <category>git</category>
@@ -24,7 +25,6 @@
     <category>图床</category>
     <category>frp</category>
     <category>服务器监测</category>
-    <category>运维</category>
     <category>快速导航</category>
     <category>编程知识库</category>
     <category>mysql</category>
@@ -41,6 +41,30 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>git指定单文件提交</title>
+      <link>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</link>
+      <guid>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">git指定单文件提交</source>
+      <description>背景 在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。 基本命令操作 git指定文件提交 提交代码前，先拉取代码 检查文件状态 将修改后的文件，暂存在暂存区 提交这个文件： 推送到仓库 扩展： 表示增...</description>
+      <category>运维</category>
+      <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。</p>
+<h2> 基本命令操作</h2>
+<p>git指定文件提交</p>
+<p>提交代码前，先拉取代码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>检查文件状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>将修改后的文件，暂存在暂存区</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>提交这个文件：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>推送到仓库</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>扩展：</p>
+<p>表示增加所有文件到暂存区，慎用</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>原因：有的配置修改并不提交，只是为了本地运行调试使用。在开发的时候，只提交我们需要提交的的文件。</p>
+</blockquote>
+]]></content:encoded>
+    </item>
     <item>
       <title>项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
       <link>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</link>

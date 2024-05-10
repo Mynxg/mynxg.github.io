@@ -3,10 +3,11 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2024-03-13T02:14:25.307Z</updated>
+  <updated>2024-05-10T02:30:54.730Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
+  <category term="运维"/>
   <category term="Springboot"/>
   <category term="maven"/>
   <category term="git"/>
@@ -21,7 +22,6 @@
   <category term="图床"/>
   <category term="frp"/>
   <category term="服务器监测"/>
-  <category term="运维"/>
   <category term="快速导航"/>
   <category term="编程知识库"/>
   <category term="mysql"/>
@@ -42,10 +42,40 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">git指定单文件提交</title>
+    <id>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</id>
+    <link href="https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html"/>
+    <updated>2024-05-10T02:30:54.744Z</updated>
+    <summary type="html"><![CDATA[<h2> 背景</h2>
+<p>在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。</p>
+<h2> 基本命令操作</h2>
+<p>git指定文件提交</p>
+<p>提交代码前，先拉取代码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>git pull
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 背景</h2>
+<p>在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。</p>
+<h2> 基本命令操作</h2>
+<p>git指定文件提交</p>
+<p>提交代码前，先拉取代码</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>检查文件状态</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>将修改后的文件，暂存在暂存区</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>提交这个文件：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>推送到仓库</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>扩展：</p>
+<p>表示增加所有文件到暂存区，慎用</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>原因：有的配置修改并不提交，只是为了本地运行调试使用。在开发的时候，只提交我们需要提交的的文件。</p>
+</blockquote>
+]]></content>
+    <category term="运维"/>
+    <published>2024-05-10T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-03-13T02:14:25.335Z</updated>
+    <updated>2024-05-10T02:30:54.766Z</updated>
     <summary type="html"><![CDATA[<p>背景</p>
 <p>使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。</p>
 <h2> 遇到的问题：</h2>
@@ -85,7 +115,7 @@
     <title type="text">maven私服批量上传本地依赖</title>
     <id>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</id>
     <link href="https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html"/>
-    <updated>2024-03-13T02:14:25.353Z</updated>
+    <updated>2024-05-10T02:30:54.780Z</updated>
     <summary type="html"><![CDATA[<h2> maven本地仓库依赖上传到远程仓库</h2>
 <blockquote>
 <p>本地仓库上传到远程仓库</p>
@@ -144,7 +174,7 @@
     <title type="text">maven私服搭建教程</title>
     <id>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</id>
     <link href="https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html"/>
-    <updated>2024-03-13T02:14:25.355Z</updated>
+    <updated>2024-05-10T02:30:54.784Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>sonatype-nexus私服搭建</p>
 </blockquote>
@@ -196,7 +226,7 @@ sonatype-work</p>
     <title type="text">mac配置gitlab</title>
     <id>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</id>
     <link href="https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html"/>
-    <updated>2024-03-13T02:14:25.361Z</updated>
+    <updated>2024-05-10T02:30:54.791Z</updated>
     <summary type="html"><![CDATA[<p>使用ssh方式拉取gitlab仓库代码</p>
 <h2> 背景</h2>
 <p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。<br>
@@ -259,7 +289,7 @@ config文件</p>
     <title type="text">gitlab导入本地或远程仓库代码</title>
     <id>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2024-03-13T02:14:25.367Z</updated>
+    <updated>2024-05-10T02:30:54.797Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>gitee仓库项目迁移到gitlab仓库</p>
 </blockquote>
@@ -330,7 +360,7 @@ config文件</p>
     <title type="text">idea中文乱码问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-03-13T02:14:25.371Z</updated>
+    <updated>2024-05-10T02:30:54.800Z</updated>
     <summary type="html"><![CDATA[<p>背景<br>
 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit  configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。</p>
 <h2> 遇到问题</h2>
@@ -368,7 +398,7 @@ config文件</p>
     <title type="text">项目中文乱码</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html"/>
-    <updated>2024-03-13T02:14:25.385Z</updated>
+    <updated>2024-05-10T02:30:54.803Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
 这里使用到spring、springmvc、本地tomcat、idea</p>
@@ -404,7 +434,7 @@ tomcat字符集问题</p>
     <title type="text">eclipse-内存问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-03-13T02:14:25.387Z</updated>
+    <updated>2024-05-10T02:30:54.806Z</updated>
     <summary type="html"><![CDATA[<h2> 启动超时问题</h2>
 <p>对tomcat启动项目，将超时时间（timeouts）延迟</p>
 <h2> tomcat6内存问题</h2>
@@ -441,7 +471,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">问题集-插件类</title>
     <id>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html"/>
-    <updated>2024-03-13T02:14:25.389Z</updated>
+    <updated>2024-05-10T02:30:54.809Z</updated>
     <summary type="html"><![CDATA[<h2> lombok在eclipse中不生效问题</h2>
 <p>遇到的问题</p>
 <p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
@@ -474,7 +504,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">老项目导入问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-03-13T02:14:25.391Z</updated>
+    <updated>2024-05-10T02:30:54.812Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>导入eclipse项目，可能就会遇到这样那样的问题</p>
 <p>比如 该项目时jdk1.7版本的老项目</p>
@@ -506,7 +536,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">Oracle之ORA-29275-部分多字节字符</title>
     <id>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html"/>
-    <updated>2024-03-13T02:14:25.396Z</updated>
+    <updated>2024-05-10T02:30:54.818Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题</p>
 <div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>SELECT * FROM  A
@@ -556,7 +586,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">maven之‘settings.xml‘-has-syntax-errors</title>
     <id>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html"/>
-    <updated>2024-03-13T02:14:25.439Z</updated>
+    <updated>2024-05-10T02:30:54.855Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示：</p>
 <blockquote>
@@ -589,7 +619,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">eclipse项目在idea中打开</title>
     <id>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2024-03-13T02:14:25.447Z</updated>
+    <updated>2024-05-10T02:30:54.869Z</updated>
     <summary type="html"><![CDATA[<p>首先拿到项目地址：</p>
 <p>使用svn拉到本地目录位置（自定义）</p>
 <h2> 背景</h2>
@@ -707,7 +737,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">工作必会工具</title>
     <id>https://blog.lxip.top/notes/devtool/front-dev-tool.html</id>
     <link href="https://blog.lxip.top/notes/devtool/front-dev-tool.html"/>
-    <updated>2024-03-13T02:14:25.450Z</updated>
+    <updated>2024-05-10T02:30:54.872Z</updated>
     <summary type="html"><![CDATA[<h2> git</h2>
 <blockquote>
 <p>Gitee、GitHub、GitLab、Gitcode</p>
@@ -775,7 +805,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">docker安装Oracle容器</title>
     <id>https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</id>
     <link href="https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html"/>
-    <updated>2024-03-13T02:14:25.472Z</updated>
+    <updated>2024-05-10T02:30:54.886Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>使用docker方式手动方式安装各类容器（服务）</p>
 </blockquote>
@@ -858,7 +888,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">spring项目整合xxl-job</title>
     <id>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
     <link href="https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
-    <updated>2024-03-13T02:14:25.494Z</updated>
+    <updated>2024-05-10T02:30:54.901Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
 <h2> 准备工作</h2>
@@ -937,7 +967,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2024-03-13T02:14:25.499Z</updated>
+    <updated>2024-05-10T02:30:54.906Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2> 开发工具的选择</h2>
@@ -1054,7 +1084,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2024-03-13T02:14:25.502Z</updated>
+    <updated>2024-05-10T02:30:54.908Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -1129,7 +1159,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2024-03-13T02:14:25.507Z</updated>
+    <updated>2024-05-10T02:30:54.930Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -1216,7 +1246,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2024-03-13T02:14:25.512Z</updated>
+    <updated>2024-05-10T02:30:54.940Z</updated>
     <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -1279,7 +1309,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2024-03-13T02:14:25.539Z</updated>
+    <updated>2024-05-10T02:30:54.958Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -1420,7 +1450,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2024-03-13T02:14:25.555Z</updated>
+    <updated>2024-05-10T02:30:54.984Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -1547,7 +1577,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2024-03-13T02:14:25.556Z</updated>
+    <updated>2024-05-10T02:30:54.986Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -1583,7 +1613,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2024-03-13T02:14:25.567Z</updated>
+    <updated>2024-05-10T02:30:55.008Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -1636,7 +1666,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2024-03-13T02:14:25.570Z</updated>
+    <updated>2024-05-10T02:30:55.012Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -1697,7 +1727,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">编程知识库</title>
     <id>https://blog.lxip.top/resources/share/navlearn.html</id>
     <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2024-03-13T02:14:25.571Z</updated>
+    <updated>2024-05-10T02:30:55.013Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <blockquote>
 <p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
@@ -1722,7 +1752,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2024-03-13T02:14:25.583Z</updated>
+    <updated>2024-05-10T02:30:55.016Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -1786,7 +1816,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2024-03-13T02:14:25.629Z</updated>
+    <updated>2024-05-10T02:30:55.061Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -2020,7 +2050,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2024-03-13T02:14:25.642Z</updated>
+    <updated>2024-05-10T02:30:55.071Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -2085,7 +2115,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2024-03-13T02:14:25.643Z</updated>
+    <updated>2024-05-10T02:30:55.073Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -2115,7 +2145,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2024-03-13T02:14:25.672Z</updated>
+    <updated>2024-05-10T02:30:55.118Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -2460,7 +2490,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2024-03-13T02:14:25.681Z</updated>
+    <updated>2024-05-10T02:30:55.122Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -2560,7 +2590,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2024-03-13T02:14:25.686Z</updated>
+    <updated>2024-05-10T02:30:55.125Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -2644,7 +2674,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2024-03-13T02:14:25.686Z</updated>
+    <updated>2024-05-10T02:30:55.125Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -2652,7 +2682,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2024-03-13T02:14:25.688Z</updated>
+    <updated>2024-05-10T02:30:55.126Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
@@ -2668,7 +2698,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2024-03-13T02:14:25.765Z</updated>
+    <updated>2024-05-10T02:30:55.226Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -2810,14 +2840,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2024-03-13T02:14:25.766Z</updated>
+    <updated>2024-05-10T02:30:55.227Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2024-03-13T02:14:25.767Z</updated>
+    <updated>2024-05-10T02:30:55.228Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2847,7 +2877,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2024-03-13T02:14:25.768Z</updated>
+    <updated>2024-05-10T02:30:55.228Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2870,7 +2900,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2024-03-13T02:14:25.771Z</updated>
+    <updated>2024-05-10T02:30:55.230Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2934,7 +2964,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2024-03-13T02:14:25.774Z</updated>
+    <updated>2024-05-10T02:30:55.231Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -3066,7 +3096,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2024-03-13T02:14:25.784Z</updated>
+    <updated>2024-05-10T02:30:55.251Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -3094,7 +3124,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2024-03-13T02:14:25.786Z</updated>
+    <updated>2024-05-10T02:30:55.254Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -3114,7 +3144,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2024-03-13T02:14:25.786Z</updated>
+    <updated>2024-05-10T02:30:55.254Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -3122,7 +3152,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2024-03-13T02:14:25.803Z</updated>
+    <updated>2024-05-10T02:30:55.292Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
