@@ -3,27 +3,27 @@
   <id>https://blog.lxip.top/</id>
   <title>所遇所思</title>
   <subtitle>记录笔记</subtitle>
-  <updated>2024-05-10T02:30:54.730Z</updated>
+  <updated>2024-06-02T15:20:41.975Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://blog.lxip.top/atom.xml"/>
   <link rel="alternate" href="https://blog.lxip.top/"/>
+  <category term="xxl-job"/>
+  <category term="项目整合"/>
+  <category term="Knife4j"/>
+  <category term="项目"/>
   <category term="运维"/>
   <category term="Springboot"/>
   <category term="maven"/>
   <category term="git"/>
-  <category term="项目"/>
   <category term="lombok"/>
   <category term="技巧"/>
   <category term="数据库"/>
   <category term="工具"/>
   <category term="docker"/>
   <category term="安装教程"/>
-  <category term="项目整合"/>
   <category term="图床"/>
   <category term="frp"/>
   <category term="服务器监测"/>
-  <category term="快速导航"/>
-  <category term="编程知识库"/>
   <category term="mysql"/>
   <category term="linux"/>
   <category term="生活"/>
@@ -33,6 +33,8 @@
   <category term="系统设计"/>
   <category term="技术教程"/>
   <category term="书籍"/>
+  <category term="快速导航"/>
+  <category term="编程知识库"/>
   <category term="影视"/>
   <category term="音乐"/>
   <category term="java"/>
@@ -42,10 +44,153 @@
     <name>nxg</name>
   </contributor>
   <entry>
+    <title type="text">SpringBoot整合xxx-job</title>
+    <id>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</id>
+    <link href="https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html"/>
+    <updated>2024-06-02T15:20:42.048Z</updated>
+    <summary type="html"><![CDATA[<h2> SpringBoot整合xxl-job</h2>
+<blockquote>
+<p>前提是本地或者远程启动了xxl-job服务</p>
+</blockquote>
+<ol>
+<li>引入依赖</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>&lt;!--  xxl-job --&gt;  
+&lt;dependency&gt;  
+    &lt;groupId&gt;com.xuxueli&lt;/groupId&gt;  
+    &lt;artifactId&gt;xxl-job-core&lt;/artifactId&gt;  
+    &lt;version&gt;2.4.1&lt;/version&gt;  
+&lt;/dependency&gt;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> SpringBoot整合xxl-job</h2>
+<blockquote>
+<p>前提是本地或者远程启动了xxl-job服务</p>
+</blockquote>
+<ol>
+<li>引入依赖</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2.增加配置</p>
+<p>在application-dev.yml中增加</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>增加XxlJobConfig配置：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3.增加任务调用方法<br>
+SampleXxlJob类：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>参考：<a href="./xxl-job%E4%BD%BF%E7%94%A8">xxl-job使用</a></p>
+<h2> 附件</h2>
+<p>参考：<br>
+<a href="https://www.cnblogs.com/sowler/p/17350403.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/sowler/p/17350403.html</a></p>
+<p><a href="https://blog.csdn.net/qq_20957669/article/details/128845865" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_20957669/article/details/128845865</a></p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="xxl-job"/>
+    <category term="项目整合"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2024-06-02T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
+    <title type="text">SpringBoot整合Knife4j</title>
+    <id>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</id>
+    <link href="https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html"/>
+    <updated>2024-06-02T15:20:42.069Z</updated>
+    <summary type="html"><![CDATA[<h2> 介绍</h2>
+<p>Knife4j 是 <strong>springfox 3.0.0</strong> 和 <strong>springdoc-openapi</strong> 的增强。</p>
+<blockquote>
+<p>knife4j是一个集Swagger2 和 OpenAPI3为一体的增强解决方案，帮助开发者快速聚合使用OpenAPI规范，快速生成API文档，并且提供一些额外的功能.</p>
+<p>参考：<a href="https://doc.xiaominfo.com/docs/quick-start" target="_blank" rel="noopener noreferrer">https://doc.xiaominfo.com/docs/quick-start</a></p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<h2> 介绍</h2>
+<p>Knife4j 是 <strong>springfox 3.0.0</strong> 和 <strong>springdoc-openapi</strong> 的增强。</p>
+<blockquote>
+<p>knife4j是一个集Swagger2 和 OpenAPI3为一体的增强解决方案，帮助开发者快速聚合使用OpenAPI规范，快速生成API文档，并且提供一些额外的功能.</p>
+<p>参考：<a href="https://doc.xiaominfo.com/docs/quick-start" target="_blank" rel="noopener noreferrer">https://doc.xiaominfo.com/docs/quick-start</a></p>
+</blockquote>
+<h2> Spring Boot 集成 Knife4j</h2>
+<ol>
+<li>添加依赖：引入 Knife4j 包</li>
+</ol>
+<p>在 Spring Boot 项目的<code>pom.xml</code>文件中添加以下依赖:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>配置 Knife4j</li>
+</ol>
+<p>在配置包下增加 SwaggerConfig</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在application-dev.yml文件中增加：</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>参考：<a href="https://gitee.com/xiaoym/swagger-bootstrap-ui-demo/blob/master/knife4j-springdoc-openapi-demo/src/main/java/com/xiaominfo/knife4j/demo/config/SwaggerConfig.java" target="_blank" rel="noopener noreferrer">https://gitee.com/xiaoym/swagger-bootstrap-ui-demo/blob/master/knife4j-springdoc-openapi-demo/src/main/java/com/xiaominfo/knife4j/demo/config/SwaggerConfig.java</a></p>
+<ol start="3">
+<li>运行项目</li>
+</ol>
+<p>在浏览器中访问<code>http://localhost:8080/doc.html</code>，你就能看到 Knife4j 生成的 API 文档啦！</p>
+<p>并且你访问：<code>http://localhost:8080/swagger-ui.html</code>，也能查看springdoc接口文档</p>
+<h2> 附件</h2>
+<p>参考：</p>
+<p>官方文档：<a href="https://doc.xiaominfo.com/docs/features/enhance" target="_blank" rel="noopener noreferrer">https://doc.xiaominfo.com/docs/features/enhance</a></p>
+<p>案例参考：<a href="https://gitee.com/xiaoym/swagger-bootstrap-ui-demo/blob/master/knife4j-springdoc-openapi-demo/src/main/java/com/xiaominfo/knife4j/demo/config/SwaggerConfig.java" target="_blank" rel="noopener noreferrer">https://gitee.com/xiaoym/swagger-bootstrap-ui-demo/blob/master/knife4j-springdoc-openapi-demo/src/main/java/com/xiaominfo/knife4j/demo/config/SwaggerConfig.java</a></p>
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/637810792" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/637810792</a></p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="项目整合"/>
+    <category term="Knife4j"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2024-06-01T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
+    <title type="text">eclipse-卡顿问题</title>
+    <id>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</id>
+    <link href="https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html"/>
+    <updated>2024-06-02T15:20:42.081Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>2024-05-20</p>
+</blockquote>
+<h2> Eclipse卡顿问题</h2>
+<h2> 背景</h2>
+<p>在<a href="https://www.baidu.com/s?wd=Eclipse&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Eclipse__</a>中，使用快捷键<a href="https://www.baidu.com/s?wd=Ctrl%2BC&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Ctrl+C__</a>进行复制时，可能会遇到编辑器卡顿或者无响应的问题。这主要是因为Eclipse在按下Ctrl键时，会自动切换到与当前代码相关联的文件，如果这些文件较大或者无法找到，就会导致卡顿甚至假死状态。为了解决这个问题，可以将自动进入关联文件的快捷键改为其他键，例如<a href="https://www.baidu.com/s?wd=Alt&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Alt__</a>。</p>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>2024-05-20</p>
+</blockquote>
+<h2> Eclipse卡顿问题</h2>
+<h2> 背景</h2>
+<p>在<a href="https://www.baidu.com/s?wd=Eclipse&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Eclipse__</a>中，使用快捷键<a href="https://www.baidu.com/s?wd=Ctrl%2BC&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Ctrl+C__</a>进行复制时，可能会遇到编辑器卡顿或者无响应的问题。这主要是因为Eclipse在按下Ctrl键时，会自动切换到与当前代码相关联的文件，如果这些文件较大或者无法找到，就会导致卡顿甚至假死状态。为了解决这个问题，可以将自动进入关联文件的快捷键改为其他键，例如<a href="https://www.baidu.com/s?wd=Alt&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=b8c9b742000302ef&amp;oq=eclipse%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%BE%88%E5%8D%A1&amp;rsv_t=03a5ayTzLZ46aOK7eaNHCtNe4vUdlw%2BmlxyWgkhliKPoqNxtk0epCAhg8TM&amp;sa=re_dqa_zy&amp;icon=1" target="_blank" rel="noopener noreferrer">Alt__</a>。</p>
+<blockquote>
+<p><strong>在Eclipse中编辑代码时，使用快捷键进行复制粘贴，经常会导致编辑器短暂的停顿，光标不跟随，居然反应不过来，就一直卡在那，很是浪费时间,让人抓耳挠腮..</strong></p>
+</blockquote>
+<h2> 解决方法：</h2>
+<p>Window -&gt; Preferences -&gt; General -&gt; Editors -&gt; Text Editors -&gt;Hyperlinking</p>
+<p><strong>把超链的快捷键改为其他键比如Alt（不能改为shift）</strong></p>
+<p>具体的解决办法如下：</p>
+<ol>
+<li>进入Eclipse的Preferences设置，路径为Window -&gt; Preferences。</li>
+<li>在Preferences窗口中，选择General -&gt; Editors -&gt; Text Editors -&gt; Hyperlinking。</li>
+<li>在Hyperlinking设置页面，将“Default modifier key”从Ctrl改为Alt，或者选择其他你喜欢的键。例如，可以设置为当按下Alt键时，Eclipse不会自动切换到代码超链接。</li>
+<li>保存设置。</li>
+</ol>
+<p>此外，如果更改快捷键后仍然出现卡顿，可以尝试进一步禁用某些超链接导航功能。在Hyperlinking页中，取消勾选“Enable on demand hyperlink style navigation”，这样可以减少Eclipse在编辑时的负担，从而可能避免卡顿。</p>
+<p>请注意，虽然更改快捷键可以解决复制粘贴时的卡顿问题，但这样做可能会影响到其他依赖于Ctrl+鼠标单击导航的操作。因此，根据个人需求选择是否进行此更改。</p>
+<p>其他方法：<br>
+取消 Validate 校验</p>
+<h2> 附件</h2>
+<p>参考：<a href="https://www.cnblogs.com/abministrator/p/17881905.html" target="_blank" rel="noopener noreferrer">Eclipse复制（Ctrl+C）粘贴（Ctrl+V）会卡顿</a></p>
+<p><a href="https://blog.csdn.net/qq_37022150/article/details/78193294" target="_blank" rel="noopener noreferrer">Ecilpse复制粘贴很慢，出现卡死现象及解决方法</a></p>
+<p><a href="https://blog.csdn.net/qq_44695727/article/details/104092148" target="_blank" rel="noopener noreferrer">eclipse经常卡死、反应慢、内存溢出的解决方案</a></p>
+<p>eclipse优化技巧：</p>
+<p><a href="https://blog.csdn.net/yangniceyangyang/article/details/96309283" target="_blank" rel="noopener noreferrer">eclipse经常卡死、反应慢、内存溢出的解决方案</a></p>
+<p><a href="https://blog.csdn.net/ArtemisC/article/details/87954568" target="_blank" rel="noopener noreferrer">Eclipse频繁卡顿的解决办法</a></p>
+]]></content>
+    <category term="项目"/>
+    <published>2024-05-20T10:13:17.000Z</published>
+  </entry>
+  <entry>
     <title type="text">git指定单文件提交</title>
     <id>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html"/>
-    <updated>2024-05-10T02:30:54.744Z</updated>
+    <updated>2024-06-02T15:20:42.086Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。</p>
 <h2> 基本命令操作</h2>
@@ -72,10 +217,113 @@
     <published>2024-05-10T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">eclipse-内存问题</title>
+    <id>https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</id>
+    <link href="https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html"/>
+    <updated>2024-06-02T15:20:42.096Z</updated>
+    <summary type="html"><![CDATA[<h2> 遇到的问题</h2>
+<p>在eclipse中使用lombok，省get/set方法，但是在新的环境中引入lombok.jar包并不生效，代码中有get方法就会飘红。</p>
+<p>原因：lombok在项目中没有生效，get/set也就没有。</p>
+<h2> 解决方法</h2>
+<blockquote>
+<p>在D:\programTool\eclipse2019\eclipse.ini 最后一行添加你lombok.jar所在的路径</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>-javaagent:D:\jar\lombok.jar
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 遇到的问题</h2>
+<p>在eclipse中使用lombok，省get/set方法，但是在新的环境中引入lombok.jar包并不生效，代码中有get方法就会飘红。</p>
+<p>原因：lombok在项目中没有生效，get/set也就没有。</p>
+<h2> 解决方法</h2>
+<blockquote>
+<p>在D:\programTool\eclipse2019\eclipse.ini 最后一行添加你lombok.jar所在的路径</p>
+</blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>最后，保存并关闭 eclipse.ini 文件，重新启动 Eclipse 即可。</p>
+<blockquote>
+<p>请注意，在使用 Lombok 之前，还需要确保已经将 Lombok JAR 文件添加到项目的 Classpath 中。这通常可以通过 Maven 或 Gradle 等构建工具来完成。如果你需要在 Eclipse 中手动添加 Lombok JAR 文件，可以按照以下步骤进行操作：</p>
+<ol>
+<li>右键单击项目，选择“Properties”；</li>
+<li>在“Java Build Path”选项卡中，选择“Libraries”；</li>
+<li>点击“Add JARs...”或“Add External JARs...”按钮，选择 Lombok JAR 文件并添加到项目中。</li>
+</ol>
+</blockquote>
+<p>题外话：若感觉Eclipse挺卡的，就把Eclipse 所有的校验都关闭；</p>
+<p>若eclipse使用起来还是卡，就看看eclipse.ini 中内存分配了多少，进行适当调整。</p>
+<h2> 附件</h2>
+<p>参考：<a href="https://www.caogenjava.com/detail/127.html" target="_blank" rel="noopener noreferrer">https://www.caogenjava.com/detail/127.html</a></p>
+<p>lombok eclipse.ini：<br>
+<a href="https://juejin.cn/s/lombok%20eclipse.ini" target="_blank" rel="noopener noreferrer">https://juejin.cn/s/lombok%20eclipse.ini</a></p>
+<p>eclipse.ini配置介绍：<br>
+<a href="https://wjw465150.github.io/blog/java/my_data/Eclipse/eclipse%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.htm" target="_blank" rel="noopener noreferrer">https://wjw465150.github.io/blog/java/my_data/Eclipse/eclipse%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.htm</a></p>
+<p>直接右键eclipse的快捷方式，在"目标"中填入下行</p>
+<p>D:\eclipse\eclipse.exe -debug options -vm javaw.exe -nl en_US -clean -vmargs -Xverify:none -XX:+UseParallelGC -XX:PermSize=20M -XX:MaxNewSize=32M -XX:NewSize=32M -Xms128m -Xmx256m</p>
+<p>参数注解：</p>
+<p>【-debug options -vm javaw.exe】显示JVM当前内存使用量（注：详见下方《让你的eclipse也能显示JVM当前内存使用量》）</p>
+<p>【-nl】后面跟的是语言：英语 en_US 简体中文 zh_CN</p>
+<p>【-clean 】是当启动Eclipse IDE时清空缓冲，一般来说在没有更新插件的情况下，去掉这个参数启动速度更快。</p>
+<p>【-vmargs】使用JRE的参数，后面就是JRE的参数了：</p>
+<p>【-Xverify:none】去掉JAR包数据验证，一般来说只有在网络环境下才需要验证JAR包数据的有效性。本地的话可以不用验证。</p>
+<p>【-XX:+UseParallelGC】使用并行垃圾收集机制，据说这个GC算法比较快。具体不清楚。</p>
+<p>【-XX:PermSize=20M -XX:MaxNewSize=32M -XX:NewSize=32M】这三个就是设置详细的缓冲数据了。详情看Java官方网站的介绍吧。</p>
+<p>【-Xms128m】Java虚拟机初始化内存容量。</p>
+<p>【-Xmx256m】Java虚拟机最大使用内存容量，根据你所使用机器的内容大小设置，只要不超过最大内存容量就好。</p>
+<p>-arch [processor architecture]<br>
+描述：指定所使用的处理器的类别<br>
+举例：eclipse -arch x86或eclipse -arch sparc</p>
+<p>-application [id]<br>
+描述：指定要运行的应用，id为扩展org.eclipse.core.applications扩展点的插件id加扩展id<br>
+举例：例如有个插件id为edu.sdu.app，扩展id为myapp，则eclipse -application edu.sdu.app.myapp，就会执行你的扩展应用</p>
+<p>-clean<br>
+描述：清空插件缓存内容<br>
+举例：eclipse -clean，有时插件显示不出来是因为Eclipse将插件进行了缓存以加速启动过程，若指定此参数则会清空缓存，从头加载</p>
+<p>-configuration [cofigfile location]<br>
+描述：指定配置文件的位置，在启动时使用此目录下的配置文件config.ini来启动<br>
+举例：eclipse -configuration d:/eclipse/configuration</p>
+<p>-data [workspace location]<br>
+描述：指定启动时的Workspace位置<br>
+举例：例如Workspace位置设在D:/myworkspace，则eclipse -data D:/myworkspace</p>
+<p>-debug [option file]<br>
+描述：以Debug状态启动Eclipse，所有的Debug开关在.options文件中指定<br>
+举例：eclipse -debug d:/eclipse/.options</p>
+<p>-dev [classpath entry]<br>
+描述：以开发状态启动Eclipse，这会添加所有指定的路径作为每个插件的Classpath<br>
+举例：例如eclipse -dev bin，会将产生在bin目录下的所有类加载到类路径中，这在开发插件时非常有用</p>
+<p>-nosplash<br>
+描述：指定启动时不显示闪屏<br>
+举例：eclipse -nosplash</p>
+<p>-vm [jre path]<br>
+描述：指定启动时所使用的Java虚拟机<br>
+举 例：例如要使用自己的Java虚拟机，则eclipse -vmD:/j2sdk1.4.2_04/jre/bin/java.exe，这样还有一个好处，就是可以开启一个Console，能够显示控制台信息， 当然若使用eclipse -vm D:/j2sdk1.4.2_04/jre/bin/javaw.exe则不会再显示控制台</p>
+<p>-vmargs [Java VM arguments]<br>
+描述：指定启动时要使用的Java虚拟机参数<br>
+举例：例如要指定使用的内存容量，则eclipse -vmargs "-Xms256m -Xmx1024m"<br>
+注：此参数一定要放在所有参数变量的最后面</p>
+<p>如果你觉得你的Eclipse在启动的时候很慢（比如说超过20秒钟），也许你要调整一下你的Eclipse启动参数了，以下是一些``小贴士'':</p>
+<ol>
+<li>检查启动Eclipse的JVM设置。 在Help\About Eclipse SDK\Configuration Detail里面，你可以看到启动Eclipse的JVM。 这个JVM和你在Eclipse中设置的Installed JDK是两回事情。 如果启动Eclipse的JVM还是JDK 1.4的话，那最好改为JDK 5，因为JDK 5的性能比1.4更好。</li>
+</ol>
+<p><code>C:\eclipse\eclipse.exe -vm "C:\Program Files\Java\jdk1.5.0_08\ bin\javaw.exe"</code></p>
+<ol start="2">
+<li>检查Eclipse所使用的heap的大小。 在C:\eclipse目录下有一个配置文件eclipse.ini，其中配置了Eclipse启动的默认heap大小</li>
+</ol>
+<p><code>-vmargs   -Xms40M   -Xmx256M</code></p>
+<p>所以你可以把默认值改为:</p>
+<p><code>-vmargs   -Xms256M   -Xmx512M</code></p>
+<p>当然，也可以这样做，把堆的大小改为256 - 512。</p>
+<p><code>C:\eclipse\eclipse.exe -vm "C:\Program Files\Java\jdk1.5.0_08\ bin\javaw.exe" -vmargs -Xms256M -Xmx512M</code></p>
+<ol start="3">
+<li>其他的启动参数。 如果你有一个双核的CPU，也许可以尝试这个参数:</li>
+</ol>
+<p><code>-XX:+UseParallelGC</code></p>
+<p>让GC可以更快的执行。（只是JDK 5里对GC新增加的参数）</p>
+]]></content>
+    <category term="项目"/>
+    <published>2024-05-07T15:20:17.000Z</published>
+  </entry>
+  <entry>
     <title type="text">项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-05-10T02:30:54.766Z</updated>
+    <updated>2024-06-02T15:20:42.102Z</updated>
     <summary type="html"><![CDATA[<p>背景</p>
 <p>使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。</p>
 <h2> 遇到的问题：</h2>
@@ -115,7 +363,7 @@
     <title type="text">maven私服批量上传本地依赖</title>
     <id>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</id>
     <link href="https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html"/>
-    <updated>2024-05-10T02:30:54.780Z</updated>
+    <updated>2024-06-02T15:20:42.109Z</updated>
     <summary type="html"><![CDATA[<h2> maven本地仓库依赖上传到远程仓库</h2>
 <blockquote>
 <p>本地仓库上传到远程仓库</p>
@@ -174,7 +422,7 @@
     <title type="text">maven私服搭建教程</title>
     <id>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</id>
     <link href="https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html"/>
-    <updated>2024-05-10T02:30:54.784Z</updated>
+    <updated>2024-06-02T15:20:42.112Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>sonatype-nexus私服搭建</p>
 </blockquote>
@@ -226,7 +474,7 @@ sonatype-work</p>
     <title type="text">mac配置gitlab</title>
     <id>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</id>
     <link href="https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html"/>
-    <updated>2024-05-10T02:30:54.791Z</updated>
+    <updated>2024-06-02T15:20:42.118Z</updated>
     <summary type="html"><![CDATA[<p>使用ssh方式拉取gitlab仓库代码</p>
 <h2> 背景</h2>
 <p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。<br>
@@ -289,7 +537,7 @@ config文件</p>
     <title type="text">gitlab导入本地或远程仓库代码</title>
     <id>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2024-05-10T02:30:54.797Z</updated>
+    <updated>2024-06-02T15:20:42.139Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>gitee仓库项目迁移到gitlab仓库</p>
 </blockquote>
@@ -360,7 +608,7 @@ config文件</p>
     <title type="text">idea中文乱码问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-05-10T02:30:54.800Z</updated>
+    <updated>2024-06-02T15:20:42.142Z</updated>
     <summary type="html"><![CDATA[<p>背景<br>
 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit  configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。</p>
 <h2> 遇到问题</h2>
@@ -398,7 +646,7 @@ config文件</p>
     <title type="text">项目中文乱码</title>
     <id>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html"/>
-    <updated>2024-05-10T02:30:54.803Z</updated>
+    <updated>2024-06-02T15:20:42.144Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
 这里使用到spring、springmvc、本地tomcat、idea</p>
@@ -434,7 +682,7 @@ tomcat字符集问题</p>
     <title type="text">eclipse-内存问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-05-10T02:30:54.806Z</updated>
+    <updated>2024-06-02T15:20:42.146Z</updated>
     <summary type="html"><![CDATA[<h2> 启动超时问题</h2>
 <p>对tomcat启动项目，将超时时间（timeouts）延迟</p>
 <h2> tomcat6内存问题</h2>
@@ -471,7 +719,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">问题集-插件类</title>
     <id>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html"/>
-    <updated>2024-05-10T02:30:54.809Z</updated>
+    <updated>2024-06-02T15:20:42.155Z</updated>
     <summary type="html"><![CDATA[<h2> lombok在eclipse中不生效问题</h2>
 <p>遇到的问题</p>
 <p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
@@ -504,7 +752,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">老项目导入问题</title>
     <id>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html"/>
-    <updated>2024-05-10T02:30:54.812Z</updated>
+    <updated>2024-06-02T15:20:42.158Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>导入eclipse项目，可能就会遇到这样那样的问题</p>
 <p>比如 该项目时jdk1.7版本的老项目</p>
@@ -536,7 +784,7 @@ eclipse版本是2019-06（4.12.0）</p>
     <title type="text">Oracle之ORA-29275-部分多字节字符</title>
     <id>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html"/>
-    <updated>2024-05-10T02:30:54.818Z</updated>
+    <updated>2024-06-02T15:20:42.161Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题</p>
 <div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>SELECT * FROM  A
@@ -586,7 +834,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">maven之‘settings.xml‘-has-syntax-errors</title>
     <id>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html"/>
-    <updated>2024-05-10T02:30:54.855Z</updated>
+    <updated>2024-06-02T15:20:42.195Z</updated>
     <summary type="html"><![CDATA[<p>背景：<br>
 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示：</p>
 <blockquote>
@@ -619,7 +867,7 @@ to_single_byte(c)转换成半角</p>
     <title type="text">eclipse项目在idea中打开</title>
     <id>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2024-05-10T02:30:54.869Z</updated>
+    <updated>2024-06-02T15:20:42.199Z</updated>
     <summary type="html"><![CDATA[<p>首先拿到项目地址：</p>
 <p>使用svn拉到本地目录位置（自定义）</p>
 <h2> 背景</h2>
@@ -737,7 +985,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">工作必会工具</title>
     <id>https://blog.lxip.top/notes/devtool/front-dev-tool.html</id>
     <link href="https://blog.lxip.top/notes/devtool/front-dev-tool.html"/>
-    <updated>2024-05-10T02:30:54.872Z</updated>
+    <updated>2024-06-02T15:20:42.202Z</updated>
     <summary type="html"><![CDATA[<h2> git</h2>
 <blockquote>
 <p>Gitee、GitHub、GitLab、Gitcode</p>
@@ -802,10 +1050,74 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <rights>Copyright by nxg</rights>
   </entry>
   <entry>
+    <title type="text">docker之xxl-job</title>
+    <id>https://blog.lxip.top/questionskills/docker/docker%E4%B9%8Bxxl-job.html</id>
+    <link href="https://blog.lxip.top/questionskills/docker/docker%E4%B9%8Bxxl-job.html"/>
+    <updated>2024-06-02T15:20:42.204Z</updated>
+    <summary type="html"><![CDATA[<h2> xxl-job</h2>
+<p>拉取镜像：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>docker pull xuxueli/xxl-job-admin:2.3.1
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>启动容器：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>docker run -d --name=xxl-job-admin \
+-p 8088:8080 \
+-v /root/docker-data/xxl-job/application.properties:/application.properties \
+-v /root/docker-data/xxl-job/applogs:/data/applogs \
+xuxueli/xxl-job-admin:2.3.1
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> xxl-job</h2>
+<p>拉取镜像：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>启动容器：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>/root/docker-data/xxl-job/application.properties 其中的application.properties文件需要从xxl-job项目中拿到，并需要要修改数据库连接账号密码，然后就是</p>
+</blockquote>
+<p>application.properties</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> xxl-job连接数据库问题</h3>
+<p>背景：</p>
+<p>在项目中需要定时任务调度，需要在docker容器中安装xxl-job</p>
+<p>遇到的问题</p>
+<p>部署成功后，可以访问xxl-job登录界面，点登录没反应，但过一段时间就弹出数据库拒绝连接，说MyBatis连接用户失败</p>
+<p>原因：</p>
+<p>在docker容器中，不同容器直接是相互隔离互不影响的，如果使用localhost、或者127.0.0.1是无法生效的。</p>
+<p>解决方法：</p>
+<p>思路：</p>
+<p>1、先检查需要连接的数据库用户名和密码是否正确</p>
+<p>2、如果是docker中不同容器之间的连接访问，就需要检查服务器内网地址。</p>
+<p>3、检测映射的端口是否对应</p>
+<p>方法：</p>
+<p>查看服务器内网ip地址：<br>
+</p>
+<p>修改application.properties配置：</p>
+<p>数据库连接地址和密码</p>
+<p>或者使用：容器名加端口号的方式访问，例如我的mysql数据库的容器名是 n_mysql</p>
+<p>则</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意：这些操作都是在同一服务器上操作的</p>
+<figure><figcaption></figcaption></figure>
+<p>在操作这些步骤中，可能有其他原因：</p>
+<p>1、是否在同一服务器中操作的，不同服务器之间就不能直接使用局域网ip地址，需要使用公网ip进行访问连接数据库</p>
+<p>2、在创建容器时，映射地址是否正确（不限于，路径名称）</p>
+<p>3、检测防火墙是否放行相应的端口，不过都能访问后台地址了，不会是防火墙的问题</p>
+<p>扩展：</p>
+<blockquote>
+<p>docker内的应用访问宿主机上的mysql和Redis<br>
+背景：宿主机部署MySQL、Redis，docker内部署tomcat、jdk<br>
+需求：tomcat内的应用访问宿主机的MySQL和Redis<br>
+方法：<br>
+一、连接地址切记不能用localhost和127.0.0.1<br>
+这些地址代表的都是容器内的系统，根本没有访问到宿主机，会一直报连接mysql/redis异常。<br>
+二、用docker的虚拟网卡地址<br>
+在宿主机查询网卡情况------ifconfig<br>
+docker0这块虚拟网卡的 inet 地址就是正确的本地ip(如172.17.0.1)</p>
+</blockquote>
+]]></content>
+    <category term="docker"/>
+    <category term="安装教程"/>
+    <published>2023-11-02T10:00:13.000Z</published>
+  </entry>
+  <entry>
     <title type="text">docker安装Oracle容器</title>
     <id>https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</id>
     <link href="https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html"/>
-    <updated>2024-05-10T02:30:54.886Z</updated>
+    <updated>2024-06-02T15:20:42.209Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>使用docker方式手动方式安装各类容器（服务）</p>
 </blockquote>
@@ -885,10 +1197,84 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <published>2023-10-26T10:00:13.000Z</published>
   </entry>
   <entry>
+    <title type="text">xxl-job使用</title>
+    <id>https://blog.lxip.top/notes/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</id>
+    <link href="https://blog.lxip.top/notes/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html"/>
+    <updated>2024-06-02T15:20:42.215Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>这里使用xxl-job-admin 2.3.1版本做演示</p>
+</blockquote>
+<p>xxl-job访问地址：<a href="http://127.0.0.1:8098/xxl-job-admin" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8098/xxl-job-admin</a></p>
+<blockquote>
+<p>端口跟application.properties 配置对应上，默认的用户名：admin<br>
+密码：123456</p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>这里使用xxl-job-admin 2.3.1版本做演示</p>
+</blockquote>
+<p>xxl-job访问地址：<a href="http://127.0.0.1:8098/xxl-job-admin" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8098/xxl-job-admin</a></p>
+<blockquote>
+<p>端口跟application.properties 配置对应上，默认的用户名：admin<br>
+密码：123456</p>
+</blockquote>
+<h2> 导入数据库</h2>
+<blockquote>
+<p>xxl-job使用的是mysql数据库，版本是mysql5.7或者使用mysql8都可以</p>
+</blockquote>
+<p>将xxl-job项目中的对应版本的对应数据库，导入到mysql数据库中。</p>
+<h2> 修改配置</h2>
+<p>如：数据库名为：xxl_job<br>
+则application.properties配置中连接的url为：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>与自己的数据库的用户名对应上</p>
+</blockquote>
+<h2> 启动xxl-job项目</h2>
+<p>xxl-job-admin项目中的application.properties<br>
+关键配置修改：</p>
+<div class="language-properties line-numbers-mode" data-ext="properties"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：目前只需要修改端口、数据库连接地址（用户名、密码）、accessToken</p>
+</blockquote>
+<h2> 配置任务调度</h2>
+<p>找到执行器：<br>
+添加xxl.job.executor.appname配置对应的值：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<figure><figcaption></figcaption></figure>
+<p>配置好，点击保存：<br>
+</p>
+<p>效果：<br>
+</p>
+<p>在任务管理中新增任务，配置如下：</p>
+<figure><figcaption></figcaption></figure>
+<h2> 运行案例</h2>
+<figure><figcaption></figcaption></figure>
+<blockquote>
+<p>记得修改对应配置</p>
+</blockquote>
+<p>案例配置：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>最后自动注册到执行器管理对应的配置中：<br>
+</p>
+<figure><figcaption></figcaption></figure>
+<p>在任务管理中执行该任务：<br>
+点击执行一次，测试是否调度成功<br>
+</p>
+<p>在调度日志中查看当前的记录：<br>
+</p>
+]]></content>
+    <author>
+      <name>nxg</name>
+    </author>
+    <category term="xxl-job"/>
+    <contributor>
+      <name>nxg</name>
+    </contributor>
+    <published>2023-10-22T00:00:00.000Z</published>
+    <rights>Copyright by nxg</rights>
+  </entry>
+  <entry>
     <title type="text">spring项目整合xxl-job</title>
     <id>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</id>
     <link href="https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html"/>
-    <updated>2024-05-10T02:30:54.901Z</updated>
+    <updated>2024-06-02T15:20:42.254Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。</p>
 <h2> 准备工作</h2>
@@ -956,6 +1342,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <author>
       <name>nxg</name>
     </author>
+    <category term="xxl-job"/>
     <category term="项目整合"/>
     <contributor>
       <name>nxg</name>
@@ -967,7 +1354,7 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     <title type="text">熟悉项目 &amp; idea导入eclipse项目</title>
     <id>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html"/>
-    <updated>2024-05-10T02:30:54.906Z</updated>
+    <updated>2024-06-02T15:20:42.259Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2> 开发工具的选择</h2>
@@ -1084,7 +1471,7 @@ idea就会提示找到svn对应的.exe</p>
     <title type="text">Cloudfare和Telegraph-Image-实现图床搭建</title>
     <id>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html"/>
-    <updated>2024-05-10T02:30:54.908Z</updated>
+    <updated>2024-06-02T15:20:42.265Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -1159,7 +1546,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp实现p2p远程连接桌面</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html"/>
-    <updated>2024-05-10T02:30:54.930Z</updated>
+    <updated>2024-06-02T15:20:42.273Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。</p>
 <blockquote>
@@ -1246,7 +1633,7 @@ bindings (编辑绑定)，添加绑定 KV 的命名空间的变量名和变量�
     <title type="text">frp-p2p配置说明</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
-    <updated>2024-05-10T02:30:54.940Z</updated>
+    <updated>2024-06-02T15:20:42.293Z</updated>
     <summary type="html"><![CDATA[<h2> 标准的配置文件</h2>
 <p>访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。</p>
 <p>被访问者：frpc.ini</p>
@@ -1309,7 +1696,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">多服务器监测面板</title>
     <id>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html"/>
-    <updated>2024-05-10T02:30:54.958Z</updated>
+    <updated>2024-06-02T15:20:42.321Z</updated>
     <summary type="html"><![CDATA[<p>✨&nbsp;Rust 版 ServerStatus 探针、威力加强版</p>
 <blockquote>
 <p>项目地址：<a href="https://github.com/zdz/ServerStatus-Rust" target="_blank" rel="noopener noreferrer">zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com)</a></p>
@@ -1450,7 +1837,7 @@ local_port <span class="token operator">=</span> <span class="token number">3389
     <title type="text">frp实现远程桌面连接</title>
     <id>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</id>
     <link href="https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html"/>
-    <updated>2024-05-10T02:30:54.984Z</updated>
+    <updated>2024-06-02T15:20:42.326Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景：</p>
 <ol>
@@ -1577,7 +1964,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">git实时拉取GitHub仓库代码</title>
     <id>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html"/>
-    <updated>2024-05-10T02:30:54.986Z</updated>
+    <updated>2024-06-02T15:20:42.327Z</updated>
     <summary type="html"><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
@@ -1613,7 +2000,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">常用的git命令</title>
     <id>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
     <link href="https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <updated>2024-05-10T02:30:55.008Z</updated>
+    <updated>2024-06-02T15:20:42.328Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>记录目前常用到的基本命令</p>
 </blockquote>
@@ -1666,7 +2053,7 @@ mv 原文件名 修改后的文件名</p>
     <title type="text">使用 GitHub 的单个仓库管理多个项目</title>
     <id>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</id>
     <link href="https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html"/>
-    <updated>2024-05-10T02:30:55.012Z</updated>
+    <updated>2024-06-02T15:20:42.331Z</updated>
     <summary type="html"><![CDATA[<h2> 前置知识</h2>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="blank">常用的git命令</a></p>
 <h2> 背景</h2>
@@ -1724,35 +2111,10 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <published>2023-04-16T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">编程知识库</title>
-    <id>https://blog.lxip.top/resources/share/navlearn.html</id>
-    <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
-    <updated>2024-05-10T02:30:55.013Z</updated>
-    <summary type="html"><![CDATA[<h2> 介绍</h2>
-<blockquote>
-<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
-<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
-<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
-<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
-</blockquote>]]></summary>
-    <content type="html"><![CDATA[<h2> 介绍</h2>
-<blockquote>
-<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
-<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
-<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
-<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
-</blockquote>
-<h2> 后端知识库</h2>
-]]></content>
-    <category term="快速导航"/>
-    <category term="编程知识库"/>
-    <published>2023-04-14T16:12:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">PicGo配置多图床仓库</title>
     <id>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</id>
     <link href="https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html"/>
-    <updated>2024-05-10T02:30:55.016Z</updated>
+    <updated>2024-06-02T15:20:42.333Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2> PicGo配置多图床</h2>
@@ -1816,7 +2178,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Gitee Pages Action</title>
     <id>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/gitee-pages-action.html"/>
-    <updated>2024-05-10T02:30:55.061Z</updated>
+    <updated>2024-06-02T15:20:42.368Z</updated>
     <summary type="html"><![CDATA[<p align="center">
   <a href="https://github.com/yanglbme/gitee-pages-action">
     
@@ -2050,7 +2412,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">github代码备份到gitee仓库-工作流</title>
     <id>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2024-05-10T02:30:55.071Z</updated>
+    <updated>2024-06-02T15:20:42.376Z</updated>
     <summary type="html"><![CDATA[<h2> 大概思路</h2>
 <p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>
 <h2> 前置知识</h2>
@@ -2115,7 +2477,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">mysql问题</title>
     <id>https://blog.lxip.top/notes/database/question.html</id>
     <link href="https://blog.lxip.top/notes/database/question.html"/>
-    <updated>2024-05-10T02:30:55.073Z</updated>
+    <updated>2024-06-02T15:20:42.379Z</updated>
     <summary type="html"><![CDATA[<h2> 问题1-提示1251- Client does not support authentication protocol requested by server</h2>
 <p>原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password,</p>
 <p>解决办法：</p>
@@ -2145,7 +2507,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">centos7.9使用</title>
     <id>https://blog.lxip.top/notes/linux/linux.html</id>
     <link href="https://blog.lxip.top/notes/linux/linux.html"/>
-    <updated>2024-05-10T02:30:55.118Z</updated>
+    <updated>2024-06-02T15:20:42.434Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
@@ -2490,7 +2852,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     <title type="text">Git多账号配置</title>
     <id>https://blog.lxip.top/notes/git/gitMore.html</id>
     <link href="https://blog.lxip.top/notes/git/gitMore.html"/>
-    <updated>2024-05-10T02:30:55.122Z</updated>
+    <updated>2024-06-02T15:20:42.442Z</updated>
     <summary type="html"><![CDATA[<h2> 一、背景</h2>
 <p>​		在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。</p>
 <h2> 二、准备</h2>
@@ -2590,7 +2952,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">Git提交本地代码至分支（详细每一步）</title>
     <id>https://blog.lxip.top/notes/git/git.html</id>
     <link href="https://blog.lxip.top/notes/git/git.html"/>
-    <updated>2024-05-10T02:30:55.125Z</updated>
+    <updated>2024-06-02T15:20:42.447Z</updated>
     <summary type="html"><![CDATA[<h1> 查看分支</h1>
 <p>A: 查看本地分支<br>
 使用 git branch命令，如下：git branch<br>
@@ -2674,7 +3036,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">hello life</title>
     <id>https://blog.lxip.top/happylife/thinker/th.html</id>
     <link href="https://blog.lxip.top/happylife/thinker/th.html"/>
-    <updated>2024-05-10T02:30:55.125Z</updated>
+    <updated>2024-06-02T15:20:42.447Z</updated>
     <category term="生活"/>
     <published>2022-03-01T00:00:00.000Z</published>
   </entry>
@@ -2682,23 +3044,62 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">关于本站</title>
     <id>https://blog.lxip.top/blog/about.html</id>
     <link href="https://blog.lxip.top/blog/about.html"/>
-    <updated>2024-05-10T02:30:55.126Z</updated>
+    <updated>2024-06-02T15:20:42.461Z</updated>
     <summary type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
 <p>本站由以下内容提供服务</p>
-]]></summary>
+<p>::: projects</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code>
+<span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//image.liubing.me/2023/02/11/7f17f3cf426c3.png
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> Cloudflare
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> 提供免费的 CDN 服务。
+  <span class="token key atrule">link</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//www.cloudflare.com/
+
+<span class="token comment"># - icon: https://image.liubing.me/2023/02/11/a6de6381e4ae6.png</span>
+<span class="token comment">#   name: Contabo</span>
+<span class="token comment">#   desc: VPS 所属供应商。</span>
+<span class="token comment">#   link: https://contabo.com/</span>
+
+<span class="token comment"># - icon: https://image.liubing.me/2023/02/11/50994f9710667.ico</span>
+<span class="token comment">#   name: 宝塔 Linux 面板</span>
+<span class="token comment">#   desc: 用来管理 VPS</span>
+<span class="token comment">#   link: https://cn.vuejs.org/</span>
+
+<span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//vuepress.vuejs.org/hero.png
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> VuePress
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> 博客驱动引擎。
+  <span class="token key atrule">link</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//vuepress.vuejs.org/zh/
+
+<span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//theme<span class="token punctuation">-</span>hope.vuejs.press/logo.png
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> VuePress Theme Hope
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> 本站博客所用主题
+  <span class="token key atrule">link</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//theme<span class="token punctuation">-</span>hope.vuejs.press/zh/
+
+<span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//image.liubing.me/2023/02/11/a7643dcbbc234.png
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> Buddy
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> 本站自动化打包构建发布工具。
+  <span class="token key atrule">link</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//buddy.works
+
+<span class="token punctuation">-</span> <span class="token key atrule">icon</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//image.liubing.me/2023/02/05/834597e9e927e.png
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> Waline
+  <span class="token key atrule">desc</span><span class="token punctuation">:</span> 本站评论所用服务。
+  <span class="token key atrule">link</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//waline.js.org/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
     <content type="html"><![CDATA[<h1> 关于本站</h1>
 <p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2> 服务提供</h2>
 <p>本站由以下内容提供服务</p>
+<p>::: projects</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
+<h2> 博客</h2>
 ]]></content>
   </entry>
   <entry>
     <title type="text">Java8新特性</title>
     <id>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</id>
     <link href="https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html"/>
-    <updated>2024-05-10T02:30:55.226Z</updated>
+    <updated>2024-06-02T15:20:42.565Z</updated>
     <summary type="html"><![CDATA[<h2> Optional类</h2>
 <h3> 引入</h3>
 <p><code>NPE</code>问题就是在开发中经常碰到的<code>NullPointerException</code>，即空指针问题，<code>Optional</code>类就是用来优雅解决该问题的方案。</p>
@@ -2840,14 +3241,14 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">实战项目【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/pracprojects/</id>
     <link href="https://blog.lxip.top/questionskills/pracprojects/"/>
-    <updated>2024-05-10T02:30:55.227Z</updated>
+    <updated>2024-06-02T15:20:42.566Z</updated>
     <category term="实战项目"/>
   </entry>
   <entry>
     <title type="text">编程软件</title>
     <id>https://blog.lxip.top/questionskills/software/</id>
     <link href="https://blog.lxip.top/questionskills/software/"/>
-    <updated>2024-05-10T02:30:55.228Z</updated>
+    <updated>2024-06-02T15:20:42.566Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2877,7 +3278,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">系统设计【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/systemdesign/</id>
     <link href="https://blog.lxip.top/questionskills/systemdesign/"/>
-    <updated>2024-05-10T02:30:55.228Z</updated>
+    <updated>2024-06-02T15:20:42.567Z</updated>
     <summary type="html"><![CDATA[<h2> 专业软件</h2>
 <ul>
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
@@ -2900,7 +3301,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">技术教程【开源项目】</title>
     <id>https://blog.lxip.top/questionskills/techguide/</id>
     <link href="https://blog.lxip.top/questionskills/techguide/"/>
-    <updated>2024-05-10T02:30:55.230Z</updated>
+    <updated>2024-06-02T15:20:42.568Z</updated>
     <summary type="html"><![CDATA[<h2> CS</h2>
 <ul>
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
@@ -2964,7 +3365,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">书籍资源</title>
     <id>https://blog.lxip.top/resources/books/</id>
     <link href="https://blog.lxip.top/resources/books/"/>
-    <updated>2024-05-10T02:30:55.231Z</updated>
+    <updated>2024-06-02T15:20:42.570Z</updated>
     <summary type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -3096,7 +3497,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">快速导航</title>
     <id>https://blog.lxip.top/resources/share/</id>
     <link href="https://blog.lxip.top/resources/share/"/>
-    <updated>2024-05-10T02:30:55.251Z</updated>
+    <updated>2024-06-02T15:20:42.580Z</updated>
     <summary type="html"><![CDATA[<h2> 搜索引擎</h2>
 <h2> 开源社区</h2>
 <h2> 优质博客</h2>
@@ -3124,7 +3525,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">个人导航</title>
     <id>https://blog.lxip.top/resources/share/nav.html</id>
     <link href="https://blog.lxip.top/resources/share/nav.html"/>
-    <updated>2024-05-10T02:30:55.254Z</updated>
+    <updated>2024-06-02T15:20:42.582Z</updated>
     <summary type="html"><![CDATA[<!-- <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
 {"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
 {"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
@@ -3141,10 +3542,39 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <category term="快速导航"/>
   </entry>
   <entry>
+    <title type="text">编程知识库</title>
+    <id>https://blog.lxip.top/resources/share/navlearn.html</id>
+    <link href="https://blog.lxip.top/resources/share/navlearn.html"/>
+    <updated>2024-06-02T15:20:42.582Z</updated>
+    <summary type="html"><![CDATA[<h2> 介绍</h2>
+<blockquote>
+<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
+<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
+<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
+<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
+</blockquote>]]></summary>
+    <content type="html"><![CDATA[<h2> 介绍</h2>
+<blockquote>
+<p>编程知识库是一个涵盖各种编程语言和技术的资源库，旨在为所有程序员提供一个有趣、充实的学习体验。我们深信，对于那些充满好奇心和求知欲的人来说，编程可以是一项非常有趣和充实的活动。</p>
+<p>编程知识库致力于为所有编程初学者和专业人士提供一个包罗万象的学习平台，涵盖各种不同级别的课程和项目，适合不同的学习目标和水平。我们的知识库不仅包含最新的技术和语言，还提供了许多经典的编程问题和解决&gt;方案，可以帮助你深入了解编程世界的本质。</p>
+<p>我们的编程知识库不仅提供丰富的学习资源，还提供交流和互动的平台。你可以通过讨论区或社交媒体与其他编程爱好者交流想法、讨论问题或分享你的项目。我们相信，通过互动和分享，你可以更快、更有趣地学习编程，并与其他程序员建立有意义的联系。</p>
+<p>无论你是一名新手，还是一名专业人士，编程知识库都是一个有趣、充实的学习平台，让你掌握最新的技术和知识，探索编程的乐趣和创造力。快来加入我们，一起探索编程世界的精彩吧！</p>
+</blockquote>
+<h2> 后端知识库</h2>
+
+<h2> 前端知识库</h2>
+
+<h2> 运维知识库</h2>
+
+]]></content>
+    <category term="快速导航"/>
+    <category term="编程知识库"/>
+  </entry>
+  <entry>
     <title type="text">影音资源</title>
     <id>https://blog.lxip.top/resources/videos/</id>
     <link href="https://blog.lxip.top/resources/videos/"/>
-    <updated>2024-05-10T02:30:55.254Z</updated>
+    <updated>2024-06-02T15:20:42.583Z</updated>
     <category term="影视"/>
     <category term="音乐"/>
   </entry>
@@ -3152,7 +3582,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     <title type="text">tomcat服务器</title>
     <id>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</id>
     <link href="https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html"/>
-    <updated>2024-05-10T02:30:55.292Z</updated>
+    <updated>2024-06-02T15:20:42.586Z</updated>
     <summary type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 1.HTTP协议简介</h2>
