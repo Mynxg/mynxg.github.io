@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录笔记</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 03 Jun 2024 15:29:30 GMT</pubDate>
-    <lastBuildDate>Mon, 03 Jun 2024 15:29:30 GMT</lastBuildDate>
+    <pubDate>Tue, 04 Jun 2024 06:49:00 GMT</pubDate>
+    <lastBuildDate>Tue, 04 Jun 2024 06:49:00 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>xxl-job</category>
@@ -389,10 +389,10 @@ SampleXxlJob类：</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>eclipse-内存问题</title>
+      <title>eclipse引入lombok不生效问题</title>
       <link>https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</link>
       <guid>https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">eclipse-内存问题</source>
+      <source url="https://blog.lxip.top/rss.xml">eclipse引入lombok不生效问题</source>
       <description>遇到的问题 在eclipse中使用lombok，省get/set方法，但是在新的环境中引入lombok.jar包并不生效，代码中有get方法就会飘红。 原因：lombok在项目中没有生效，get/set也就没有。 解决方法 在D:\programTool\eclipse2019\eclipse.ini 最后一行添加你lombok.jar所在的路径 最后...</description>
       <category>项目</category>
       <pubDate>Tue, 07 May 2024 15:20:17 GMT</pubDate>
