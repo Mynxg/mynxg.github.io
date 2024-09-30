@@ -4,10 +4,10 @@
     <atom:link href="https://blog.lxip.top/rss.xml" rel="self" type="application/rss+xml"/>
     <title>所遇所思</title>
     <link>https://blog.lxip.top/</link>
-    <description>feedId: 63579994084069376+userId:63572632571569152</description>
+    <description>feedId:63581818710068224+userId:63572632571569152</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 30 Sep 2024 14:14:11 GMT</pubDate>
-    <lastBuildDate>Mon, 30 Sep 2024 14:14:11 GMT</lastBuildDate>
+    <pubDate>Mon, 30 Sep 2024 14:16:55 GMT</pubDate>
+    <lastBuildDate>Mon, 30 Sep 2024 14:16:55 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>frp</category>
