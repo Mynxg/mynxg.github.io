@@ -1,6 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as n,b as a,d as r,o,r as s}from"./app-_2BZDzLr.js";const c={};function i(l,p){const e=s("MyLinks");return o(),n("div",null,[a(` <NavCard arr='[{"title":"One Nav","url":"https://nav.lxip.top/","desc":"导航","icon":"/navicon/pdai.ico"},
-{"title":" Nginx Proxy Manager","url":"https://npm.lxip.top/","desc":"反向代理","icon":"/navicon/ruan.ico"},
-{"title":"单服务器数据检测","url":"https://watch.lxip.top/","desc":"单服务器数据检测","icon":"/navicon/r2coding.png"},
-{"title":"导航页","url":"https://navs.lxip.top/","desc":"导航","icon":"/navicon/yuque.png"},
-{"title":"兰空图床","url":"http://139.224.55.130:9080","desc":"方向代理有问题~~~","icon":"/navicon/dd.jpg"}
-]'></NavCard> `),r(e,{type:"mynav",src:"mynav"})])}const h=t(c,[["render",i],["__file","nav.html.vue"]]),v=JSON.parse('{"path":"/resources/share/nav.html","title":"个人导航","lang":"zh-CN","frontmatter":{"title":"个人导航","icon":"tablet","category":["快速导航"],"tag":["导航"],"sticky":false,"star":false,"article":true,"timeline":true,"order":4,"feed":false,"seo":false,"gitInclude":[],"head":[["link",{"rel":"canonical","href":"https://blogs.lxip.top/resources/share/nav.html"}]]},"headers":[],"readingTime":{"minutes":0.63,"words":188},"filePathRelative":"resources/share/nav.md"}');export{h as comp,v as data};

@@ -1,3 +1,5 @@
 
 User-agent:*
 Disallow:
+
+Sitemap: https://blog.lxip.top/sitemap.xml
