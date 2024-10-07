@@ -6,12 +6,13 @@
     <link>https://blog.lxip.top/</link>
     <description>记录学习过程</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 06 Oct 2024 15:55:06 GMT</pubDate>
-    <lastBuildDate>Sun, 06 Oct 2024 15:55:06 GMT</lastBuildDate>
+    <pubDate>Mon, 07 Oct 2024 13:18:31 GMT</pubDate>
+    <lastBuildDate>Mon, 07 Oct 2024 13:18:31 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>archlinux</category>
     <category>hyprland</category>
+    <category>Go</category>
     <category>frp</category>
     <category>lamp-cloud</category>
     <category>xxl-job</category>
@@ -201,6 +202,157 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <p>配置1：https://github.com/Rogerskelamen/dotfiles</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.nlark.com/yuque/0/2024/png/25612657/1726676589794-ab9d94b3-ca00-46b7-83ea-0ce5183863a8.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_585%2Climit_0" type="image/"/>
+    </item>
+    <item>
+      <title>vscode运行go</title>
+      <link>https://blog.lxip.top/notes/go/vscode%E8%BF%90%E8%A1%8Cgo.html</link>
+      <guid>https://blog.lxip.top/notes/go/vscode%E8%BF%90%E8%A1%8Cgo.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">vscode运行go</source>
+      <description>配置 VSCode 开发环境 1、安装GO插件 先在vscode中安装插件 1.1 通过go扩展插件安装 `shift``p` `shift``p` 安装完成后，控制台打印的效果： 1.2 通过命令安装 在cmd窗口，输入以下命令进行安装 注意：cmd窗口需要 最后，</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 10:45:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>配置 VSCode 开发环境</h2>
+<blockquote>
+</blockquote>
+<h3>1、安装GO插件</h3>
+<p>先在vscode中安装插件</p>
+<figure><figcaption></figcaption></figure>
+<p>1.1 通过go扩展插件安装</p>
+<ul>
+<li>
+`shift``p`</li>
+<li>
+`shift``p`</li>
+<li><figcaption></figcaption></li>
+</ul>
+<p>安装完成后，控制台打印的效果：</p>
+<figure><figcaption></figcaption></figure>
+<p>1.2 通过命令安装</p>
+<p>在cmd窗口，输入以下命令进行安装</p>
+<div class="language-plain line-numbers-mode" data-highlighter="shiki" data-ext="plain" data-title="plain" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>go get -v github.com/mdempsky/gocode</span></span>
+<span class="line"><span>go get -v github.com/uudashr/gopkgs/v2/cmd/gopkgs</span></span>
+<span class="line"><span>go get -v github.com/rogpeppe/godef</span></span>
+<span class="line"><span>go get -u github.com/ramya-rao-a/go-outline</span></span>
+<span class="line"><span>go get -v github.com/sqs/goreturns</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>注意：cmd窗口需要</p>
+</blockquote>
+<p>最后，</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>go安装</title>
+      <link>https://blog.lxip.top/notes/go/go%E5%AE%89%E8%A3%85.html</link>
+      <guid>https://blog.lxip.top/notes/go/go%E5%AE%89%E8%A3%85.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go安装</source>
+      <description>下载Go 下载地址：https://studygolang.com/dl 一、go安装 这种方式会自动帮把go环境配置.</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 10:39:13 GMT</pubDate>
+      <content:encoded><![CDATA[<p>下载Go</p>
+<p>下载地址：<a href="https://studygolang.com/dl" target="_blank" rel="noopener noreferrer">https://studygolang.com/dl</a></p>
+<figure><figcaption></figcaption></figure>
+<h2>一、go安装</h2>
+<h2></h2>
+<figure><figcaption></figcaption></figure>
+<figure><figcaption></figcaption></figure>
+<figure><figcaption></figcaption></figure>
+<figure><figcaption></figcaption></figure>
+<figure><figcaption></figcaption></figure>
+<p>这种方式会自动帮把go环境配置.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>go-window环境安装（推荐）</title>
+      <link>https://blog.lxip.top/notes/go/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89.html</link>
+      <guid>https://blog.lxip.top/notes/go/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">go-window环境安装（推荐）</source>
+      <description>下载安装包 https://go.dev/learn/ 准备工作 下载编译器 编译器下载： 付费的 vscode、vim 免费 一、go安装 我这里直接以下载go语言安装包方式， 解压到D:\software\go目录下： 二、环境配置 window系统环境变量配置大概位置：高级系统设置&amp;gt;环境变量&amp;gt;系统变量 点击Path： 增加 创建go三方包： 点击...</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 10:36:13 GMT</pubDate>
+      <content:encoded><![CDATA[<p>下载安装包</p>
+<p><a href="https://go.dev/learn/" target="_blank" rel="noopener noreferrer">https://go.dev/learn/</a></p>
+<figure><figcaption></figcaption></figure>
+<h2>准备工作</h2>
+<p>下载编译器</p>
+<p>编译器下载：</p>
+<blockquote>
+<p>付费的</p>
+</blockquote>
+<p>vscode、vim</p>
+<blockquote>
+<p>免费</p>
+</blockquote>
+<h2>一、go安装</h2>
+<p>我这里直接以下载go语言安装包方式，</p>
+<figure><figcaption></figcaption></figure>
+<p>解压到D:\software\go目录下：</p>
+<figure><figcaption></figcaption></figure>
+<h2>二、环境配置</h2>
+<p>window系统环境变量配置大概位置：高级系统设置&gt;环境变量&gt;系统变量</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">go包路径：</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">go1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">23</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">windows</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<p>点击Path：</p>
+<figure><figcaption></figcaption></figure>
+<p>增加</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">%GO_HOME1231%\bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<p>创建go三方包：</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third\bin</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third\pkg</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<blockquote>
+</blockquote>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量名：GOPATH</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量值：D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<p>点击Path：</p>
+<p>增加</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">%GOPATH%\bin</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<blockquote>
+<p><strong></strong></p>
+</blockquote>
+<h3>检测是否安装成功</h3>
+<p>查看版本：</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> version</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>查看环境变量：</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> env</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
+<h2>配置 Go 代理</h2>
+<p>在环境变量中增加代理</p>
+<p>GOPROXY</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量名：GOPROXY</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量值：https://</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">cn</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,direct</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">通过命令方式设置goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">io代理</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> env -w GOPROXY</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"https://proxy.golang.com.cn,direct"</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 设置GO111MOUDLE</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> env -w GO111MODULE</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"on"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>目的：下载国外包比较慢，使用国内代理就比较快</p>
+</blockquote>
+<h3>常用的 go 代理</h3>
+<ul>
+<li>
+[](https://goproxy.io/zh/)</li>
+<li>
+[](https://mirrors.aliyun.com/goproxy/)</li>
+<li>
+[](https://goproxy.cn/)</li>
+</ul>
+<h2></h2>
+配置 Go 代理<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 配置 GOPROXY 环境变量</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPROXY</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">https://</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">io</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,direct</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 还可以设置不走 proxy 的私有仓库或组，多个用逗号相隔（可选）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPRIVATE</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">git</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">mycompany</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.com,</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">github</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">com</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/my/</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">private</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>参考：<a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a></p>
+</blockquote>
+]]></content:encoded>
     </item>
     <item>
       <title>frp-0.59-使用教程</title>
