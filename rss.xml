@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录学习过程</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 07 Oct 2024 13:39:08 GMT</pubDate>
-    <lastBuildDate>Mon, 07 Oct 2024 13:39:08 GMT</lastBuildDate>
+    <pubDate>Mon, 14 Oct 2024 08:28:22 GMT</pubDate>
+    <lastBuildDate>Mon, 14 Oct 2024 08:28:22 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>archlinux</category>
@@ -15,11 +15,11 @@
     <category>Go</category>
     <category>frp</category>
     <category>lamp-cloud</category>
+    <category>运维</category>
     <category>xxl-job</category>
     <category>项目整合</category>
     <category>Knife4j</category>
     <category>项目</category>
-    <category>运维</category>
     <category>Springboot</category>
     <category>maven</category>
     <category>git</category>
@@ -2588,6 +2588,96 @@ Swagger文档: 		http://192.168.1.79:8768/doc.html
 Swagger文档: 		http://192.168.1.79:8773/doc.html
 数据库监控: 		http://127.0.0.1:8773/druid</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>window下配置ssh</title>
+      <link>https://blog.lxip.top/notes/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</link>
+      <guid>https://blog.lxip.top/notes/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">window下配置ssh</source>
+      <description>背景 在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。 ssh配置 配置ssh cofnig文件 在C:\Users\catcat\...</description>
+      <category>运维</category>
+      <pubDate>Mon, 01 Jul 2024 10:30:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>背景</h2>
+<p>在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。</p>
+<h2>ssh配置</h2>
+<h3>配置ssh cofnig文件</h3>
+<blockquote>
+<p>在C:\Users\catcat\.ssh目录下创建 <strong>config</strong> 文件，并自由添加需要的配置</p>
+<p>这里的catcat表示window电脑对应的用户名，每个电脑的用户名都是自己设置的，自行修改即可。</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># GitHub</span></span>
+<span class="line"><span>Host github.com</span></span>
+<span class="line"><span>    HostName github.com</span></span>
+<span class="line"><span>    PreferredAuthentications publickey</span></span>
+<span class="line"><span>    IdentityFile ~/.ssh/id_ed25519_github_mytest</span></span>
+<span class="line"><span>    User mytest</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span># Github2</span></span>
+<span class="line"><span>Host imtest.github.com</span></span>
+<span class="line"><span>    HostName github.com</span></span>
+<span class="line"><span>    PreferredAuthentications publickey</span></span>
+<span class="line"><span>    IdentityFile ~/.ssh/id_ed25519_github_imtest</span></span>
+<span class="line"><span>    User imtest    </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># gitee</span></span>
+<span class="line"><span>Host gitee.com</span></span>
+<span class="line"><span>    HostName gitee.com</span></span>
+<span class="line"><span>    PreferredAuthentications publickey</span></span>
+<span class="line"><span>    IdentityFile ~/.ssh/id_ed25519_gitee_mytest</span></span>
+<span class="line"><span>    User mytest    	</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># gitee</span></span>
+<span class="line"><span>Host imtest.gitee.com</span></span>
+<span class="line"><span>    HostName gitee.com</span></span>
+<span class="line"><span>    PreferredAuthentications publickey</span></span>
+<span class="line"><span>    IdentityFile ~/.ssh/id_ed25519_gitee_imtest</span></span>
+<span class="line"><span>    User imtest 	</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span># gitee</span></span>
+<span class="line"><span>Host gitcode.net</span></span>
+<span class="line"><span>    HostName gitcode.net</span></span>
+<span class="line"><span>    PreferredAuthentications publickey</span></span>
+<span class="line"><span>    IdentityFile ~/.ssh/id_ed25519_gitcode_nxgtest</span></span>
+<span class="line"><span>    User test</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>为什么配置两个github呢，我是想分开两个账号的公钥，虽然可以共用一个公钥，但是我还是习惯于分开。</p>
+</blockquote>
+<h3>生成秘钥</h3>
+<p>在目录下执行：</p>
+<blockquote>
+<p>位置：C:\Users\catcat\.ssh</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>ssh-keygen -t ed25519 -C "&lt;注释内容&gt;"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>推荐使用<strong>ed25519</strong>算法方式生成秘钥</p>
+</blockquote>
+<p>生成效果：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> catcat    .ssh     0ms⠀   ssh-keygen -t ed25519 -C "mytest@qq.com"             pwsh   96  15:48:07 </span></span>
+<span class="line"><span>Generating public/private ed25519 key pair.</span></span>
+<span class="line"><span>Enter file in which to save the key (C:\Users\catcat/.ssh/id_ed25519):</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>输入自定义的名称，并回车</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> catcat    .ssh     0ms⠀   ssh-keygen -t ed25519 -C "mytest@qq.com"             pwsh   96  15:48:07 </span></span>
+<span class="line"><span>Generating public/private ed25519 key pair.</span></span>
+<span class="line"><span>Enter file in which to save the key (C:\Users\catcat/.ssh/id_ed25519): id_ed25519_github_mytest</span></span>
+<span class="line"><span>Enter passphrase (empty for no passphrase):</span></span>
+<span class="line"><span>Enter same passphrase again:</span></span>
+<span class="line"><span>Your identification has been saved in id_ed25519_github_mytest</span></span>
+<span class="line"><span>Your public key has been saved in id_ed25519_github_mytest.pub</span></span>
+<span class="line"><span>The key fingerprint is:</span></span>
+<span class="line"><span>SHA256:FREWfhgLoEWqn21ewQWE65s+MGFoamjj0CWQvHG124 mytest@qq.com</span></span>
+<span class="line"><span>The key's randomart image is:</span></span>
+<span class="line"><span>+--[ED25519 256]--+</span></span>
+<span class="line"><span>|+.    .. .+      |</span></span>
+<span class="line"><span>|o. . .  ..o+     |</span></span>
+<span class="line"><span>| .. .    oo+     |</span></span>
+<span class="line"><span>|.  . .   .+ .    |</span></span>
+<span class="line"><span>|.o+ o o S  .     |</span></span>
+<span class="line"><span>|+o *o*           |</span></span>
+<span class="line"><span>|+ =**..          |</span></span>
+<span class="line"><span>|=o+++o.          |</span></span>
+<span class="line"><span>|B*o.+E.          |</span></span>
+<span class="line"><span>+</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>SpringBoot整合xxx-job</title>
