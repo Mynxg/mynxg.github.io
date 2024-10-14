@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>记录学习过程</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 14 Oct 2024 08:28:22 GMT</pubDate>
-    <lastBuildDate>Mon, 14 Oct 2024 08:28:22 GMT</lastBuildDate>
+    <pubDate>Mon, 14 Oct 2024 08:59:08 GMT</pubDate>
+    <lastBuildDate>Mon, 14 Oct 2024 08:59:08 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>archlinux</category>
@@ -2596,7 +2596,7 @@ Swagger文档: 		http://192.168.1.79:8773/doc.html
       <source url="https://blog.lxip.top/rss.xml">window下配置ssh</source>
       <description>背景 在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。 ssh配置 配置ssh cofnig文件 在C:\Users\catcat\...</description>
       <category>运维</category>
-      <pubDate>Mon, 01 Jul 2024 10:30:00 GMT</pubDate>
+      <pubDate>Tue, 02 Jul 2024 10:18:13 GMT</pubDate>
       <content:encoded><![CDATA[<h2>背景</h2>
 <p>在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。</p>
 <h2>ssh配置</h2>
