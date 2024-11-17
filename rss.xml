@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 17 Nov 2024 14:11:40 GMT</pubDate>
-    <lastBuildDate>Sun, 17 Nov 2024 14:11:40 GMT</lastBuildDate>
+    <pubDate>Sun, 17 Nov 2024 14:31:27 GMT</pubDate>
+    <lastBuildDate>Sun, 17 Nov 2024 14:31:27 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>archlinux</category>
@@ -7360,14 +7360,13 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <link>https://blog.lxip.top/resources/share/navlearn.html</link>
       <guid>https://blog.lxip.top/resources/share/navlearn.html</guid>
       <source url="https://blog.lxip.top/rss.xml">编程知识库</source>
-      <description>介绍 整理编程相关的技术文档 后端知识库</description>
+      <description>介绍 整理编程相关的技术文档</description>
       <category>快速导航</category>
       <category>编程知识库</category>
       <content:encoded><![CDATA[<h2>介绍</h2>
 <blockquote>
 <p>整理编程相关的技术文档</p>
 </blockquote>
-<h2>后端知识库</h2>
 ]]></content:encoded>
     </item>
     <item>

@@ -797,8 +797,8 @@
       "title": "编程知识库",
       "url": "https://blog.lxip.top/resources/share/navlearn.html",
       "id": "https://blog.lxip.top/resources/share/navlearn.html",
-      "summary": "介绍 整理编程相关的技术文档 后端知识库",
-      "content_html": "<h2>介绍</h2>\n<blockquote>\n<p>整理编程相关的技术文档</p>\n</blockquote>\n<h2>后端知识库</h2>\n",
+      "summary": "介绍 整理编程相关的技术文档",
+      "content_html": "<h2>介绍</h2>\n<blockquote>\n<p>整理编程相关的技术文档</p>\n</blockquote>\n",
       "authors": [],
       "tags": [
         "快速导航",
