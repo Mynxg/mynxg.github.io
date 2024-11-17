@@ -4,10 +4,10 @@
     <atom:link href="https://blog.lxip.top/rss.xml" rel="self" type="application/rss+xml"/>
     <title>所遇所思</title>
     <link>https://blog.lxip.top/</link>
-    <description>记录学习过程</description>
+    <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 14 Oct 2024 09:00:46 GMT</pubDate>
-    <lastBuildDate>Mon, 14 Oct 2024 09:00:46 GMT</lastBuildDate>
+    <pubDate>Sun, 17 Nov 2024 10:42:55 GMT</pubDate>
+    <lastBuildDate>Sun, 17 Nov 2024 10:42:55 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>archlinux</category>
@@ -388,8 +388,23 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -zxvf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frp_0.59.0_linux_amd64.tar.gz</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>位置：/root/frp/frp_0.59.0_linux_amd64</p>
 <p>frps.toml修改配置端口:</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>bindPort = 7002</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>bindPort = 7002</span></span>
+<span class="line"><span>auth.token = "qwweqqwea123132aa"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>transport.maxPoolCount = 5</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 默认为 127.0.0.1，如果需要公网访问，需要修改为 0.0.0.0。</span></span>
+<span class="line"><span>webServer.addr = "0.0.0.0"</span></span>
+<span class="line"><span>webServer.port = 7003</span></span>
+<span class="line"><span># dashboard 用户名密码，可选，默认为空</span></span>
+<span class="line"><span>webServer.user = "admin"</span></span>
+<span class="line"><span>webServer.password = "admin"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>log.to = "/root/frp/log/frps.log"</span></span>
+<span class="line"><span>log.level = "info"</span></span>
+<span class="line"><span>log.maxDays = 30</span></span>
+<span class="line"><span>log.disablePrintColor = false</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>至此服务配置就配置好了</p>
 </blockquote>
 <h3>2.2 安装&nbsp;<code>systemd</code></h3>
@@ -596,8 +611,23 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -zxvf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frp_0.59.0_linux_amd64.tar.gz</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>位置：/root/frp/frp_0.59.0_linux_amd64</p>
 <p>frps.toml修改配置端口:</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>bindPort = 7002</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>bindPort = 7002</span></span>
+<span class="line"><span>auth.token = "qwweqqwea123132aa"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>transport.maxPoolCount = 5</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 默认为 127.0.0.1，如果需要公网访问，需要修改为 0.0.0.0。</span></span>
+<span class="line"><span>webServer.addr = "0.0.0.0"</span></span>
+<span class="line"><span>webServer.port = 7003</span></span>
+<span class="line"><span># dashboard 用户名密码，可选，默认为空</span></span>
+<span class="line"><span>webServer.user = "admin"</span></span>
+<span class="line"><span>webServer.password = "admin"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>log.to = "/root/frp/log/frps.log"</span></span>
+<span class="line"><span>log.level = "info"</span></span>
+<span class="line"><span>log.maxDays = 30</span></span>
+<span class="line"><span>log.disablePrintColor = false</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>至此服务配置就配置好了</p>
 </blockquote>
 <h3>2.2 安装&nbsp;<code>systemd</code></h3>
@@ -6661,9 +6691,9 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <link>https://blog.lxip.top/blog/about.html</link>
       <guid>https://blog.lxip.top/blog/about.html</guid>
       <source url="https://blog.lxip.top/rss.xml">关于本站</source>
-      <description>关于本站 一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。 服务提供 本站由以下内容提供服务</description>
+      <description>关于本站 一个基于 VuePress theme hope 的个人博客，主要记录日常开发问题和一些代码笔记。 服务提供 本站由以下内容提供服务</description>
       <content:encoded><![CDATA[
-<p>一个基于 VuePress 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
+<p>一个基于 VuePress  theme hope 的个人博客，主要记录日常开发问题和一些代码笔记。</p>
 <h2>服务提供</h2>
 <p>本站由以下内容提供服务</p>
 <!-- ::: projects
