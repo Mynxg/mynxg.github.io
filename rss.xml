@@ -6,10 +6,12 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Nov 2024 16:06:26 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Nov 2024 16:06:26 GMT</lastBuildDate>
+    <pubDate>Sun, 01 Dec 2024 09:55:02 GMT</pubDate>
+    <lastBuildDate>Sun, 01 Dec 2024 09:55:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>docker</category>
+    <category>安装教程</category>
     <category>archlinux</category>
     <category>hyprland</category>
     <category>Go</category>
@@ -27,8 +29,6 @@
     <category>技巧</category>
     <category>数据库</category>
     <category>工具</category>
-    <category>docker</category>
-    <category>安装教程</category>
     <category>图床</category>
     <category>Mybatis</category>
     <category>服务器监测</category>
@@ -48,6 +48,188 @@
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
+    <item>
+      <title>docker安装umami</title>
+      <link>https://blog.lxip.top/notes/docker/umami-install.html</link>
+      <guid>https://blog.lxip.top/notes/docker/umami-install.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">docker安装umami</source>
+      <description>介绍 在众多的分析工具中，有google analyze、baidu analyze、51La等，为什么选择umami呢，原因在于umami可以用于自由部署、网站数据追踪、埋点等，数据可以掌握在自己手中，或者说灵活度更高，可以接入个人站点中展示网站访问情况。 umami优点： 简单分析 Umami 只测量你关心的重要指标：网页浏览量、使用的设备以及访问...</description>
+      <category>docker</category>
+      <category>安装教程</category>
+      <pubDate>Sat, 30 Nov 2024 23:43:57 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>介绍</h2>
+<p>在众多的分析工具中，有google analyze、baidu analyze、51La等，为什么选择umami呢，原因在于umami可以用于自由部署、网站数据追踪、埋点等，数据可以掌握在自己手中，或者说灵活度更高，可以接入个人站点中展示网站访问情况。</p>
+<p>umami优点：</p>
+<blockquote>
+<ol>
+<li><strong>简单分析</strong> Umami 只测量你关心的重要指标：网页浏览量、使用的设备以及访问者的来源。这些数据都在一个易于浏览的页面上展示。</li>
+<li><strong>不限网站数量</strong> Umami 通过一次安装就可以跟踪无限数量的网站，甚至还可以跟踪子域名和单个的 URL。</li>
+<li><strong>绕过广告拦截器</strong> Umami 由你在自己进行托管部署，所以你可以有效地避免 Google Analytics 不同的广告拦截器。</li>
+<li><strong>轻量级</strong> 追踪脚本很小（只有 2KB），而且支持 IE 等旧版浏览器。</li>
+<li><strong>多账户</strong> Umami 可用于为朋友或客户托管数据，只需创建一个单独的账号，他们就可以开始在自己的仪表板上跟踪自己的网站。</li>
+<li><strong>共享数据</strong> 如果你想公开分享你的统计数据，那么你可以使用一个唯一生成的 URL 进行共享。</li>
+<li><strong>移动端友好</strong> Umami 界面已针对移动设备进行了优化，因此你可以从任何地方查看你的统计数据。</li>
+<li><strong>数据所有权</strong> 由于 Umami 是自托管的，因此你拥有所有数据。无需将你的数据交给第三方进行利用。</li>
+<li><strong>注重隐私</strong> Umami 不收集任何个人身份信息，并对收集的所有数据进行匿名处理。</li>
+<li><strong>开源</strong> Umami 是开源的，并采用 MIT 的开源协议。</li>
+</ol>
+</blockquote>
+<h2>前提</h2>
+<p>一台云服务器、配置有反向代理</p>
+<p>云服务器安装docker、docker-compose</p>
+<p>云服务器对应的防火墙（规则）端口开放</p>
+<p>国内服务器需要自行配置镜像源地址</p>
+<p>docker版本：Docker version 27.3.1, build ce12230</p>
+<p>Linux版本：Linux lavm-2uq9wpz749 5.14.0-70.13.1.el9_0.x86_64 #1 SMP PREEMPT Wed May 25 21:01:57 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</p>
+<p>umami版本：2.14.0 （目前是最新版）</p>
+<p>官方网站：https://umami.is/</p>
+<p>官方文档：https://umami.is/docs/</p>
+<p>开源地址：https://github.com/umami-software/umami</p>
+<p>演示地址： https://app.umami.is/share/8rmHaheU/umami.is</p>
+<p>docker镜像查看：
+https://github.com/umami-software/umami/pkgs/container/umami
+https://hub.docker.com/r/umamisoftware/umami/tags</p>
+<h2>umami安装及配置</h2>
+<p>先熟悉不同docker-compose配置，如果你有docker基础，使用起来那是非常方便。如果不是，那就需要先了解docker的使用了。</p>
+<blockquote>
+<p>这里使用最新docker compose命令，不再使用docker-compose命令</p>
+</blockquote>
+<h3>1.数据库选择（二选一）</h3>
+<p>mysql用于存储</p>
+<blockquote>
+<p>文件名：docker-compose-umami.yml</p>
+<p>以下是文件内容</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>version: '3'</span></span>
+<span class="line"><span>services:</span></span>
+<span class="line"><span>  umami:</span></span>
+<span class="line"><span>    image: docker.umami.is/umami-software/umami:mysql-latest</span></span>
+<span class="line"><span>    container_name: umami-latest-v</span></span>
+<span class="line"><span>    ports:</span></span>
+<span class="line"><span>      - "3010:3000"</span></span>
+<span class="line"><span>    environment:</span></span>
+<span class="line"><span>      DATABASE_URL: mysql://umami-u:123456-u@umami-mysql:3306/umami</span></span>
+<span class="line"><span>      DATABASE_TYPE: mysql</span></span>
+<span class="line"><span>      APP_SECRET: replace-me-with-a-random-string</span></span>
+<span class="line"><span>    depends_on:</span></span>
+<span class="line"><span>      - umami-db</span></span>
+<span class="line"><span>    restart: always</span></span>
+<span class="line"><span>  umami-db:</span></span>
+<span class="line"><span>    image: mysql:8.0.20</span></span>
+<span class="line"><span>    container_name: umami-mysql</span></span>
+<span class="line"><span>    command: --default-authentication-plugin=mysql_native_password</span></span>
+<span class="line"><span>    environment:</span></span>
+<span class="line"><span>      TZ: Asia/Shanghai</span></span>
+<span class="line"><span>      MYSQL_DATABASE: umami</span></span>
+<span class="line"><span>      MYSQL_ROOT_PASSWORD: 123456-a</span></span>
+<span class="line"><span>      MYSQL_USER: umami-u</span></span>
+<span class="line"><span>      MYSQL_PASSWORD: 123456-u</span></span>
+<span class="line"><span>    ports:</span></span>
+<span class="line"><span>      - "3307:3306"</span></span>
+<span class="line"><span>    volumes:</span></span>
+<span class="line"><span>      # 挂载数据目录</span></span>
+<span class="line"><span>      - ./umami-mysql-data:/var/lib/mysql</span></span>
+<span class="line"><span>    restart: always</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>mysql://umami-u:123456-u@umami-mysql:3306/umami</p>
+<p>mysql://数据库用户名:数据库密码@数据库容器名称:端口/数据库名</p>
+<p>MYSQL_DATABASE: 数据库名
+MYSQL_ROOT_PASSWORD: root用户密码
+MYSQL_USER: 普通用户的用户名
+MYSQL_PASSWORD: 普通用户的用户名对应的密码</p>
+<p>这里只有普通用户进行连接数据库</p>
+</blockquote>
+<p>postgresql用于存储</p>
+<blockquote>
+<p>文件名：docker-compose-umami.yml</p>
+<p>以下是文件内容</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>version: '3'</span></span>
+<span class="line"><span>services:</span></span>
+<span class="line"><span>  umami:</span></span>
+<span class="line"><span>    image: docker.umami.is/umami-software/umami:postgresql-latest</span></span>
+<span class="line"><span>    ports:</span></span>
+<span class="line"><span>      - "3010:3000"</span></span>
+<span class="line"><span>    environment:</span></span>
+<span class="line"><span>      DATABASE_URL: postgresql://umami:umami@db:5432/umami</span></span>
+<span class="line"><span>      DATABASE_TYPE: postgresql</span></span>
+<span class="line"><span>      APP_SECRET: replace-me-with-a-random-string</span></span>
+<span class="line"><span>    depends_on:</span></span>
+<span class="line"><span>      - db</span></span>
+<span class="line"><span>    restart: always</span></span>
+<span class="line"><span>  db:</span></span>
+<span class="line"><span>    image: postgres:12.22</span></span>
+<span class="line"><span>    environment:</span></span>
+<span class="line"><span>      POSTGRES_DB: umami</span></span>
+<span class="line"><span>      POSTGRES_USER: umami</span></span>
+<span class="line"><span>      POSTGRES_PASSWORD: umami</span></span>
+<span class="line"><span>    volumes:</span></span>
+<span class="line"><span>      - ./umami-db-data:/var/lib/postgresql/data</span></span>
+<span class="line"><span>    restart: always</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>postgresql://umami:umami@db:5432/umami</p>
+<p>postgresql://用户名:密码@默认连接名称:5432/数据库名</p>
+<p>POSTGRES_DB: 数据库名
+POSTGRES_USER: 用户名
+POSTGRES_PASSWORD: 密码</p>
+<p>注意：在老的教程中可能会有这个条// - ./sql/schema.postgresql.sql:/docker-entrypoint-initdb.d/schema.postgresql.sql:ro 现在不需要了</p>
+<p>原因是在新版本中已经不需要初始化sql了，在源代码中已经处理了。</p>
+<p>//- ./umami-db-data:/var/lib/postgresql/data</p>
+<p>这个表示将本地文件系统中的某个目录（<code>./umami-db-data</code>）挂载到 Docker 容器中/var/lib/postgresql/data的目录，这样做的目的是以便在容器中持久化数据，数据卷可以使数据在容器停止或删除后保留，确保数据不丢失。</p>
+</blockquote>
+<h3>2.操作</h3>
+<p>2.1.创建目录：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>mkdir -p /root/docker-compose/umami</span></span>
+<span class="line"><span>mkdir -p  /root/docker-compose/umami/umami-mysql-data</span></span>
+<span class="line"><span>mkdir  -p  /root/docker-compose/umami/umami-db-data</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2.2.在目录下创建docker-compose.yml文件</p>
+<blockquote>
+<p>docker-compose.yml文件在/root/docker-compose/umami目录下创建</p>
+</blockquote>
+<p>在数据选择中选择其中一个配置即可</p>
+<p>2.3. 启动docker compose</p>
+<blockquote>
+<p>在/root/docker-compose/umami目录下执行以下命令</p>
+</blockquote>
+<p>启动：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker compose -f docker-compose-umami.yml up -d</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>为什么使用自定义的docker-compose-umami.yml名称呢</p>
+<p>1.为了方便后续增加其他docker-compose文件</p>
+<p>2.docker compose 默认配置是docker-compose.yml，通过docker-compose up -d即可启动</p>
+<p>3.自定docker compose配置，定制化需求更好，比如umami提供的两种数据库，不想修改配置，可以这样：</p>
+<p>docker-compose-umami-mysql.yml 用于填写mysql配置内容</p>
+<p>docker-compose-umami-postgresql.yml 用于填写postgresql配置内容</p>
+</blockquote>
+<p>关闭删除容器</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker compose -f docker-compose-umami.yml  down</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>更新容器镜像</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker compose -f docker-compose-umami.yml  pull</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>拉取docker-compose-umami服务的最新镜像</p>
+</blockquote>
+<h2>访问umami</h2>
+<p>在没有使用方向代理，则直接通过ip地址加端口即可访问</p>
+<blockquote>
+<p>默认账号是：admin</p>
+<p>密码：umami</p>
+</blockquote>
+<p>地址：http://11x.xx.xx.53:3010</p>
+<h2>附录</h2>
+<p><a href="https://imnxg.notion.site/docker-compose-docker-compose-14f8b8600cef8032a730fa2b42503f86?pvs=4" target="_blank" rel="noopener noreferrer">为什么使用docker compose而不使用docker-compose</a></p>
+<blockquote>
+<p>对于新用户和新的项目，推荐使用 docker compose，因为它是最新的命令集并且集成更好</p>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p>docker.umami.is/umami-software/umami:postgresql-latest镜像可能在国内服务器中可能拉下来非常慢，可以选择阿里云提供的镜像服务，将docker hub镜像同步到阿里云镜像仓库中，然后再在服务器中使用对应的地址拉取umami:postgresql-latest或umami:mysql-latest</p>
+</blockquote>
+<p>参考：</p>
+<p>https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html</p>
+<p>https://www.zywvvd.com/notes/tools/umami/umami/</p>
+<p>https://blog.laoda.de/archives/umami?cid=3913</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>02-hyprland主题使用</title>
       <link>https://blog.lxip.top/questionskills/archlinux/01-hyprland.html</link>
@@ -4219,8 +4401,8 @@ https://jf.homefont.cn/daxiao.html</p>
     </item>
     <item>
       <title>docker之xxl-job</title>
-      <link>https://blog.lxip.top/questionskills/docker/docker%E4%B9%8Bxxl-job.html</link>
-      <guid>https://blog.lxip.top/questionskills/docker/docker%E4%B9%8Bxxl-job.html</guid>
+      <link>https://blog.lxip.top/notes/docker/docker%E4%B9%8Bxxl-job.html</link>
+      <guid>https://blog.lxip.top/notes/docker/docker%E4%B9%8Bxxl-job.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker之xxl-job</source>
       <description>xxl-job 拉取镜像： 启动容器： /root/docker-data/xxl-job/application.properties 其中的application.properties文件需要从xxl-job项目中拿到，并需要要修改数据库连接账号密码，然后就是 application.properties xxl-job连接数据库问题 背景： 在项...</description>
       <category>docker</category>
@@ -4345,8 +4527,8 @@ https://jf.homefont.cn/daxiao.html</p>
     </item>
     <item>
       <title>docker安装Oracle容器</title>
-      <link>https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</link>
-      <guid>https://blog.lxip.top/questionskills/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</guid>
+      <link>https://blog.lxip.top/notes/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</link>
+      <guid>https://blog.lxip.top/notes/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker安装Oracle容器</source>
       <description>使用docker方式手动方式安装各类容器（服务） 镜像查找方式：https://hub.docker.com/ 安装Oracle 参考1：https://blog.csdn.net/javaboyweng/article/details/125486242 参考2：Docker-14：Docker安装Oracle11g (赞) 参考3：[docker安...</description>
       <category>docker</category>
