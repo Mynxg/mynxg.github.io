@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 01 Dec 2024 09:55:02 GMT</pubDate>
-    <lastBuildDate>Sun, 01 Dec 2024 09:55:02 GMT</lastBuildDate>
+    <pubDate>Fri, 06 Dec 2024 08:23:00 GMT</pubDate>
+    <lastBuildDate>Fri, 06 Dec 2024 08:23:00 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -761,10 +761,10 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 ]]></content:encoded>
     </item>
     <item>
-      <title>frp-0.59-点对点和安全暴露服务-二合一配置案例：</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1-%E4%BA%8C%E5%90%88%E4%B8%80%E9%85%8D%E7%BD%AE%E6%A1%88%E4%BE%8B%EF%BC%9A.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1-%E4%BA%8C%E5%90%88%E4%B8%80%E9%85%8D%E7%BD%AE%E6%A1%88%E4%BE%8B%EF%BC%9A.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">frp-0.59-点对点和安全暴露服务-二合一配置案例：</source>
+      <title>frp-0.59-点对点和安全暴露服务</title>
+      <link>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</link>
+      <guid>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">frp-0.59-点对点和安全暴露服务</source>
       <description>背景 目前需要使用自建的内网穿透工具，就选择了frp，frp也分很多版本，我之前使用的是frp_0.51.2_windows_386版本，现在升级版本为frp_0.59.0_windows_amd64，主要使用这个frp功能有，点对点内网穿透（p2p）、安全地暴露内网服务 和 服务端作为代理进行穿透的三种方式。准备使用点对点或安全的暴露服务方式，之前使...</description>
       <category>frp</category>
       <pubDate>Sun, 04 Aug 2024 19:49:00 GMT</pubDate>
