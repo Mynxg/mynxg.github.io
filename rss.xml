@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 07 Dec 2024 08:59:47 GMT</pubDate>
-    <lastBuildDate>Sat, 07 Dec 2024 08:59:47 GMT</lastBuildDate>
+    <pubDate>Mon, 16 Dec 2024 09:58:18 GMT</pubDate>
+    <lastBuildDate>Mon, 16 Dec 2024 09:58:18 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -82,13 +82,13 @@
 <p>docker版本：Docker version 27.3.1, build ce12230</p>
 <p>Linux版本：Linux lavm-2uq9wpz749 5.14.0-70.13.1.el9_0.x86_64 #1 SMP PREEMPT Wed May 25 21:01:57 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</p>
 <p>umami版本：2.14.0 （目前是最新版）</p>
-<p>官方网站：https://umami.is/</p>
-<p>官方文档：https://umami.is/docs/</p>
-<p>开源地址：https://github.com/umami-software/umami</p>
-<p>演示地址： https://app.umami.is/share/8rmHaheU/umami.is</p>
-<p>docker镜像查看：
-https://github.com/umami-software/umami/pkgs/container/umami
-https://hub.docker.com/r/umamisoftware/umami/tags</p>
+<p>官方网站：<a href="https://umami.is/" target="_blank" rel="noopener noreferrer">https://umami.is/</a></p>
+<p>官方文档：<a href="https://umami.is/docs/" target="_blank" rel="noopener noreferrer">https://umami.is/docs/</a></p>
+<p>开源地址：<a href="https://github.com/umami-software/umami" target="_blank" rel="noopener noreferrer">https://github.com/umami-software/umami</a></p>
+<p>演示地址： <a href="https://app.umami.is/share/8rmHaheU/umami.is" target="_blank" rel="noopener noreferrer">https://app.umami.is/share/8rmHaheU/umami.is</a></p>
+<p>docker镜像查看：<br>
+<a href="https://github.com/umami-software/umami/pkgs/container/umami" target="_blank" rel="noopener noreferrer">https://github.com/umami-software/umami/pkgs/container/umami</a><br>
+<a href="https://hub.docker.com/r/umamisoftware/umami/tags" target="_blank" rel="noopener noreferrer">https://hub.docker.com/r/umamisoftware/umami/tags</a></p>
 <h2>umami安装及配置</h2>
 <p>先熟悉不同docker-compose配置，如果你有docker基础，使用起来那是非常方便。如果不是，那就需要先了解docker的使用了。</p>
 <blockquote>
@@ -133,9 +133,9 @@ https://hub.docker.com/r/umamisoftware/umami/tags</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>mysql://umami-u:123456-u@umami-mysql:3306/umami</p>
 <p>mysql://数据库用户名:数据库密码@数据库容器名称:端口/数据库名</p>
-<p>MYSQL_DATABASE: 数据库名
-MYSQL_ROOT_PASSWORD: root用户密码
-MYSQL_USER: 普通用户的用户名
+<p>MYSQL_DATABASE: 数据库名<br>
+MYSQL_ROOT_PASSWORD: root用户密码<br>
+MYSQL_USER: 普通用户的用户名<br>
 MYSQL_PASSWORD: 普通用户的用户名对应的密码</p>
 <p>这里只有普通用户进行连接数据库</p>
 </blockquote>
@@ -169,8 +169,8 @@ MYSQL_PASSWORD: 普通用户的用户名对应的密码</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>postgresql://umami:umami@db:5432/umami</p>
 <p>postgresql://用户名:密码@默认连接名称:5432/数据库名</p>
-<p>POSTGRES_DB: 数据库名
-POSTGRES_USER: 用户名
+<p>POSTGRES_DB: 数据库名<br>
+POSTGRES_USER: 用户名<br>
 POSTGRES_PASSWORD: 密码</p>
 <p>注意：在老的教程中可能会有这个条// - ./sql/schema.postgresql.sql:/docker-entrypoint-initdb.d/schema.postgresql.sql:ro 现在不需要了</p>
 <p>原因是在新版本中已经不需要初始化sql了，在源代码中已经处理了。</p>
@@ -214,7 +214,7 @@ POSTGRES_PASSWORD: 密码</p>
 <p>默认账号是：admin</p>
 <p>密码：umami</p>
 </blockquote>
-<p>地址：http://11x.xx.xx.53:3010</p>
+<p>地址：<a href="http://11x.xx.xx.53:3010" target="_blank" rel="noopener noreferrer">http://11x.xx.xx.53:3010</a></p>
 <h2>附录</h2>
 <p><a href="https://imnxg.notion.site/docker-compose-docker-compose-14f8b8600cef8032a730fa2b42503f86?pvs=4" target="_blank" rel="noopener noreferrer">为什么使用docker compose而不使用docker-compose</a></p>
 <blockquote>
@@ -222,12 +222,12 @@ POSTGRES_PASSWORD: 密码</p>
 </blockquote>
 <p>注意：</p>
 <blockquote>
-<p>docker.umami.is/umami-software/umami:postgresql-latest镜像可能在国内服务器中可能拉下来非常慢，可以选择阿里云提供的镜像服务，将docker hub镜像同步到阿里云镜像仓库中，然后再在服务器中使用对应的地址拉取umami:postgresql-latest或umami:mysql-latest</p>
+<p><a href="http://docker.umami.is/umami-software/umami:postgresql-latest%E9%95%9C%E5%83%8F%E5%8F%AF%E8%83%BD%E5%9C%A8%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E5%8F%AF%E8%83%BD%E6%8B%89%E4%B8%8B%E6%9D%A5%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E9%98%BF%E9%87%8C%E4%BA%91%E6%8F%90%E4%BE%9B%E7%9A%84%E9%95%9C%E5%83%8F%E6%9C%8D%E5%8A%A1%EF%BC%8C%E5%B0%86docker" target="_blank" rel="noopener noreferrer">docker.umami.is/umami-software/umami:postgresql-latest镜像可能在国内服务器中可能拉下来非常慢，可以选择阿里云提供的镜像服务，将docker</a> hub镜像同步到阿里云镜像仓库中，然后再在服务器中使用对应的地址拉取umami:postgresql-latest或umami:mysql-latest</p>
 </blockquote>
 <p>参考：</p>
-<p>https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html</p>
-<p>https://www.zywvvd.com/notes/tools/umami/umami/</p>
-<p>https://blog.laoda.de/archives/umami?cid=3913</p>
+<p><a href="https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html" target="_blank" rel="noopener noreferrer">https://blog.amarea.cn/archives/use-docker-deploy-umami-analytics.html</a></p>
+<p><a href="https://www.zywvvd.com/notes/tools/umami/umami/" target="_blank" rel="noopener noreferrer">https://www.zywvvd.com/notes/tools/umami/umami/</a></p>
+<p><a href="https://blog.laoda.de/archives/umami?cid=3913" target="_blank" rel="noopener noreferrer">https://blog.laoda.de/archives/umami?cid=3913</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -240,32 +240,32 @@ POSTGRES_PASSWORD: 密码</p>
       <category>hyprland</category>
       <pubDate>Mon, 16 Sep 2024 14:12:13 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
-<p>参考：hyperland安装：
-https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong</p>
+<p>参考：hyperland安装：<br>
+<a href="https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong" target="_blank" rel="noopener noreferrer">https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong</a></p>
 </blockquote>
 <blockquote>
-<p>参考视频：https://www.youtube.com/watch?v=1_Ui6dgH9Vs
+<p>参考视频：<a href="https://www.youtube.com/watch?v=1_Ui6dgH9Vs" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=1_Ui6dgH9Vs</a><br>
 推荐</p>
 </blockquote>
 <p>hyprland主题安装</p>
 <p>1、安装好archlinux之后</p>
 <p>2、先下载paru包</p>
-<p>这个地址也可以 https://aur.archlinux.org/paru.git</p>
+<p>这个地址也可以 <a href="https://aur.archlinux.org/paru.git" target="_blank" rel="noopener noreferrer">https://aur.archlinux.org/paru.git</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git clone https://aur.archlinux.org/paru-git.git</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后进入cd paru-git目录执行以下命令：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>makepkg -si</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>3、再安装hyprland桌面</p>
-<p>参考：https://github.com/mylinuxforwork/dotfiles</p>
+<p>参考：<a href="https://github.com/mylinuxforwork/dotfiles" target="_blank" rel="noopener noreferrer">https://github.com/mylinuxforwork/dotfiles</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>paru -S ml4w-hyprland-git</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>安装和配置启动</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>ml4w-hyprland-setup</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>fcitx5皮肤美化</p>
 <p>中文输入法安装：</p>
-<p>参考：https://fcitx-im.org/wiki/Fcitx_5/zh-cn</p>
+<p>参考：<a href="https://fcitx-im.org/wiki/Fcitx_5/zh-cn" target="_blank" rel="noopener noreferrer">https://fcitx-im.org/wiki/Fcitx_5/zh-cn</a></p>
 <p>中文输入法本身有两种frameworks，ibus和fcitx，我在这里使用的是fcitx5。</p>
-<p>https://fcitx-im.org/wiki/Fcitx_5/zh-cn</p>
+<p><a href="https://fcitx-im.org/wiki/Fcitx_5/zh-cn" target="_blank" rel="noopener noreferrer">https://fcitx-im.org/wiki/Fcitx_5/zh-cn</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>pacman -S fcitx5 fcitx5-rime fcitx5-configtool</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>强推下雾凇拼音 https://github.com/iDvel/rime-ice</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>强推下雾凇拼音 <a href="https://github.com/iDvel/rime-ice" target="_blank" rel="noopener noreferrer">https://github.com/iDvel/rime-ice</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>paru -S rime-ice-git</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>installation完成之后还需要集成到系统中去，需要在/etc/environment文件中添加如下几行：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>GTK_IM_MODULE=fcitx</span></span>
@@ -282,7 +282,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>patch:</span></span>
 <span class="line"><span>  "menu/page_size": 7</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>fcitx5皮肤美化：</p>
-<p>https://github.com/tonyfettes/fcitx5-nord</p>
+<p><a href="https://github.com/tonyfettes/fcitx5-nord" target="_blank" rel="noopener noreferrer">https://github.com/tonyfettes/fcitx5-nord</a></p>
 <p>安装：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git clone https://github.com/tonyfettes/fcitx5-nord.git</span></span>
 <span class="line"><span>mkdir -p ~/.local/share/fcitx5/themes/</span></span>
@@ -298,7 +298,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>包管理工具</h2>
 <p>pacman、paru</p>
 <p>包查找：</p>
-<p>https://aur.chaotic.cx/package-list</p>
+<p><a href="https://aur.chaotic.cx/package-list" target="_blank" rel="noopener noreferrer">https://aur.chaotic.cx/package-list</a></p>
 <h2>快捷键</h2>
 <p>Super+回车 打开终端</p>
 <p>Super+B 打开浏览器</p>
@@ -380,9 +380,9 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <figure><img src="https://cdn.nlark.com/yuque/0/2024/png/25612657/1726676589794-ab9d94b3-ca00-46b7-83ea-0ce5183863a8.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_585%2Climit_0" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
 <h2>附件</h2>
 <p>hyprland配置：</p>
-<p>配置：https://github.com/Rogerskelamen/dotfiles</p>
+<p>配置：<a href="https://github.com/Rogerskelamen/dotfiles" target="_blank" rel="noopener noreferrer">https://github.com/Rogerskelamen/dotfiles</a></p>
 <p>配置：<a href="https://github.com/lingllqs/dotfiles?" target="_blank" rel="noopener noreferrer">https://github.com/lingllqs/dotfiles</a></p>
-<p>配置1：https://github.com/Rogerskelamen/dotfiles</p>
+<p>配置1：<a href="https://github.com/Rogerskelamen/dotfiles" target="_blank" rel="noopener noreferrer">https://github.com/Rogerskelamen/dotfiles</a></p>
 ]]></content:encoded>
       <enclosure url="https://cdn.nlark.com/yuque/0/2024/png/25612657/1726676589794-ab9d94b3-ca00-46b7-83ea-0ce5183863a8.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_585%2Climit_0" type="image/"/>
     </item>
@@ -521,11 +521,11 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <h3>常用的 go 代理</h3>
 <ul>
 <li>
-[](https://goproxy.io/zh/)</li>
+[](<a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a>)</li>
 <li>
-[](https://mirrors.aliyun.com/goproxy/)</li>
+[](<a href="https://mirrors.aliyun.com/goproxy/" target="_blank" rel="noopener noreferrer">https://mirrors.aliyun.com/goproxy/</a>)</li>
 <li>
-[](https://goproxy.cn/)</li>
+[](<a href="https://goproxy.cn/" target="_blank" rel="noopener noreferrer">https://goproxy.cn/</a>)</li>
 </ul>
 <h2></h2>
 配置 Go 代理<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 配置 GOPROXY 环境变量</span></span>
@@ -562,7 +562,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <p>frp_0.59.0_linux_amd64.tar.gz   ====》用于上传到linux服务器上</p>
 <p>frp_0.59.0_windows_amd64.zip  ====》 用于在window本地启动的</p>
 <blockquote>
-<p>注意：下载linux版的会window系统会报毒，自行在设置中放行(排除)下载目录即可下载，并上传到服务器上。
+<p>注意：下载linux版的会window系统会报毒，自行在设置中放行(排除)下载目录即可下载，并上传到服务器上。<br>
 在官网下载同样是会报毒的，可以自行验证。</p>
 </blockquote>
 <h2>二、配置服务端</h2>
@@ -678,7 +678,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>访问者机器 连接 被访问者</p>
 <p>使用window自带的远程连接工具：127.0.0.1:7003 输入电脑用户名和密码，即可访问目标机器</p>
 <h3>点对点访问服务</h3>
-<p>1、被访问者机器（目标机器）
+<p>1、被访问者机器（目标机器）<br>
 位置：D:\programTool\frp\frp_0.59.0_windows_amd64</p>
 <p>frpc.toml 修改配置：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>serverAddr = "服务器公网ip地址"</span></span>
@@ -785,7 +785,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <p>frp_0.59.0_linux_amd64.tar.gz   ====》用于上传到linux服务器上</p>
 <p>frp_0.59.0_windows_amd64.zip  ====》 用于在window本地启动的</p>
 <blockquote>
-<p>注意：下载linux版的会window系统会报毒，自行在设置中放行(排除)下载目录即可下载，并上传到服务器上。
+<p>注意：下载linux版的会window系统会报毒，自行在设置中放行(排除)下载目录即可下载，并上传到服务器上。<br>
 在官网下载同样是会报毒的，可以自行验证。</p>
 </blockquote>
 <h2>二、配置服务端</h2>
@@ -989,7 +989,7 @@ https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-q
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>查看node有哪些源：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>nrm ls</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>C:\Users\catbun&gt;nrm ls
+<p>C:\Users\catbun&gt;nrm ls<br>
 npm</p>
 </blockquote>
 ]]></content:encoded>
@@ -2301,7 +2301,7 @@ npm</p>
       <pubDate>Wed, 03 Jul 2024 15:37:17 GMT</pubDate>
       <content:encoded><![CDATA[<h2>一、准备工作</h2>
 <blockquote>
-<p>这使用绿色版进行安装mysql8
+<p>这使用绿色版进行安装mysql8<br>
 版本：mysql-8.0.22</p>
 </blockquote>
 <h2>二、安装及配置</h2>
@@ -2464,7 +2464,7 @@ npm</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.\startup.cmd -m standalone</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
 <p>Windows 启动命令(standalone代表着单机模式运行，非集群模式): startup.cmd -m standalone</p>
-<p>参考：https://blog.csdn.net/weixin_44203609/article/details/120951913</p>
+<p>参考：<a href="https://blog.csdn.net/weixin_44203609/article/details/120951913" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_44203609/article/details/120951913</a></p>
 </blockquote>
 <p>访问地址：<a href="http://192.168.1.79:8848/nacos/index.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8848/nacos/index.html</a></p>
 <p>nacos设置密码：<a href="https://blog.csdn.net/taotao_guiwang/article/details/135359247" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/taotao_guiwang/article/details/135359247</a></p>
@@ -2598,7 +2598,7 @@ npm</p>
 </blockquote>
 <h2>3.0 nacos创建seata配置</h2>
 <blockquote>
-<p>参考：https://tangyh.top/doc/start/%E5%8D%95%E6%9C%BA%E7%89%88Seata%E5%90%AF%E5%8A%A8.html</p>
+<p>参考：<a href="https://tangyh.top/doc/start/%E5%8D%95%E6%9C%BA%E7%89%88Seata%E5%90%AF%E5%8A%A8.html" target="_blank" rel="noopener noreferrer">https://tangyh.top/doc/start/单机版Seata启动.html</a></p>
 </blockquote>
 <p>在新建的命名空间中新增配置： <code>seataServer.properties</code>， 将修改后的 config.txt 文件中的内容复制进来。</p>
 <p>命名空间id： <code>5b51e46a-4aeb-4d40-8398-8a9d33e2f0ad</code></p>
@@ -2765,7 +2765,7 @@ npm</p>
 <p><a href="http://localhost:7091/" target="_blank" rel="noopener noreferrer">http://localhost:7091/</a></p>
 <p>用户名：seata</p>
 <p>密码：seata</p>
-<p>Swagger文档: 		<a href="http://192.168.1.79:8778/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8778/doc.html</a>
+<p>Swagger文档: 		<a href="http://192.168.1.79:8778/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8778/doc.html</a><br>
 数据库监控: 		<a href="http://127.0.0.1:8778/druid" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8778/druid</a></p>
 <blockquote>
 <p>用户名：lamp</p>
@@ -2785,21 +2785,21 @@ npm</p>
 <p>微服务：</p>
 <p>lamp-cloud每个服务都有一个server模块，存放各个服务自己的配置文件和启动类。</p>
 <h3>服务访问扩展</h3>
-<p>应用 'lamp-authority-server' 运行成功! 访问连接:
-Swagger文档: 		http://192.168.1.79:8764/doc.html
-数据库监控: 		http://127.0.0.1:8764/druid</p>
-<p>应用 'lamp-gateway-server' 运行成功! 访问连接:
-Swagger文档: 		http://192.168.1.79:8760/api/doc.html</p>
-<p>​	
-应用 'lamp-file-server' 运行成功! 访问连接:
-Swagger文档: 		http://192.168.1.79:8765/doc.html
-数据库监控: 		http://127.0.0.1:8765/druid</p>
-<p>应用 'lamp-msg-server' 运行成功! 访问连接:
-Swagger文档: 		http://192.168.1.79:8768/doc.html
-数据库监控: 		http://192.168.1.79:8768/druid</p>
-<p>应用 'lamp-oauth-server' 运行成功! 访问连接:
-Swagger文档: 		http://192.168.1.79:8773/doc.html
-数据库监控: 		http://127.0.0.1:8773/druid</p>
+<p>应用 'lamp-authority-server' 运行成功! 访问连接:<br>
+Swagger文档: 		<a href="http://192.168.1.79:8764/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8764/doc.html</a><br>
+数据库监控: 		<a href="http://127.0.0.1:8764/druid" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8764/druid</a></p>
+<p>应用 'lamp-gateway-server' 运行成功! 访问连接:<br>
+Swagger文档: 		<a href="http://192.168.1.79:8760/api/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8760/api/doc.html</a></p>
+<p>​	<br>
+应用 'lamp-file-server' 运行成功! 访问连接:<br>
+Swagger文档: 		<a href="http://192.168.1.79:8765/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8765/doc.html</a><br>
+数据库监控: 		<a href="http://127.0.0.1:8765/druid" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8765/druid</a></p>
+<p>应用 'lamp-msg-server' 运行成功! 访问连接:<br>
+Swagger文档: 		<a href="http://192.168.1.79:8768/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8768/doc.html</a><br>
+数据库监控: 		<a href="http://192.168.1.79:8768/druid" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8768/druid</a></p>
+<p>应用 'lamp-oauth-server' 运行成功! 访问连接:<br>
+Swagger文档: 		<a href="http://192.168.1.79:8773/doc.html" target="_blank" rel="noopener noreferrer">http://192.168.1.79:8773/doc.html</a><br>
+数据库监控: 		<a href="http://127.0.0.1:8773/druid" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8773/druid</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -3005,7 +3005,7 @@ Swagger文档: 		http://192.168.1.79:8773/doc.html
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">     *     *      3、获取IP  </span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">     *          String ip_ = inetUtils.findFirstNonLoopbackHostInfo().getIpAddress();     */</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  </span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3.增加任务调用方法
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3.增加任务调用方法<br>
 SampleXxlJob类：</p>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" data-title="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> com.xxl.job.core.context.XxlJobHelper</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  </span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> com.xxl.job.core.handler.annotation.XxlJob</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  </span></span>
@@ -3052,7 +3052,7 @@ SampleXxlJob类：</p>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>参考：<a href="./xxl-job%E4%BD%BF%E7%94%A8">xxl-job使用</a></p>
 <h2>附件</h2>
-<p>参考：
+<p>参考：<br>
 <a href="https://www.cnblogs.com/sowler/p/17350403.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/sowler/p/17350403.html</a></p>
 <p><a href="https://blog.csdn.net/qq_20957669/article/details/128845865" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_20957669/article/details/128845865</a></p>
 ]]></content:encoded>
@@ -3195,7 +3195,7 @@ SampleXxlJob类：</p>
 </ol>
 <p>此外，如果更改快捷键后仍然出现卡顿，可以尝试进一步禁用某些超链接导航功能。在Hyperlinking页中，取消勾选“Enable on demand hyperlink style navigation”，这样可以减少Eclipse在编辑时的负担，从而可能避免卡顿。</p>
 <p>请注意，虽然更改快捷键可以解决复制粘贴时的卡顿问题，但这样做可能会影响到其他依赖于Ctrl+鼠标单击导航的操作。因此，根据个人需求选择是否进行此更改。</p>
-<p>其他方法：
+<p>其他方法：<br>
 取消 Validate 校验</p>
 <h2>附件</h2>
 <p>参考：<a href="https://www.cnblogs.com/abministrator/p/17881905.html" target="_blank" rel="noopener noreferrer">Eclipse复制（Ctrl+C）粘贴（Ctrl+V）会卡顿</a></p>
@@ -3266,9 +3266,9 @@ SampleXxlJob类：</p>
 <p>若eclipse使用起来还是卡，就看看eclipse.ini 中内存分配了多少，进行适当调整。</p>
 <h2>附件</h2>
 <p>参考：<a href="https://www.caogenjava.com/detail/127.html" target="_blank" rel="noopener noreferrer">https://www.caogenjava.com/detail/127.html</a></p>
-<p>lombok eclipse.ini：
+<p>lombok eclipse.ini：<br>
 <a href="https://juejin.cn/s/lombok%20eclipse.ini" target="_blank" rel="noopener noreferrer">https://juejin.cn/s/lombok%20eclipse.ini</a></p>
-<p>eclipse.ini配置介绍：
+<p>eclipse.ini配置介绍：<br>
 <a href="https://wjw465150.github.io/blog/java/my_data/Eclipse/eclipse%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.htm" target="_blank" rel="noopener noreferrer">https://wjw465150.github.io/blog/java/my_data/Eclipse/eclipse%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.htm</a></p>
 <p>直接右键eclipse的快捷方式，在"目标"中填入下行</p>
 <p>D:\eclipse\eclipse.exe -debug options -vm javaw.exe -nl en_US -clean -vmargs -Xverify:none -XX:+UseParallelGC -XX:PermSize=20M -XX:MaxNewSize=32M -XX:NewSize=32M -Xms128m -Xmx256m</p>
@@ -3346,17 +3346,17 @@ SampleXxlJob类：</p>
 <h2>遇到的问题：</h2>
 <p>报错：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> java compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因：<br>
 最开始我想到的是，官方最新版本编译器强制使用JDK17，</p>
 <p>后续验证，才发现并不是这样，你也能正常引用jdk1.8。</p>
 <blockquote>
 <p>如果没有指定 spring-boot-maven-plugin 的版本，Maven 会使用最新版本的插件进行打包。但是，最新版本的插件可能不适用于 1.8 的 JDK</p>
 </blockquote>
 <h2>解决方法：</h2>
-<p>1、检查idea编译器中的jdk版本（编译版本）
+<p>1、检查idea编译器中的jdk版本（编译版本）<br>
 2、检查pom文件中的maven插件版本 （<strong>推荐</strong>）</p>
 <blockquote>
-<p>可能在使用maven插件版本时，你并没有指定maven插件版本，默认引用的就是最新版本的maven插件。
+<p>可能在使用maven插件版本时，你并没有指定maven插件版本，默认引用的就是最新版本的maven插件。<br>
 这也是在升级项目时常遇到的问题，之前使用项目是可以正常打包，但后来升级了项目之后，项目可以正常打包，但到打包环节就出现了问题。</p>
 </blockquote>
 <p><strong>指定 spring-boot-maven-plugin 的版本</strong></p>
@@ -3410,22 +3410,22 @@ SampleXxlJob类：</p>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">done</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">find</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -type</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> f</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -path</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> './mavenimport\.sh*'</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -path</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '*/\.*'</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -path</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '*/\^archetype\-catalog\.xml*'</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -path</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '*/\^maven\-metadata\-local*\.xml'</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -not</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -path</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '*/\^maven\-metadata\-deployment*\.xml'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> | </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sed</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "s|^\./||"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> | </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">xargs</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -I</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '{}'</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$USERNAME</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">:</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$PASSWORD</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> PUT</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -T</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> {}</span><span style="--shiki-light:#E45649;--shiki-dark:#ABB2BF"> ${</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">REPO_URL</span><span style="--shiki-light:#E45649;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/{}</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在maven本地仓库目录下创建 <strong>batch_upload_repo2.sh</strong> 脚本，并将上述内容添加进去脚本文件中
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在maven本地仓库目录下创建 <strong>batch_upload_repo2.sh</strong> 脚本，并将上述内容添加进去脚本文件中<br>
 </p>
-<p>在maven本地仓库目录下，右键打开 git 自带的 git bash Here命令窗口：
+<p>在maven本地仓库目录下，右键打开 git 自带的 git bash Here命令窗口：<br>
 </p>
 <p>执行以下命令：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>sh batch_upload_repo2.sh -u admin -p nxg_123456 -r http://localhost:8081/repository/nxgtest/</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>sh 脚本名称.sh -u 用户名 -p 密码 -r  http://localhost:8081/repository/仓库名</p>
+<p>sh <a href="http://xn--eqrv85b2vnsxg.sh" target="_blank" rel="noopener noreferrer">脚本名称.sh</a> -u 用户名 -p 密码 -r  <a href="http://localhost:8081/repository/%E4%BB%93%E5%BA%93%E5%90%8D" target="_blank" rel="noopener noreferrer">http://localhost:8081/repository/仓库名</a></p>
 </blockquote>
-<p>执行完成是下图的效果：
+<p>执行完成是下图的效果：<br>
 </p>
 <h2>注意事项</h2>
 <p>删除本地maven仓库目录下所有的 .lastUpdated 文件</p>
 <p>如果上传失败，可以将本地maven仓库目录下所有的 _remote.repositories 文件删除</p>
 <h2>附件</h2>
-<p>参考：
+<p>参考：<br>
 <a href="https://mdzzw.cn/archives/mavenimport" target="_blank" rel="noopener noreferrer">本地仓库所有Jar批量上传到Nexus</a></p>
 <p><a href="https://www.sharkchili.com/pages/076b9d/" target="_blank" rel="noopener noreferrer">基于自动化脚本批量上传依赖到nexus内网私服</a></p>
 <p><a href="http://www.angyum.com/archives/pi-liang-shang-chuan-ben-de-maven-ku-dao-nexus-fu-wu-qi-zhong" target="_blank" rel="noopener noreferrer">批量上传本地maven库到Nexus服务器中</a></p>
@@ -3451,26 +3451,26 @@ SampleXxlJob类：</p>
 </blockquote>
 <p>这里我提供安装包：</p>
 <blockquote>
-<p><a href="https://www.123pan.com/s/tB5A-F4GYd.html" target="_blank" rel="noopener noreferrer">https://www.123pan.com/s/tB5A-F4GYd.html</a>
+<p><a href="https://www.123pan.com/s/tB5A-F4GYd.html" target="_blank" rel="noopener noreferrer">https://www.123pan.com/s/tB5A-F4GYd.html</a><br>
 提取码:I3hp</p>
 </blockquote>
 <p>这里以window10安装为例：</p>
 <figure><figcaption></figcaption></figure>
 <blockquote>
-<p>nexus-3.66.0-02
+<p>nexus-3.66.0-02<br>
 sonatype-work</p>
 </blockquote>
-<p>进入 nexus-3.66.0-02 目录，在地址栏输入 cmd命令，并回车，进入终端窗口
-
+<p>进入 nexus-3.66.0-02 目录，在地址栏输入 cmd命令，并回车，进入终端窗口<br>
+<br>
 在终端窗口输入以下启动命令，回车：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>nexus.exe /run nexus</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
 <blockquote>
 <p>开始初始化maven私服仓库</p>
 </blockquote>
-<p>等初始化完成，我们访问 <a href="http://localhost:8081/" target="_blank" rel="noopener noreferrer">http://localhost:8081/</a> 到达登录页面，提示你需要登录
-这时需要在你安装maven私服  D:\programTool\nexus-3.66.0-02-win64\sonatype-work\nexus3
-目录下找到 admin.password 文件，打开复制那一串秘钥，
+<p>等初始化完成，我们访问 <a href="http://localhost:8081/" target="_blank" rel="noopener noreferrer">http://localhost:8081/</a> 到达登录页面，提示你需要登录<br>
+这时需要在你安装maven私服  D:\programTool\nexus-3.66.0-02-win64\sonatype-work\nexus3<br>
+目录下找到 admin.password 文件，打开复制那一串秘钥，<br>
 用户名默认是 admin  ，密码是刚刚复制的秘钥，点击登录，然后进行设置密码</p>
 <h2>具体使用</h2>
 <p>接下来的使用教程可以参考这里：</p>
@@ -3488,17 +3488,17 @@ sonatype-work</p>
       <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>使用ssh方式拉取gitlab仓库代码</p>
 <h2>背景</h2>
-<p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。
+<p>在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比对、各个分支各自的用处等。<br>
 再扯点，我使用过idea和Android提交代码，并且它们提交的方式差不多，我也使用svn提交代码，但觉得并不优雅。我通常使用两种方式来提交代码，一种是命令方式、一种是可视化方式，点点就行。高级一点的方式就是Sourcetree。</p>
 <h2>执行步骤</h2>
 <h3>1、配置</h3>
 <blockquote>
 <p><strong>以下命令</strong>都是在终端中进入 /Users/<strong>用户/.ssh目录下</strong>执行下面的命令：</p>
 </blockquote>
-<p>1.1手动方式配置
+<p>1.1手动方式配置<br>
 config文件</p>
 <blockquote>
-<p>.ssh/目录下，如果没有config文件，需要创建一个config
+<p>.ssh/目录下，如果没有config文件，需要创建一个config<br>
 创建命令方式：touch config</p>
 </blockquote>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># gitlab</span></span>
@@ -3580,8 +3580,8 @@ config文件</p>
 </blockquote>
 <h2>步骤</h2>
 <blockquote>
-<p>也可以直接使用gitee仓库中url地址直接导入整个仓库到gitlab中，
-例如：http://gitee.com:xiaoming/test.git</p>
+<p>也可以直接使用gitee仓库中url地址直接导入整个仓库到gitlab中，<br>
+例如：<a href="http://gitee.com" target="_blank" rel="noopener noreferrer">http://gitee.com</a>:xiaoming/test.git</p>
 </blockquote>
 <p>1、将gitee上的仓库代码 git clone至本地</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git clone  git@gitee.com:xiaoming/test.git</span></span></code></pre>
@@ -3604,7 +3604,7 @@ config文件</p>
 <p>在test项目目录下执行下方命令</p>
 </blockquote>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git remote set-url origin git@gitlab.com:xiaoming/project-test.git</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>5、查看test项目是否已修改为新项目地址的url
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>5、查看test项目是否已修改为新项目地址的url<br>
 在test项目目录下使用此命令查看：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>cat .git\config</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>效果如下：</p>
@@ -3647,18 +3647,18 @@ config文件</p>
       <description>背景 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。 遇到问题 ide...</description>
       <category>项目</category>
       <pubDate>Fri, 19 Jan 2024 09:13:17 GMT</pubDate>
-      <content:encoded><![CDATA[<p>背景
+      <content:encoded><![CDATA[<p>背景<br>
 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit  configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。</p>
 <h2>遇到问题</h2>
 <p>idea控制台运行项目是打印日志，出现中文乱码</p>
 <h2>解决方法</h2>
-<p>控制台中文乱码，实际上是控制打印编码的问题，需要找到根源。
+<p>控制台中文乱码，实际上是控制打印编码的问题，需要找到根源。<br>
 在file --&gt; settings --&gt; Editor --&gt; General --&gt; Console，然后点击Console在这界面找到<code>Default Encoding</code> 选择 UTF-8 即可解决。</p>
 <blockquote>
 <p>注意：不同idea版本可能位置不同，但Console位置应该是不变的</p>
 </blockquote>
 <h2>附件</h2>
-<p>参考：
+<p>参考：<br>
 <a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
 <p><a href="https://blog.csdn.net/nxg0916/article/details/135697221" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/nxg0916/article/details/135697221</a></p>
 <p><a href="https://www.quanxiaoha.com/idea/idea-chinese-garbled-code.html" target="_blank" rel="noopener noreferrer">https://www.quanxiaoha.com/idea/idea-chinese-garbled-code.html</a></p>
@@ -3666,7 +3666,7 @@ config文件</p>
 <p><a href="https://www.cnblogs.com/itzkd/articles/17384934.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itzkd/articles/17384934.html</a></p>
 <blockquote>
 <p>这里面是包含文件（xml、java文件等）内容的中文乱码的修改配置。</p>
-<p>注意：<code>idea64.exe.vmoptions</code>&nbsp;文件的修改需要慎重修改，修改后有可能出现编译器打不开问题。
+<p>注意：<code>idea64.exe.vmoptions</code>&nbsp;文件的修改需要慎重修改，修改后有可能出现编译器打不开问题。<br>
 还有就是 在新版本idea编译器中并没有 <code>idea.exe.vmoptions</code></p>
 </blockquote>
 ]]></content:encoded>
@@ -3680,14 +3680,14 @@ config文件</p>
       <category>项目</category>
       <pubDate>Thu, 18 Jan 2024 09:11:17 GMT</pubDate>
       <content:encoded><![CDATA[<h2>背景</h2>
-<p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。
+<p>在spring大杂烩项目中，调用第三方接口时，出现中文乱码。<br>
 这里使用到spring、springmvc、本地tomcat、idea</p>
-<p>找问题心流：
-在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是不能正常运行的，需要注释掉对应的测试类，在idea中运行项目，一点错误都不能有，比如测试类中有错误，项目就跑不起来，idea中就是这样的。在eclipse中就没有这么样的情况，它也不会检测你测试类中是否丢失了哪些包或者不存在，你还是能正常运行项目。而且拉下来的项目，连配置文件中的内容都缺少，我也是服了。其实这里缺少的是两行配置，加在配置文件中即可，看似两行简单配置，可能会让你在突然拿到这个项目时，启动项目调接口时调不同，你去调别人的接口也貌似调不通。找啊找，很纠结。于是去看同事电脑上对应的项目的配置文件，才发现少了这两行代码，代码仓库居然不提交。我服了。这问题解决了，新的问题又来了。数据返回的中文乱码，但在单元测试中调用接口却没有出现中文乱码的问题。使用postman调用却出现了。
+<p>找问题心流：<br>
+在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是不能正常运行的，需要注释掉对应的测试类，在idea中运行项目，一点错误都不能有，比如测试类中有错误，项目就跑不起来，idea中就是这样的。在eclipse中就没有这么样的情况，它也不会检测你测试类中是否丢失了哪些包或者不存在，你还是能正常运行项目。而且拉下来的项目，连配置文件中的内容都缺少，我也是服了。其实这里缺少的是两行配置，加在配置文件中即可，看似两行简单配置，可能会让你在突然拿到这个项目时，启动项目调接口时调不同，你去调别人的接口也貌似调不通。找啊找，很纠结。于是去看同事电脑上对应的项目的配置文件，才发现少了这两行代码，代码仓库居然不提交。我服了。这问题解决了，新的问题又来了。数据返回的中文乱码，但在单元测试中调用接口却没有出现中文乱码的问题。使用postman调用却出现了。<br>
 于是我检查idea所有的与编码相关的，在检查postman请求头中的，都没有发现问题，找啊找，意外发现是tomcat的问题。但是我使用之前的项目是可以正常调用接口，也没发现中文乱码问题。</p>
 <h2>遇到的问题</h2>
 <p>返回的数据出现中文乱码</p>
-<p>原因：
+<p>原因：<br>
 tomcat字符集问题</p>
 <h2>解决方法</h2>
 <p>检查字符编码，将所有跟编码相关的都更改为 UTF-8 编码格式</p>
@@ -3698,7 +3698,7 @@ tomcat字符集问题</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
 <p>IDEA的配置tomcat页面VM options  添加   <code>-Dfile.encoding=UTF-8</code></p>
 </blockquote>
-<p>其他问题检查：
+<p>其他问题检查：<br>
 参考这里：<a href="https://blog.csdn.net/qq_44549652/article/details/131764308" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_44549652/article/details/131764308</a></p>
 <p><a href="https://blog.csdn.net/nxg0916/article/details/135697602" target="_blank" rel="noopener noreferrer">idea中文乱码解决四种方法</a></p>
 ]]></content:encoded>
@@ -3714,13 +3714,13 @@ tomcat字符集问题</p>
       <content:encoded><![CDATA[<h2>启动超时问题</h2>
 <p>对tomcat启动项目，将超时时间（timeouts）延迟</p>
 <h2>tomcat6内存问题</h2>
-<p>eclipse使用tomcat6运行项目
+<p>eclipse使用tomcat6运行项目<br>
 eclipse版本是2019-06（4.12.0）</p>
 <p>遇到的问题：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> java.lang.OutOfMemoryError: PermGen space</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因：<br>
 提示内存溢出，电脑内存不够，运行起来卡顿</p>
-<p>解决方法
+<p>解决方法<br>
 在双击tomcat server at localhost 配置之后，找到open lannch configuration，点击进入后，找到Arguments ，再找到 VM arguments输入框，在最后一行加上一下配置：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>-Xms256m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256M</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
@@ -3747,7 +3747,7 @@ eclipse版本是2019-06（4.12.0）</p>
       <content:encoded><![CDATA[<h2>lombok在eclipse中不生效问题</h2>
 <p>遇到的问题</p>
 <p>lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法</p>
-<p>解决方法：
+<p>解决方法：<br>
 把lombok.jar包复制到了eclipse安装目录，并在 eclipse.ini 文件中最后一行加入了一句话：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>-javaagent:D:\eclipse_4.4\eclipse\lombok.jar</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>最后在项目中引入lombok.jar，然后重启eclipse，lombok插件就生效了。</p>
@@ -3758,11 +3758,11 @@ eclipse版本是2019-06（4.12.0）</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p><a href="https://blog.csdn.net/chengmo123/article/details/108673610" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/chengmo123/article/details/108673610</a></p>
 <p><a href="https://blog.csdn.net/chengmo123/article/details/108673610" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/chengmo123/article/details/108673610</a></p>
 <p>解决Error running ‘XXX‘：command line is too long.Shorten command line for ‘XXX‘ or also for Junit</p>
-<p>解决方法：
+<p>解决方法：<br>
 <a href="https://blog.csdn.net/weixin_44009447/article/details/118707493" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_44009447/article/details/118707493</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Intel® HAXM installation failed. To install Intel® HAXM follow the instructions found at: https://github.com/intel/haxm/wiki/Installation-Instructions-on-Windows</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>https://blog.csdn.net/qq_24033983/article/details/123335806</p>
-<p>https://www.bilibili.com/read/cv26239980/</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p><a href="https://blog.csdn.net/qq_24033983/article/details/123335806" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_24033983/article/details/123335806</a></p>
+<p><a href="https://www.bilibili.com/read/cv26239980/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv26239980/</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -3781,8 +3781,8 @@ eclipse版本是2019-06（4.12.0）</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>encode.java 非法字符 \65279</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>参考点：<a href="https://blog.csdn.net/qq_45988641/article/details/117474148" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/qq_45988641/article/details/117474148</a></p>
 <p><a href="https://blog.csdn.net/netwalk/article/details/52005546" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/netwalk/article/details/52005546</a></p>
-<p><a href="https://blog.csdn.net/dszgf5717/article/details/104284198" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/dszgf5717/article/details/104284198</a>
-https://blog.csdn.net/yuhaibao324/article/details/108187891</p>
+<p><a href="https://blog.csdn.net/dszgf5717/article/details/104284198" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/dszgf5717/article/details/104284198</a><br>
+<a href="https://blog.csdn.net/yuhaibao324/article/details/108187891" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/yuhaibao324/article/details/108187891</a></p>
 <h2>二、解决方法</h2>
 <p>解决方法：</p>
 <blockquote>
@@ -3801,7 +3801,7 @@ https://blog.csdn.net/yuhaibao324/article/details/108187891</p>
       <description>背景： 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题 一、遇到的问题 排查过程： 1.先定位到哪条数据有问题，这可以通过二分查找方式缩小查询范围 2.拿出A所有的字段，进行查询，同样通过二分查找的方式缩小查询范围 3.最终定位到 A表中的 w字段有问题 显示如下错误：ORA-29275: 部分多字节字符 原因分析： 可能某个...</description>
       <category>数据库</category>
       <pubDate>Sat, 02 Dec 2023 09:14:17 GMT</pubDate>
-      <content:encoded><![CDATA[<p>背景：
+      <content:encoded><![CDATA[<p>背景：<br>
 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>SELECT * FROM  A</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>一、遇到的问题</h2>
@@ -3819,7 +3819,7 @@ https://blog.csdn.net/yuhaibao324/article/details/108187891</p>
 <p>可能某个字段中有半个中文字符则会报这个异常，原因为Oracle编码问题。</p>
 </blockquote>
 <h2>二、解决方法：</h2>
-<p>方法1：
+<p>方法1：<br>
 在有问题的字段上面加上 to_nchar(字段)</p>
 <div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">select</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  TO_NCHAR(w) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> A</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 或者</span></span>
@@ -3834,12 +3834,12 @@ https://blog.csdn.net/yuhaibao324/article/details/108187891</p>
 <blockquote>
 <p>在oracle中字段中找出汉字的方法：可以利用length(testname)和lengthb(testname)，其中length(testname)不论数字或者字符都算一个，</p>
 <p>而lengthb则不同，比如说testname的值为：54看法12，用length(testname)的值为6，而lengthb(testname)的值为：8。</p>
-<p>利用这个就可以非常清楚的判断一个字符中是否包含汉字了(字母除外)。
+<p>利用这个就可以非常清楚的判断一个字符中是否包含汉字了(字母除外)。<br>
 to_single_byte(c)转换成半角</p>
 <p>to_multi_byte(c)转换成全角</p>
 </blockquote>
 <h2>三、附件</h2>
-<p>参考：
+<p>参考：<br>
 <a href="https://blog.csdn.net/zhangzhongzhong/article/details/78722105" target="_blank" rel="noopener noreferrer">ORA-29275部分多字节字符处理</a></p>
 <p><a href="https://blog.csdn.net/keueng/article/details/48808085" target="_blank" rel="noopener noreferrer">ORA-29275:部分多字节字符</a></p>
 <p><a href="https://www.cnblogs.com/huaji666/p/8489592.html" target="_blank" rel="noopener noreferrer"> Oracle数据库报错: ORA-29275:部分多字节字符</a></p>
@@ -3854,10 +3854,10 @@ to_single_byte(c)转换成半角</p>
       <description>背景： 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示： 之前一直使用阿里云 http://Maven.aliyun.com/nexus/content/groups/public/ maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。 一、遇到的问题 二、解决方法 方法1：...</description>
       <category>maven</category>
       <pubDate>Sat, 02 Dec 2023 09:09:17 GMT</pubDate>
-      <content:encoded><![CDATA[<p>背景：
+      <content:encoded><![CDATA[<p>背景：<br>
 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示：</p>
 <blockquote>
-<p>之前一直使用阿里云 http://Maven.aliyun.com/nexus/content/groups/public/ maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。</p>
+<p>之前一直使用阿里云 <a href="http://Maven.aliyun.com/nexus/content/groups/public/" target="_blank" rel="noopener noreferrer">http://Maven.aliyun.com/nexus/content/groups/public/</a> maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。</p>
 </blockquote>
 <div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;  </span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;com.oracle&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;  </span></span>
@@ -3868,8 +3868,8 @@ to_single_byte(c)转换成半角</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>一、遇到的问题</h2>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>'settings.xml' has syntax errors</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>二、解决方法</h2>
-<p>方法1：
-删除maven仓库资源，例如：D:\Software\Maven\repository
+<p>方法1：<br>
+删除maven仓库资源，例如：D:\Software\Maven\repository<br>
 更换为华为云的仓库</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>  &lt;mirror&gt;</span></span>
 <span class="line"><span>    &lt;id&gt;huaweicloud&lt;/id&gt;</span></span>
@@ -3877,7 +3877,7 @@ to_single_byte(c)转换成半角</p>
 <span class="line"><span>    &lt;url&gt;https://mirrors.huaweicloud.com/repository/maven/&lt;/url&gt;</span></span>
 <span class="line"><span>  &lt;/mirror&gt;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后重新拉取依赖</p>
-<p>方法2：
+<p>方法2：<br>
 需要注意settings.xml配置中格式问题，这个需要注意一下，例如：你可能在增加maven仓库地址时少引入单词或者引脚等</p>
 <p>settings.xml配置</p>
 <div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;?</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">xml</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"1.0"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> encoding</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"UTF-8"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">?&gt;</span></span>
@@ -4193,9 +4193,9 @@ to_single_byte(c)转换成半角</p>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  --&gt;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">settings</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>附件</h2>
-<p>参考：
-<a href="https://www.west999.com/info/html/chengxusheji/Javajishu/20190826/4657334.html" target="_blank" rel="noopener noreferrer">intellij idea 新建springboot工程pom.xml报错</a>
-<a href="https://blog.csdn.net/RABCDXB/article/details/123910435" target="_blank" rel="noopener noreferrer">settings.xml‘ has syntax errors 解决办法</a>
+<p>参考：<br>
+<a href="https://www.west999.com/info/html/chengxusheji/Javajishu/20190826/4657334.html" target="_blank" rel="noopener noreferrer">intellij idea 新建springboot工程pom.xml报错</a><br>
+<a href="https://blog.csdn.net/RABCDXB/article/details/123910435" target="_blank" rel="noopener noreferrer">settings.xml‘ has syntax errors 解决办法</a><br>
 <a href="https://blog.csdn.net/RABCDXB/article/details/123910435" target="_blank" rel="noopener noreferrer">‘settings.xml‘ has syntax errors 解决办法</a></p>
 ]]></content:encoded>
     </item>
@@ -4214,7 +4214,7 @@ to_single_byte(c)转换成半角</p>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2>开发工具的选择</h2>
 <p>是选择使用eclipse还是idea，根据自己的使用习惯。</p>
-<p>环境：
+<p>环境：<br>
 可能拿到一个项目，无法直接确定项目中使用的jdk版本、缺失的依赖等。</p>
 <p>这里以idea为例</p>
 <h2>环境配置</h2>
@@ -4227,29 +4227,29 @@ to_single_byte(c)转换成半角</p>
 <p>对应需要安装vc_redist.x64.exe环境</p>
 </blockquote>
 <h2>导入项目</h2>
-<p>项目本身是eclipse编写的，由此你需要会如何将eclipse项目导入到idea中：
+<p>项目本身是eclipse编写的，由此你需要会如何将eclipse项目导入到idea中：<br>
 教程可以参考这：<a href="https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506</a></p>
 <p>在idea中找到File --&gt; New --&gt; Project from Existing Sources，选择你需要导入的项目。</p>
 <blockquote>
 <p>因为这里是eclipse项目</p>
 </blockquote>
-<p>导入项目后会弹出 Import Project 界面：
-选择 Import project from external model (默认选项)，然后选择选项 Eclipse ，
-点击下一步（Next），默认配置，点击下一步，后会进行扫描，等待一下即可。
-然后勾选对应的项目，点击下一步，点到最后，选择JDK版本，这里选择JDK1.8，
+<p>导入项目后会弹出 Import Project 界面：<br>
+选择 Import project from external model (默认选项)，然后选择选项 Eclipse ，<br>
+点击下一步（Next），默认配置，点击下一步，后会进行扫描，等待一下即可。<br>
+然后勾选对应的项目，点击下一步，点到最后，选择JDK版本，这里选择JDK1.8，<br>
 最后点击创建（Create），项目导入完成。</p>
 <h2>配置项目</h2>
 <p>打开导入的项目后：</p>
-<p>在idea中，找到 File --&gt; Project Structure ，
+<p>在idea中，找到 File --&gt; Project Structure ，<br>
 然后开始配置。</p>
 <h3>第一步：确定Project中jdk版本</h3>
 <p>选择SDK对应的JDK1.8</p>
 <h3>第二步：Modules (模块)</h3>
-<p>点击左上方 + （加号），找到 Web 点击加入。
-然后点击项目名称，找到 Dependencies后，点击下面的 + （加号），
+<p>点击左上方 + （加号），找到 Web 点击加入。<br>
+然后点击项目名称，找到 Dependencies后，点击下面的 + （加号），<br>
 点击 Library 添加对应的 Tomcat 。</p>
 <h3>第三步：Libraries</h3>
-<p>点击 Libraries，点击左上方 + （加号），点击Java，然后找到项目对应的依赖路径位置 lib，
+<p>点击 Libraries，点击左上方 + （加号），点击Java，然后找到项目对应的依赖路径位置 lib，<br>
 点击添加 lib 即可</p>
 <blockquote>
 <p>一般lib位置在WEB-INF目录下</p>
@@ -4259,27 +4259,27 @@ to_single_byte(c)转换成半角</p>
 <blockquote>
 <p><strong>重点来了</strong></p>
 </blockquote>
-<p>点击 样式类似于   Web（项目名）的位置后，
-定位到Deployment Descriptors位置下方：
+<p>点击 样式类似于   Web（项目名）的位置后，<br>
+定位到Deployment Descriptors位置下方：<br>
 点击 type下方的 Web Module Deployment Descriptor 之后，点击编辑（Edit），选择项目中对应的web.xml文件。</p>
 <blockquote>
-<p>这里注意了，一般项目中 是 web  --&gt; WEB-INF --&gt; web.xml文件，
+<p>这里注意了，一般项目中 是 web  --&gt; WEB-INF --&gt; web.xml文件，<br>
 但是 这个项目的web存放路径也可以自定义，比如 名称叫 interfacePlatform  ，下面存放WEB-INF --&gt; web.xml文件，存放静态资源，存放对应的jar包。</p>
 </blockquote>
-<p>定位到 Web Resource Directories 位置：
+<p>定位到 Web Resource Directories 位置：<br>
 点击下方的路径，然后点击编辑按钮，修改静态资源存放路径的主目录，例如项目存放静态资源的主目录名为 interfacePlatform，</p>
 <h3>第五步：Artifacts</h3>
 <p>点击 Artifacts，点击左上方 + （加号），找到 Web Application：Exlpoded --&gt; From Modules</p>
 <p>选择项目中对应的模块，点OK即可。</p>
-<p>第六步：找到 Platform Settings 位置
+<p>第六步：找到 Platform Settings 位置<br>
 点击 Problems ，如果有提示 fixed，就点击修复一下</p>
 <p>最后，点击右下角的 Apply（应用），点 OK，这里就配置完成了。</p>
 <h2>配置tomcat</h2>
-<p>在idea中找到 File --&gt; Settings --&gt; Build Execution，Deployment，
-然后找到 Application Servers并点击之后，
-点击左上方 + （加号），找到 Tomcat Server，
+<p>在idea中找到 File --&gt; Settings --&gt; Build Execution，Deployment，<br>
+然后找到 Application Servers并点击之后，<br>
+点击左上方 + （加号），找到 Tomcat Server，<br>
 添加Tomcat Home目录位置，然后下方的 Tomcat base directory就自动加上路径，点击OK就可以了，最后点击Apply（应用）和 OK</p>
-<p>点击右上角的“Add configuration”，点击左上方 + （加号），找到 Tomcat Server --&gt; Local
+<p>点击右上角的“Add configuration”，点击左上方 + （加号），找到 Tomcat Server --&gt; Local<br>
 点击local后，点击 Tomcat 8.5.23 ，在右边找到Deployment，在下方 Deploy at the server startup，这一步默认可以省掉，原因是在上面  第五步：Artifacts  就已经配置好了。</p>
 <p>如果你想请求路径不带有项目名，你就在 Application context下方，去掉项目名称直接留下 / (斜杠)即可。</p>
 <p>最后就点击 Apply（应用）和 OK 。</p>
@@ -4290,23 +4290,23 @@ to_single_byte(c)转换成半角</p>
 <p>有时候还是有问题，就需要rebuild --&gt; Rebuild Project (重新构建项目)</p>
 <h2>遇到的问题</h2>
 <h3>问题一：svn使用问题</h3>
-<p>如果你使用的svn是TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi版本时，你在idea的设置中，找到version Control（版本控制），找到Subversion，找到 Path to Subversion executable 配置svn启动exe。
-但是在TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi 版本对应的安装目录下，貌似没有svn.exe文件。
+<p>如果你使用的svn是TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi版本时，你在idea的设置中，找到version Control（版本控制），找到Subversion，找到 Path to Subversion executable 配置svn启动exe。<br>
+但是在TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi 版本对应的安装目录下，貌似没有svn.exe文件。<br>
 idea就会提示找到svn对应的.exe</p>
 <p>使用TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi时idea提示报错：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Cant's use Subversion command line client D:\ProgramFiles\TortoiseSVN\bin\svn.exe</span></span>
 <span class="line"><span>The path to the Subversion excutable is probably wrong</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>解决方法：
-我是直接换一个svn版本：TortoiseSVN-1.14.5.29465-x64-svn-1.14.2.msi
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>解决方法：<br>
+我是直接换一个svn版本：TortoiseSVN-1.14.5.29465-x64-svn-1.14.2.msi<br>
 这个安装时也会提示报错，说缺少windows Server 2008 R2 Enterprise缺少组件，于是找到对应的组件包（vc_redist.x64.exe）安装即可解决问题。</p>
 <h2>问题二</h2>
 <p>idea中可能报错：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>java：常量字符串过长</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因是：将eclipse项目导入到idea中，会遇到这样的问题。</p>
-<p>解决方法：
+<p>解决方法：<br>
 在idea设置中找到Build，Execution，Deploymentw位置，点击Compiler，点击Java Compiler，找到Use comiler，然后选择eclipse，点击Apply（应用），点OK即可。</p>
 <blockquote>
-<p>注意：在没有出现这样的问题的情况下，还是使用Javac，每个项目的使用情况可能不同。
+<p>注意：在没有出现这样的问题的情况下，还是使用Javac，每个项目的使用情况可能不同。<br>
 还有，如果之前改为了eclipse，后面换了一个项目，建议及时改回Javac，然后后面编译总是报错，也找到问题所在，那就很难受了。</p>
 <p>不过呢，对于现在SpringBoot项目一般不会出现这样的问题。</p>
 </blockquote>
@@ -4341,7 +4341,7 @@ idea就会提示找到svn对应的.exe</p>
 <blockquote>
 <p>Mysql、Oracle</p>
 </blockquote>
-<p>对于Mysql连接工具会一两种即可（Navicat Premium 16、SQLyog、idea自带的）
+<p>对于Mysql连接工具会一两种即可（Navicat Premium 16、SQLyog、idea自带的）<br>
 Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使用比较多的还是PL/SQL。PL/SQL可以同时连接6个数据库，感觉不够使用。</p>
 <p>Mysql是入门必会的，额，sql server 那就算了，目前使用到的比较少。</p>
 <p>Oracle 学习起来还是有一定的成本的，特别是SQL又丑又长，~~</p>
@@ -4378,23 +4378,23 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
       <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>云效</p>
 <blockquote>
-<p>阿里云云效git代码管理仓库
+<p>阿里云云效git代码管理仓库<br>
 git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target="_blank" rel="noopener noreferrer">如何配置SSH密钥及自定义SSH认证密钥的路径_云效(Apsara Devops)-阿里云帮助中心 (aliyun.com)</a></p>
 </blockquote>
-<p>pdmaner：
-http://www.pdmaner.com/download/latest</p>
+<p>pdmaner：<br>
+<a href="http://www.pdmaner.com/download/latest" target="_blank" rel="noopener noreferrer">http://www.pdmaner.com/download/latest</a></p>
 <blockquote>
 <p>文档：<a href="https://www.yuque.com/pdmaner/docs/pdmaner-manual" target="_blank" rel="noopener noreferrer">https://www.yuque.com/pdmaner/docs/pdmaner-manual</a></p>
 </blockquote>
 <h2>必备工具</h2>
-<p>局域网远程桌面连接：
-https://blog.csdn.net/chengzia__/article/details/137650526</p>
+<p>局域网远程桌面连接：<br>
+<a href="https://blog.csdn.net/chengzia__/article/details/137650526" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/chengzia__/article/details/137650526</a></p>
 <h2>在线网址</h2>
-<p>大写转小写：
-https://jf.homefont.cn/daxiao.html</p>
+<p>大写转小写：<br>
+<a href="https://jf.homefont.cn/daxiao.html" target="_blank" rel="noopener noreferrer">https://jf.homefont.cn/daxiao.html</a></p>
 <p>jar反编译工具：</p>
 <blockquote>
-<p>官网：https://java-decompiler.github.io/
+<p>官网：<a href="https://java-decompiler.github.io/" target="_blank" rel="noopener noreferrer">https://java-decompiler.github.io/</a><br>
 文档：<a href="https://hksanduo.github.io/2021/06/22/2021-06-22-java-decompiler-tools/" target="_blank" rel="noopener noreferrer">https://hksanduo.github.io/2021/06/22/2021-06-22-java-decompiler-tools/</a></p>
 </blockquote>
 ]]></content:encoded>
@@ -4499,7 +4499,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>2、如果是docker中不同容器之间的连接访问，就需要检查服务器内网地址。</p>
 <p>3、检测映射的端口是否对应</p>
 <p>方法：</p>
-<p>查看服务器内网ip地址：
+<p>查看服务器内网ip地址：<br>
 </p>
 <p>修改application.properties配置：</p>
 <p>数据库连接地址和密码</p>
@@ -4564,7 +4564,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>--mount source=oracle_vol,</p>
 <p>target=/home/oracle/app/oracle/oradata ，服务器本地目录，可以自定义，比如：/root/docker-data/oracle/oracledata</p>
-<p>registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</p>
+<p><a href="http://registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g" target="_blank" rel="noopener noreferrer">registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</a></p>
 </blockquote>
 <p>修改文件，先进入容器内，执行一下操作：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>docker exec -it oracle /bin/bash </span></span>
@@ -4573,7 +4573,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后输入密码</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#密码:</span></span>
 <span class="line"><span>helowin</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改<code>/etc/profile</code>文件，将ORACLE_HOME和ORACLE_SID配置到其中，然后生效。
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改<code>/etc/profile</code>文件，将ORACLE_HOME和ORACLE_SID配置到其中，然后生效。<br>
 输入：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>vi /etc/profile</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">#配置内容</span></span>
@@ -4652,7 +4652,7 @@ https://jf.homefont.cn/daxiao.html</p>
 </blockquote>
 <p>xxl-job访问地址：<a href="http://127.0.0.1:8098/xxl-job-admin" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8098/xxl-job-admin</a></p>
 <blockquote>
-<p>端口跟application.properties 配置对应上，默认的用户名：admin
+<p>端口跟application.properties 配置对应上，默认的用户名：admin<br>
 密码：123456</p>
 </blockquote>
 <h2>导入数据库</h2>
@@ -4661,7 +4661,7 @@ https://jf.homefont.cn/daxiao.html</p>
 </blockquote>
 <p>将xxl-job项目中的对应版本的对应数据库，导入到mysql数据库中。</p>
 <h2>修改配置</h2>
-<p>如：数据库名为：xxl_job
+<p>如：数据库名为：xxl_job<br>
 则application.properties配置中连接的url为：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xxl_job?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=Asia/Shanghai  </span></span>
 <span class="line"><span>spring.datasource.username=root  </span></span>
@@ -4671,7 +4671,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>与自己的数据库的用户名对应上</p>
 </blockquote>
 <h2>启动xxl-job项目</h2>
-<p>xxl-job-admin项目中的application.properties
+<p>xxl-job-admin项目中的application.properties<br>
 关键配置修改：</p>
 <div class="language-properties line-numbers-mode" data-highlighter="shiki" data-ext="properties" data-title="properties" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">### web  </span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">server.port</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">8099  </span></span>
@@ -4740,14 +4740,14 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>注意：目前只需要修改端口、数据库连接地址（用户名、密码）、accessToken</p>
 </blockquote>
 <h2>配置任务调度</h2>
-<p>找到执行器：
+<p>找到执行器：<br>
 添加xxl.job.executor.appname配置对应的值：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>xxl.job.executor.appname=xxl-job-executor-sample</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
 <figure><figcaption></figcaption></figure>
-<p>配置好，点击保存：
+<p>配置好，点击保存：<br>
 </p>
-<p>效果：
+<p>效果：<br>
 </p>
 <p>在任务管理中新增任务，配置如下：</p>
 <figure><figcaption></figcaption></figure>
@@ -4783,13 +4783,13 @@ https://jf.homefont.cn/daxiao.html</p>
 <span class="line"><span>xxl.job.executor.logpath=/data/applogs/xxl-job/jobhandler  </span></span>
 <span class="line"><span>### xxl-job executor log-retention-days  </span></span>
 <span class="line"><span>xxl.job.executor.logretentiondays=30</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>最后自动注册到执行器管理对应的配置中：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>最后自动注册到执行器管理对应的配置中：<br>
 </p>
 <figure><figcaption></figcaption></figure>
-<p>在任务管理中执行该任务：
-点击执行一次，测试是否调度成功
+<p>在任务管理中执行该任务：<br>
+点击执行一次，测试是否调度成功<br>
 </p>
-<p>在调度日志中查看当前的记录：
+<p>在调度日志中查看当前的记录：<br>
 </p>
 ]]></content:encoded>
     </item>
@@ -4813,7 +4813,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>官方文档：<a href="https://www.xuxueli.com/xxl-job" target="_blank" rel="noopener noreferrer">https://www.xuxueli.com/xxl-job</a></p>
 </blockquote>
 <h3>xxl-job-admin项目配置修改</h3>
-<p>xxl-job-admin项目中的application.properties
+<p>xxl-job-admin项目中的application.properties<br>
 关键配置修改：</p>
 <div class="language-properties line-numbers-mode" data-highlighter="shiki" data-ext="properties" data-title="properties" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">### web  </span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">server.port</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">8099  </span></span>
@@ -5010,7 +5010,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <span class="line"><span>    }  </span></span>
 <span class="line"><span>}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>@XxlJob("demoJobHandler")  ：这里的demoJobHandler会在任务管理器中使用到。
+<p>@XxlJob("demoJobHandler")  ：这里的demoJobHandler会在任务管理器中使用到。<br>
 当你执行点执行时，就会触发demoJobHandler方法</p>
 </blockquote>
 <h4>web.xml</h4>
@@ -5045,7 +5045,7 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。</p>
 <h2>开发工具的选择</h2>
 <p>是选择使用eclipse还是idea，根据自己的使用习惯。</p>
-<p>环境：
+<p>环境：<br>
 可能拿到一个项目，无法直接确定项目中使用的jdk版本、缺失的依赖等。</p>
 <p>这里以idea为例</p>
 <h2>环境配置</h2>
@@ -5060,29 +5060,29 @@ https://jf.homefont.cn/daxiao.html</p>
 <h2>导入项目</h2>
 <p>首先拿到项目地址：</p>
 <p>使用svn拉到本地目录位置（自定义）</p>
-<p>项目本身是eclipse编写的，由此你需要会如何将eclipse项目导入到idea中：
+<p>项目本身是eclipse编写的，由此你需要会如何将eclipse项目导入到idea中：<br>
 教程可以参考这：<a href="https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_43435032/article/details/127067473?spm=1001.2014.3001.5506</a></p>
 <p>在idea中找到File --&gt; New --&gt; Project from Existing Sources，选择你需要导入的项目。</p>
 <blockquote>
 <p>因为这里是eclipse项目</p>
 </blockquote>
-<p>导入项目后会弹出 Import Project 界面：
-选择 Import project from external model (默认选项)，然后选择选项 Eclipse ，
-点击下一步（Next），默认配置，点击下一步，后会进行扫描，等待一下即可。
-然后勾选对应的项目，点击下一步，点到最后，选择JDK版本，这里选择JDK1.8，
+<p>导入项目后会弹出 Import Project 界面：<br>
+选择 Import project from external model (默认选项)，然后选择选项 Eclipse ，<br>
+点击下一步（Next），默认配置，点击下一步，后会进行扫描，等待一下即可。<br>
+然后勾选对应的项目，点击下一步，点到最后，选择JDK版本，这里选择JDK1.8，<br>
 最后点击创建（Create），项目导入完成。</p>
 <h2>配置项目</h2>
 <p>打开导入的项目后：</p>
-<p>在idea中，找到 File --&gt; Project Structure ，
+<p>在idea中，找到 File --&gt; Project Structure ，<br>
 然后开始配置。</p>
 <h3>第一步：确定Project中jdk版本</h3>
 <p>选择SDK对应的JDK1.8</p>
 <h3>第二步：Modules (模块)</h3>
-<p>点击左上方 + （加号），找到 Web 点击加入。
-然后点击项目名称，找到 Dependencies后，点击下面的 + （加号），
+<p>点击左上方 + （加号），找到 Web 点击加入。<br>
+然后点击项目名称，找到 Dependencies后，点击下面的 + （加号），<br>
 点击 Library 添加对应的 Tomcat 。</p>
 <h3>第三步：Libraries</h3>
-<p>点击 Libraries，点击左上方 + （加号），点击Java，然后找到项目对应的依赖路径位置 lib，
+<p>点击 Libraries，点击左上方 + （加号），点击Java，然后找到项目对应的依赖路径位置 lib，<br>
 点击添加 lib 即可</p>
 <blockquote>
 <p>一般lib位置在WEB-INF目录下</p>
@@ -5092,27 +5092,27 @@ https://jf.homefont.cn/daxiao.html</p>
 <blockquote>
 <p><strong>重点来了</strong></p>
 </blockquote>
-<p>点击 样式类似于   Web（项目名）的位置后，
-定位到Deployment Descriptors位置下方：
+<p>点击 样式类似于   Web（项目名）的位置后，<br>
+定位到Deployment Descriptors位置下方：<br>
 点击 type下方的 Web Module Deployment Descriptor 之后，点击编辑（Edit），选择项目中对应的web.xml文件。</p>
 <blockquote>
-<p>这里注意了，一般项目中 是 web  --&gt; WEB-INF --&gt; web.xml文件，
+<p>这里注意了，一般项目中 是 web  --&gt; WEB-INF --&gt; web.xml文件，<br>
 但是 这个项目的web存放路径也可以自定义，比如 名称叫 interfacePlatform  ，下面存放WEB-INF --&gt; web.xml文件，存放静态资源，存放对应的jar包。</p>
 </blockquote>
-<p>定位到 Web Resource Directories 位置：
+<p>定位到 Web Resource Directories 位置：<br>
 点击下方的路径，然后点击编辑按钮，修改静态资源存放路径的主目录，例如项目存放静态资源的主目录名为 interfacePlatform，</p>
 <h3>第五步：Artifacts</h3>
 <p>点击 Artifacts，点击左上方 + （加号），找到 Web Application：Exlpoded --&gt; From Modules</p>
 <p>选择项目中对应的模块，点OK即可。</p>
-<p>第六步：找到 Platform Settings 位置
+<p>第六步：找到 Platform Settings 位置<br>
 点击 Problems ，如果有提示 fixed，就点击修复一下</p>
 <p>最后，点击右下角的 Apply（应用），点 OK，这里就配置完成了。</p>
 <h2>配置tomcat</h2>
-<p>在idea中找到 File --&gt; Settings --&gt; Build Execution，Deployment，
-然后找到 Application Servers并点击之后，
-点击左上方 + （加号），找到 Tomcat Server，
+<p>在idea中找到 File --&gt; Settings --&gt; Build Execution，Deployment，<br>
+然后找到 Application Servers并点击之后，<br>
+点击左上方 + （加号），找到 Tomcat Server，<br>
 添加Tomcat Home目录位置，然后下方的 Tomcat base directory就自动加上路径，点击OK就可以了，最后点击Apply（应用）和 OK</p>
-<p>点击右上角的“Add configuration”，点击左上方 + （加号），找到 Tomcat Server --&gt; Local
+<p>点击右上角的“Add configuration”，点击左上方 + （加号），找到 Tomcat Server --&gt; Local<br>
 点击local后，点击 Tomcat 8.5.23 ，在右边找到Deployment，在下方 Deploy at the server startup，这一步默认可以省掉，原因是在上面  第五步：Artifacts  就已经配置好了。</p>
 <p>如果你想请求路径不带有项目名，你就在 Application context下方，去掉项目名称直接留下 / (斜杠)即可。</p>
 <p>最后就点击 Apply（应用）和 OK 。</p>
@@ -5123,23 +5123,23 @@ https://jf.homefont.cn/daxiao.html</p>
 <p>有时候还是有问题，就需要rebuild --&gt; Rebuild Project (重新构建项目)</p>
 <h2>遇到的问题</h2>
 <h3>问题一：svn使用问题</h3>
-<p>如果你使用的svn是TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi版本时，你在idea的设置中，找到version Control（版本控制），找到Subversion，找到 Path to Subversion executable 配置svn启动exe。
-但是在TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi 版本对应的安装目录下，貌似没有svn.exe文件。
+<p>如果你使用的svn是TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi版本时，你在idea的设置中，找到version Control（版本控制），找到Subversion，找到 Path to Subversion executable 配置svn启动exe。<br>
+但是在TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi 版本对应的安装目录下，貌似没有svn.exe文件。<br>
 idea就会提示找到svn对应的.exe</p>
 <p>使用TortoiseSVN-1.8.8.25755-x64-svn-1.8.10.msi时idea提示报错：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>Cant's use Subversion command line client D:\ProgramFiles\TortoiseSVN\bin\svn.exe</span></span>
 <span class="line"><span>The path to the Subversion excutable is probably wrong</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>解决方法：
-我是直接换一个svn版本：TortoiseSVN-1.14.5.29465-x64-svn-1.14.2.msi
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>解决方法：<br>
+我是直接换一个svn版本：TortoiseSVN-1.14.5.29465-x64-svn-1.14.2.msi<br>
 这个安装时也会提示报错，说缺少windows Server 2008 R2 Enterprise缺少组件，于是找到对应的组件包（vc_redist.x64.exe）安装即可解决问题。</p>
 <h2>问题二</h2>
 <p>idea中可能报错：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>java：常量字符串过长</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>原因是：将eclipse项目导入到idea中，会遇到这样的问题。</p>
-<p>解决方法：
+<p>解决方法：<br>
 在idea设置中找到Build，Execution，Deploymentw位置，点击Compiler，点击Java Compiler，找到Use comiler，然后选择eclipse，点击Apply（应用），点OK即可。</p>
 <blockquote>
-<p>注意：在没有出现这样的问题的情况下，还是使用Javac，每个项目的使用情况可能不同。
+<p>注意：在没有出现这样的问题的情况下，还是使用Javac，每个项目的使用情况可能不同。<br>
 还有，如果之前改为了eclipse，后面换了一个项目，建议及时改回Javac，然后后面编译总是报错，也找到问题所在，那就很难受了。</p>
 <p>不过呢，对于现在SpringBoot项目一般不会出现这样的问题。</p>
 </blockquote>
@@ -5162,13 +5162,13 @@ idea就会提示找到svn对应的.exe</p>
 <h2>部署和配置</h2>
 <h3>fork 仓库 和 部署Telegraph-Image 静态资源</h3>
 <p>将 <a href="https://github.com/cf-pages/Telegraph-Image" target="_blank" rel="noopener noreferrer">https://github.com/cf-pages/Telegraph-Image</a>  这个仓库克隆到自己的仓库，然后通过cloudfare中Workers  &amp; Pages ，将克隆好的Github仓库关联，然后进行部署，基本上是点下一步下一步。</p>
-<p>首先点击创建一个应用( create application )：
+<p>首先点击创建一个应用( create application )：<br>
 <img src="https://img.nnxx.me/file/0a4d1702892892007890c.png" alt="" loading="lazy"></p>
-<p>选择 Pages ，点击关联自己的Github仓库，然后选择克隆后的 Telegraph-Image 仓库
+<p>选择 Pages ，点击关联自己的Github仓库，然后选择克隆后的 Telegraph-Image 仓库<br>
 <img src="https://img.nnxx.me/file/94ae08aabc2a6fe4ee91c.png" alt="" loading="lazy"></p>
 <p>点击 Telegraph-Image 仓库，然后部署即可。</p>
 <figure><img src="https://img.nnxx.me/file/e2ac933717a0c9840efb4.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>部署后的效果图：
+<p>部署后的效果图：<br>
 <img src="https://img.nnxx.me/file/e1fcfc5881514a4f02961.png" alt="" loading="lazy"></p>
 <p>配置环境变量：BASIC_USER、BASIC_PASS、ModerateContentApiKey</p>
 <blockquote>
@@ -5181,9 +5181,9 @@ idea就会提示找到svn对应的.exe</p>
 <figure><img src="https://img.nnxx.me/file/1c59abff1132c1fdf0955.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3>创建 KV 存储空间</h3>
 <p>然后需要创建 KV 作为图片的存储空间</p>
-<p>创建 命名空间：
+<p>创建 命名空间：<br>
 <img src="https://img.nnxx.me/file/529ea5cd707af55ca1756.png" alt="" loading="lazy"></p>
-<p>效果：
+<p>效果：<br>
 <img src="https://img.nnxx.me/file/296e6c1b13d4478a3c8ac.png" alt="" loading="lazy"></p>
 <p>找到Functions（函数）</p>
 ]]></content:encoded>
@@ -5326,7 +5326,7 @@ idea就会提示找到svn对应的.exe</p>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>将cd后的路径更改为你的frpc实际存放的目录</p>
 </blockquote>
-<p>win10开机自启frp
+<p>win10开机自启frp<br>
 简单操作：win+R 输入 "shell:startup" , 进入到开机自启的位置，然后将上述配置好的 frp.bat 文件的快捷方式复制到开机自启的位置。</p>
 <blockquote>
 <p>注意：之后直接运行这个 .bat 文件即可启动frpc并隐藏窗口（可在任务管理器中退出）。<br>
@@ -5339,7 +5339,7 @@ idea就会提示找到svn对应的.exe</p>
 <blockquote>
 <p>远程桌面连接怎么打开？直接win+Q，输入远程桌面连接，点击即可打开，然后输入地址、账号、密码。</p>
 </blockquote>
-<p>效果：
+<p>效果：<br>
 <img src="https://img.nnxx.me/file/d96263d8a494ba3a00aed.png" alt="" loading="lazy"></p>
 <figure><img src="https://img.nnxx.me/file/99b239d563a82414830e9.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <figure><img src="https://img.nnxx.me/file/f275bbd5eb71225f9b0d3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
@@ -5355,11 +5355,11 @@ idea就会提示找到svn对应的.exe</p>
 <p>个人具体配置：<a href="https://blog.nnxx.me/posts/e1d1124g.html" target="_blank" rel="noopener noreferrer">frp-p2p配置说明</a></p>
 <h2>附件</h2>
 <p>扩展资料：</p>
-<p>frp udp p2p打洞内网穿透net，xtcp点对点直连win远程桌面，速度超快的高性能内网穿透
+<p>frp udp p2p打洞内网穿透net，xtcp点对点直连win远程桌面，速度超快的高性能内网穿透<br>
 <a href="https://imold.wang/technology/computer/420.html/2/" target="_blank" rel="noopener noreferrer">https://imold.wang/technology/computer/420.html/2/</a></p>
-<p>frp实现p2p远程连接桌面：
+<p>frp实现p2p远程连接桌面：<br>
 <a href="https://www.2280129.xyz/article/000040/frp.html" target="_blank" rel="noopener noreferrer">https://www.2280129.xyz/article/000040/frp.html</a></p>
-<p>frp实现p2p远程连接桌面，非服务器中转：
+<p>frp实现p2p远程连接桌面，非服务器中转：<br>
 <a href="https://blog.csdn.net/Asachen/article/details/120845923" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Asachen/article/details/120845923</a></p>
 ]]></content:encoded>
       <enclosure url="https://s2.ax1x.com/2019/01/12/FjUW0x.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" type="image/"/>
@@ -5567,8 +5567,8 @@ idea就会提示找到svn对应的.exe</p>
 至此，客户端配置完成，之后就是你自己根据需要在frpc.ini后追加规则即可。<br>
 强烈建议你在使用frp直接测试内网穿透前，先在局域网内测试好相关功能的正常使用，并配置好可能会影响的Windows防火墙等内容，在内网调试通过后再使用frp进行内网穿透测试。</p>
 </blockquote>
-<p>windows开机自启动bat文件：
-https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
+<p>windows开机自启动bat文件：<br>
+<a href="https://www.cnblogs.com/shengruxiahuaya/p/17150459.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</a></p>
 <p>开机自启可以参考：<a href="https://www.vuar.cn/index.php/archives/74/" target="_blank" rel="noopener noreferrer">https://www.vuar.cn/index.php/archives/74/</a></p>
 <h2>附件</h2>
 <p>参考：<a href="https://zhuanlan.zhihu.com/p/575316935" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/575316935</a></p>
@@ -5621,7 +5621,7 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <blockquote>
 <p>建议使用国外的，国内的服务器拉取仓库代码比较慢，可感人了。</p>
 </blockquote>
-<p>比如：你的服务器环境不支持国外环境，脚本执行拉取远程仓库代码就出现超时，无法完成情况。
+<p>比如：你的服务器环境不支持国外环境，脚本执行拉取远程仓库代码就出现超时，无法完成情况。<br>
 我这里使用手动一步安装，也是大致根据脚本来完成的。</p>
 <blockquote>
 <p>注：在这之前需要了解服务端和客户端是什么，如何将客户端和服务端关联起来</p>
@@ -5660,7 +5660,7 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <blockquote>
 <p>需要安装服务端和客户端</p>
 </blockquote>
-<p>server.sh 配置：</p>
+<p><a href="http://server.sh" target="_blank" rel="noopener noreferrer">server.sh</a> 配置：</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">#!/bin/bash</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">set</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -ex</span></span>
 <span class="line"></span>
@@ -5740,14 +5740,14 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># systemctl stop stat_server</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># systemctl stop stat_client</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>修改配置：</p>
-<p>
+<p><br>
 去掉注释，也就是去掉#号</p>
 <p>后面的地址替换成自己服务端反向代理的域名</p>
-<p>例如你的域名是：https://w.lxip.top</p>
-<p>则替换后就是https://w.lxip.top/report</p>
+<p>例如你的域名是：<a href="https://w.lxip.top" target="_blank" rel="noopener noreferrer">https://w.lxip.top</a></p>
+<p>则替换后就是<a href="https://w.lxip.top/report" target="_blank" rel="noopener noreferrer">https://w.lxip.top/report</a></p>
 <blockquote>
 <p>如果不想反向代理，或者觉得麻烦，那就直接使用服务器公网ip地址+端口号</p>
-<p>例如地址：http://139.212.12.120:8080 （服务端上的），直接替换也行</p>
+<p>例如地址：<a href="http://139.212.12.120:8080" target="_blank" rel="noopener noreferrer">http://139.212.12.120:8080</a> （服务端上的），直接替换也行</p>
 </blockquote>
 <p>服务端与客户端的关联关系：</p>
 <figure><figcaption>image-20230626012319564</figcaption></figure>
@@ -5762,7 +5762,7 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <p><a href="https://github.com/zdz/ServerStatus-Rust/wiki/Railway" target="_blank" rel="noopener noreferrer">Railway部署教程</a></p>
 </blockquote>
 <h2>3 客户端搭建</h2>
-<p>client.sh 配置</p>
+<p><a href="http://client.sh" target="_blank" rel="noopener noreferrer">client.sh</a> 配置</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#!/bin/bash</span></span>
 <span class="line"><span>set -ex</span></span>
 <span class="line"><span></span></span>
@@ -5821,7 +5821,7 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 状态查看</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> stat_client</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>都安装完成后如图所示：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>都安装完成后如图所示：<br>
 </p>
 <p>将客户端注册到服务端上：</p>
 <p>打开 stat_client.service 文件：</p>
@@ -5839,7 +5839,7 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 </blockquote>
 <h2>卸载服务端和客户端：</h2>
 <ol>
-<li>先停掉 之前开启的服务
+<li>先停掉 之前开启的服务<br>
 查看服务状态：</li>
 </ol>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>systemctl status stat_server</span></span>
@@ -5849,11 +5849,11 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 </blockquote>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>systemctl stop stat_server</span></span>
 <span class="line"><span>systemctl stop stat_client</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>再执行简单粗暴的方式删除文件夹的文件
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>再执行简单粗暴的方式删除文件夹的文件<br>
 在/opt/文件下删除ServerStatus文件夹（包括ServerStatus文件夹所有内容）</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>rm -rf ServerStatus</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>注意：别使用  /* 来删除所文件，小心一不小心就删库了，对于第一次使用删除命令来删除文件夹下所有内容，是很容易犯这样的问题的。
+<p>注意：别使用  /* 来删除所文件，小心一不小心就删库了，对于第一次使用删除命令来删除文件夹下所有内容，是很容易犯这样的问题的。<br>
 原因：大致是习惯性使用可视化界面，把那种思维方式带到linux下，以为linux跟可视化界面删除方式删除方式相同，这就容易误操作，删库了。禁止这么操作，这是很严重的问题。</p>
 </blockquote>
 <p>删除完成后使用 ll命令，查看一下是否删除完成</p>
@@ -5886,12 +5886,12 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <li>内网穿透：通过 Frp，您可以将内网中的服务暴露到公网上，例如 Web 服务器、FTP 服务器、SSH 服务器等。</li>
 <li>内网远程桌面：Frp 可以让您在外网使用远程桌面连接到内网中的计算机，方便远程管理和维护。</li>
 <li>构建云计算平台：Frp 可以帮助企业构建私有云环境，提供虚拟机、存储和计算资源等服务。</li>
-<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。
+<li>网络监控：Frp 可以用于搭建网络监控系统，通过端口转发将监控服务暴露到公网上，方便管理员远程查看。<br>
 总之，Frp 是一款十分实用的工具，可以帮助企业和个人轻松地管理和访问内网中的服务。</li>
 </ol>
 </blockquote>
 <blockquote>
-<p>官网：<a href="https://github.com/fatedier/frp/releases/tag/v0.48.0" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases/tag/v0.48.0</a>
+<p>官网：<a href="https://github.com/fatedier/frp/releases/tag/v0.48.0" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases/tag/v0.48.0</a><br>
 官方文档：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
 </blockquote>
 <h2>一、背景</h2>
@@ -5901,13 +5901,13 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <blockquote>
 <p>例如以我的阿里云服务器为例</p>
 </blockquote>
-<p>
+<p><br>
 具体如何配置请参考：</p>
 <h3>frp实现思路：</h3>
 <p>首先先明确服务端和客户端是什么？</p>
 <blockquote>
-<p>FRP 中服务端（Server）和客户端（Client）是指 FRP 这个工具的两个不同角色。
-服务端是 FRP 的远程服务器，它运行在公网上，并且通常被用来提供内网穿透功能。当您需要从外部网络访问内部网络的设备时，可以在公网上部署一个 FRP 服务端，通过配置相应的映射规则，将来自公网的请求转发到内网设备上。
+<p>FRP 中服务端（Server）和客户端（Client）是指 FRP 这个工具的两个不同角色。<br>
+服务端是 FRP 的远程服务器，它运行在公网上，并且通常被用来提供内网穿透功能。当您需要从外部网络访问内部网络的设备时，可以在公网上部署一个 FRP 服务端，通过配置相应的映射规则，将来自公网的请求转发到内网设备上。<br>
 客户端是 FRP 工具的本地组件，它运行在需要被访问的内部网络设备上，并与远程服务端建立连接。客户端会向服务端注册自己的身份信息，并定期向服务端发送心跳包以保持连接。一旦客户端成功连接到服务端，外部网络就可以通过服务端访问客户端所在的内部网络设备。</p>
 </blockquote>
 <figure><figcaption></figcaption></figure>
@@ -5936,24 +5936,24 @@ https://www.cnblogs.com/shengruxiahuaya/p/17150459.html</p>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Install]</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">WantedBy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> multi-user.target</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如下图：
-
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如下图：<br>
+<br>
 上面三步可以参考：<a href="https://gofrp.org/docs/setup/systemd/" target="_blank" rel="noopener noreferrer">https://gofrp.org/docs/setup/systemd/</a></p>
 <h3>2.4 下载解压安装包</h3>
-<p>方式一：
+<p>方式一：<br>
 在已经创建好的 /root/frp目录下，执行下面的命令即可下frp安装包：</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://github.com/fatedier/frp/releases/download/v0.48.0/frp_0.48.0_linux_arm64.tar.gz</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>方式二：
-下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a>
-Linux版（centos），下载如下图版本：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>方式二：<br>
+下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a><br>
+Linux版（centos），下载如下图版本：<br>
 </p>
 <p>将frp的linux包传递Linux服务器的自定义目录下</p>
 <blockquote>
-<p>例如：
+<p>例如：<br>
 放在/root/frp/目录（文件夹）下，然后解压此文件<strong>frp_0.48.0_linux_amd64.tar.gz</strong></p>
 </blockquote>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -zxvf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frp_0.48.0_linux_amd64.tar.gz</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后对其命名：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>然后对其命名：<br>
 mv 原文件名 修改后的文件名</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mv</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frp_0.48.0_linux_amd64</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>或者直接解压并重新命名</p>
@@ -5992,17 +5992,17 @@ mv 原文件名 修改后的文件名</p>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置 frps 开机自启:</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> enable</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>贴一张可视化面板图：
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>贴一张可视化面板图：<br>
 </p>
 <h3>2.6 配置客户端frp</h3>
 <blockquote>
 <p>下载地址：<a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreferrer">https://github.com/fatedier/frp/releases</a></p>
 </blockquote>
-<p>
+<p><br>
 自定义一个文件夹解压</p>
 <h3>2.6 配置客户端（win10本机）</h3>
-<p>在解压frp安装包后，进入找到frpc.ini配置文件并使用文本编辑器打开
-
+<p>在解压frp安装包后，进入找到frpc.ini配置文件并使用文本编辑器打开<br>
+<br>
 配置如下：</p>
 <div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" data-title="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 全局配置</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[common]</span></span>
@@ -6025,24 +6025,24 @@ mv 原文件名 修改后的文件名</p>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 外网访问的端口</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">remote_port</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> 7001</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>注意：服务端的配置的token与客户端配置的token需要保持一致。
+<p>注意：服务端的配置的token与客户端配置的token需要保持一致。<br>
 参考：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a></p>
 </blockquote>
-<p>在目录下输入cmd回车，然后运行frpc.exe
-如图所示：
-
-
+<p>在目录下输入cmd回车，然后运行frpc.exe<br>
+如图所示：<br>
+<br>
+<br>
 就此配置完成</p>
 <p>接下来就连接远程桌面了</p>
 <h3>2.7 连接远程桌面</h3>
-<p>如下图所示：
+<p>如下图所示：<br>
 计算机为你服务端的ip地址加端口</p>
 <blockquote>
-<p>例如：139.224.12.12:7000
+<p>例如：139.224.12.12:7000<br>
 </p>
 </blockquote>
-<p>由于我电脑使用的微软邮箱，用户名就为 123@outlook.com，密码对应微软邮箱密码
-
+<p>由于我电脑使用的微软邮箱，用户名就为 <a href="mailto:123@outlook.com" target="_blank" rel="noopener noreferrer">123@outlook.com</a>，密码对应微软邮箱密码<br>
+<br>
 如果你使用的是本地账号登录，那用户名就是你本地的那个用户名，密码就是开机密码。</p>
 <blockquote>
 <p>如果不想使用ip地址，可以将ip地址绑到域名上，或不想输入端口，可以进行反向代理</p>
@@ -6050,8 +6050,8 @@ mv 原文件名 修改后的文件名</p>
 <h2>总结</h2>
 <p>总之，frp不仅仅只是玩远程桌面，还可以玩内网穿透、渗透等。</p>
 <h2>附件</h2>
-<p>参考1：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a>
-参考2：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a>
+<p>参考1：<a href="https://cloud.tencent.com/developer/article/1710141" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1710141</a><br>
+参考2：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a><br>
 阿里云官方地址：<a href="https://account.aliyun.com/login/login.htm" target="_blank" rel="noopener noreferrer">https://account.aliyun.com/login/login.htm</a></p>
 ]]></content:encoded>
     </item>
@@ -6063,18 +6063,18 @@ mv 原文件名 修改后的文件名</p>
       <description>首先你需要有一个gitee账号和一个GitHub账号 （gitee需要绑定手机号并且需要绑定对应的GitHub账号） 使用gitee仓库镜像管理（目前是限时开放） 直接上效果图： 选择直接需要同步的仓库 获取GitHub私人令牌的方式简单贴一张图： 具体如何创建GitHub私人令牌步骤就不展开了 效果如下：</description>
       <category>运维</category>
       <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号
+      <content:encoded><![CDATA[<p>首先你需要有一个gitee账号和一个GitHub账号<br>
 （gitee需要绑定手机号并且需要绑定对应的GitHub账号）</p>
 <p>使用gitee仓库镜像管理（目前是限时开放）</p>
-<p>直接上效果图：
+<p>直接上效果图：<br>
 </p>
 <blockquote>
 <p>选择直接需要同步的仓库</p>
 </blockquote>
-<p>获取GitHub私人令牌的方式简单贴一张图：
-
+<p>获取GitHub私人令牌的方式简单贴一张图：<br>
+<br>
 具体如何创建GitHub私人令牌步骤就不展开了</p>
-<p>效果如下：
+<p>效果如下：<br>
 </p>
 ]]></content:encoded>
     </item>
@@ -6128,7 +6128,7 @@ mv 原文件名 修改后的文件名</p>
 <p>此时新的分支会有当前分支的所有文件</p>
 </blockquote>
 <h2>附件</h2>
-<p>命令大全：
+<p>命令大全：<br>
 </p>
 <p>参考：<a href="https://www.runoob.com/note/56524" target="_blank" rel="noopener noreferrer">https://www.runoob.com/note/56524</a></p>
 ]]></content:encoded>
@@ -6145,9 +6145,9 @@ mv 原文件名 修改后的文件名</p>
 <p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="_blank">常用的git命令</a></p>
 <h2>背景</h2>
 <blockquote>
-<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）
-再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理
-起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）<br>
+再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理<br>
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）<br>
 最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
 </blockquote>
 <h2>具体步骤</h2>
@@ -6157,9 +6157,9 @@ mv 原文件名 修改后的文件名</p>
 <p>创建orphan分支</p>
 <div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout --orphan [分支名]</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>这就是创建orphan类型的分支
-为什么使用orphan类型的分支
-原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响
+<p>这就是创建orphan类型的分支<br>
+为什么使用orphan类型的分支<br>
+原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响<br>
 git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
 </blockquote>
 <p>检查分支状态</p>
@@ -6172,7 +6172,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <span class="line"><span>git commit -m "commit branch"</span></span>
 <span class="line"><span>git push orgin [分支名]</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>为什么push？
+<p>为什么push？<br>
 因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
 </blockquote>
 <p>注意：</p>
@@ -6188,8 +6188,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <p>此时新的分支会有当前分支的所有文件</p>
 </blockquote>
 <h2>附件</h2>
-<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a>
-参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a>
+<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a><br>
+参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a><br>
 参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
 ]]></content:encoded>
     </item>
@@ -6206,7 +6206,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <h2>PicGo配置多图床</h2>
 <p>以七牛云为例：</p>
 <blockquote>
-<p>官网：https://portal.qiniu.com/</p>
+<p>官网：<a href="https://portal.qiniu.com/" target="_blank" rel="noopener noreferrer">https://portal.qiniu.com/</a></p>
 <p>七牛云有10G免费存储空间和10G CDN静态资源加速</p>
 <p>注意：CDN超额会需要付费的。</p>
 </blockquote>
@@ -6243,7 +6243,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>参考：<a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A" target="_blank" rel="noopener noreferrer">GitHub配置 | PicGo</a></p>
 <p>gitee图床配置：</p>
 <figure><figcaption>image-20230408155204806</figcaption></figure>
-<p>参考：https://github.com/lizhuangs/picgo-plugin-gitee-uploader.git</p>
+<p>参考：<a href="https://github.com/lizhuangs/picgo-plugin-gitee-uploader.git" target="_blank" rel="noopener noreferrer">https://github.com/lizhuangs/picgo-plugin-gitee-uploader.git</a></p>
 <h2>附件</h2>
 <p>参考：</p>
 <p>GitHub仓库：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener noreferrer">Molunerfinn/PicGo</a></p>
@@ -6284,7 +6284,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <li>由于 Gitee 改版，使用 Gitee Pages 前需要先完成实名认证。</li>
 </ol>
 <h2>入参</h2>
-<p>| 参数             | 描述                         | 是否必传 | 默认值   | 示例                            |
+<p>| 参数             | 描述                         | 是否必传 | 默认值   | 示例                            |<br>
 |</p>
 ]]></content:encoded>
     </item>
@@ -6349,7 +6349,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>原因：gitee配置的此公钥要与GitHub公钥成对存在。</p>
 <p>添加即可解决</p>
 <figure><figcaption>image-20230404223214170</figcaption></figure>
-<p>如未解决可参考：https://github.com/yanglbme/gitee-pages-action/issues/29</p>
+<p>如未解决可参考：<a href="https://github.com/yanglbme/gitee-pages-action/issues/29" target="_blank" rel="noopener noreferrer">https://github.com/yanglbme/gitee-pages-action/issues/29</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -6382,8 +6382,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <span class="line"><span> #刷新权限</span></span>
 <span class="line"><span>FLUSH PRIVILEGES;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>附件</h2>
-<p>参考：https://blog.csdn.net/pengfeng111833/article/details/124399404</p>
-<p>参考2：https://huaweicloud.csdn.net/63355d9ed3efff3090b54464.html</p>
+<p>参考：<a href="https://blog.csdn.net/pengfeng111833/article/details/124399404" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/pengfeng111833/article/details/124399404</a></p>
+<p>参考2：<a href="https://huaweicloud.csdn.net/63355d9ed3efff3090b54464.html" target="_blank" rel="noopener noreferrer">https://huaweicloud.csdn.net/63355d9ed3efff3090b54464.html</a></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -6433,7 +6433,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <span class="line"><span>javac 1.8.0_11</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>2 .Docker安装</h2>
 <p>在拉去之前，先配置镜像加速器</p>
-<p>阿里云镜像获取地址：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors，登陆后，左侧菜单选中镜像加速器就可以看到你的专属地址了：</p>
+<p>阿里云镜像获取地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors%EF%BC%8C%E7%99%BB%E9%99%86%E5%90%8E%EF%BC%8C%E5%B7%A6%E4%BE%A7%E8%8F%9C%E5%8D%95%E9%80%89%E4%B8%AD%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%9C%B0%E5%9D%80%E4%BA%86%EF%BC%9A" target="_blank" rel="noopener noreferrer">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors，登陆后，左侧菜单选中镜像加速器就可以看到你的专属地址了：</a></p>
 <figure><figcaption>image-20221116231427095</figcaption></figure>
 <p>因为工作的需要,需要把docker 启动后的路径改成/data,所以就会用到:<em>/etc/docker/daemon.json</em> 是docker 的配置<em>文件</em>,默认是没有的,需要我们手动创建,可配置项<em>如下:</em></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#在根目录下</span></span>
@@ -6464,7 +6464,7 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 </blockquote>
 <p><em><strong>为什么配置这个呢？原因是docker下载镜像速度慢，需要配置国内镜像加速。</strong></em></p>
 <p>Docker可以运行在MAC、Windows、CentOS、UBUNTU等操作系统上，本课程基于CentOS7安装Docker</p>
-<p>官网：https://www.docker.com</p>
+<p>官网：<a href="https://www.docker.com" target="_blank" rel="noopener noreferrer">https://www.docker.com</a></p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>#1、yum包更新到最新</span></span>
 <span class="line"><span>yum update</span></span>
 <span class="line"><span>#2、安装需要的软件包，yum-util提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</span></span>
@@ -6712,8 +6712,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <p>对于开发人员：可以为开发团队提供一个完全一致的开发环境</p>
 <p>对于测试人员：可以直接拿开发时所构建的镜像或者通过Dockerfile文件构建一个新的镜像开始工作了</p>
 <p>对于运维人员：在部署时，可以实现应用的无缝移植</p>
-<p>参考Dochub网址：https://hub.docker.com ，比如centos和nginx镜像</p>
-<p>| 关键字      | 作用                       | 备注                                                         |
+<p>参考Dochub网址：<a href="https://hub.docker.com" target="_blank" rel="noopener noreferrer">https://hub.docker.com</a> ，比如centos和nginx镜像</p>
+<p>| 关键字      | 作用                       | 备注                                                         |<br>
 |</p>
 ]]></content:encoded>
     </item>
@@ -6766,15 +6766,15 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果如图所示：</p>
 <figure><figcaption>image-20221031224144979</figcaption></figure>
 <blockquote>
-<p>“#”  表示注释
+<p>“#”  表示注释<br>
 Host  后面是名称，可以随便写，相当于起了一个别名</p>
-<p>每一个Host就代表一个仓库，仓库参数另起一行，前有4个空格
+<p>每一个Host就代表一个仓库，仓库参数另起一行，前有4个空格<br>
 HostName ： 真正连接的服务器地址</p>
 <p>ssh的host，SSH地址“git@”后面到冒号前面的内容</p>
-<p><code>User</code>：自定义的用户名，一般使用“git”
+<p><code>User</code>：自定义的用户名，一般使用“git”<br>
 <code>PreferredAuthentications</code>： 指定优先使用哪种方式验证，支持密码和秘钥验证方式 。使用“publickey”即可，git仓库均为这种形式</p>
-<p>权限认证--可设为publickey,password publickey,keyboard-interactive等
-<code>IdentityFile</code>：指定本次连接使用的密钥文件。 该host后台配置的公钥对应的私钥地址的绝对路径
+<p>权限认证--可设为publickey,password publickey,keyboard-interactive等<br>
+<code>IdentityFile</code>：指定本次连接使用的密钥文件。 该host后台配置的公钥对应的私钥地址的绝对路径<br>
 Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口号</p>
 </blockquote>
 <h3>3.2 全局配置</h3>
@@ -6790,7 +6790,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <span class="line"><span>ssh-keygen -t rsa -C "123456@qq.com"</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span># 同理gitee账号也是这么操作的。</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注：这里的abc是GitHub<strong>用户名</strong> ，<strong>123456@qq.com</strong>这里是你绑定GitHub上的邮箱</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注：这里的abc是GitHub<strong>用户名</strong> ，<strong><a href="mailto:123456@qq.com" target="_blank" rel="noopener noreferrer">123456@qq.com</a></strong>这里是你绑定GitHub上的邮箱</p>
 <p>如下图效果：</p>
 <figure><figcaption>image-20221031232651471</figcaption></figure>
 <p>配置gitee效果如下图所示：</p>
@@ -6872,8 +6872,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <category>运维</category>
       <pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>A: 查看本地分支
-使用 git branch命令，如下：git branch
+<p>A: 查看本地分支<br>
+使用 git branch命令，如下：git branch<br>
 *标识的是你当前所在的分支</p>
 <figure><figcaption>img</figcaption></figure>
 <p>B: 查看远程分支</p>
@@ -7461,7 +7461,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <span class="line"><span>    .ifPresent(System.out::println);</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>使用总结</h3>
 <p>使用<code>Optional</code>工具类判断一个对象的<code>NPE</code>问题，一定要先通过其静态方法<code>（of、empty、ofNullable）</code>获得<code>Optional</code>对象，进而通过一些实例方法进行一系列的操作获得最后的对象。</p>
-<p>| API方法名称   | 用处                                                         |
+<p>| API方法名称   | 用处                                                         |<br>
 |</p>
 ]]></content:encoded>
     </item>
@@ -7490,7 +7490,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
 </ul>
 <blockquote>
-<p>官网：https://ruancang.net/</p>
+<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
 </blockquote>
 <h2>导航</h2>
 <ul>
@@ -7510,7 +7510,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
 </ul>
 <blockquote>
-<p>官网：https://ruancang.net/</p>
+<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
 </blockquote>
 ]]></content:encoded>
     </item>
@@ -7526,48 +7526,48 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
 </ul>
 <blockquote>
-<p><code>Github</code>地址：https://github.com/CyC2018/CS-Notes</p>
-<p>官网：http://www.cyc2018.xyz/</p>
+<p><code>Github</code>地址：<a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">https://github.com/CyC2018/CS-Notes</a></p>
+<p>官网：<a href="http://www.cyc2018.xyz/" target="_blank" rel="noopener noreferrer">http://www.cyc2018.xyz/</a></p>
 </blockquote>
 <h2>Java相关</h2>
 <ul>
 <li><a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">advanced-java</a>：互联网 <code>Java</code> 工程师<strong>进阶知识完全扫盲</strong>：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识。</li>
 </ul>
 <blockquote>
-<p>官网：https://doocs.gitee.io/advanced-java/#/</p>
-<p>官网：https://doocs.github.io/advanced-java/#/</p>
-<p><code>Github</code>地址：https://github.com/doocs/advanced-java</p>
-<p><code>Gitee</code>地址：https://gitee.com/Doocs/advanced-java</p>
+<p>官网：<a href="https://doocs.gitee.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/advanced-java/#/</a></p>
+<p>官网：<a href="https://doocs.github.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/advanced-java/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://github.com/doocs/advanced-java</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/advanced-java</a></p>
 </blockquote>
 <h2>源码相关</h2>
 <ul>
 <li><a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">source-code-hunter</a>：从源码层面，剖析<strong>挖掘互联网行业主流技术的底层实现原理</strong>，为广大开发者 “提升技术深度” 提供便利。</li>
 </ul>
 <blockquote>
-<p>官网：https://doocs.gitee.io/source-code-hunter/#/</p>
-<p>官网：https://doocs.github.io/source-code-hunter/#/</p>
-<p><code>Github</code>地址：https://github.com/doocs/source-code-hunter</p>
-<p><code>Gitee</code>地址：https://gitee.com/Doocs/source-code-hunter</p>
+<p>官网：<a href="https://doocs.gitee.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/source-code-hunter/#/</a></p>
+<p>官网：<a href="https://doocs.github.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/source-code-hunter/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://github.com/doocs/source-code-hunter</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/source-code-hunter</a></p>
 </blockquote>
 <h2>算法和数据结构</h2>
 <ul>
 <li><a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">leetcode</a>：多种编程语言<strong>实现 <code>LeetCode</code></strong>。</li>
 </ul>
 <blockquote>
-<p>官网：https://doocs.github.io/leetcode/#/</p>
-<p>官网：https://doocs.gitee.io/leetcode/#/</p>
-<p><code>Github</code>地址：https://github.com/doocs/leetcode</p>
-<p><code>Gitee</code>地址：https://gitee.com/Doocs/leetcode</p>
+<p>官网：<a href="https://doocs.github.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/leetcode/#/</a></p>
+<p>官网：<a href="https://doocs.gitee.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/leetcode/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/leetcode" target="_blank" rel="noopener noreferrer">https://github.com/doocs/leetcode</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/leetcode</a></p>
 </blockquote>
 <h2>JVM相关</h2>
 <ul>
 <li><a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">jvm</a>：<strong><code>JVM</code> 底层原理</strong>最全知识总结</li>
 </ul>
 <blockquote>
-<p>官网：https://doocs.gitee.io/jvm/</p>
-<p>官网：https://doocs.github.io/jvm/</p>
-<p><code>Github</code>地址：https://github.com/doocs/jvm</p>
-<p><code>Gitee</code>地址：https://gitee.com/Doocs/jvm</p>
+<p>官网：<a href="https://doocs.gitee.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/jvm/</a></p>
+<p>官网：<a href="https://doocs.github.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/jvm/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/jvm" target="_blank" rel="noopener noreferrer">https://github.com/doocs/jvm</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/jvm</a></p>
 </blockquote>
 ]]></content:encoded>
     </item>
@@ -7577,7 +7577,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
       <guid>https://blog.lxip.top/resources/books/</guid>
       <source url="https://blog.lxip.top/rss.xml">书籍资源</source>
       <category>书籍</category>
-      <content:encoded><![CDATA[<p>| 资源名称                                   | 分享链接                                  |
+      <content:encoded><![CDATA[<p>| 资源名称                                   | 分享链接                                  |<br>
 |</p>
 ]]></content:encoded>
     </item>
@@ -7627,7 +7627,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web Consortium，W3C）和互联网工程任务组（Internet Engineering Task Force，IETF）进行协 调，最终发布了一系列的RFC，其中最著名的是1999年6月公布的 RFC 2616，定义了HTTP协议中现今广泛使用的 一个版本——HTTP 1.1。</p>
 <figure><figcaption>image-20221019161616266</figcaption></figure>
 <h2>2.HTTP 请求/响应的步骤</h2>
-<p>2.1 客户端连接到Web服务器 一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。 例如:http://www.baidu.com。</p>
+<p>2.1 客户端连接到Web服务器 一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。 例如:<a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer">http://www.baidu.com</a>。</p>
 <p>2.2 发送HTTP请求 通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求 数据4部分组成。</p>
 <p>2.3 服务器接受请求并返回HTTP响应 Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响 应头部、空行和响应数据4部分组成。</p>
 <p>2.4 释放TCP连接 在HTTP/1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接，任务结束就 中断连接。当客户端浏览器访问的某个HTML或其他类型的Web页中包含有其他的Web资源（如JavaScript文件、 图像文件、CSS文件等），每遇到这样一个Web资源，浏览器就会重新建立一个HTTP会话。</p>
@@ -7681,7 +7681,7 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <h2>6. Tomcat</h2>
 <p>(1) Tomcat下载与安装</p>
 <p>开源小型web服务器 ，完全免费，主要用于中小型web项目，只支持Servlet和JSP 等少量javaee规范（就是 JavaWeb编程接口）</p>
-<p>https://tomcat.apache.org</p>
+<p><a href="https://tomcat.apache.org" target="_blank" rel="noopener noreferrer">https://tomcat.apache.org</a></p>
 <figure><figcaption>image-20221019203030315</figcaption></figure>
 <p>下载好之后，安装到任意目录</p>
 <p>安装步骤:</p>
@@ -7708,13 +7708,13 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>4、logs：这个目录中都是日志文件，记录了Tomcat启动和关闭的信息，如果启动Tomcat时有错误，那么异常也会 记录在日志文件中。</p>
 <p>5、temp：存放Tomcat的临时文件，这个目录下的东西可以在停止Tomcat后删除！</p>
 <p>6、webapps：存放web项目的目录，其中每个文件夹都是一个项目；如果这个目录下已经存在了目录，那么都是 tomcat自带的项目。其中ROOT是一个特殊的项目，在地址栏中没有给出项目目录时，对应的就是ROOT项目。</p>
-<p>http://localhost:8080/examples，进入示例项目。其中examples就是项目名，即文件夹的名字。</p>
+<p><a href="http://localhost:8080/examples%EF%BC%8C%E8%BF%9B%E5%85%A5%E7%A4%BA%E4%BE%8B%E9%A1%B9%E7%9B%AE%E3%80%82%E5%85%B6%E4%B8%ADexamples%E5%B0%B1%E6%98%AF%E9%A1%B9%E7%9B%AE%E5%90%8D%EF%BC%8C%E5%8D%B3%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%82" target="_blank" rel="noopener noreferrer">http://localhost:8080/examples，进入示例项目。其中examples就是项目名，即文件夹的名字。</a></p>
 <p>7、work：运行时生成的文件，最终运行的文件都在这里。通过webapps中的项目生成的！可以把这个目录下的内 容删除，再次运行时会生再次生成work目录。当客户端用户访问一个JSP文件时，Tomcat会通过JSP生成Java文 件，然后再编译Java文件生成class文件，生成的java和class文件都会存放到这个目录下。</p>
 <p>8、LICENSE：许可证。</p>
 <p>9、NOTICE：说明文件。</p>
 <p>通过url访问服务器:</p>
-<p>url:http://服务器的ip地址:端口号/项目名/被访问的页面</p>
-<p>示例:http://localhost:8080/test0918</p>
+<p>url:<a href="http://xn--ip-fr5c86lw2a0cw16k83z" target="_blank" rel="noopener noreferrer">http://服务器的ip地址</a>:端口号/项目名/被访问的页面</p>
+<p>示例:<a href="http://localhost:8080/test0918" target="_blank" rel="noopener noreferrer">http://localhost:8080/test0918</a></p>
 <p>注: (1)启动tomcat后,tomcat会加载部署在服务器端的所有项目 (2) 浏览器访问的页面是服务器端的页面,基本上服务器的项目和工作空间的项目要保持一致</p>
 <p>(3)IntelliJ IDEA配置Tomcat</p>
 <p>1，点击Run</p>
