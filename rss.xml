@@ -6,8 +6,8 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 23 Dec 2024 16:34:29 GMT</pubDate>
-    <lastBuildDate>Mon, 23 Dec 2024 16:34:29 GMT</lastBuildDate>
+    <pubDate>Tue, 24 Dec 2024 15:59:04 GMT</pubDate>
+    <lastBuildDate>Tue, 24 Dec 2024 15:59:04 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
@@ -31,27 +31,23 @@
     <category>工具</category>
     <category>图床</category>
     <category>Mybatis</category>
+    <category>快速导航</category>
+    <category>编程知识库</category>
     <category>服务器监测</category>
+    <category>技术文档</category>
     <category>mysql</category>
     <category>linux</category>
     <category>生活</category>
     <category>Java</category>
     <category>实战项目</category>
-    <category>导航</category>
-    <category>系统设计</category>
-    <category>技术教程</category>
-    <category>书籍</category>
-    <category>快速导航</category>
-    <category>编程知识库</category>
-    <category>影视</category>
-    <category>音乐</category>
+    <category>捣鼓</category>
     <category>java</category>
     <category>后端</category>
     <category>javaweb</category>
     <item>
       <title>docker安装umami</title>
-      <link>https://blog.lxip.top/notes/docker/umami-install.html</link>
-      <guid>https://blog.lxip.top/notes/docker/umami-install.html</guid>
+      <link>https://blog.lxip.top/om/docker/umami-install.html</link>
+      <guid>https://blog.lxip.top/om/docker/umami-install.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker安装umami</source>
       <description>介绍 在众多的分析工具中，有google analyze、baidu analyze、51La等，为什么选择umami呢，原因在于umami可以用于自由部署、网站数据追踪、埋点等，数据可以掌握在自己手中，或者说灵活度更高，可以接入个人站点中展示网站访问情况。 umami优点： 简单分析 Umami 只测量你关心的重要指标：网页浏览量、使用的设备以及访问...</description>
       <category>docker</category>
@@ -232,8 +228,8 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>02-hyprland主题使用</title>
-      <link>https://blog.lxip.top/questionskills/archlinux/01-hyprland.html</link>
-      <guid>https://blog.lxip.top/questionskills/archlinux/01-hyprland.html</guid>
+      <link>https://blog.lxip.top/messing/archlinux/01-hyprland.html</link>
+      <guid>https://blog.lxip.top/messing/archlinux/01-hyprland.html</guid>
       <source url="https://blog.lxip.top/rss.xml">02-hyprland主题使用</source>
       <description>参考：hyperland安装： https://xiaochai.website/archives/zai-nvidiaxia-an-zhuang-hyprlandshou-ba-shou-qin-ce-ke-yong 参考视频：https://www.youtube.com/watch?v=1_Ui6dgH9Vs 推荐 hyprland主题安装 1、...</description>
       <category>archlinux</category>
@@ -388,45 +384,43 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>vscode运行go</title>
-      <link>https://blog.lxip.top/notes/go/vscode%E8%BF%90%E8%A1%8Cgo.html</link>
-      <guid>https://blog.lxip.top/notes/go/vscode%E8%BF%90%E8%A1%8Cgo.html</guid>
+      <link>https://blog.lxip.top/go/install/vscode%E8%BF%90%E8%A1%8Cgo.html</link>
+      <guid>https://blog.lxip.top/go/install/vscode%E8%BF%90%E8%A1%8Cgo.html</guid>
       <source url="https://blog.lxip.top/rss.xml">vscode运行go</source>
-      <description>配置 VSCode 开发环境 1、安装GO插件 先在vscode中安装插件 1.1 通过go扩展插件安装 `shift``p` `shift``p` 安装完成后，控制台打印的效果： 1.2 通过命令安装 在cmd窗口，输入以下命令进行安装 注意：cmd窗口需要 最后，</description>
+      <description>配置 VSCode 开发环境 这里使用的是 VSCode 进行开发 1、安装GO插件 先在vscode中安装插件 1.1 通过go扩展插件安装 在扩展程序中安装 Go 插件 ctrl+ shift + p 输入 Go:Show All Commands 或者 ctrl+ shift + p 直接找到 Go:Install/Update Tools，选择...</description>
       <category>Go</category>
       <pubDate>Thu, 12 Sep 2024 10:45:13 GMT</pubDate>
       <content:encoded><![CDATA[<h2>配置 VSCode 开发环境</h2>
 <blockquote>
+<p>这里使用的是 VSCode 进行开发</p>
 </blockquote>
 <h3>1、安装GO插件</h3>
 <p>先在vscode中安装插件</p>
 <figure><figcaption></figcaption></figure>
 <p>1.1 通过go扩展插件安装</p>
-<ul>
-<li>
-`shift``p`</li>
-<li>
-`shift``p`</li>
-<li><figcaption></figcaption></li>
-</ul>
+<p>在扩展程序中安装 Go 插件</p>
+<p>ctrl+ <code>shift</code> + <code>p</code> 输入 Go:Show All Commands</p>
+<p>或者 ctrl+ <code>shift</code> + <code>p</code> 直接找到  Go:Install/Update Tools，选择所有工具，并确定安装。</p>
+<figure><figcaption></figcaption></figure>
 <p>安装完成后，控制台打印的效果：</p>
 <figure><figcaption></figcaption></figure>
 <p>1.2 通过命令安装</p>
 <p>在cmd窗口，输入以下命令进行安装</p>
-<div class="language-plain line-numbers-mode" data-highlighter="shiki" data-ext="plain" data-title="plain" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>go get -v github.com/mdempsky/gocode</span></span>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>go get -v github.com/mdempsky/gocode</span></span>
 <span class="line"><span>go get -v github.com/uudashr/gopkgs/v2/cmd/gopkgs</span></span>
 <span class="line"><span>go get -v github.com/rogpeppe/godef</span></span>
 <span class="line"><span>go get -u github.com/ramya-rao-a/go-outline</span></span>
 <span class="line"><span>go get -v github.com/sqs/goreturns</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>注意：cmd窗口需要</p>
+<p>注意：cmd窗口需要以管理员身份运行</p>
 </blockquote>
-<p>最后，</p>
+<p>最后，安装 go 的开发依赖，就有语法提示，包提示等功能。 Vscode 的 Go 开发环境也就安装完成了。</p>
 ]]></content:encoded>
     </item>
     <item>
       <title>go安装</title>
-      <link>https://blog.lxip.top/notes/go/go%E5%AE%89%E8%A3%85.html</link>
-      <guid>https://blog.lxip.top/notes/go/go%E5%AE%89%E8%A3%85.html</guid>
+      <link>https://blog.lxip.top/go/install/go%E5%AE%89%E8%A3%85.html</link>
+      <guid>https://blog.lxip.top/go/install/go%E5%AE%89%E8%A3%85.html</guid>
       <source url="https://blog.lxip.top/rss.xml">go安装</source>
       <description>下载Go 下载地址：https://studygolang.com/dl 一、go安装 这种方式会自动帮把go环境配置.</description>
       <category>Go</category>
@@ -446,18 +440,19 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>go-window环境安装（推荐）</title>
-      <link>https://blog.lxip.top/notes/go/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89.html</link>
-      <guid>https://blog.lxip.top/notes/go/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89.html</guid>
+      <link>https://blog.lxip.top/go/install/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85(%E6%8E%A8%E8%8D%90).html</link>
+      <guid>https://blog.lxip.top/go/install/go-window%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85(%E6%8E%A8%E8%8D%90).html</guid>
       <source url="https://blog.lxip.top/rss.xml">go-window环境安装（推荐）</source>
-      <description>下载安装包 https://go.dev/learn/ 准备工作 下载编译器 编译器下载： 付费的 vscode、vim 免费 一、go安装 我这里直接以下载go语言安装包方式， 解压到D:\software\go目录下： 二、环境配置 window系统环境变量配置大概位置：高级系统设置&amp;gt;环境变量&amp;gt;系统变量 点击Path： 增加 创建go三方包： 点击...</description>
+      <description>下载安装包 https://go.dev/learn/ 准备工作 下载编译器 编译器下载： https://www.jetbrains.com.cn/go 付费的 vscode、vim 免费 一、go安装 我这里直接以下载go语言安装包方式， 解压到D:\software\go目录下： 二、环境配置 window系统环境变量配置大概位置：高级系统设置&amp;gt;...</description>
       <category>Go</category>
-      <pubDate>Thu, 12 Sep 2024 10:36:13 GMT</pubDate>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>下载安装包</p>
 <p><a href="https://go.dev/learn/" target="_blank" rel="noopener noreferrer">https://go.dev/learn/</a></p>
 <figure><figcaption></figcaption></figure>
 <h2>准备工作</h2>
 <p>下载编译器</p>
 <p>编译器下载：</p>
+<p><a href="https://www.jetbrains.com.cn/go" target="_blank" rel="noopener noreferrer">https://www.jetbrains.com.cn/go</a></p>
 <blockquote>
 <p>付费的</p>
 </blockquote>
@@ -472,6 +467,7 @@ POSTGRES_PASSWORD: 密码</p>
 <figure><figcaption></figcaption></figure>
 <h2>二、环境配置</h2>
 <p>window系统环境变量配置大概位置：高级系统设置&gt;环境变量&gt;系统变量</p>
+<p>变量名：GO_HOME1231</p>
 <div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">go包路径：</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">go1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">23</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">windows</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
@@ -488,6 +484,10 @@ POSTGRES_PASSWORD: 密码</p>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third\pkg</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
 <blockquote>
+<p>GOPATH下三个目录的含义如下：</p>
+<p>src目录下主要存放go的源文件</p>
+<p>pkg目录存放编译好的库文件，主要是*.a文件;</p>
+<p>bin目录主要存放可执行文件</p>
 </blockquote>
 <div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量名：GOPATH</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">变量值：D:\software\</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">go</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-third</span></span></code></pre>
@@ -497,7 +497,7 @@ POSTGRES_PASSWORD: 密码</p>
 <div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">%GOPATH%\bin</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption></figcaption></figure>
 <blockquote>
-<p><strong></strong></p>
+<p><strong>GOPATH 即为存储 Go 工具依赖的路径</strong>，可以自己进行设值，我放在了 GoWorks 自己建的，里面需要包含 src、pkg、bin 三个目录。 设置为</p>
 </blockquote>
 <h3>检测是否安装成功</h3>
 <p>查看版本：</p>
@@ -520,15 +520,13 @@ POSTGRES_PASSWORD: 密码</p>
 </blockquote>
 <h3>常用的 go 代理</h3>
 <ul>
-<li>
-[](<a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a>)</li>
-<li>
-[](<a href="https://mirrors.aliyun.com/goproxy/" target="_blank" rel="noopener noreferrer">https://mirrors.aliyun.com/goproxy/</a>)</li>
-<li>
-[](<a href="https://goproxy.cn/" target="_blank" rel="noopener noreferrer">https://goproxy.cn/</a>)</li>
+<li>goproxy <a href="https://goproxy.io/zh/" target="_blank" rel="noopener noreferrer">https://goproxy.io/zh/</a></li>
+<li>阿里云 <a href="https://mirrors.aliyun.com/goproxy/" target="_blank" rel="noopener noreferrer">https://mirrors.aliyun.com/goproxy/</a></li>
+<li>七牛云 <a href="https://goproxy.cn/" target="_blank" rel="noopener noreferrer">https://goproxy.cn</a></li>
 </ul>
-<h2></h2>
-配置 Go 代理<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 配置 GOPROXY 环境变量</span></span>
+<h2>其他操作系统</h2>
+<p>mac/linux 下配置 Go 代理</p>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 配置 GOPROXY 环境变量</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPROXY</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">https://</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">goproxy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">io</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,direct</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 还可以设置不走 proxy 的私有仓库或组，多个用逗号相隔（可选）</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export GOPRIVATE</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">git</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">mycompany</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.com,</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">github</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">com</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/my/</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">private</span></span></code></pre>
@@ -539,8 +537,8 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>frp-0.59-使用教程</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/frp-0.59-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html</guid>
       <source url="https://blog.lxip.top/rss.xml">frp-0.59-使用教程</source>
       <description>背景 目前需要使用自建的内网穿透工具，就选择了frp，frp也分很多版本，我之前使用的是frp_0.51.2_windows_386版本，现在升级版本为frp_0.59.0_windows_amd64，主要使用这个frp功能有，点对点内网穿透（p2p）、安全地暴露内网服务 和 服务端作为代理进行穿透的三种方式。准备使用点对点或安全的暴露服务方式，之前使...</description>
       <category>frp</category>
@@ -762,8 +760,8 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>frp-0.59-点对点和安全暴露服务</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/frp-0.59-%E7%82%B9%E5%AF%B9%E7%82%B9%E5%92%8C%E5%AE%89%E5%85%A8%E6%9A%B4%E9%9C%B2%E6%9C%8D%E5%8A%A1.html</guid>
       <source url="https://blog.lxip.top/rss.xml">frp-0.59-点对点和安全暴露服务</source>
       <description>背景 目前需要使用自建的内网穿透工具，就选择了frp，frp也分很多版本，我之前使用的是frp_0.51.2_windows_386版本，现在升级版本为frp_0.59.0_windows_amd64，主要使用这个frp功能有，点对点内网穿透（p2p）、安全地暴露内网服务 和 服务端作为代理进行穿透的三种方式。准备使用点对点或安全的暴露服务方式，之前使...</description>
       <category>frp</category>
@@ -932,8 +930,8 @@ POSTGRES_PASSWORD: 密码</p>
     </item>
     <item>
       <title>5-Node安装及配置</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://blog.lxip.top/rss.xml">5-Node安装及配置</source>
       <description>这里就直接写nvm安装node教程，不再写node的安装教程 一、准备工作 nvm安装和使用教程：https://blog.csdn.net/qq_22182989/article/details/125387145 nvm下载地址： https://github.com/coreybutler/nvm-windows/releases 安装步骤点下一...</description>
       <category>lamp-cloud</category>
@@ -996,8 +994,8 @@ npm</p>
     </item>
     <item>
       <title>4-seata-2.0.0-安装及配置</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/4-seata-2.0.0-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://blog.lxip.top/rss.xml">4-seata-2.0.0-安装及配置</source>
       <description>一、准备工作 下载地址：https://seata.apache.org/zh-cn/unversioned/download/seata-server/ Sentinel Version：1.8.6及以上 二、修改配置及启动 seata安装教程：https://blog.csdn.net/jokeMqc/article/details/1363232...</description>
       <category>lamp-cloud</category>
@@ -1404,8 +1402,8 @@ npm</p>
     </item>
     <item>
       <title>3-nacos-server-2.3.2-安装及配置</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/3-nacos-server-2.3.2-%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://blog.lxip.top/rss.xml">3-nacos-server-2.3.2-安装及配置</source>
       <description>一、准备工作 下载地址：https://github.com/alibaba/nacos/releases nacos官网：https://nacos.io/download/release-history/ 安装及配置 1、修改application.properties配置： D:\software\nacos\nacos-server-2.3.1...</description>
       <category>lamp-cloud</category>
@@ -1987,8 +1985,8 @@ npm</p>
     </item>
     <item>
       <title>2-Redis安装及配置</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/2-Redis%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://blog.lxip.top/rss.xml">2-Redis安装及配置</source>
       <description>一、准备工作 redis版本下载：https://redis.io/downloads/ 需要登录 redis客户端下载：https://github.com/RedisInsight/RedisDesktopManager 二、安装 &amp; 配置 安装教程：https://blog.csdn.net/m0_62617719/article/details...</description>
       <category>lamp-cloud</category>
@@ -2293,8 +2291,8 @@ npm</p>
     </item>
     <item>
       <title>1-Mysql8安装及配置</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/1-Mysql8%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://blog.lxip.top/rss.xml">1-Mysql8安装及配置</source>
       <description>一、准备工作 这使用绿色版进行安装mysql8 版本：mysql-8.0.22 二、安装及配置 MySQL8 绿色版安装教程：https://blog.csdn.net/qq_58608526/article/details/134408777 2.1、安装 解压到指定目录位置 创建data目录： 在D:\software\mysql\mysql-8....</description>
       <category>lamp-cloud</category>
@@ -2398,8 +2396,8 @@ npm</p>
     </item>
     <item>
       <title>0-环境安装-整体</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/0-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E6%95%B4%E4%BD%93.html</guid>
       <source url="https://blog.lxip.top/rss.xml">0-环境安装-整体</source>
       <description>mysql mysql8绿色安装教程： https://blog.csdn.net/qq_58608526/article/details/134408777 创建my.ini配置： 执行： 在D:\software\mysql\mysql-8.0.22-winx64\bin目录，输入cmd回车，执行一下命令 maven maven配置： https:...</description>
       <category>lamp-cloud</category>
@@ -2513,8 +2511,8 @@ npm</p>
     </item>
     <item>
       <title>lamp-cloud-项目熟悉</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html</guid>
+      <link>https://blog.lxip.top/java/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html</link>
+      <guid>https://blog.lxip.top/java/pracprojects/lamp-project/lamp-cloud-%E9%A1%B9%E7%9B%AE%E7%86%9F%E6%82%89.html</guid>
       <source url="https://blog.lxip.top/rss.xml">lamp-cloud-项目熟悉</source>
       <description>一、项目地址 本项目统一使用master分支，lamp-cloud mater分支版本是3.10.0 项目地址：https://gitee.com/dromara/lamp-cloud 项目依赖工具：https://gitee.com/zuihou111/lamp-util 代码生成器：https://gitee.com/zuihou111/lamp-...</description>
       <category>lamp-cloud</category>
@@ -2545,7 +2543,7 @@ npm</p>
 </blockquote>
 <h3>2.2 环境安装</h3>
 <blockquote>
-<p>详细安装见：<a href="">0-环境安装-整体.md</a> 、<a href="">1-Mysql8安装及配置.md</a>、<a href="">2-Redis安装及配置.md</a>、<a href="">3-nacos-server-2.3.2-安装及配置.md</a>、<a href="">4-Sentinel-2.0.0-安装及配置.md</a>、<a href="/questionskills/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html" target="_blank">5-Node安装及配置.md</a></p>
+<p>详细安装见：<a href="">0-环境安装-整体.md</a> 、<a href="">1-Mysql8安装及配置.md</a>、<a href="">2-Redis安装及配置.md</a>、<a href="">3-nacos-server-2.3.2-安装及配置.md</a>、<a href="">4-Sentinel-2.0.0-安装及配置.md</a>、<a href="/java/pracprojects/lamp-project/5-Node%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE.html" target="_blank">5-Node安装及配置.md</a></p>
 <p>lamp-web master分支，node版本21，实际上是低于这版本，又高于16版本</p>
 </blockquote>
 <h3>2.3 数据库导入</h3>
@@ -2804,12 +2802,12 @@ Swagger文档: 		<a href="http://192.168.1.79:8773/doc.html" target="_blank" rel
     </item>
     <item>
       <title>window下配置ssh</title>
-      <link>https://blog.lxip.top/notes/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</link>
-      <guid>https://blog.lxip.top/notes/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</guid>
+      <link>https://blog.lxip.top/java/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</link>
+      <guid>https://blog.lxip.top/java/git/window%E4%B8%8B%E9%85%8D%E7%BD%AEssh.html</guid>
       <source url="https://blog.lxip.top/rss.xml">window下配置ssh</source>
       <description>背景 在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。 ssh配置 配置ssh cofnig文件 在C:\Users\catcat\...</description>
       <category>运维</category>
-      <pubDate>Tue, 02 Jul 2024 10:18:13 GMT</pubDate>
+      <pubDate>Tue, 02 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>背景</h2>
 <p>在window下使用git，我习惯使用ssh方式进行拉取推送代码，其他方式流程就没有这么繁琐了。为什么使用SSH方式呢，我不想每次切换不同账号的时候重复输入密码，像github不支持直接输入密码，建议使用ssh方式。gitlab、云效等支持输入访问令牌方式连接远程仓库。</p>
 <h2>ssh配置</h2>
@@ -2894,8 +2892,8 @@ Swagger文档: 		<a href="http://192.168.1.79:8773/doc.html" target="_blank" rel
     </item>
     <item>
       <title>SpringBoot整合xxx-job</title>
-      <link>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</link>
-      <guid>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</guid>
+      <link>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</link>
+      <guid>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88xxx-job.html</guid>
       <source url="https://blog.lxip.top/rss.xml">SpringBoot整合xxx-job</source>
       <description>SpringBoot整合xxl-job 前提是本地或者远程启动了xxl-job服务 引入依赖 2.增加配置 在application-dev.yml中增加 增加XxlJobConfig配置： 3.增加任务调用方法 SampleXxlJob类： 参考：xxl-job使用 附件 参考： https://www.cnblogs.com/sowler/p/17...</description>
       <category>xxl-job</category>
@@ -3059,8 +3057,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>SpringBoot整合Knife4j</title>
-      <link>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</link>
-      <guid>https://blog.lxip.top/notes/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</guid>
+      <link>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</link>
+      <guid>https://blog.lxip.top/java/projectintegration/SpringBoot%E6%95%B4%E5%90%88Knife4j.html</guid>
       <source url="https://blog.lxip.top/rss.xml">SpringBoot整合Knife4j</source>
       <description>介绍 Knife4j 是 springfox 3.0.0 和 springdoc-openapi 的增强。 knife4j是一个集Swagger2 和 OpenAPI3为一体的增强解决方案，帮助开发者快速聚合使用OpenAPI规范，快速生成API文档，并且提供一些额外的功能. 参考：https://doc.xiaominfo.com/docs/quic...</description>
       <category>项目整合</category>
@@ -3168,8 +3166,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>eclipse-卡顿问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/eclipse-%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">eclipse-卡顿问题</source>
       <description>2024-05-20 Eclipse卡顿问题 背景 在Eclipse__中，使用快捷键Ctrl+C__进行复制时，可能会遇到编辑器卡顿或者无响应的问题。这主要是因为Eclipse在按下Ctrl键时，会自动切换到与当前代码相关联的文件，如果这些文件较大或者无法找到，就会导致卡顿甚至假死状态。为了解决这个问题，可以将自动进入关联文件的快捷键改为其他键，...</description>
       <category>项目</category>
@@ -3208,8 +3206,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>git指定单文件提交</title>
-      <link>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</link>
-      <guid>https://blog.lxip.top/notes/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</guid>
+      <link>https://blog.lxip.top/java/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</link>
+      <guid>https://blog.lxip.top/java/git/git%E6%8C%87%E5%AE%9A%E5%8D%95%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4.html</guid>
       <source url="https://blog.lxip.top/rss.xml">git指定单文件提交</source>
       <description>背景 在使用idea提交文件时，当提交大文件或者文件数量过多时，你想要提交文件是提交不上去的，这样在idea设置中也可以解决，但是有时候并不方便，于是就有了使用git指定文件提交的方式来解决idea提交问题。 基本命令操作 git指定文件提交 提交代码前，先拉取代码 检查文件状态 将修改后的文件，暂存在暂存区 提交这个文件： 推送到仓库 扩展： 表示增...</description>
       <category>运维</category>
@@ -3239,8 +3237,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>eclipse引入lombok不生效问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/eclipse%E5%BC%95%E5%85%A5lombok%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">eclipse引入lombok不生效问题</source>
       <description>遇到的问题 在eclipse中使用lombok，省get/set方法，但是在新的环境中引入lombok.jar包并不生效，代码中有get方法就会飘红。 原因：lombok在项目中没有生效，get/set也就没有。 解决方法 在D:\programTool\eclipse2019\eclipse.ini 最后一行添加你lombok.jar所在的路径 最后...</description>
       <category>项目</category>
@@ -3335,8 +3333,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/question10-%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">项目打包之java compiled by a more recent version of the Java Runtime (class file version 61.0)</source>
       <description>背景 使用2023年最新版本的idea编译器、JDK1.8，可以正常启动项目SpringBoot项目，使用maven插件打包项目时报错。 遇到的问题： 报错： 原因： 最开始我想到的是，官方最新版本编译器强制使用JDK17， 后续验证，才发现并不是这样，你也能正常引用jdk1.8。 如果没有指定 spring-boot-maven-plugin 的版本...</description>
       <category>Springboot</category>
@@ -3382,8 +3380,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>maven私服批量上传本地依赖</title>
-      <link>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</link>
-      <guid>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</guid>
+      <link>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</link>
+      <guid>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E4%BE%9D%E8%B5%96.html</guid>
       <source url="https://blog.lxip.top/rss.xml">maven私服批量上传本地依赖</source>
       <description>maven本地仓库依赖上传到远程仓库 本地仓库上传到远程仓库 批量上传： 批量本地仓库依赖（jar包）上传脚本： 在maven本地仓库目录下创建 batch_upload_repo2.sh 脚本，并将上述内容添加进去脚本文件中 在maven本地仓库目录下，右键打开 git 自带的 git bash Here命令窗口： 执行以下命令： sh 脚本名称.s...</description>
       <category>maven</category>
@@ -3435,8 +3433,8 @@ SampleXxlJob类：</p>
     </item>
     <item>
       <title>maven私服搭建教程</title>
-      <link>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</link>
-      <guid>https://blog.lxip.top/questionskills/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</guid>
+      <link>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</link>
+      <guid>https://blog.lxip.top/java/maven/maven%E7%A7%81%E6%9C%8D%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.html</guid>
       <source url="https://blog.lxip.top/rss.xml">maven私服搭建教程</source>
       <description>sonatype-nexus私服搭建 搭建 下载安装包： 官方地址：https://www.sonatype.com/products/sonatype-nexus-oss-download 这里我提供安装包： https://www.123pan.com/s/tB5A-F4GYd.html 提取码:I3hp 这里以window10安装为例： nexu...</description>
       <category>maven</category>
@@ -3480,8 +3478,8 @@ sonatype-work</p>
     </item>
     <item>
       <title>mac配置gitlab</title>
-      <link>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</link>
-      <guid>https://blog.lxip.top/notes/git/mac%E9%85%8D%E7%BD%AEgitlab.html</guid>
+      <link>https://blog.lxip.top/java/git/mac%E9%85%8D%E7%BD%AEgitlab.html</link>
+      <guid>https://blog.lxip.top/java/git/mac%E9%85%8D%E7%BD%AEgitlab.html</guid>
       <source url="https://blog.lxip.top/rss.xml">mac配置gitlab</source>
       <description>使用ssh方式拉取gitlab仓库代码 背景 在公司mac电脑上需要将gitee仓库代码迁移到公司gitlab代码仓库中，而我习惯使用ssh方式关联git仓库。我也喜欢使用下面简单粗暴的方式来配置git，之前玩git在window10系统上玩的比较多，各种操作都玩过，比如：创建分支、切换分支、分支代码合并、单文件历史查看、当前文件与上一个版本文件进行比...</description>
       <category>git</category>
@@ -3560,8 +3558,8 @@ config文件</p>
     </item>
     <item>
       <title>gitlab导入本地或远程仓库代码</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/gitlab%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%88%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
       <source url="https://blog.lxip.top/rss.xml">gitlab导入本地或远程仓库代码</source>
       <description>gitee仓库项目迁移到gitlab仓库 背景 之前一直使用gitee代码仓库提交代码，现在需要将gitee仓库中的代码迁移到gitlab中，并保留原有的提交记录。 前提 配置好了本地git，并本地与gitlab仓库已连接。 我这里使用 ssh方式拉去代码，因此需要配置ssh密钥 步骤 也可以直接使用gitee仓库中url地址直接导入整个仓库到gitl...</description>
       <category>git</category>
@@ -3641,8 +3639,8 @@ config文件</p>
     </item>
     <item>
       <title>idea中文乱码问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/question07-idea%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">idea中文乱码问题</source>
       <description>背景 在idea2022版本中运行项目时，server控制台中文出现乱码。之前解决的是在debug时，返回的数据中的中文乱码，原因是tomcat8.5的编码问题，在edit configurations中找到vm options并添加设置UTF-8即可解决。而这并不能解决控制台中文乱码，网上多数都是说改这改那，但并没有解决自己的需求。 遇到问题 ide...</description>
       <category>项目</category>
@@ -3673,8 +3671,8 @@ config文件</p>
     </item>
     <item>
       <title>项目中文乱码</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/question06-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81.html</guid>
       <source url="https://blog.lxip.top/rss.xml">项目中文乱码</source>
       <description>背景 在spring大杂烩项目中，调用第三方接口时，出现中文乱码。 这里使用到spring、springmvc、本地tomcat、idea 找问题心流： 在电脑中使用idea打开项目，配置好了相应环境。之前使用的另外一个spring项目，可以正常使用，使用postman调接口返回的数据并没有中文乱码。现在使用的另外一个项目，我是想吐槽一下了，项目拉下是...</description>
       <category>项目</category>
@@ -3705,8 +3703,8 @@ tomcat字符集问题</p>
     </item>
     <item>
       <title>eclipse-内存问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/eclipse-%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">eclipse-内存问题</source>
       <description>启动超时问题 对tomcat启动项目，将超时时间（timeouts）延迟 tomcat6内存问题 eclipse使用tomcat6运行项目 eclipse版本是2019-06（4.12.0） 遇到的问题： 原因： 提示内存溢出，电脑内存不够，运行起来卡顿 解决方法 在双击tomcat server at localhost 配置之后，找到open la...</description>
       <category>项目</category>
@@ -3737,8 +3735,8 @@ eclipse版本是2019-06（4.12.0）</p>
     </item>
     <item>
       <title>问题集-插件类</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/%E9%97%AE%E9%A2%98%E9%9B%86-%E6%8F%92%E4%BB%B6%E7%B1%BB.html</guid>
       <source url="https://blog.lxip.top/rss.xml">问题集-插件类</source>
       <description>lombok在eclipse中不生效问题 遇到的问题 lombok在eclipse中不生效，使用了@Data注解无法调用set/get方法 解决方法： 把lombok.jar包复制到了eclipse安装目录，并在 eclipse.ini 文件中最后一行加入了一句话： 最后在项目中引入lombok.jar，然后重启eclipse，lombok插件就生效了...</description>
       <category>项目</category>
@@ -3767,8 +3765,8 @@ eclipse版本是2019-06（4.12.0）</p>
     </item>
     <item>
       <title>老项目导入问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E9%97%AE%E9%A2%98.html</guid>
       <source url="https://blog.lxip.top/rss.xml">老项目导入问题</source>
       <description>背景 导入eclipse项目，可能就会遇到这样那样的问题 比如 该项目时jdk1.7版本的老项目 一、遇到的问题： 参考点：https://blog.csdn.net/qq_45988641/article/details/117474148 https://blog.csdn.net/netwalk/article/details/52005546 ...</description>
       <category>项目</category>
@@ -3795,8 +3793,8 @@ eclipse版本是2019-06（4.12.0）</p>
     </item>
     <item>
       <title>Oracle之ORA-29275-部分多字节字符</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/Oracle%E4%B9%8BORA-29275-%E9%83%A8%E5%88%86%E5%A4%9A%E5%AD%97%E8%8A%82%E5%AD%97%E7%AC%A6.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Oracle之ORA-29275-部分多字节字符</source>
       <description>背景： 在Oracle数据库中，通过查询 A表所有数据，发现某个字段出现字符问题 一、遇到的问题 排查过程： 1.先定位到哪条数据有问题，这可以通过二分查找方式缩小查询范围 2.拿出A所有的字段，进行查询，同样通过二分查找的方式缩小查询范围 3.最终定位到 A表中的 w字段有问题 显示如下错误：ORA-29275: 部分多字节字符 原因分析： 可能某个...</description>
       <category>数据库</category>
@@ -3848,8 +3846,8 @@ to_single_byte(c)转换成半角</p>
     </item>
     <item>
       <title>maven之‘settings.xml‘-has-syntax-errors</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/maven%E4%B9%8B%E2%80%98settings.xml%E2%80%98%20has%20syntax%20errors.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/maven%E4%B9%8B-settings.xml-has-syntax-errors.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/maven%E4%B9%8B-settings.xml-has-syntax-errors.html</guid>
       <source url="https://blog.lxip.top/rss.xml">maven之‘settings.xml‘-has-syntax-errors</source>
       <description>背景： 在springboot项目中拉取依赖，出现oracle对应的依赖不存在或没找到，如下所示： 之前一直使用阿里云 http://Maven.aliyun.com/nexus/content/groups/public/ maven仓库地址，拉去依赖的时候报错说没找到ojdbc6对应的 11.2.0.3版本。 一、遇到的问题 二、解决方法 方法1：...</description>
       <category>maven</category>
@@ -4201,8 +4199,8 @@ to_single_byte(c)转换成半角</p>
     </item>
     <item>
       <title>eclipse项目在idea中打开</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</guid>
       <source url="https://blog.lxip.top/rss.xml">eclipse项目在idea中打开</source>
       <description>首先拿到项目地址： 使用svn拉到本地目录位置（自定义） 背景 当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。 开发工具的选择 是选择使用eclips...</description>
       <category>项目</category>
@@ -4314,8 +4312,8 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>工作必会工具</title>
-      <link>https://blog.lxip.top/notes/devtool/front-dev-tool.html</link>
-      <guid>https://blog.lxip.top/notes/devtool/front-dev-tool.html</guid>
+      <link>https://blog.lxip.top/java/devtool/front-dev-tool.html</link>
+      <guid>https://blog.lxip.top/java/devtool/front-dev-tool.html</guid>
       <source url="https://blog.lxip.top/rss.xml">工作必会工具</source>
       <description>git Gitee、GitHub、GitLab、Gitcode 教程：https://www.bilibili.com/video/BV1fN4y1r7ie https://www.bilibili.com/video/BV14V4y1U7k9/ https://www.bilibili.com/video/BV1Ga4y1G79o 注：有git前置知...</description>
       <category>工具</category>
@@ -4370,8 +4368,8 @@ Oracle通常使用 Pl/SQL 连接工具，不过Navicat也能使用，通过使�
     </item>
     <item>
       <title>常用工具</title>
-      <link>https://blog.lxip.top/notes/devtool/use-tool.html</link>
-      <guid>https://blog.lxip.top/notes/devtool/use-tool.html</guid>
+      <link>https://blog.lxip.top/java/devtool/use-tool.html</link>
+      <guid>https://blog.lxip.top/java/devtool/use-tool.html</guid>
       <source url="https://blog.lxip.top/rss.xml">常用工具</source>
       <description>云效 阿里云云效git代码管理仓库 git配置：如何配置SSH密钥及自定义SSH认证密钥的路径_云效(Apsara Devops)-阿里云帮助中心 (aliyun.com) pdmaner： http://www.pdmaner.com/download/latest 文档：https://www.yuque.com/pdmaner/docs/pdma...</description>
       <category>工具</category>
@@ -4401,8 +4399,8 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     </item>
     <item>
       <title>docker之xxl-job</title>
-      <link>https://blog.lxip.top/notes/docker/docker%E4%B9%8Bxxl-job.html</link>
-      <guid>https://blog.lxip.top/notes/docker/docker%E4%B9%8Bxxl-job.html</guid>
+      <link>https://blog.lxip.top/om/docker/docker%E4%B9%8Bxxl-job.html</link>
+      <guid>https://blog.lxip.top/om/docker/docker%E4%B9%8Bxxl-job.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker之xxl-job</source>
       <description>xxl-job 拉取镜像： 启动容器： /root/docker-data/xxl-job/application.properties 其中的application.properties文件需要从xxl-job项目中拿到，并需要要修改数据库连接账号密码，然后就是 application.properties xxl-job连接数据库问题 背景： 在项...</description>
       <category>docker</category>
@@ -4527,8 +4525,8 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     </item>
     <item>
       <title>docker安装Oracle容器</title>
-      <link>https://blog.lxip.top/notes/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</link>
-      <guid>https://blog.lxip.top/notes/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</guid>
+      <link>https://blog.lxip.top/om/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</link>
+      <guid>https://blog.lxip.top/om/docker/docker%E5%AE%89%E8%A3%85Oracle%E5%AE%B9%E5%99%A8.html</guid>
       <source url="https://blog.lxip.top/rss.xml">docker安装Oracle容器</source>
       <description>使用docker方式手动方式安装各类容器（服务） 镜像查找方式：https://hub.docker.com/ 安装Oracle 参考1：https://blog.csdn.net/javaboyweng/article/details/125486242 参考2：Docker-14：Docker安装Oracle11g (赞) 参考3：[docker安...</description>
       <category>docker</category>
@@ -4641,8 +4639,8 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     </item>
     <item>
       <title>xxl-job使用</title>
-      <link>https://blog.lxip.top/notes/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</link>
-      <guid>https://blog.lxip.top/notes/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</guid>
+      <link>https://blog.lxip.top/java/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</link>
+      <guid>https://blog.lxip.top/java/projectintegration/xxl-job%E4%BD%BF%E7%94%A8.html</guid>
       <source url="https://blog.lxip.top/rss.xml">xxl-job使用</source>
       <description>这里使用xxl-job-admin 2.3.1版本做演示 xxl-job访问地址：http://127.0.0.1:8098/xxl-job-admin 端口跟application.properties 配置对应上，默认的用户名：admin 密码：123456 导入数据库 xxl-job使用的是mysql数据库，版本是mysql5.7或者使用mysq...</description>
       <category>xxl-job</category>
@@ -4795,8 +4793,8 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     </item>
     <item>
       <title>spring项目整合xxl-job</title>
-      <link>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</link>
-      <guid>https://blog.lxip.top/notes/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</guid>
+      <link>https://blog.lxip.top/java/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</link>
+      <guid>https://blog.lxip.top/java/projectintegration/spring%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88xxl-job.html</guid>
       <source url="https://blog.lxip.top/rss.xml">spring项目整合xxl-job</source>
       <description>背景 当你的项目中还在使用配置管理定时任务时，为了提高效率，提高可用性，你就需要一个可以可视化的定时任务管理工具来对项目进行管理，而xxl-job就不错的选择。 准备工作 环境和版本确定 这里选择：xxl-job-admin-2.3.1版本、需要用到了jdk1.8 项目地址：https://gitee.com/xuxueli0323/xxl-job/t...</description>
       <category>xxl-job</category>
@@ -5035,8 +5033,8 @@ git配置：<a href="https://help.aliyun.com/document_detail/153709.html" target
     </item>
     <item>
       <title>熟悉项目 &amp; idea导入eclipse项目</title>
-      <link>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</guid>
+      <link>https://blog.lxip.top/java/install/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</link>
+      <guid>https://blog.lxip.top/java/install/eclipse%E9%A1%B9%E7%9B%AE%E5%9C%A8idea%E4%B8%AD%E6%89%93%E5%BC%80.html</guid>
       <source url="https://blog.lxip.top/rss.xml">熟悉项目 &amp; idea导入eclipse项目</source>
       <description>背景 当你拿到一个项目时，这个项目可能跟你想象得不一样，它跟你平时写的项目不一致。这时，你需要先确定是先项目是什么项目、使用的环境是怎么的？可能你会遇到这样那样的问题，在同一台服务器上有多人共同使用，遇到权限问题、安装软件重启服务器问题、配置不生效问题等。 开发工具的选择 是选择使用eclipse还是idea，根据自己的使用习惯。 环境： 可能拿到一个...</description>
       <category>项目</category>
@@ -5147,12 +5145,12 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>Cloudfare和Telegraph-Image-实现图床搭建</title>
-      <link>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</link>
-      <guid>https://blog.lxip.top/questionskills/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</guid>
+      <link>https://blog.lxip.top/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</link>
+      <guid>https://blog.lxip.top/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Cloudfare和Telegraph-Image-实现图床搭建</source>
       <description>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。 核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔 背景 想有个免费、稳定、访问速度还可以的，并且就算图片丢失也没问题的图床工具，于是就有了Telegraph-I...</description>
       <category>图床</category>
-      <pubDate>Sun, 15 Oct 2023 09:49:00 GMT</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>基于Cloudflare Pages服务和开源图床项目Telegraph来实现免费使用图床。</p>
 <p>核心原理就是利用Cloudflare Workers和Pages的免费额度，将图床系统和图片储存都托管在Cloudflare网络中，从而实现一毛不拔</p>
@@ -5191,8 +5189,8 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>frp实现p2p远程连接桌面</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0p2p%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A1%8C%E9%9D%A2.html</guid>
       <source url="https://blog.lxip.top/rss.xml">frp实现p2p远程连接桌面</source>
       <description>背景 国内服务器贵，并且宽带越高越贵。在连接一个远程桌面的时候就可能很卡了。而且你想使用国外vps时，连接的时候延迟太高，连接也很卡。想节省服务器带宽或者服务器带宽不理想，由此frp 使用 p2p 模式，点对点穿透，可节约服务器带宽。 对等式网络（peer-to-peer， 简称P2P），又称点对点技术，是无中心服务器、依靠用户群（peers）交换信息...</description>
       <category>frp</category>
@@ -5366,8 +5364,8 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>frp-p2p配置说明</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/frp-p2p%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html</guid>
       <source url="https://blog.lxip.top/rss.xml">frp-p2p配置说明</source>
       <description>标准的配置文件 访问者、被访问者都修改frpc.ini,中间的媒婆服务器修改frps.ini，其中的c就是client客户端，s指server服务器。 被访问者：frpc.ini 服务器：frps.ini 访问者：frpc.ini 个人配置文件 被访问者：frpc.ini mstsc表示远程桌面的命令行指令_mstsc_，原来它的意思是Microsof...</description>
       <category>frp</category>
@@ -5578,8 +5576,8 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>mybatis传数值问题</title>
-      <link>https://blog.lxip.top/questionskills/workquestions/mybatis-question.html</link>
-      <guid>https://blog.lxip.top/questionskills/workquestions/mybatis-question.html</guid>
+      <link>https://blog.lxip.top/java/workquestions/mybatis-question.html</link>
+      <guid>https://blog.lxip.top/java/workquestions/mybatis-question.html</guid>
       <source url="https://blog.lxip.top/rss.xml">mybatis传数值问题</source>
       <description>mybatis传数值问题： 当传 0时，mybatis默认会处理为空串 https://blog.csdn.net/programmer_sir/article/details/45896431 示例： 如果不空null并且不是空字符串才去修改这个值，但这样写只能针对字符串(String)类型，如果是Integer类型的话就会有问题了。 ，0不为空也不...</description>
       <category>Mybatis</category>
@@ -5600,9 +5598,229 @@ idea就会提示找到svn对应的.exe</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>编程工具</title>
+      <link>https://blog.lxip.top/tool/share/code-tool.html</link>
+      <guid>https://blog.lxip.top/tool/share/code-tool.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">编程工具</source>
+      <description>记录编程相关工具，方便后续查找使用，工具适用于前后端开发、测试、运维等 连接工具 Navicat Premium16永久激活教程 教程参考：https://zhuanlan.zhihu.com/p/642328966 下载地址：点击下载 提取码:IRRz 点击下载 （激活工具） 专业软件 RuanCang：专业软件免费下载。 官网：https://ru...</description>
+      <category>工具</category>
+      <pubDate>Tue, 08 Aug 2023 14:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>记录编程相关工具，方便后续查找使用，工具适用于前后端开发、测试、运维等</p>
+</blockquote>
+<h2>连接工具</h2>
+<p>Navicat Premium16永久激活教程</p>
+<blockquote>
+<p>教程参考：<a href="https://zhuanlan.zhihu.com/p/642328966" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/642328966</a></p>
+</blockquote>
+<p>下载地址：<a href="https://www.123pan.com/s/tB5A-gewYd.html" target="_blank" rel="noopener noreferrer">点击下载</a> 提取码:IRRz<br>
+<a href="https://www.123pan.com/s/tB5A-FewYd.html%E6%8F%90%E5%8F%96%E7%A0%81:tWUs" target="_blank" rel="noopener noreferrer">点击下载</a>  （激活工具）</p>
+<h2>专业软件</h2>
+<ul>
+<li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
+</blockquote>
+<h2>组件库</h2>
+<ul>
+<li><a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">vue-clock2</a>：一款简单的<strong>图形时钟组件</strong>，可以自定义时间、颜色、边框、背景、大小。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://github.com/bestvist/vue-clock2/" target="_blank" rel="noopener noreferrer">GitHub - bestvist/vue-clock2: vue clock component</a></p>
+<p>演示：<a href="https://bestvist.github.io/vue-clock2/docs/" target="_blank" rel="noopener noreferrer">vue-clock2 | vue clock component (bestvist.github.io)</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/javaLuo/vue-flip-down" target="_blank" rel="noopener noreferrer">vue-flip-down</a>：一款简单的<strong>翻页倒计时组件</strong>，可以自定义结束时间、显示类型、空隙间的文字。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://github.com/javaLuo/vue-flip-down" target="_blank" rel="noopener noreferrer">GitHub - javaLuo/vue-flip-down: vue 翻页倒计时组件 妙啊</a></p>
+<p>演示：<a href="https://isluo.com/work/vue-flip-down/" target="_blank" rel="noopener noreferrer">Vue-flip-down DEMO (isluo.com)</a></p>
+</blockquote>
+<ul>
+<li><a href="https://codepen.io/quintiontang/pen/MWrywqW" target="_blank" rel="noopener noreferrer">crayon-clock</a>：一款<strong>极简时钟组件</strong>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://www.devpoint.cn/article/390.shtml" target="_blank" rel="noopener noreferrer">VUE构建数字时钟组件|在线数字时钟_devpoint</a></p>
+<p>演示：<a href="https://codepen.io/quintiontang/pen/MWrywqW" target="_blank" rel="noopener noreferrer">crayon-clock (codepen.io)</a></p>
+<p>代码：<a href="https://gitee.com/xt-gitee/codes/cv451silwfzm63dqa9xe863" target="_blank" rel="noopener noreferrer">https://gitee.com/xt-gitee/codes/cv451silwfzm63dqa9xe863</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/kuan1/kuan-vue-flip-clock" target="_blank" rel="noopener noreferrer">kuan-vue-flip-clock</a>：一款类似于经典<code>flip</code>的<strong>翻页时钟组件</strong>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://github.com/kuan1/kuan-vue-flip-clock" target="_blank" rel="noopener noreferrer">GitHub - kuan1/kuan-vue-flip-clock: 使用vue制作翻页时钟</a></p>
+<p>演示：<a href="https://www.kuan1.top/kuan-vue-flip-clock/" target="_blank" rel="noopener noreferrer">kuan-vue-flip-clock (kuan1.top)</a></p>
+</blockquote>
+<h2>工具库</h2>
+<ul>
+<li><a href="https://hutool.cn/" target="_blank" rel="noopener noreferrer">Hutool</a>：一个小而全的<code>Java</code>工具类库，通过<strong>静态方法封装</strong>，降低相关<code>API</code>的学习成本，提高工作效率，使<code>Java</code>拥有函数式语言般的优雅，让<code>Java</code>语言也可以“甜甜的”。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://hutool.cn/" target="_blank" rel="noopener noreferrer">Hutool — 🍬A set of tools that keep Java sweet.</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/dromara/hutool/" target="_blank" rel="noopener noreferrer">hutool: 🍬小而全的Java工具类库，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。 (gitee.com)</a></p>
+<p><code>API</code>文档：<a href="https://apidoc.gitee.com/dromara/hutool/" target="_blank" rel="noopener noreferrer">Overview (hutool-码云(gitee.com))</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/DiUS/java-faker" target="_blank" rel="noopener noreferrer">java-faker</a>：一个获得<strong>假数据</strong>的神器【 <strong>Faker-骗子</strong> 】。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/DiUS/java-faker" target="_blank" rel="noopener noreferrer">GitHub - DiUS/java-faker: Brings the popular ruby faker gem to Java</a></p>
+<p><code>API</code>文档：<a href="http://dius.github.io/java-faker/apidocs/index.html" target="_blank" rel="noopener noreferrer">Overview (Java Faker 0.19-SNAPSHOT API) (dius.github.io)</a></p>
+</blockquote>
+<ul>
+<li><a href="https://guava.dev/" target="_blank" rel="noopener noreferrer">Guava</a>：<code>Guava</code>是<code>Google</code>提供的一组<strong>核心<code>Java</code>库</strong>，其中包括新的集合类型（如<code>multimap</code>和<code>multiset</code>）、不可变集合、图形库以及用于并发、<code>I/O</code>、哈希、缓存、原语、字符串等的实用程序。它广泛用于<code>Google</code>中的大多数<code>Java</code>项目，也被许多其他公司广泛使用。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/google/guava" target="_blank" rel="noopener noreferrer">GitHub - google/guava: Google core libraries for Java</a></p>
+<p>官方文档：<a href="https://github.com/google/guava/wiki" target="_blank" rel="noopener noreferrer">Home · google/guava Wiki · GitHub</a></p>
+<p>中文文档：<a href="https://www.yiibai.com/guava/guava_environment.html" target="_blank" rel="noopener noreferrer"> Guava教程</a></p>
+</blockquote>
+<h2>Mac软件</h2>
+<ul>
+<li><a href="https://mos.caldis.me/" target="_blank" rel="noopener noreferrer">Mos</a>：<code>MagicMouse</code>真的是太难用了，<code>Mac</code>上外接鼠标之后，会出现<strong>滚动卡顿</strong>和<strong>自然方向</strong>的问题，通过该软件可以<strong>实现<code>平滑滚动</code>和<code>反转方向</code></strong>，还可以自定义滚动的速度、持续时长，同时该软件<code>免费开源</code>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://mos.caldis.me/" target="_blank" rel="noopener noreferrer">MOS | 一个用于在 MacOS 上平滑你的鼠标滚动效果或单独设置滚动方向的小工具, 让你的滚轮爽如触控板 (caldis.me)</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/Caldis/Mos" target="_blank" rel="noopener noreferrer">https://github.com/Caldis/Mos</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/dwarvesf/hidden" target="_blank" rel="noopener noreferrer">Hidden Bar</a>：<strong>隐藏<code>Mac</code>菜单栏</strong>的小工具，免费开源。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://dwarves.foundation/opensource/" target="_blank" rel="noopener noreferrer">https://dwarves.foundation/opensource/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/dwarvesf/hidden" target="_blank" rel="noopener noreferrer">https://github.com/dwarvesf/hidden</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Splode/pomotroid" target="_blank" rel="noopener noreferrer">Pomotroid</a>：<code>Pomotroid</code>是一个简单且可配置的<strong>番茄计时器</strong>。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/Splode/pomotroid" target="_blank" rel="noopener noreferrer">https://github.com/Splode/pomotroid</a></p>
+<p>官网：<a href="https://splode.github.io/pomotroid/" target="_blank" rel="noopener noreferrer">https://splode.github.io/pomotroid/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/CyC2018/Text-Typesetting" target="_blank" rel="noopener noreferrer">Text-Typesetting</a>：中英混排文档<strong>在线排版工具</strong>。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/CyC2018/Text-Typesetting" target="_blank" rel="noopener noreferrer">https://github.com/CyC2018/Text-Typesetting</a></p>
+<p>官网：<a href="https://cyc2018.github.io/Text-Typesetting/" target="_blank" rel="noopener noreferrer">https://cyc2018.github.io/Text-Typesetting/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://gitee.com/Doocs/md" target="_blank" rel="noopener noreferrer">md</a>：一款高度简洁的<strong>微信公众号推文 <code>Markdown</code> 编辑器</strong>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://doocs.gitee.io/md/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/md/</a></p>
+<p>官网：<a href="https://doocs.github.io/md" target="_blank" rel="noopener noreferrer">https://doocs.github.io/md</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/md" target="_blank" rel="noopener noreferrer">https://github.com/doocs/md</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/md" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/md</a></p>
+</blockquote>
+<ul>
+<li><a href="https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12" target="_blank" rel="noopener noreferrer">Input Source Pro</a>：自动<strong>显示当前输入法名称</strong>的工具。</li>
+</ul>
+<blockquote>
+<p>下载地址：<a href="https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12" target="_blank" rel="noopener noreferrer">https://apps.apple.com/cn/app/input-source-pro/id1537056428?mt=12</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/obsproject/obs-studio" target="_blank" rel="noopener noreferrer">obs-studio</a>：用于<strong>视频录制和直播</strong>的免费开源软件。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/obsproject/obs-studio" target="_blank" rel="noopener noreferrer">https://github.com/obsproject/obs-studio</a></p>
+<p>官网：<a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">https://obsproject.com/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md" target="_blank" rel="noopener noreferrer">awesome-mac</a>：收集了各种类别非常好用的 <strong><code>Mac</code> 应用程序、软件以及工具。</strong></li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener noreferrer">https://github.com/jaywcjlove/awesome-mac</a></p>
+<p>官网：<a href="https://git.io/macx" target="_blank" rel="noopener noreferrer">https://git.io/macx</a></p>
+</blockquote>
+<ul>
+<li><a href="https://gitee.com/xwintop/xJavaFxTool" target="_blank" rel="noopener noreferrer">xJavaFxTool</a>：基于<code>JavaFx</code>搭建的<strong>实用小工具集合</strong>，方便开发过程中的代码编写与调试。</li>
+</ul>
+<blockquote>
+<p><code>Api Doc</code>：<a href="https://apidoc.gitee.com/xwintop/xJavaFxTool/" target="_blank" rel="noopener noreferrer">https://apidoc.gitee.com/xwintop/xJavaFxTool/</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/xwintop/xJavaFxTool" target="_blank" rel="noopener noreferrer">https://gitee.com/xwintop/xJavaFxTool</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/864381832/xJavaFxTool" target="_blank" rel="noopener noreferrer">https://github.com/864381832/xJavaFxTool</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/fvarrui/JavaPackager" target="_blank" rel="noopener noreferrer">JavaPackager</a>：<code>Java</code>应用的<strong>打包工具</strong>，可以为<code>Windows</code>、<code>Mac</code>、<code>Linux</code>打包应用。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/fvarrui/JavaPackager" target="_blank" rel="noopener noreferrer">https://github.com/fvarrui/JavaPackager</a></p>
+</blockquote>
+<ul>
+<li><a href="https://www.coley.software/Recaf/" target="_blank" rel="noopener noreferrer">Recaf</a>：基于JavaFx构建的开源<strong>字节码编辑器。</strong></li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://www.coley.software/Recaf/" target="_blank" rel="noopener noreferrer">https://www.coley.software/Recaf/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/Col-E/Recaf" target="_blank" rel="noopener noreferrer">https://github.com/Col-E/Recaf</a></p>
+</blockquote>
+<ul>
+<li><a href="https://apps.apple.com/cn/app/menubarx-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%B5%8F%E8%A7%88%E5%99%A8/id1575588022?mt=12" target="_blank" rel="noopener noreferrer">MenubarX</a>：一款强大的<code>Mac</code><strong>菜单栏浏览器</strong>。</li>
+</ul>
+<blockquote>
+<p>下载链接：<a href="https://apps.apple.com/cn/app/menubarx-%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%B5%8F%E8%A7%88%E5%99%A8/id1575588022?mt=12" target="_blank" rel="noopener noreferrer">https://apps.apple.com/cn/app/menubarx-强大的菜单栏浏览器/id1575588022?mt=12</a></p>
+</blockquote>
+<ul>
+<li><a href="https://www.apicloud.com/" target="_blank" rel="noopener noreferrer">apicloud</a>：移动<strong>低代码专家，可以使用其<code>APICloud Studio 3</code>开发工具进行快速开发。</strong></li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://www.apicloud.com/" target="_blank" rel="noopener noreferrer">https://www.apicloud.com/</a></p>
+<p><code>APICloud Studio 3</code>下载地址：<a href="https://www.apicloud.com/studio3" target="_blank" rel="noopener noreferrer">https://www.apicloud.com/studio3</a></p>
+</blockquote>
+<ul>
+<li><a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a>：免费开源且跨平台的<strong>音频编辑软件</strong>，可以用来实现降噪。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">https://www.audacityteam.org/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">HandBrake</a>：<code>HandBrake</code>是一款适用于<code>Mac</code>系统的<strong>视频压缩软件（免费开源）</strong>，可压缩<code>MP4</code>视频和其他文件格式，软件可以用于调整诸如帧率，码率，分辨率等参数，以便轻松地压缩视频大小。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">https://handbrake.fr/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/keycastr/keycastr" target="_blank" rel="noopener noreferrer">keycastr</a>：一个开源免费的在桌面上<strong>显示键盘按键</strong>的小工具。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/keycastr/keycastr" target="_blank" rel="noopener noreferrer">https://github.com/keycastr/keycastr</a></p>
+</blockquote>
+<ul>
+<li><a href="https://www.warp.dev/" target="_blank" rel="noopener noreferrer">warp</a>：<code>21世纪</code>的专为程序员开发的<strong>终端工具</strong>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://www.warp.dev/" target="_blank" rel="noopener noreferrer">https://www.warp.dev/</a></p>
+</blockquote>
+<ul>
+<li><a href="https://swh.app/" target="_blank" rel="noopener noreferrer">SwitchHosts</a>：<strong>管理<code>host</code>文件</strong>的开源免费工具。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://swh.app/" target="_blank" rel="noopener noreferrer">https://swh.app/</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/mirrors/switchhosts" target="_blank" rel="noopener noreferrer">https://gitee.com/mirrors/switchhosts</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/oldj/SwitchHosts" target="_blank" rel="noopener noreferrer">https://github.com/oldj/SwitchHosts</a></p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>导航学习</title>
+      <link>https://blog.lxip.top/tool/share/navlearn.html</link>
+      <guid>https://blog.lxip.top/tool/share/navlearn.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">导航学习</source>
+      <description>介绍 整理编程相关的技术文档</description>
+      <category>快速导航</category>
+      <category>编程知识库</category>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>介绍</h2>
+<blockquote>
+<p>整理编程相关的技术文档</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
       <title>多服务器监测面板</title>
-      <link>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/%E5%A4%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E6%B5%8B%E9%9D%A2%E6%9D%BF.html</guid>
       <source url="https://blog.lxip.top/rss.xml">多服务器监测面板</source>
       <description>✨ Rust 版 ServerStatus 探针、威力加强版 项目地址：zdz/ServerStatus-Rust: ✨ Rust 版 ServerStatus 探针、威力加强版 (github.com) 官方教程：安装部署 - Rust 版 ServerStatus 云探针 (ssr.rs) 在线地址：ServerStatus (ssr.rs) 这是...</description>
       <category>服务器监测</category>
@@ -5874,8 +6092,8 @@ idea就会提示找到svn对应的.exe</p>
     </item>
     <item>
       <title>frp实现远程桌面连接</title>
-      <link>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</link>
-      <guid>https://blog.lxip.top/questionskills/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</guid>
+      <link>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</link>
+      <guid>https://blog.lxip.top/messing/softguide/frp%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5.html</guid>
       <source url="https://blog.lxip.top/rss.xml">frp实现远程桌面连接</source>
       <description>Frp 是一个高性能的反向代理应用程序，它可以帮助您轻松地管理内网中的服务，并且可以将这些服务暴露给公网。Frp 的主要作用是实现内网穿透，使外网用户能够访问内网中的服务。下面是一些 Frp 的应用场景： 内网穿透：通过 Frp，您可以将内网中的服务暴露到公网上，例如 Web 服务器、FTP 服务器、SSH 服务器等。 内网远程桌面：Frp 可以让您在...</description>
       <category>frp</category>
@@ -6056,9 +6274,69 @@ mv 原文件名 修改后的文件名</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>GitHub单仓库管理多项目</title>
+      <link>https://blog.lxip.top/java/git/gitHub-manage-project.html</link>
+      <guid>https://blog.lxip.top/java/git/gitHub-manage-project.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">GitHub单仓库管理多项目</source>
+      <description>前置知识 需要对git命令比较熟悉，可以参考 背景 练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看） 再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理 起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了） 最后发现 orphan 分...</description>
+      <category>运维</category>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>前置知识</h2>
+<p>需要对git命令比较熟悉，可以参考<a href="/java/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="_blank">常用的git命令</a></p>
+<h2>背景</h2>
+<blockquote>
+<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）</p>
+</blockquote>
+<p>再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理<br>
+起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）<br>
+最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
+<h2>具体步骤</h2>
+<blockquote>
+<p>在一个git仓库下操作如下的命令</p>
+</blockquote>
+<p>创建orphan分支</p>
+<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout --orphan [分支名]</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>这就是创建orphan类型的分支<br>
+为什么使用orphan类型的分支<br>
+原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响<br>
+git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
+</blockquote>
+<p>检查分支状态</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git branch</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>会列出<strong>本地</strong>所有的分支</p>
+</blockquote>
+<p>提交代码</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git add ./</span></span>
+<span class="line"><span>git commit -m "commit branch"</span></span>
+<span class="line"><span>git push orgin [分支名]</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>为什么push？<br>
+因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p>创建其他orphan分支时，建议切换回主分支以后再新建 orphan 分支</p>
+</blockquote>
+<h2>扩展</h2>
+<p>切换分支：</p>
+<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout [分支名]</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
+<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout -b [新分支名]</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
+<p>此时新的分支会有当前分支的所有文件</p>
+</blockquote>
+<h2>附件</h2>
+<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a></p>
+<p>参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a></p>
+<p>参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>git实时拉取GitHub仓库代码</title>
-      <link>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
-      <guid>https://blog.lxip.top/notes/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
+      <link>https://blog.lxip.top/java/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</link>
+      <guid>https://blog.lxip.top/java/git/git%E5%AE%9E%E6%97%B6%E6%8B%89%E5%8F%96GitHub%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81.html</guid>
       <source url="https://blog.lxip.top/rss.xml">git实时拉取GitHub仓库代码</source>
       <description>首先你需要有一个gitee账号和一个GitHub账号 （gitee需要绑定手机号并且需要绑定对应的GitHub账号） 使用gitee仓库镜像管理（目前是限时开放） 直接上效果图： 选择直接需要同步的仓库 获取GitHub私人令牌的方式简单贴一张图： 具体如何创建GitHub私人令牌步骤就不展开了 效果如下：</description>
       <category>运维</category>
@@ -6080,8 +6358,8 @@ mv 原文件名 修改后的文件名</p>
     </item>
     <item>
       <title>常用的git命令</title>
-      <link>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</link>
-      <guid>https://blog.lxip.top/notes/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</guid>
+      <link>https://blog.lxip.top/java/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</link>
+      <guid>https://blog.lxip.top/java/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</guid>
       <source url="https://blog.lxip.top/rss.xml">常用的git命令</source>
       <description>记录目前常用到的基本命令 常用命令 提交代码的步骤 检查当前文件状态： 提交代码： 注意：可以不需要斜杠 推送代码到远程仓库： 将本地仓库中的，当前main分支的代码提交到远程仓库 扩展 创建分支 这就是创建orphan类型的分支，其他步骤就是简单的提交代操作了。 检查分支状态 会列出本地所有的分支 查看所有分支 列出所有的分支(远程和本地) 切换分支...</description>
       <category>运维</category>
@@ -6134,73 +6412,13 @@ mv 原文件名 修改后的文件名</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>使用 GitHub 的单个仓库管理多个项目</title>
-      <link>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</link>
-      <guid>https://blog.lxip.top/notes/git/%E4%BD%BF%E7%94%A8%20GitHub%20%E7%9A%84%E5%8D%95%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">使用 GitHub 的单个仓库管理多个项目</source>
-      <description>前置知识 需要对git命令比较熟悉，可以参考 背景 练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看） 再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理 起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了） 最后发现 orphan 分...</description>
-      <category>运维</category>
-      <pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>前置知识</h2>
-<p>需要对git命令比较熟悉，可以参考<a href="/notes/git/%E5%B8%B8%E7%94%A8%E7%9A%84git%E5%91%BD%E4%BB%A4.html" target="_blank">常用的git命令</a></p>
-<h2>背景</h2>
-<blockquote>
-<p>练习的项目比较多，但存放于公司电脑并不是一个合适的选择（不方便随处查看）<br>
-再加上近期对 Git 使用比较多，就萌生了将项目传到 GitHub 仓库中进行管理<br>
-起初想法是在一个仓库中建立文件夹来区分项目，后来感觉并不合适（每次从别处看的时候整个分支上的内容全clone下来了）<br>
-最后发现 orphan 分支（将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响）完全可以解决该问题</p>
-</blockquote>
-<h2>具体步骤</h2>
-<blockquote>
-<p>在一个git仓库下操作如下的命令</p>
-</blockquote>
-<p>创建orphan分支</p>
-<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout --orphan [分支名]</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>这就是创建orphan类型的分支<br>
-为什么使用orphan类型的分支<br>
-原因：将N个完全不同的项目作为N个分支放在同一个仓库中, 并且分支之间互不影响<br>
-git checkout --orphan的核心用途是在非新存储库上以类似git init的状态创建分支</p>
-</blockquote>
-<p>检查分支状态</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git branch</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>会列出<strong>本地</strong>所有的分支</p>
-</blockquote>
-<p>提交代码</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git add ./</span></span>
-<span class="line"><span>git commit -m "commit branch"</span></span>
-<span class="line"><span>git push orgin [分支名]</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>为什么push？<br>
-因为本地创建了该分支后还需要提交到远程仓库，才算是真正的创建新的分支</p>
-</blockquote>
-<p>注意：</p>
-<blockquote>
-<p>创建其他orphan分支时，建议切换回主分支以后再新建 orphan 分支</p>
-</blockquote>
-<h2>扩展</h2>
-<p>切换分支：</p>
-<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout [分支名]</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>从当前分支创建新分支：</p>
-<div class="language-git line-numbers-mode" data-highlighter="shiki" data-ext="git" data-title="git" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>git checkout -b [新分支名]</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><blockquote>
-<p>此时新的分支会有当前分支的所有文件</p>
-</blockquote>
-<h2>附件</h2>
-<p>参考：<a href="https://blog.csdn.net/Wrysmile0308/article/details/119619702" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/Wrysmile0308/article/details/119619702</a><br>
-参考2：<a href="https://www.cnblogs.com/asdfq/p/13277559.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/asdfq/p/13277559.html</a><br>
-参考3：<a href="https://www.codenong.com/19980631/#:~:text=git%20checkout%20--orphan,%E7%9A%84%E6%A0%B8%E5%BF%83%E7%94%A8%E9%80%94%E6%98%AF%E5%9C%A8%E9%9D%9E%E6%96%B0%E5%AD%98%E5%82%A8%E5%BA%93%E4%B8%8A%E4%BB%A5%E7%B1%BB%E4%BC%BC%20git%20init%20%E7%9A%84%E7%8A%B6%E6%80%81%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E3%80%82" target="_blank" rel="noopener noreferrer">git checkout –orphan是做什么用的</a></p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>PicGo配置多图床仓库</title>
-      <link>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</link>
-      <guid>https://blog.lxip.top/questionskills/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</guid>
+      <link>https://blog.lxip.top/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</link>
+      <guid>https://blog.lxip.top/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html</guid>
       <source url="https://blog.lxip.top/rss.xml">PicGo配置多图床仓库</source>
       <description>背景 想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具 PicGo配置多图床 以七牛云为例： 官网：https://portal.qiniu.com/ 七牛云有10G免费存储空间和10G CDN静态资源加速 注意：CDN超额会需要付费的。 参考此文：配置手册 | PicGo...</description>
       <category>图床</category>
-      <pubDate>Sat, 08 Apr 2023 14:00:00 GMT</pubDate>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>背景</h2>
 <p>想使用不需要直接购买服务器就可以存储图片，并且可以很方便使用外链访问到图片资源。这里就有了typora+PicGo两者结合的工具</p>
 <h2>PicGo配置多图床</h2>
@@ -6253,8 +6471,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>Gitee Pages Action</title>
-      <link>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</link>
-      <guid>https://blog.lxip.top/notes/githubaction/gitee-pages-action.html</guid>
+      <link>https://blog.lxip.top/java/githubaction/gitee-pages-action.html</link>
+      <guid>https://blog.lxip.top/java/githubaction/gitee-pages-action.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Gitee Pages Action</source>
       <description>gitee-pages-action license release users users github gitee stars forks Gitee Pages Action 由于 Gitee Pages 的访问速度很快，很多朋友会选择 Gitee Pages 部署项目（如：个人博客、开源项目国内镜像站点）。但是它不像 GitHub Pages ...</description>
       <category>运维</category>
@@ -6290,8 +6508,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>github代码备份到gitee仓库-工作流</title>
-      <link>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</link>
-      <guid>https://blog.lxip.top/notes/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</guid>
+      <link>https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</link>
+      <guid>https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</guid>
       <source url="https://blog.lxip.top/rss.xml">github代码备份到gitee仓库-工作流</source>
       <description>大概思路 从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。 前置知识 需要会使用git 熟悉GitHub（配置、工作流） 大致步骤 关于GitHub工作流与密钥配置对应图： image-20230404224357484image-20230404224357484 1...</description>
       <category>运维</category>
@@ -6353,9 +6571,67 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
 ]]></content:encoded>
     </item>
     <item>
+      <title>文档</title>
+      <link>https://blog.lxip.top/java/cookbook/other.html</link>
+      <guid>https://blog.lxip.top/java/cookbook/other.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">文档</source>
+      <description>CS CS-Notes：技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计。 Github地址：https://github.com/CyC2018/CS-Notes 官网：http://www.cyc2018.xyz/ Java相关 advanced-java：互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高...</description>
+      <category>技术文档</category>
+      <pubDate>Thu, 17 Nov 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>CS</h2>
+<ul>
+<li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
+</ul>
+<blockquote>
+<p><code>Github</code>地址：<a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">https://github.com/CyC2018/CS-Notes</a></p>
+<p>官网：<a href="http://www.cyc2018.xyz/" target="_blank" rel="noopener noreferrer">http://www.cyc2018.xyz/</a></p>
+</blockquote>
+<h2>Java相关</h2>
+<ul>
+<li><a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">advanced-java</a>：互联网 <code>Java</code> 工程师<strong>进阶知识完全扫盲</strong>：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://doocs.gitee.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/advanced-java/#/</a></p>
+<p>官网：<a href="https://doocs.github.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/advanced-java/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://github.com/doocs/advanced-java</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/advanced-java</a></p>
+</blockquote>
+<h2>源码相关</h2>
+<ul>
+<li><a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">source-code-hunter</a>：从源码层面，剖析<strong>挖掘互联网行业主流技术的底层实现原理</strong>，为广大开发者 “提升技术深度” 提供便利。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://doocs.gitee.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/source-code-hunter/#/</a></p>
+<p>官网：<a href="https://doocs.github.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/source-code-hunter/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://github.com/doocs/source-code-hunter</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/source-code-hunter</a></p>
+</blockquote>
+<h2>算法和数据结构</h2>
+<ul>
+<li><a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">leetcode</a>：多种编程语言<strong>实现 <code>LeetCode</code></strong>。</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://doocs.github.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/leetcode/#/</a></p>
+<p>官网：<a href="https://doocs.gitee.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/leetcode/#/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/leetcode" target="_blank" rel="noopener noreferrer">https://github.com/doocs/leetcode</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/leetcode</a></p>
+</blockquote>
+<h2>JVM相关</h2>
+<ul>
+<li><a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">jvm</a>：<strong><code>JVM</code> 底层原理</strong>最全知识总结</li>
+</ul>
+<blockquote>
+<p>官网：<a href="https://doocs.gitee.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/jvm/</a></p>
+<p>官网：<a href="https://doocs.github.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/jvm/</a></p>
+<p><code>Github</code>地址：<a href="https://github.com/doocs/jvm" target="_blank" rel="noopener noreferrer">https://github.com/doocs/jvm</a></p>
+<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/jvm</a></p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
       <title>mysql问题</title>
-      <link>https://blog.lxip.top/notes/database/question.html</link>
-      <guid>https://blog.lxip.top/notes/database/question.html</guid>
+      <link>https://blog.lxip.top/java/database/question.html</link>
+      <guid>https://blog.lxip.top/java/database/question.html</guid>
       <source url="https://blog.lxip.top/rss.xml">mysql问题</source>
       <description>问题1-提示1251- Client does not support authentication protocol requested by server 原因：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password, 解决办法： 使用命令方式解决：...</description>
       <category>mysql</category>
@@ -6388,8 +6664,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>centos7.9使用</title>
-      <link>https://blog.lxip.top/notes/linux/linux.html</link>
-      <guid>https://blog.lxip.top/notes/linux/linux.html</guid>
+      <link>https://blog.lxip.top/om/linux/linux.html</link>
+      <guid>https://blog.lxip.top/om/linux/linux.html</guid>
       <source url="https://blog.lxip.top/rss.xml">centos7.9使用</source>
       <description>more 注释之前的内容被视为文章摘要。</description>
       <category>linux</category>
@@ -6719,8 +6995,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>Git多账号配置</title>
-      <link>https://blog.lxip.top/notes/git/gitMore.html</link>
-      <guid>https://blog.lxip.top/notes/git/gitMore.html</guid>
+      <link>https://blog.lxip.top/java/git/gitMore.html</link>
+      <guid>https://blog.lxip.top/java/git/gitMore.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Git多账号配置</source>
       <description>一、背景 ​ 在同一台电脑上有时候需要使用多个GitHub、gitee、gitlab账号，或者说你有多个账号，不想来回生成公钥，那么这就需要使用到git配置多账户了。 二、准备 环境：window 10、git 在使用之前你需要安装git，对于git安装也是点击下一步下一步就可以安装完成，在此也需要对git命令有一定的了解。 前提条件：需要C:\Use...</description>
       <category>运维</category>
@@ -6865,8 +7141,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     </item>
     <item>
       <title>Git提交本地代码至分支（详细每一步）</title>
-      <link>https://blog.lxip.top/notes/git/git.html</link>
-      <guid>https://blog.lxip.top/notes/git/git.html</guid>
+      <link>https://blog.lxip.top/java/git/git.html</link>
+      <guid>https://blog.lxip.top/java/git/git.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Git提交本地代码至分支（详细每一步）</source>
       <description>查看分支 A: 查看本地分支 使用 git branch命令，如下：git branch *标识的是你当前所在的分支 imgimg B: 查看远程分支 命令如下：git branch -r imgimg C: 查看所有分支 命令如下：git branch -a imgimg 二、本地创建新分支 命令如下：git branch [分支名称] 例如：git...</description>
       <category>运维</category>
@@ -6977,8 +7253,8 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     </item>
     <item>
       <title>Java8新特性</title>
-      <link>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</link>
-      <guid>https://blog.lxip.top/notes/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</guid>
+      <link>https://blog.lxip.top/java/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</link>
+      <guid>https://blog.lxip.top/java/javacore/Java8%E6%96%B0%E7%89%B9%E6%80%A7.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Java8新特性</source>
       <description>Optional类 引入 NPE问题就是在开发中经常碰到的NullPointerException，即空指针问题，Optional类就是用来优雅解决该问题的方案。 比如大家可能都有这样的经历：调用一个方法得到了返回值却不能直接将返回值作为参数去调用别的方法。我们首先要判断这个返回值是否为null，只有在非空的前提下才能将其作为其他方法的参数。 以用户类...</description>
       <category>Java</category>
@@ -7467,157 +7743,32 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
     </item>
     <item>
       <title>实战项目【开源项目】</title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/</guid>
+      <link>https://blog.lxip.top/java/pracprojects/</link>
+      <guid>https://blog.lxip.top/java/pracprojects/</guid>
       <source url="https://blog.lxip.top/rss.xml">实战项目【开源项目】</source>
       <description>lamp-cloud环境安装及配置、启动、使用等</description>
       <category>实战项目</category>
-      <content:encoded><![CDATA[<p><a href="/questionskills/pracprojects/lamp-project/" target="_blank">lamp-project</a></p>
+      <content:encoded><![CDATA[<p><a href="/java/pracprojects/lamp-project/" target="_blank">lamp-project</a></p>
 <blockquote>
 <p>lamp-cloud环境安装及配置、启动、使用等</p>
 </blockquote>
-]]></content:encoded>
+<!-- [yudao-cloud](./yudao-cloud/README.md)
+> yudao-cloud mini  -->]]></content:encoded>
     </item>
     <item>
-      <title>编程软件</title>
-      <link>https://blog.lxip.top/questionskills/software/</link>
-      <guid>https://blog.lxip.top/questionskills/software/</guid>
-      <source url="https://blog.lxip.top/rss.xml">编程软件</source>
-      <description>专业软件 RuanCang：专业软件免费下载。 官网：https://ruancang.net/ 导航</description>
-      <category>导航</category>
-      <content:encoded><![CDATA[<h2>专业软件</h2>
-<ul>
-<li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
-</blockquote>
-<h2>导航</h2>
-<ul>
-<li><a href="/questionskills/software/tool.html" target="_blank">编程软件</a></li>
-</ul>
+      <title>捣鼓教程</title>
+      <link>https://blog.lxip.top/messing/techguide/</link>
+      <guid>https://blog.lxip.top/messing/techguide/</guid>
+      <source url="https://blog.lxip.top/rss.xml">捣鼓教程</source>
+      <category>捣鼓</category>
+      <content:encoded><![CDATA[<p><a href="/messing/techguide/picgo%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%9B%BE%E5%BA%8A.html" target="_blank">picgo使用多图床.md</a></p>
+<p><a href="/messing/techguide/Cloudfare%E5%92%8CTelegraph-Image-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA.html" target="_blank">Cloudfare和Telegraph-Image-实现图床搭建.md</a></p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>系统设计【开源项目】</title>
-      <link>https://blog.lxip.top/questionskills/systemdesign/</link>
-      <guid>https://blog.lxip.top/questionskills/systemdesign/</guid>
-      <source url="https://blog.lxip.top/rss.xml">系统设计【开源项目】</source>
-      <description>专业软件 RuanCang：专业软件免费下载。 官网：https://ruancang.net/</description>
-      <category>系统设计</category>
-      <content:encoded><![CDATA[<h2>专业软件</h2>
-<ul>
-<li><a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">RuanCang</a>：<strong>专业软件</strong>免费下载。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://ruancang.net/" target="_blank" rel="noopener noreferrer">https://ruancang.net/</a></p>
-</blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>技术教程【开源项目】</title>
-      <link>https://blog.lxip.top/questionskills/techguide/</link>
-      <guid>https://blog.lxip.top/questionskills/techguide/</guid>
-      <source url="https://blog.lxip.top/rss.xml">技术教程【开源项目】</source>
-      <description>CS CS-Notes：技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计。 Github地址：https://github.com/CyC2018/CS-Notes 官网：http://www.cyc2018.xyz/ Java相关 advanced-java：互联网 Java 工程师进阶知识完全扫盲：涵盖高并发、分布式、高...</description>
-      <category>技术教程</category>
-      <content:encoded><![CDATA[<h2>CS</h2>
-<ul>
-<li><a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">CS-Notes</a>：技术面试<strong>必备基础知识</strong>、<code>Leetcode</code>、计算机操作系统、计算机网络、系统设计。</li>
-</ul>
-<blockquote>
-<p><code>Github</code>地址：<a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener noreferrer">https://github.com/CyC2018/CS-Notes</a></p>
-<p>官网：<a href="http://www.cyc2018.xyz/" target="_blank" rel="noopener noreferrer">http://www.cyc2018.xyz/</a></p>
-</blockquote>
-<h2>Java相关</h2>
-<ul>
-<li><a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">advanced-java</a>：互联网 <code>Java</code> 工程师<strong>进阶知识完全扫盲</strong>：涵盖高并发、分布式、高可用、微服务、海量数据处理等领域知识。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://doocs.gitee.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/advanced-java/#/</a></p>
-<p>官网：<a href="https://doocs.github.io/advanced-java/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/advanced-java/#/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://github.com/doocs/advanced-java</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/advanced-java" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/advanced-java</a></p>
-</blockquote>
-<h2>源码相关</h2>
-<ul>
-<li><a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">source-code-hunter</a>：从源码层面，剖析<strong>挖掘互联网行业主流技术的底层实现原理</strong>，为广大开发者 “提升技术深度” 提供便利。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://doocs.gitee.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/source-code-hunter/#/</a></p>
-<p>官网：<a href="https://doocs.github.io/source-code-hunter/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/source-code-hunter/#/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://github.com/doocs/source-code-hunter</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/source-code-hunter" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/source-code-hunter</a></p>
-</blockquote>
-<h2>算法和数据结构</h2>
-<ul>
-<li><a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">leetcode</a>：多种编程语言<strong>实现 <code>LeetCode</code></strong>。</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://doocs.github.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/leetcode/#/</a></p>
-<p>官网：<a href="https://doocs.gitee.io/leetcode/#/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/leetcode/#/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/doocs/leetcode" target="_blank" rel="noopener noreferrer">https://github.com/doocs/leetcode</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/leetcode" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/leetcode</a></p>
-</blockquote>
-<h2>JVM相关</h2>
-<ul>
-<li><a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">jvm</a>：<strong><code>JVM</code> 底层原理</strong>最全知识总结</li>
-</ul>
-<blockquote>
-<p>官网：<a href="https://doocs.gitee.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.gitee.io/jvm/</a></p>
-<p>官网：<a href="https://doocs.github.io/jvm/" target="_blank" rel="noopener noreferrer">https://doocs.github.io/jvm/</a></p>
-<p><code>Github</code>地址：<a href="https://github.com/doocs/jvm" target="_blank" rel="noopener noreferrer">https://github.com/doocs/jvm</a></p>
-<p><code>Gitee</code>地址：<a href="https://gitee.com/Doocs/jvm" target="_blank" rel="noopener noreferrer">https://gitee.com/Doocs/jvm</a></p>
-</blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>书籍资源</title>
-      <link>https://blog.lxip.top/resources/books/</link>
-      <guid>https://blog.lxip.top/resources/books/</guid>
-      <source url="https://blog.lxip.top/rss.xml">书籍资源</source>
-      <category>书籍</category>
-      <content:encoded><![CDATA[<p>| 资源名称                                   | 分享链接                                  |<br>
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>快速导航</title>
-      <link>https://blog.lxip.top/resources/share/</link>
-      <guid>https://blog.lxip.top/resources/share/</guid>
-      <source url="https://blog.lxip.top/rss.xml">快速导航</source>
-      <description>搜索引擎</description>
-      <category>快速导航</category>
-      <content:encoded><![CDATA[<h2>搜索引擎</h2>
-<!-- <NavCard arr='[{"title":"百度","url":"https://www.baidu.com/","desc":"中文搜索引擎","icon":"/navicon/baidu.ico"},{"title":"必应","url":"https://cn.bing.com/","desc":"优秀的国内外搜索引擎","icon":"/navicon/bing.ico"},{"title":"谷歌","url":"https://www.google.com/","desc":"被墙的国内外搜索引擎","icon":"/navicon/google.ico"},{"title":"找代码","url":"https://www.programcreek.com/java-api-examples/index.php","desc":"搜一下某个类的使用方法","icon":"/navicon/java.ico"}]'></NavCard> -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>编程知识库</title>
-      <link>https://blog.lxip.top/resources/share/navlearn.html</link>
-      <guid>https://blog.lxip.top/resources/share/navlearn.html</guid>
-      <source url="https://blog.lxip.top/rss.xml">编程知识库</source>
-      <description>介绍 整理编程相关的技术文档</description>
-      <category>快速导航</category>
-      <category>编程知识库</category>
-      <content:encoded><![CDATA[<h2>介绍</h2>
-<blockquote>
-<p>整理编程相关的技术文档</p>
-</blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>影音资源</title>
-      <link>https://blog.lxip.top/resources/videos/</link>
-      <guid>https://blog.lxip.top/resources/videos/</guid>
-      <source url="https://blog.lxip.top/rss.xml">影音资源</source>
-      <category>影视</category>
-      <category>音乐</category>
     </item>
     <item>
       <title>tomcat服务器</title>
-      <link>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</link>
-      <guid>https://blog.lxip.top/notes/javacore/javaweb/javaweb_tomcat.html</guid>
+      <link>https://blog.lxip.top/java/javacore/javaweb/javaweb_tomcat.html</link>
+      <guid>https://blog.lxip.top/java/javacore/javaweb/javaweb_tomcat.html</guid>
       <source url="https://blog.lxip.top/rss.xml">tomcat服务器</source>
       <description>1.HTTP协议简介 超文本传输协议（英文：HyperText Transfer Protocol，缩写：HTTP）是一种用于分布式、协作式和超媒体信息 系统的应用层协议。HTTP是万维网的数据通信的基础。 HTTP的发展是由蒂姆·伯纳斯-李于1989年在欧洲核子研究组织（CERN）所发起。HTTP的标准制定由万维网协会 （World Wide Web...</description>
       <category>java</category>
@@ -7719,51 +7870,6 @@ Port ： SSH默认端口号为22，某些私有部署的git仓库会更换端口
 <p>(3)IntelliJ IDEA配置Tomcat</p>
 <p>1，点击Run</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title></title>
-      <link>https://blog.lxip.top/questionskills/pracprojects/yudao-cloud/%E6%9C%8D%E5%8A%A1%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC.html</link>
-      <guid>https://blog.lxip.top/questionskills/pracprojects/yudao-cloud/%E6%9C%8D%E5%8A%A1%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC.html</guid>
-      <source url="https://blog.lxip.top/rss.xml"></source>
-      <description>redis、naocs一键启动脚本 nacos-redis.bat jar一键启动脚本 cloud-start.bat</description>
-      <content:encoded><![CDATA[<h2>redis、naocs一键启动脚本</h2>
-<p>nacos-redis.bat</p>
-<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">@echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> off</span></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Starting</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Redis...</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ""</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /D</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "E:\Redis-x64-5.0.14.1"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">\r</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">edis-server.exe</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> redis.windows.conf</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Starting</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Nacos...</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ""</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /D</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "E:\nacos\bin"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">\s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">tartup.cmd</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -m</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> standalone</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Both</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Redis</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> and</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Nacos</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> are</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> started</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> in</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> separate</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> windows.</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pause</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>jar一键启动脚本</h2>
-<p>cloud-start.bat</p>
-<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">@echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> off</span></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> .....</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 1、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> gateway.jar</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 1 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  cmd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-gateway.jar"</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  2、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-infra-biz.jar</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 2 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  cmd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /c</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx128m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-infra-biz.jar"</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  3、</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-system-biz.jar</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 3 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-system-biz.jar"</span></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 等待30秒</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">timeout</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /t</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /nobreak</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">nul</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">::</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  4、start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yudao-module-medicine-biz.jar</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "JAR 4 Window"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xms512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Xmx512m</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -Dfile.encoding=UTF-8</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  -jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\Administrator\Desktop\cloud-jar\yudao-module-medicine-biz.jar"</span></span>
-<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  all</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> jar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> start</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> complete！</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pause</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
