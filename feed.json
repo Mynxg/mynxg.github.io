@@ -19,6 +19,32 @@
       ]
     },
     {
+      "title": "Ubicloud替代github action",
+      "url": "https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html",
+      "id": "https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html",
+      "summary": "为什么使用Ubicloud GitHub Action 工作流程与 Ubicloud 运行器集成 Ubicloud文档：https://www.ubicloud.com/docs/github-actions-integration/quickstart Ubicloud需要绑定信用卡，官方说主要是为了防止滥用 主要修改这里： 更改“workflow....",
+      "content_html": "<h2>为什么使用Ubicloud</h2>\n<p>GitHub Action 工作流程与 Ubicloud 运行器集成</p>\n<p>Ubicloud文档：<a href=\"https://www.ubicloud.com/docs/github-actions-integration/quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.ubicloud.com/docs/github-actions-integration/quickstart</a></p>\n<blockquote>\n<p>Ubicloud需要绑定信用卡，官方说主要是为了防止滥用</p>\n</blockquote>\n<p>主要修改这里：<br>\n<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/ubicloud-00f14c0d/github-actions-integration/quickstart-4.png\" alt=\"\" loading=\"lazy\"></p>\n<blockquote>\n<p>更改“workflow.yml”文件，要将 Ubicloud 用于 GitHub Actions，您需要编辑<code>.github/workflows</code>文件。具体来说，您需要将<code>ubuntu-latest</code>运行器标签更改为<code>ubicloud-standard-2</code>。</p>\n</blockquote>\n<p>为什么使用</p>\n<p>原因：</p>\n<blockquote>\n<p>Ubicloud - GitHub Actions，构建过程更便宜10倍，也就是ubicloud  平均 2 分钟多一点就跑完了，从一开始的 22+ 分钟到现在的 2 分钟左右，费用成本便宜了 10 倍</p>\n</blockquote>\n<h2>引用</h2>\n<p><a href=\"https://blog.webp.se/github-actions-hybrid-runner-zh/\" target=\"_blank\" rel=\"noopener noreferrer\">https://blog.webp.se/github-actions-hybrid-runner-zh/</a></p>\n<blockquote>\n<p>混合部署 GitHub Actions Runner：Multi Arch 镜像构建速度飙升 10 倍！</p>\n</blockquote>\n<p><a href=\"https://github.com/ubicloud/ubicloud\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/ubicloud/ubicloud</a></p>\n<blockquote>\n<p>AWS 的开源替代方案。弹性计算、块存储（非复制型）、防火墙和负载均衡器、托管式 Postgres 以及 IAM 服务处于公开测试阶段。</p>\n</blockquote>\n<p>ubicloud文档：<a href=\"https://www.ubicloud.com/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.ubicloud.com/</a></p>\n",
+      "image": "https://mintlify.s3.us-west-1.amazonaws.com/ubicloud-00f14c0d/github-actions-integration/quickstart-4.png",
+      "date_published": "2024-09-24T00:00:00.000Z",
+      "authors": [],
+      "tags": [
+        "workflow"
+      ]
+    },
+    {
+      "title": "Node环境配置",
+      "url": "https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html",
+      "id": "https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html",
+      "summary": "Node安装 使用nvm安装，跳过 《node安装》 密码：fkka https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc# nvm安装 nvm安装基本上下一步下一步 配置位置： D:\\software\\nvm\\settings.txt 常用命令： 镜像源 可用的所有镜像源： 可以使用n...",
+      "content_html": "<h2>Node安装</h2>\n<blockquote>\n<p>使用nvm安装，跳过</p>\n</blockquote>\n<p>《node安装》 密码：fkka</p>\n<p><a href=\"https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc#\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc# </a></p>\n<h2>nvm安装</h2>\n<blockquote>\n<p>nvm安装基本上下一步下一步</p>\n</blockquote>\n<p>配置位置：</p>\n<blockquote>\n<p>D:\\software\\nvm\\settings.txt</p>\n</blockquote>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"\" data-title=\"\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code><span class=\"line\"><span># 配置node镜像：</span></span>\n<span class=\"line\"><span>node_mirror: https://npmmirror.com/mirrors/node/</span></span>\n<span class=\"line\"><span># 配置npm镜像：</span></span>\n<span class=\"line\"><span>npm_mirror: https://npmmirror.com/mirrors/npm/</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span># 历史版本已经弃用</span></span>\n<span class=\"line\"><span>node_mirror: https://npm.taobao.org/mirrors/node/</span></span>\n<span class=\"line\"><span>npm_mirror: https://npm.taobao.org/mirrors/npm/</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>常用命令：</p>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"\" data-title=\"\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code><span class=\"line\"><span># 查看版本</span></span>\n<span class=\"line\"><span>nvm -v</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span>#查看已安装的node</span></span>\n<span class=\"line\"><span>nvm list</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span># 安装node</span></span>\n<span class=\"line\"><span>nvm install 版本</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span>#切换</span></span>\n<span class=\"line\"><span>nvm use 版本</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2>镜像源</h2>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"\" data-title=\"\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code><span class=\"line\"><span>npm config set registry https://registry.npmmirror.com</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div><p>可用的所有镜像源：</p>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"\" data-title=\"\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code><span class=\"line\"><span>npm</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div>",
+      "date_published": "2024-09-18T00:00:00.000Z",
+      "authors": [],
+      "tags": [
+        "archlinux",
+        "hyprland"
+      ]
+    },
+    {
       "title": "02-hyprland主题使用",
       "url": "https://blog.lxip.top/messing/archlinux/01-hyprland.html",
       "id": "https://blog.lxip.top/messing/archlinux/01-hyprland.html",
@@ -30,6 +56,22 @@
       "tags": [
         "archlinux",
         "hyprland"
+      ]
+    },
+    {
+      "title": "vscode运行go",
+      "url": "https://blog.lxip.top/go/install/go%E6%96%87%E6%A1%A3.html",
+      "id": "https://blog.lxip.top/go/install/go%E6%96%87%E6%A1%A3.html",
+      "summary": "第三方文档 https://github.com/caoyingjunz/go-learning OpenStack、Kubernetes、Golang 及其他技术的学习与实践地图。",
+      "content_html": "<h2>第三方文档</h2>\n<p><a href=\"https://github.com/caoyingjunz/go-learning\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/caoyingjunz/go-learning</a></p>\n<blockquote>\n<p>OpenStack、Kubernetes、Golang 及其他技术的学习与实践地图。</p>\n</blockquote>\n",
+      "date_published": "2024-09-12T10:45:13.000Z",
+      "authors": [
+        {
+          "name": "nxg"
+        }
+      ],
+      "tags": [
+        "Go"
       ]
     },
     {
@@ -595,6 +637,18 @@
       ]
     },
     {
+      "title": "网站分析",
+      "url": "https://blog.lxip.top/tool/use-tool/web-analysis.html",
+      "id": "https://blog.lxip.top/tool/use-tool/web-analysis.html",
+      "summary": "域名管理 cloudflare https://dash.cloudflare.com/ 网站分析 其他站点分析平台：Cloudflare web analysis baidu analysis https://tongji.baidu.com/web5/welcome/login google analysis https://tagmanager....",
+      "content_html": "<h2>域名管理</h2>\n<p>cloudflare</p>\n<p><a href=\"https://dash.cloudflare.com/\" target=\"_blank\" rel=\"noopener noreferrer\">https://dash.cloudflare.com/</a></p>\n<h2>网站分析</h2>\n<blockquote>\n<p>其他站点分析平台：Cloudflare web analysis</p>\n</blockquote>\n<p>baidu  analysis</p>\n<p><a href=\"https://tongji.baidu.com/web5/welcome/login\" target=\"_blank\" rel=\"noopener noreferrer\">https://tongji.baidu.com/web5/welcome/login</a></p>\n<p>google analysis</p>\n<p><a href=\"https://tagmanager.google.com/?authuser=0#/home#tags\" target=\"_blank\" rel=\"noopener noreferrer\">https://tagmanager.google.com/?authuser=0#/home#tags</a></p>\n<p><a href=\"https://analytics.google.com/analytics/web/\" target=\"_blank\" rel=\"noopener noreferrer\">https://analytics.google.com/analytics/web/</a></p>\n<p><a href=\"https://search.google.com/search-console\" target=\"_blank\" rel=\"noopener noreferrer\">https://search.google.com/search-console</a></p>\n<blockquote>\n<p>网站提交</p>\n</blockquote>\n<p><a href=\"http://51.la\" target=\"_blank\" rel=\"noopener noreferrer\">51.la</a></p>\n<p><a href=\"https://v6.51.la/\" target=\"_blank\" rel=\"noopener noreferrer\">https://v6.51.la/</a></p>\n<p>umami</p>\n<p><a href=\"https://umami.is/\" target=\"_blank\" rel=\"noopener noreferrer\">https://umami.is/</a></p>\n<blockquote>\n<p>可以自行部署</p>\n</blockquote>\n<p>ahrefs:</p>\n<p><a href=\"https://app.ahrefs.com/\" target=\"_blank\" rel=\"noopener noreferrer\">https://app.ahrefs.com/</a></p>\n<p>web  站点</p>\n<p><a href=\"https://webspy.site/\" target=\"_blank\" rel=\"noopener noreferrer\">https://webspy.site/</a></p>\n<blockquote>\n<p>直接在浏览器地址栏输入 \"webspy.site/目标域名\" 即可查看流量报告</p>\n</blockquote>\n<h2>广告</h2>\n<p>google adsense</p>\n<p><a href=\"https://www.google.com/adsense\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.google.com/adsense</a></p>\n",
+      "date_published": "2023-08-09T00:00:00.000Z",
+      "authors": [],
+      "tags": [
+        "快速导航"
+      ]
+    },
+    {
       "title": "编程工具",
       "url": "https://blog.lxip.top/tool/share/code-tool.html",
       "id": "https://blog.lxip.top/tool/share/code-tool.html",
@@ -705,8 +759,8 @@
     },
     {
       "title": "Gitee Pages Action",
-      "url": "https://blog.lxip.top/java/githubaction/gitee-pages-action.html",
-      "id": "https://blog.lxip.top/java/githubaction/gitee-pages-action.html",
+      "url": "https://blog.lxip.top/messing/workflow/gitee-pages-action.html",
+      "id": "https://blog.lxip.top/messing/workflow/gitee-pages-action.html",
       "summary": "gitee-pages-action license release users users github gitee stars forks Gitee Pages Action 由于 Gitee Pages 的访问速度很快，很多朋友会选择 Gitee Pages 部署项目（如：个人博客、开源项目国内镜像站点）。但是它不像 GitHub Pages ...",
       "content_html": "<p align=\"center\">\n  <a href=\"https://github.com/yanglbme/gitee-pages-action\">\n    \n  </a>\n</p>\n<p align=\"center\">\n  <a href=\"./LICENSE\"><img src=\"https://img.shields.io/github/license/yanglbme/gitee-pages-action?color=42b883&amp;style=flat-square\" alt=\"license\"></a>\n  <a href=\"../../releases\"><img src=\"https://img.shields.io/github/v/release/yanglbme/gitee-pages-action?color=42b883&amp;style=flat-square\" alt=\"release\"></a>\n  <a href=\"#谁在使用\"><img src=\"https://shields.io/badge/who's-using-42b883?style=flat-square\" alt=\"users\"></a>\n  <a href=\"#错误及解决方案\"><img src=\"https://shields.io/badge/faq-here-42b883?style=flat-square\" alt=\"users\"></a>\n  <a href=\"https://github.com/yanglbme/gitee-pages-action\"><img src=\"https://shields.io/badge/⭐-GitHub-42b883?style=flat-square\" alt=\"github\"></a>\n  <a href=\"https://gitee.com/yanglbme/gitee-pages-action\"><img src=\"https://shields.io/badge/⭐-Gitee-42b883?style=flat-square\" alt=\"gitee\"></a><br>\n  <a href=\"https://github.com/yanglbme/gitee-pages-action/stargazers\"><img src=\"https://img.shields.io/github/stars/yanglbme/gitee-pages-action?color=42b883&amp;logo=github&amp;style=flat-square\" alt=\"stars\"></a>\n  <a href=\"https://github.com/yanglbme/gitee-pages-action/network/members\"><img src=\"https://img.shields.io/github/forks/yanglbme/gitee-pages-action?color=42b883&amp;logo=github&amp;style=flat-square\" alt=\"forks\"></a>\n</p>\n<h1 align=\"center\">Gitee Pages Action</h1>\n<p>由于 Gitee Pages 的访问速度很快，很多朋友会选择 Gitee Pages 部署项目（如：个人博客、开源项目国内镜像站点）。但是它不像 GitHub Pages 那样，一提交代码就能自动更新 Pages，因为 Gitee 的自动部署属于 Gitee Pages Pro 的服务。</p>\n<p>为了实现 Gitee Pages 的自动部署，我开发了 <a href=\"https://github.com/marketplace/actions/gitee-pages-action\" target=\"_blank\" rel=\"noopener noreferrer\">Gitee Pages Action</a> ，只需要在 GitHub 项目的 Settings 页面下配置 keys，然后在 <code>.github/workflows/</code> 下创建一个工作流，引入一些配置参数即可。欢迎 Star ⭐ 关注本项目。</p>\n<p>欢迎体验，若有使用上的问题，也欢迎随时提交 <a href=\"https://github.com/yanglbme/gitee-pages-action/issues\" target=\"_blank\" rel=\"noopener noreferrer\">Issues</a> 反馈。</p>\n<p>注：</p>\n<ol>\n<li>首次需要<strong>手动</strong>登录 Gitee ，点击“启动”进行 Gitee Pages 服务的部署。</li>\n<li>由于 Gitee 改版，使用 Gitee Pages 前需要先完成实名认证。</li>\n</ol>\n<h2>入参</h2>\n<p>| 参数             | 描述                         | 是否必传 | 默认值   | 示例                            |<br>\n|</p>\n",
       "date_published": "2023-04-04T22:10:00.000Z",
@@ -717,8 +771,8 @@
     },
     {
       "title": "github代码备份到gitee仓库-工作流",
-      "url": "https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html",
-      "id": "https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html",
+      "url": "https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html",
+      "id": "https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html",
       "summary": "大概思路 从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。 前置知识 需要会使用git 熟悉GitHub（配置、工作流） 大致步骤 关于GitHub工作流与密钥配置对应图： image-20230404224357484image-20230404224357484 1...",
       "content_html": "<h2>大概思路</h2>\n<p>从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。</p>\n<h2>前置知识</h2>\n<ul>\n<li>\n<p>需要会使用git</p>\n</li>\n<li>\n<p>熟悉GitHub（配置、工作流）</p>\n</li>\n</ul>\n<h2>大致步骤</h2>\n<p>关于GitHub工作流与密钥配置对应图：</p>\n<figure><figcaption>image-20230404224357484</figcaption></figure>\n<p>1.配置本地密钥到gitee，至于怎么配置可以参考<a href=\"../gitMore\">git多账号配置</a></p>\n<p>2.配置GitHub公钥</p>\n<p>该公钥要与gitee配置公钥对应上</p>\n<p>本地密钥id_rsa_gitee.pub内容复制到GitHub中</p>\n<figure><figcaption>image-20230404221056949</figcaption></figure>\n<p>粘贴到如下图：</p>\n<figure><figcaption>image-20230404221134689</figcaption></figure>\n<p>同理将上的公钥复制粘贴到gitee上</p>\n<p>配置示例如下：</p>\n<figure><figcaption>image-20230404222501712</figcaption></figure>\n<p>3.配置GitHub仓库密钥</p>\n<p>需要在GitHub仓库添加对应secrets</p>\n<p>如下图：</p>\n<figure><figcaption>image-20230404225010003</figcaption></figure>\n<blockquote>\n<p>注意：此处的私钥要与gitee配置的公钥成对存在</p>\n</blockquote>\n<p>如下图：</p>\n<figure><figcaption>image-20230404225213255</figcaption></figure>\n<h2>附件</h2>\n<p>参考：<a href=\"https://github.com/yanglbme/gitee-pages-action\" target=\"_blank\" rel=\"noopener noreferrer\">yanglbme/gitee-pages-action</a></p>\n<p><a href=\"./gitee-pages-action\">gitee-pages-action</a></p>\n<h3>报错</h3>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"\" data-title=\"\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code><span class=\"line\"><span>WARNING: StrictHostKeyChecking disabled</span></span>\n<span class=\"line\"><span>Cloning into bare repository 'hexo-theme-gitee-blog.git'...</span></span>\n<span class=\"line\"><span>SOURCE=git@github.com:hisnxg/hexo-theme-gitee-blog.git</span></span>\n<span class=\"line\"><span>DESTINATION=git@gitee.com:hisnxg/hisnxg.git</span></span>\n<span class=\"line\"><span>DRY RUN=false</span></span>\n<span class=\"line\"><span>Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.</span></span>\n<span class=\"line\"><span>git@github.com: Permission denied (publickey).</span></span>\n<span class=\"line\"><span>fatal: Could not read from remote repository.</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span>Please make sure you have the correct access rights</span></span>\n<span class=\"line\"><span>and the repository exists.</span></span>\n<span class=\"line\"><span>fatal: not a git repository (or any parent up to mount point /github)</span></span>\n<span class=\"line\"><span>Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>原因：gitee配置的此公钥要与GitHub公钥成对存在。</p>\n<p>添加即可解决</p>\n<figure><figcaption>image-20230404223214170</figcaption></figure>\n<p>如未解决可参考：<a href=\"https://github.com/yanglbme/gitee-pages-action/issues/29\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/yanglbme/gitee-pages-action/issues/29</a></p>\n",
       "date_published": "2023-04-04T22:10:00.000Z",

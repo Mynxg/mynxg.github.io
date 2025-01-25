@@ -6,12 +6,13 @@
     <link>https://blog.lxip.top/</link>
     <description>分享技术、bug、问题解决技巧等</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 29 Dec 2024 14:34:50 GMT</pubDate>
-    <lastBuildDate>Sun, 29 Dec 2024 14:34:50 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Jan 2025 10:50:18 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Jan 2025 10:50:18 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>docker</category>
     <category>安装教程</category>
+    <category>workflow</category>
     <category>archlinux</category>
     <category>hyprland</category>
     <category>Go</category>
@@ -227,6 +228,92 @@ POSTGRES_PASSWORD: 密码</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>Ubicloud替代github action</title>
+      <link>https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html</link>
+      <guid>https://blog.lxip.top/messing/workflow/Ubicloud%E6%9B%BF%E4%BB%A3github%20action.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Ubicloud替代github action</source>
+      <description>为什么使用Ubicloud GitHub Action 工作流程与 Ubicloud 运行器集成 Ubicloud文档：https://www.ubicloud.com/docs/github-actions-integration/quickstart Ubicloud需要绑定信用卡，官方说主要是为了防止滥用 主要修改这里： 更改“workflow....</description>
+      <category>workflow</category>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>为什么使用Ubicloud</h2>
+<p>GitHub Action 工作流程与 Ubicloud 运行器集成</p>
+<p>Ubicloud文档：<a href="https://www.ubicloud.com/docs/github-actions-integration/quickstart" target="_blank" rel="noopener noreferrer">https://www.ubicloud.com/docs/github-actions-integration/quickstart</a></p>
+<blockquote>
+<p>Ubicloud需要绑定信用卡，官方说主要是为了防止滥用</p>
+</blockquote>
+<p>主要修改这里：<br>
+<img src="https://mintlify.s3.us-west-1.amazonaws.com/ubicloud-00f14c0d/github-actions-integration/quickstart-4.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>更改“workflow.yml”文件，要将 Ubicloud 用于 GitHub Actions，您需要编辑<code>.github/workflows</code>文件。具体来说，您需要将<code>ubuntu-latest</code>运行器标签更改为<code>ubicloud-standard-2</code>。</p>
+</blockquote>
+<p>为什么使用</p>
+<p>原因：</p>
+<blockquote>
+<p>Ubicloud - GitHub Actions，构建过程更便宜10倍，也就是ubicloud  平均 2 分钟多一点就跑完了，从一开始的 22+ 分钟到现在的 2 分钟左右，费用成本便宜了 10 倍</p>
+</blockquote>
+<h2>引用</h2>
+<p><a href="https://blog.webp.se/github-actions-hybrid-runner-zh/" target="_blank" rel="noopener noreferrer">https://blog.webp.se/github-actions-hybrid-runner-zh/</a></p>
+<blockquote>
+<p>混合部署 GitHub Actions Runner：Multi Arch 镜像构建速度飙升 10 倍！</p>
+</blockquote>
+<p><a href="https://github.com/ubicloud/ubicloud" target="_blank" rel="noopener noreferrer">https://github.com/ubicloud/ubicloud</a></p>
+<blockquote>
+<p>AWS 的开源替代方案。弹性计算、块存储（非复制型）、防火墙和负载均衡器、托管式 Postgres 以及 IAM 服务处于公开测试阶段。</p>
+</blockquote>
+<p>ubicloud文档：<a href="https://www.ubicloud.com/" target="_blank" rel="noopener noreferrer">https://www.ubicloud.com/</a></p>
+]]></content:encoded>
+      <enclosure url="https://mintlify.s3.us-west-1.amazonaws.com/ubicloud-00f14c0d/github-actions-integration/quickstart-4.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Node环境配置</title>
+      <link>https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://blog.lxip.top/web/node/Node%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">Node环境配置</source>
+      <description>Node安装 使用nvm安装，跳过 《node安装》 密码：fkka https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc# nvm安装 nvm安装基本上下一步下一步 配置位置： D:\software\nvm\settings.txt 常用命令： 镜像源 可用的所有镜像源： 可以使用n...</description>
+      <category>archlinux</category>
+      <category>hyprland</category>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>Node安装</h2>
+<blockquote>
+<p>使用nvm安装，跳过</p>
+</blockquote>
+<p>《node安装》 密码：fkka</p>
+<p><a href="https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc#" target="_blank" rel="noopener noreferrer">https://www.yuque.com/hisnxg/web/mckyq80a8yegwg4a?singleDoc# </a></p>
+<h2>nvm安装</h2>
+<blockquote>
+<p>nvm安装基本上下一步下一步</p>
+</blockquote>
+<p>配置位置：</p>
+<blockquote>
+<p>D:\software\nvm\settings.txt</p>
+</blockquote>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 配置node镜像：</span></span>
+<span class="line"><span>node_mirror: https://npmmirror.com/mirrors/node/</span></span>
+<span class="line"><span># 配置npm镜像：</span></span>
+<span class="line"><span>npm_mirror: https://npmmirror.com/mirrors/npm/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 历史版本已经弃用</span></span>
+<span class="line"><span>node_mirror: https://npm.taobao.org/mirrors/node/</span></span>
+<span class="line"><span>npm_mirror: https://npm.taobao.org/mirrors/npm/</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>常用命令：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># 查看版本</span></span>
+<span class="line"><span>nvm -v</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#查看已安装的node</span></span>
+<span class="line"><span>nvm list</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 安装node</span></span>
+<span class="line"><span>nvm install 版本</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#切换</span></span>
+<span class="line"><span>nvm use 版本</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>镜像源</h2>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>npm config set registry https://registry.npmmirror.com</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>可用的所有镜像源：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>npm</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>02-hyprland主题使用</title>
       <link>https://blog.lxip.top/messing/archlinux/01-hyprland.html</link>
       <guid>https://blog.lxip.top/messing/archlinux/01-hyprland.html</guid>
@@ -381,6 +468,21 @@ POSTGRES_PASSWORD: 密码</p>
 <p>配置1：<a href="https://github.com/Rogerskelamen/dotfiles" target="_blank" rel="noopener noreferrer">https://github.com/Rogerskelamen/dotfiles</a></p>
 ]]></content:encoded>
       <enclosure url="https://cdn.nlark.com/yuque/0/2024/png/25612657/1726676589794-ab9d94b3-ca00-46b7-83ea-0ce5183863a8.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_585%2Climit_0" type="image/"/>
+    </item>
+    <item>
+      <title>vscode运行go</title>
+      <link>https://blog.lxip.top/go/install/go%E6%96%87%E6%A1%A3.html</link>
+      <guid>https://blog.lxip.top/go/install/go%E6%96%87%E6%A1%A3.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">vscode运行go</source>
+      <description>第三方文档 https://github.com/caoyingjunz/go-learning OpenStack、Kubernetes、Golang 及其他技术的学习与实践地图。</description>
+      <category>Go</category>
+      <pubDate>Thu, 12 Sep 2024 10:45:13 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>第三方文档</h2>
+<p><a href="https://github.com/caoyingjunz/go-learning" target="_blank" rel="noopener noreferrer">https://github.com/caoyingjunz/go-learning</a></p>
+<blockquote>
+<p>OpenStack、Kubernetes、Golang 及其他技术的学习与实践地图。</p>
+</blockquote>
+]]></content:encoded>
     </item>
     <item>
       <title>vscode运行go</title>
@@ -5598,6 +5700,49 @@ idea就会提示找到svn对应的.exe</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>网站分析</title>
+      <link>https://blog.lxip.top/tool/use-tool/web-analysis.html</link>
+      <guid>https://blog.lxip.top/tool/use-tool/web-analysis.html</guid>
+      <source url="https://blog.lxip.top/rss.xml">网站分析</source>
+      <description>域名管理 cloudflare https://dash.cloudflare.com/ 网站分析 其他站点分析平台：Cloudflare web analysis baidu analysis https://tongji.baidu.com/web5/welcome/login google analysis https://tagmanager....</description>
+      <category>快速导航</category>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>域名管理</h2>
+<p>cloudflare</p>
+<p><a href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">https://dash.cloudflare.com/</a></p>
+<h2>网站分析</h2>
+<blockquote>
+<p>其他站点分析平台：Cloudflare web analysis</p>
+</blockquote>
+<p>baidu  analysis</p>
+<p><a href="https://tongji.baidu.com/web5/welcome/login" target="_blank" rel="noopener noreferrer">https://tongji.baidu.com/web5/welcome/login</a></p>
+<p>google analysis</p>
+<p><a href="https://tagmanager.google.com/?authuser=0#/home#tags" target="_blank" rel="noopener noreferrer">https://tagmanager.google.com/?authuser=0#/home#tags</a></p>
+<p><a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener noreferrer">https://analytics.google.com/analytics/web/</a></p>
+<p><a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">https://search.google.com/search-console</a></p>
+<blockquote>
+<p>网站提交</p>
+</blockquote>
+<p><a href="http://51.la" target="_blank" rel="noopener noreferrer">51.la</a></p>
+<p><a href="https://v6.51.la/" target="_blank" rel="noopener noreferrer">https://v6.51.la/</a></p>
+<p>umami</p>
+<p><a href="https://umami.is/" target="_blank" rel="noopener noreferrer">https://umami.is/</a></p>
+<blockquote>
+<p>可以自行部署</p>
+</blockquote>
+<p>ahrefs:</p>
+<p><a href="https://app.ahrefs.com/" target="_blank" rel="noopener noreferrer">https://app.ahrefs.com/</a></p>
+<p>web  站点</p>
+<p><a href="https://webspy.site/" target="_blank" rel="noopener noreferrer">https://webspy.site/</a></p>
+<blockquote>
+<p>直接在浏览器地址栏输入 "webspy.site/目标域名" 即可查看流量报告</p>
+</blockquote>
+<h2>广告</h2>
+<p>google adsense</p>
+<p><a href="https://www.google.com/adsense" target="_blank" rel="noopener noreferrer">https://www.google.com/adsense</a></p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>编程工具</title>
       <link>https://blog.lxip.top/tool/share/code-tool.html</link>
       <guid>https://blog.lxip.top/tool/share/code-tool.html</guid>
@@ -6471,8 +6616,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>Gitee Pages Action</title>
-      <link>https://blog.lxip.top/java/githubaction/gitee-pages-action.html</link>
-      <guid>https://blog.lxip.top/java/githubaction/gitee-pages-action.html</guid>
+      <link>https://blog.lxip.top/messing/workflow/gitee-pages-action.html</link>
+      <guid>https://blog.lxip.top/messing/workflow/gitee-pages-action.html</guid>
       <source url="https://blog.lxip.top/rss.xml">Gitee Pages Action</source>
       <description>gitee-pages-action license release users users github gitee stars forks Gitee Pages Action 由于 Gitee Pages 的访问速度很快，很多朋友会选择 Gitee Pages 部署项目（如：个人博客、开源项目国内镜像站点）。但是它不像 GitHub Pages ...</description>
       <category>运维</category>
@@ -6508,8 +6653,8 @@ git checkout --orphan的核心用途是在非新存储库上以类似git init的
     </item>
     <item>
       <title>github代码备份到gitee仓库-工作流</title>
-      <link>https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</link>
-      <guid>https://blog.lxip.top/java/githubaction/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</guid>
+      <link>https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</link>
+      <guid>https://blog.lxip.top/messing/workflow/github%E4%BB%A3%E7%A0%81%E5%A4%87%E4%BB%BD%E5%88%B0gitee%E4%BB%93%E5%BA%93-%E5%B7%A5%E4%BD%9C%E6%B5%81.html</guid>
       <source url="https://blog.lxip.top/rss.xml">github代码备份到gitee仓库-工作流</source>
       <description>大概思路 从本地（windows）使用git将代码提交到GitHub某仓库，然后触发某仓库GitHub工作流，使其将代码推送到gitee仓库。 前置知识 需要会使用git 熟悉GitHub（配置、工作流） 大致步骤 关于GitHub工作流与密钥配置对应图： image-20230404224357484image-20230404224357484 1...</description>
       <category>运维</category>
